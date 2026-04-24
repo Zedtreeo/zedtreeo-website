@@ -274,3 +274,47 @@ td {
 tr:hover td {
   background: var(--color-zt-near-white);
 }
+
+/* ============================================
+   PROSE — Legal/content pages
+   ============================================ */
+
+.prose-zt h2 {
+  font-size: 22px;
+  margin: 0 0 12px;
+}
+
+.prose-zt h3 {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.prose-zt p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--color-zt-body);
+}
+
+.prose-zt a {
+  color: var(--color-zt-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-zt a:hover {
+  color: var(--color-zt-accent);
+}
+
+.prose-zt ul,
+.prose-zt ol {
+  padding-left: 24px;
+  margin: 0 0 16px;
+}
+
+.prose-zt li {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--color-zt-body);
+  margin-bottom: 6px;
+}
