@@ -103,7 +103,7 @@ export default function Header() {
                   aria-expanded={servicesOpen}
                   aria-haspopup="true"
                   className={`px-4 py-2 text-sm font-medium transition-colors flex items-center gap-1 bg-transparent border-none cursor-pointer ${
-                    isActive(link.href, true) ? "text-zt-accent" : "text-white/90 hover:text-white"
+                    isActive(link.href, true) ? "text-white border-b-2 border-zt-accent" : "text-white/90 hover:text-white"
                   }`}
                 >
                   {link.label}
@@ -148,7 +148,7 @@ export default function Header() {
                 key={link.label}
                 href={link.href}
                 className={`px-4 py-2 text-sm font-medium no-underline transition-colors ${
-                  isActive(link.href) ? "text-zt-accent" : "text-white/90 hover:text-white"
+                  isActive(link.href) ? "text-white border-b-2 border-zt-accent" : "text-white/90 hover:text-white"
                 }`}
               >
                 {link.label}
