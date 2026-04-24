@@ -23,7 +23,8 @@ export default function HomePage() {
             </a>
             <a
               href="/candidates"
-              className="inline-block px-8 py-3 rounded-zt-pill border-2 border-zt-accent text-zt-accent font-bold no-underline hover:bg-zt-accent hover:text-zt-headings transition-all text-center"
+              className="inline-block px-8 py-3 rounded-zt-pill border-2 border-zt-accent font-bold hover:bg-zt-accent hover:text-zt-headings transition-all text-center"
+              style={{ color: "#8FD299", textDecoration: "none" }}
             >
               Browse Candidates
             </a>

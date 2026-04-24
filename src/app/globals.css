@@ -143,6 +143,12 @@ p {
   margin: 0 0 16px;
 }
 
+/* Reset link styles globally — let Tailwind/components handle styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Links — scoped to content areas only, not nav/buttons */
 .zt-blog-content a,
 .zt-content-area a {
@@ -187,7 +193,8 @@ p {
 .zt-cta h3 { color: #fff !important; margin: 0 0 10px; font-size: 24px; }
 .zt-cta p { color: #e8f3ed; margin: 0 auto 20px; max-width: 560px; font-size: 15px; }
 
-.zt-btn {
+.zt-btn,
+a.zt-btn {
   background: var(--color-zt-accent);
   color: var(--color-zt-headings) !important;
   padding: 13px 32px;
