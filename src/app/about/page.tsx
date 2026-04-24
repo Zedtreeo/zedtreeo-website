@@ -316,16 +316,16 @@ const certifications = [
 
 const teamMembers = [
   {
+    name: "Manish",
+    role: "Founder & CEO",
+    image: "/images/team/manish.webp",
+    bio: "Founded Zedtreeo to bridge the global talent gap. Leads company vision, growth strategy, and the AI-first approach to remote staffing.",
+  },
+  {
     name: "Shalini",
     role: "Head of Operations",
     image: "/images/team/shalini.webp",
     bio: "Leads end-to-end staffing operations, overseeing vetting, onboarding, and client success across 50+ role categories.",
-  },
-  {
-    name: "Manish",
-    role: "Head of Technology",
-    image: "/images/team/manish.webp",
-    bio: "Drives technical hiring standards and AI training programs. Ensures every developer and IT professional meets enterprise-grade benchmarks.",
   },
   {
     name: "Rashmi",

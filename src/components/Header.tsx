@@ -5,27 +5,23 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-const navLinks = [
-  {
-    label: "Services",
-    href: "/services",
-    children: [
-      { label: "Software Development", href: "/hire/full-stack-developer" },
-      { label: "Finance & Accounting", href: "/hire/virtual-assistant-for-bookkeeping" },
-      { label: "Digital Marketing", href: "/hire/digital-marketer" },
-      { label: "Legal & Compliance", href: "/hire/virtual-legal-staff" },
-      { label: "Healthcare & RCM", href: "/hire/revenue-cycle-management-staff" },
-      { label: "Virtual Assistants", href: "/hire/virtual-assistants" },
-      { label: "Cybersecurity & IT", href: "/hire/cyber-security-expert" },
-      { label: "DevOps & Cloud", href: "/hire/devops-engineers" },
-    ],
-  },
+const serviceLinks = [
+  { label: "Software Development", href: "/hire/full-stack-developer" },
+  { label: "Finance & Accounting", href: "/hire/virtual-assistant-for-bookkeeping" },
+  { label: "Digital Marketing", href: "/hire/digital-marketer" },
+  { label: "Legal & Compliance", href: "/hire/virtual-legal-staff" },
+  { label: "Healthcare & RCM", href: "/hire/revenue-cycle-management-staff" },
+  { label: "Virtual Assistants", href: "/hire/virtual-assistants" },
+  { label: "Cybersecurity & IT", href: "/hire/cyber-security-expert" },
+  { label: "DevOps & Cloud", href: "/hire/devops-engineers" },
+];
+
+const companyLinks = [
+  { label: "About Us", href: "/about" },
+  { label: "How It Works", href: "/how-it-works" },
   { label: "Industries", href: "/industries" },
   { label: "Case Studies", href: "/case-studies" },
-  { label: "How It Works", href: "/how-it-works" },
   { label: "Candidates", href: "/candidates" },
-  { label: "Blog", href: "/blog" },
-  { label: "About", href: "/about" },
 ];
 
 export default function Header() {
@@ -33,16 +29,19 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [companyOpen, setCompanyOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileCompanyOpen, setMobileCompanyOpen] = useState(false);
 
-  /** Check if a nav link is active based on current pathname */
-  const isActive = (href: string, hasChildren?: boolean) => {
-    if (hasChildren) {
-      // Services dropdown: active when on /services/*, /hire/*
-      return pathname.startsWith("/services") || pathname.startsWith("/hire");
-    }
-    if (href === "/") return pathname === "/";
-    return pathname === href || pathname.startsWith(href + "/");
-  };
+  const isServicesActive =
+    pathname.startsWith("/services") || pathname.startsWith("/hire");
+  const isCompanyActive =
+    pathname.startsWith("/about") ||
+    pathname.startsWith("/how-it-works") ||
+    pathname.startsWith("/industries") ||
+    pathname.startsWith("/case-studies") ||
+    pathname.startsWith("/candidates");
+  const isBlogActive = pathname.startsWith("/blog");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -50,10 +49,13 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close mobile menu on route change
+  // Close menus on route change
   useEffect(() => {
     setMobileOpen(false);
     setServicesOpen(false);
+    setCompanyOpen(false);
+    setMobileServicesOpen(false);
+    setMobileCompanyOpen(false);
   }, [pathname]);
 
   useEffect(() => {
@@ -66,6 +68,17 @@ export default function Header() {
       document.body.style.overflow = "";
     };
   }, [mobileOpen]);
+
+  const chevron = (open: boolean, className = "w-3.5 h-3.5") => (
+    <svg
+      className={`${className} transition-transform ${open ? "rotate-180" : ""}`}
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+    </svg>
+  );
 
   return (
     <header
@@ -87,76 +100,106 @@ export default function Header() {
             priority
           />
           <span className="text-2xl tracking-tight">
-            <span className="font-extrabold text-white">Zed</span><span className="font-normal text-zt-accent">treeo</span>
+            <span className="font-extrabold text-white">Zed</span>
+            <span className="font-normal text-zt-accent">treeo</span>
           </span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-1">
-          {navLinks.map((link) =>
-            link.children ? (
-              <div
-                key={link.label}
-                className="relative group"
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
-              >
-                <button
-                  aria-expanded={servicesOpen}
-                  aria-haspopup="true"
-                  className={`px-4 py-2 text-sm font-medium transition-colors flex items-center gap-1 bg-transparent border-none cursor-pointer ${
-                    isActive(link.href, true) ? "text-white border-b-2 border-zt-accent" : "text-white/90 hover:text-white"
-                  }`}
+          {/* Services Dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
+          >
+            <button
+              aria-expanded={servicesOpen}
+              aria-haspopup="true"
+              className={`px-4 py-2 text-sm font-medium transition-colors flex items-center gap-1 bg-transparent border-none cursor-pointer ${
+                isServicesActive
+                  ? "text-white border-b-2 border-zt-accent"
+                  : "text-white/90 hover:text-white"
+              }`}
+            >
+              Services
+              {chevron(servicesOpen)}
+            </button>
+            <div
+              className={`absolute top-full left-0 mt-1 w-64 bg-white rounded-zt shadow-zt-card-hover py-2 transition-all duration-200 ${
+                servicesOpen
+                  ? "opacity-100 translate-y-0 pointer-events-auto"
+                  : "opacity-0 -translate-y-2 pointer-events-none"
+              }`}
+            >
+              {serviceLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="block px-4 py-2.5 text-sm text-zt-body hover:bg-zt-near-white hover:text-zt-primary no-underline font-medium transition-colors"
                 >
                   {link.label}
-                  <svg
-                    className={`w-3.5 h-3.5 transition-transform ${servicesOpen ? "rotate-180" : ""}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {/* Dropdown */}
-                <div
-                  className={`absolute top-full left-0 mt-1 w-64 bg-white rounded-zt shadow-zt-card-hover py-2 transition-all duration-200 ${
-                    servicesOpen
-                      ? "opacity-100 translate-y-0 pointer-events-auto"
-                      : "opacity-0 -translate-y-2 pointer-events-none"
-                  }`}
+                </Link>
+              ))}
+              <div className="border-t border-zt-border mt-1 pt-1">
+                <Link
+                  href="/services"
+                  className="block px-4 py-2.5 text-sm text-zt-accent font-semibold no-underline hover:bg-zt-near-white transition-colors"
                 >
-                  {link.children.map((child) => (
-                    <Link
-                      key={child.href}
-                      href={child.href}
-                      className="block px-4 py-2.5 text-sm text-zt-body hover:bg-zt-near-white hover:text-zt-primary no-underline font-medium transition-colors"
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
-                  <div className="border-t border-zt-border mt-1 pt-1">
-                    <Link
-                      href="/services"
-                      className="block px-4 py-2.5 text-sm text-zt-accent font-semibold no-underline hover:bg-zt-near-white transition-colors"
-                    >
-                      View All Services →
-                    </Link>
-                  </div>
-                </div>
+                  View All Services →
+                </Link>
               </div>
-            ) : (
-              <Link
-                key={link.label}
-                href={link.href}
-                className={`px-4 py-2 text-sm font-medium no-underline transition-colors ${
-                  isActive(link.href) ? "text-white border-b-2 border-zt-accent" : "text-white/90 hover:text-white"
-                }`}
-              >
-                {link.label}
-              </Link>
-            )
-          )}
+            </div>
+          </div>
+
+          {/* Company Dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setCompanyOpen(true)}
+            onMouseLeave={() => setCompanyOpen(false)}
+          >
+            <button
+              aria-expanded={companyOpen}
+              aria-haspopup="true"
+              className={`px-4 py-2 text-sm font-medium transition-colors flex items-center gap-1 bg-transparent border-none cursor-pointer ${
+                isCompanyActive
+                  ? "text-white border-b-2 border-zt-accent"
+                  : "text-white/90 hover:text-white"
+              }`}
+            >
+              Company
+              {chevron(companyOpen)}
+            </button>
+            <div
+              className={`absolute top-full left-0 mt-1 w-56 bg-white rounded-zt shadow-zt-card-hover py-2 transition-all duration-200 ${
+                companyOpen
+                  ? "opacity-100 translate-y-0 pointer-events-auto"
+                  : "opacity-0 -translate-y-2 pointer-events-none"
+              }`}
+            >
+              {companyLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="block px-4 py-2.5 text-sm text-zt-body hover:bg-zt-near-white hover:text-zt-primary no-underline font-medium transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Blog — standalone */}
+          <Link
+            href="/blog"
+            className={`px-4 py-2 text-sm font-medium no-underline transition-colors ${
+              isBlogActive
+                ? "text-white border-b-2 border-zt-accent"
+                : "text-white/90 hover:text-white"
+            }`}
+          >
+            Blog
+          </Link>
         </nav>
 
         {/* Desktop CTA */}
@@ -202,54 +245,83 @@ export default function Header() {
             : "opacity-0 pointer-events-none"
         }`}
       >
-        <nav aria-label="Mobile navigation" className="flex flex-col p-6 gap-1 overflow-y-auto max-h-[calc(100vh-72px)]">
-          {navLinks.map((link) =>
-            link.children ? (
-              <div key={link.label}>
-                <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className={`w-full flex items-center justify-between py-3 px-4 text-base font-medium bg-transparent border-none cursor-pointer ${
-                    isActive(link.href, true) ? "text-zt-accent" : "text-white"
-                  }`}
-                >
-                  {link.label}
-                  <svg
-                    className={`w-4 h-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+        <nav
+          aria-label="Mobile navigation"
+          className="flex flex-col p-6 gap-1 overflow-y-auto max-h-[calc(100vh-72px)]"
+        >
+          {/* Services accordion */}
+          <div>
+            <button
+              onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+              className={`w-full flex items-center justify-between py-3 px-4 text-base font-medium bg-transparent border-none cursor-pointer ${
+                isServicesActive ? "text-zt-accent" : "text-white"
+              }`}
+            >
+              Services
+              {chevron(mobileServicesOpen, "w-4 h-4")}
+            </button>
+            {mobileServicesOpen && (
+              <div className="pl-4 flex flex-col gap-1">
+                {serviceLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="py-2.5 px-4 text-sm text-white/70 hover:text-white no-underline font-medium transition-colors"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {servicesOpen && (
-                  <div className="pl-4 flex flex-col gap-1">
-                    {link.children.map((child) => (
-                      <Link
-                        key={child.href}
-                        href={child.href}
-                        onClick={() => setMobileOpen(false)}
-                        className="py-2.5 px-4 text-sm text-white/70 hover:text-white no-underline font-medium transition-colors"
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
+                    {link.label}
+                  </Link>
+                ))}
+                <Link
+                  href="/services"
+                  onClick={() => setMobileOpen(false)}
+                  className="py-2.5 px-4 text-sm text-zt-accent font-semibold no-underline"
+                >
+                  View All Services →
+                </Link>
               </div>
-            ) : (
-              <Link
-                key={link.label}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className={`py-3 px-4 text-base font-medium no-underline transition-colors ${
-                  isActive(link.href) ? "text-zt-accent" : "text-white hover:text-zt-accent"
-                }`}
-              >
-                {link.label}
-              </Link>
-            )
-          )}
+            )}
+          </div>
+
+          {/* Company accordion */}
+          <div>
+            <button
+              onClick={() => setMobileCompanyOpen(!mobileCompanyOpen)}
+              className={`w-full flex items-center justify-between py-3 px-4 text-base font-medium bg-transparent border-none cursor-pointer ${
+                isCompanyActive ? "text-zt-accent" : "text-white"
+              }`}
+            >
+              Company
+              {chevron(mobileCompanyOpen, "w-4 h-4")}
+            </button>
+            {mobileCompanyOpen && (
+              <div className="pl-4 flex flex-col gap-1">
+                {companyLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="py-2.5 px-4 text-sm text-white/70 hover:text-white no-underline font-medium transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Blog */}
+          <Link
+            href="/blog"
+            onClick={() => setMobileOpen(false)}
+            className={`py-3 px-4 text-base font-medium no-underline transition-colors ${
+              isBlogActive ? "text-zt-accent" : "text-white hover:text-zt-accent"
+            }`}
+          >
+            Blog
+          </Link>
+
+          {/* CTA */}
           <div className="mt-6 pt-6 border-t border-white/10">
             <Link
               href="/get-started"
