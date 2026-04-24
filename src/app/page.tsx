@@ -21,7 +21,7 @@ export default function HomePage() {
             <br />
             <span className="text-zt-accent">in 7 Days Flat.</span>
           </h1>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8 text-center">
+          <p className="text-lg text-gray-300 mb-8 text-center" style={{ maxWidth: "672px", marginLeft: "auto", marginRight: "auto" }}>
             Pre-vetted dedicated employees from India — software developers,
             accountants, marketers, legal staff, and more. Starting at $5/hour
             with a free trial.
