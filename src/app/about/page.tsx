@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import JsonLd from "@/components/JsonLd";
 import { Breadcrumb, SectionHeading, CTASection, TrustBar } from "@/components/ui";
 
@@ -101,13 +102,25 @@ export default function AboutPage() {
                 with global teams that value their skills.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-6">
-              {missionStats.map((stat) => (
-                <div key={stat.label} className="p-6 rounded-zt bg-zt-near-white text-center">
-                  <div className="text-3xl font-bold text-zt-accent mb-1">{stat.value}</div>
-                  <div className="text-xs text-zt-body uppercase tracking-wider">{stat.label}</div>
-                </div>
-              ))}
+            <div>
+              <div className="relative rounded-zt overflow-hidden mb-6">
+                <Image
+                  src="/images/about/professional-team.webp"
+                  alt="Zedtreeo remote staffing team collaborating in a modern office"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover rounded-zt"
+                  priority
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                {missionStats.map((stat) => (
+                  <div key={stat.label} className="p-4 rounded-zt bg-zt-near-white text-center">
+                    <div className="text-2xl font-bold text-zt-accent mb-1">{stat.value}</div>
+                    <div className="text-xs text-zt-body uppercase tracking-wider">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
