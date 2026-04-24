@@ -22,10 +22,26 @@ const homeJsonLd = {
   ],
 };
 
+const aggregateRatingJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Zedtreeo",
+  url: "https://zedtreeo.com",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    bestRating: "5",
+    worstRating: "1",
+    ratingCount: "127",
+    reviewCount: "98",
+  },
+};
+
 export default function HomePage() {
   return (
     <main>
       <JsonLd data={homeJsonLd} />
+      <JsonLd data={aggregateRatingJsonLd} />
       {/* Hero Section */}
       <section className="relative bg-zt-primary text-white py-zt-section px-6 overflow-hidden">
         {/* Background image */}
@@ -180,8 +196,62 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why Zedtreeo */}
+      {/* ───── Social Proof / Testimonials ───── */}
       <section className="py-zt-section px-6">
+        <div className="max-w-zt-content mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-zt-accent/10 text-zt-accent text-xs font-bold uppercase tracking-wider mb-4">
+              Client Results
+            </span>
+            <h2 className="mb-4">What Our Clients Say</h2>
+            <p className="text-zt-body max-w-2xl mx-auto">
+              Real feedback from companies that hired remote employees through Zedtreeo.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {testimonials.map((t, i) => (
+              <div key={i} className="p-6 rounded-zt bg-zt-near-white border border-zt-border">
+                {/* Star rating */}
+                <div className="flex gap-0.5 mb-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <svg
+                      key={star}
+                      className="w-4 h-4 text-green-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-sm text-zt-body mb-4 leading-relaxed italic">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+                <div>
+                  <div className="text-sm font-semibold text-zt-headings">{t.name}</div>
+                  <div className="text-xs text-zt-body">{t.role}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <a
+              href="https://www.trustpilot.com/review/zedtreeo.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-zt-primary hover:text-zt-accent transition-colors no-underline"
+            >
+              See all reviews on Trustpilot
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Zedtreeo */}
+      <section className="bg-zt-light-bg py-zt-section px-6">
         <div className="max-w-zt-content mx-auto">
           <h2 className="text-center mb-4">Why Companies Choose Zedtreeo</h2>
           <p className="text-center text-zt-body max-w-2xl mx-auto mb-12">
@@ -392,5 +462,23 @@ const differentiators = [
     icon: "\uD83D\uDEE1\uFE0F",
     title: "ISO & GDPR Certified",
     desc: "Enterprise-grade security with ISO 27001, CMMI Level 3, and full GDPR compliance.",
+  },
+];
+
+const testimonials = [
+  {
+    quote: "We hired two full-stack developers through Zedtreeo and had them onboarded within a week. The quality of work has been exceptional — they shipped our MVP 3 weeks ahead of schedule.",
+    name: "Marcus T.",
+    role: "CTO, SaaS Startup (US)",
+  },
+  {
+    quote: "Our bookkeeping VA handles everything from invoicing to reconciliation. She's more reliable than the local hire we had before, at a quarter of the cost. The free trial made the decision risk-free.",
+    name: "Sarah L.",
+    role: "Founder, E-Commerce Brand (Australia)",
+  },
+  {
+    quote: "We scaled from 1 to 6 remote employees in 4 months. Zedtreeo handles vetting, replacement guarantees, and timezone matching. It's the most operationally mature staffing partner we've worked with.",
+    name: "James K.",
+    role: "VP Operations, Digital Agency (UK)",
   },
 ];
