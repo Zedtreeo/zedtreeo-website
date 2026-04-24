@@ -196,7 +196,11 @@ const nextConfig: NextConfig = {
       { source: "/outsource-to-india/", destination: "/hire/remote-employees-for-your-business", permanent: true },
 
       /* ─── Case studies → /case-studies (301 permanent) ─── */
-      { source: "/case-study-:path*", destination: "/case-studies", permanent: true },
+      {
+        source: "/:slug(case-study-.*)",
+        destination: "/case-studies",
+        permanent: true,
+      },
 
       /* ─── How It Works variations ─── */
       { source: "/how-it-works-remote-staffing", destination: "/how-it-works", permanent: true },
