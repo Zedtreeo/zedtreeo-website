@@ -158,9 +158,6 @@ const nextConfig: NextConfig = {
       { source: "/remote-vs-on-site-work-which-is-more-effective/", destination: "/blog/ai-vs-outsourcing", permanent: true },
 
       /* ─── Old static pages → new equivalents ─── */
-      { source: "/about", destination: "/about", permanent: true },
-      { source: "/contact", destination: "/contact", permanent: true },
-      { source: "/candidates", destination: "/candidates", permanent: true },
       { source: "/get-a-5-day-free-trial", destination: "/get-started", permanent: true },
       { source: "/get-a-5-day-free-trial/", destination: "/get-started", permanent: true },
       { source: "/certifications", destination: "/about", permanent: true },
