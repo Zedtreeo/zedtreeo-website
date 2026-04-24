@@ -1,0 +1,450 @@
+<style>
+.zt-ind * { box-sizing: border-box; }
+.zt-ind { font-family: 'Geologica', system-ui, -apple-system, sans-serif; color: #5F6567; line-height: 1.7; font-size: 17px; max-width: 100%; }
+.zt-ind h1, .zt-ind h2, .zt-ind h3, .zt-ind h4 { color: #161616; font-family: inherit; }
+.zt-ind h1 { font-size: 48px; font-weight: 600; line-height: 1.1; letter-spacing: -1.5px; margin: 0 0 18px; }
+.zt-ind h2 { font-size: 34px; font-weight: 700; line-height: 1.2; margin: 54px 0 16px; text-align: center; letter-spacing: -0.5px; }
+.zt-ind h2 + p.sub { text-align: center; max-width: 720px; margin: 0 auto 32px; color: #5F6567; }
+.zt-ind h3 { font-size: 22px; font-weight: 600; line-height: 1.3; margin: 28px 0 12px; }
+.zt-ind h4 { font-size: 18px; font-weight: 600; margin: 20px 0 8px; }
+.zt-ind p  { margin: 0 0 16px; }
+.zt-ind a  { color: #374B47; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(55,75,71,.3); transition: all .2s; }
+.zt-ind a:hover { color: #8FD299; border-bottom-color: #8FD299; }
+
+/* ═══ 1. HERO + FORM ═══ */
+.zt-ind-hero { position: relative; background: linear-gradient(135deg, #374B47 0%, #1e2b28 100%); color: #fff; padding: 70px 48px; border-radius: 20px; margin: 0 0 56px; overflow: hidden; display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: center; }
+.zt-ind-hero:before { content: ''; position: absolute; top: -30%; right: -20%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(143,210,153,.12) 0%, transparent 70%); border-radius: 50%; }
+.zt-ind-hero > * { position: relative; z-index: 1; }
+.zt-ind-hero .eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(143,210,153,.15); color: #8FD299; padding: 8px 18px; border-radius: 50px; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 22px; }
+.zt-ind-hero h1 { color: #fff; }
+.zt-ind-hero p.lede { color: #cfe0d5; font-size: 19px; margin: 0 0 30px; }
+
+.zt-ind-trust { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.15); }
+.zt-ind-trust .item { color: #cfe0d5; font-size: 13px; }
+.zt-ind-trust .item strong { color: #8FD299; display: block; font-size: 26px; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.5px; line-height: 1; }
+
+.zt-ind-form { background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 30px 80px rgba(0,0,0,.25); }
+.zt-ind-form h4 { margin: 0 0 6px; font-size: 20px; color: #161616; }
+.zt-ind-form p.small { font-size: 13px; color: #5F6567; margin: 0 0 20px; }
+.zt-ind-form label { display: block; font-size: 12px; font-weight: 700; color: #161616; text-transform: uppercase; letter-spacing: 1px; margin: 12px 0 6px; }
+.zt-ind-form input, .zt-ind-form select { width: 100%; padding: 12px 14px; border: 1px solid #d5dbe0; border-radius: 8px; font-size: 14px; font-family: inherit; background: #fff; color: #161616; }
+.zt-ind-form input:focus, .zt-ind-form select:focus { outline: none; border-color: #8FD299; box-shadow: 0 0 0 3px rgba(143,210,153,.2); }
+.zt-ind-form button { width: 100%; background: #8FD299; color: #161616; border: none; padding: 15px; border-radius: 50px; font-weight: 700; font-size: 15px; margin-top: 20px; cursor: pointer; font-family: inherit; transition: all .2s; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.zt-ind-form button:hover { background: #7ac284; }
+@media (max-width: 880px) { .zt-ind-hero { grid-template-columns: 1fr; padding: 48px 28px; } .zt-ind-hero h1 { font-size: 34px; } .zt-ind-trust { grid-template-columns: 1fr 1fr; } }
+
+/* ═══ 2. PAIN POINTS INFOGRAPHIC ═══ */
+.zt-pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 24px 0 40px; }
+.zt-pain-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 28px 26px; display: flex; gap: 18px; align-items: flex-start; transition: all .2s; position: relative; }
+.zt-pain-card:hover { border-color: #8FD299; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(143,210,153,.12); }
+.zt-pain-card .pain-icon { width: 52px; height: 52px; background: #fef2f2; border: 2px solid #d54444; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.zt-pain-card .content h4 { margin: 0 0 8px; font-size: 17px; color: #161616; }
+.zt-pain-card .content p { margin: 0; font-size: 15px; line-height: 1.55; }
+@media (max-width: 780px) { .zt-pain-grid { grid-template-columns: 1fr; } }
+
+/* ═══ 3. ROLE STACK ═══ */
+.zt-role-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 24px 0 40px; }
+.zt-role-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 26px 24px; transition: all .2s; text-decoration: none !important; border-bottom: 3px solid transparent; display: block; position: relative; }
+.zt-role-card:hover { border-color: #8FD299; border-bottom-color: #8FD299; transform: translateY(-3px); box-shadow: 0 12px 30px rgba(143,210,153,.12); }
+.zt-role-card .role-icon { width: 52px; height: 52px; background: #f0faf2; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin: 0 0 16px; }
+.zt-role-card .price-tag { position: absolute; top: 20px; right: 20px; background: #8FD299; color: #161616; padding: 4px 10px; border-radius: 50px; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; }
+.zt-role-card h4 { margin: 0 0 8px; font-size: 17px; color: #161616; }
+.zt-role-card p { margin: 0; color: #5F6567; font-size: 14px; line-height: 1.55; }
+@media (max-width: 780px) { .zt-role-grid { grid-template-columns: 1fr; } }
+
+/* ═══ 4. COMPARISON TABLE ═══ */
+.zt-ind .comparison-wrap { margin: 24px 0 40px; overflow-x: auto; }
+.zt-ind table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 15px; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 12px rgba(22,22,22,.04); }
+.zt-ind th { padding: 16px; background: #374B47; color: #fff !important; text-align: left; font-weight: 600; font-size: 14px; }
+.zt-ind th.winner { background: #8FD299; color: #161616 !important; position: relative; }
+.zt-ind th.winner:before { content: '★'; margin-right: 6px; }
+.zt-ind td { padding: 13px 16px; border-bottom: 1px solid #e5e7eb; }
+.zt-ind td.winner { background: #f0faf2; color: #161616; font-weight: 600; }
+.zt-ind td.winner:before { content: '✓ '; color: #8FD299; font-weight: 700; }
+.zt-ind tbody tr:last-child td { border-bottom: none; }
+
+/* ═══ 5. PRICING INFOGRAPHIC ═══ */
+.zt-pricing { background: linear-gradient(135deg, #E4EDF3 0%, #F7F7F7 100%); border-radius: 20px; padding: 50px 36px; margin: 40px 0; }
+.zt-pricing h2 { margin-top: 0; }
+.zt-pricing-tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.zt-tier { background: #fff; border: 2px solid transparent; border-radius: 16px; padding: 32px 26px; transition: all .2s; position: relative; }
+.zt-tier:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(22,22,22,.08); }
+.zt-tier.featured { border-color: #8FD299; transform: scale(1.03); box-shadow: 0 20px 40px rgba(143,210,153,.25); }
+.zt-tier.featured:before { content: 'MOST HIRED'; position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: #8FD299; color: #161616; padding: 6px 16px; border-radius: 50px; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; }
+.zt-tier h4 { margin: 0 0 8px; font-size: 17px; }
+.zt-tier .price-big { color: #161616; font-size: 42px; font-weight: 700; margin: 16px 0 4px; letter-spacing: -1.5px; line-height: 1; }
+.zt-tier .price-big .dollar { font-size: 24px; vertical-align: top; margin-right: 2px; }
+.zt-tier .price-big .per { font-size: 16px; font-weight: 400; color: #5F6567; }
+.zt-tier .price-sub { color: #5F6567; font-size: 13px; margin: 0 0 22px; padding-bottom: 22px; border-bottom: 1px solid #e5e7eb; }
+.zt-tier ul { padding: 0; margin: 0; list-style: none; }
+.zt-tier li { font-size: 14px; margin-bottom: 10px; color: #5F6567; padding-left: 24px; position: relative; }
+.zt-tier li:before { content: ''; position: absolute; left: 0; top: 6px; width: 14px; height: 14px; background: #8FD299; border-radius: 50%; }
+.zt-tier li:after { content: '✓'; position: absolute; left: 3px; top: 4px; color: #161616; font-size: 10px; font-weight: 700; }
+@media (max-width: 780px) { .zt-pricing-tiers { grid-template-columns: 1fr; } .zt-tier.featured { transform: none; } }
+
+/* ═══ 6. CASE STUDIES ═══ */
+.zt-case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 24px 0 40px; }
+.zt-case-card { background: #fff; border-radius: 14px; overflow: hidden; text-decoration: none !important; display: block; border: 1px solid #e5e7eb; transition: all .2s; }
+.zt-case-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(22,22,22,.08); border-color: #8FD299; }
+.zt-case-card .kpi-strip { background: #161616; color: #8FD299; padding: 18px 22px; font-size: 24px; font-weight: 700; display: flex; align-items: center; justify-content: space-between; letter-spacing: -0.5px; }
+.zt-case-card .kpi-strip svg { width: 22px; height: 22px; opacity: .6; }
+.zt-case-card .content { padding: 22px; }
+.zt-case-card .meta { color: #8FD299; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 0 8px; }
+.zt-case-card h4 { margin: 0 0 8px; font-size: 16px; color: #161616; }
+.zt-case-card p { margin: 0; color: #5F6567; font-size: 14px; }
+@media (max-width: 780px) { .zt-case-grid { grid-template-columns: 1fr; } }
+
+/* ═══ 7. PROCESS INFOGRAPHIC ═══ */
+.zt-process { background: #F7F7F7; border-radius: 20px; padding: 50px 40px; margin: 40px 0; }
+.zt-process-flow { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; margin-top: 32px; }
+.zt-process-flow:before { content: ''; position: absolute; top: 28px; left: 10%; right: 10%; height: 2px; background: linear-gradient(90deg, #8FD299 0%, #8FD299 100%); z-index: 0; }
+.zt-step { text-align: center; position: relative; z-index: 1; }
+.zt-step .num-circle { width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 50%; background: #fff; border: 3px solid #8FD299; display: flex; align-items: center; justify-content: center; }
+.zt-step .num-circle svg { width: 24px; height: 24px; }
+.zt-step h4 { margin: 0 0 6px; font-size: 15px; color: #161616; }
+.zt-step p { margin: 0; font-size: 13px; line-height: 1.5; color: #5F6567; }
+@media (max-width: 880px) { .zt-process-flow { grid-template-columns: 1fr 1fr; } .zt-process-flow:before { display: none; } }
+
+/* ═══ 8. CERTIFICATIONS ═══ */
+.zt-certs { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 32px; text-align: center; margin: 30px 0 40px; }
+.zt-certs h3 { margin: 0 0 8px; font-size: 18px; color: #161616; }
+.zt-certs p.lead { font-size: 14px; color: #5F6567; margin: 0 0 24px; }
+.zt-certs-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.zt-cert-badge { background: #F7F7F7; border: 1px solid #e5e7eb; padding: 10px 18px 10px 42px; border-radius: 50px; font-size: 13px; font-weight: 600; color: #161616; position: relative; }
+.zt-cert-badge:before { content: ''; position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' stroke='%238FD299' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat; }
+
+/* ═══ 9. FAQ ═══ */
+.zt-faq details { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; margin-bottom: 12px; padding: 20px 24px; transition: all .2s; }
+.zt-faq details[open] { border-color: #8FD299; background: #fafffb; }
+.zt-faq summary { cursor: pointer; font-weight: 600; color: #161616; font-size: 16px; list-style: none; position: relative; padding-right: 40px; }
+.zt-faq summary::-webkit-details-marker { display: none; }
+.zt-faq summary:after { content: '+'; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 28px; height: 28px; border-radius: 50%; background: #F7F7F7; color: #374B47; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 400; transition: all .2s; }
+.zt-faq details[open] summary:after { content: '−'; background: #8FD299; color: #161616; }
+.zt-faq details[open] summary { margin-bottom: 14px; }
+.zt-faq p { margin: 0; font-size: 15px; }
+
+/* ═══ 10. CTA ═══ */
+.zt-cta { background: linear-gradient(135deg, #374B47 0%, #1e2b28 100%); color: #fff; padding: 56px 40px; border-radius: 20px; margin: 40px 0; text-align: center; position: relative; overflow: hidden; }
+.zt-cta:before { content: ''; position: absolute; top: -50%; left: -10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(143,210,153,.15) 0%, transparent 70%); }
+.zt-cta:after { content: ''; position: absolute; bottom: -50%; right: -10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(143,210,153,.12) 0%, transparent 70%); }
+.zt-cta .inner { position: relative; z-index: 1; }
+.zt-cta h3 { color: #fff !important; margin: 0 0 12px; font-size: 32px; line-height: 1.15; letter-spacing: -0.5px; }
+.zt-cta p  { color: #e8f3ed; margin: 0 auto 28px; max-width: 600px; font-size: 16px; }
+.zt-cta .btn { background: #8FD299; color: #161616 !important; padding: 16px 38px; border-radius: 50px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-size: 16px; transition: all .2s; }
+.zt-cta .btn:hover { background: #7ac284; transform: translateX(4px); }
+
+/* ═══ 11. RELATED INDUSTRIES ═══ */
+.zt-related-ind { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 24px 0 0; }
+.zt-related-ind a { background: #fff; border: 1px solid #e5e7eb; padding: 18px 22px; border-radius: 12px; text-decoration: none !important; color: #161616; font-weight: 600; font-size: 14px; text-align: center; transition: all .2s; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.zt-related-ind a:hover { background: #8FD299; border-color: #8FD299; transform: translateY(-2px); }
+.zt-related-ind a svg { width: 24px; height: 24px; opacity: .7; }
+@media (max-width: 780px) { .zt-related-ind { grid-template-columns: 1fr 1fr; } }
+</style>
+
+<div class="zt-ind">
+
+  <!-- ═══════════ 1. HERO + LEAD FORM ═══════════ -->
+  <section class="zt-ind-hero">
+    <div>
+      <div class="eyebrow">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="#8FD299" stroke-width="2" stroke-linejoin="round" fill="#8FD299" fill-opacity=".2"/></svg>
+        ZEDTREEO FOR MARKETING &amp; ADVERTISING
+      </div>
+      <h1>Scale Your Marketing &amp; Advertising Team Without Scaling Your Payroll</h1>
+      <p class="lede">Vetted content writers, SEO specialists, PPC buyers, social media managers and designers — embedded with your brand or agency, starting from $6 per hour with a 48-hour shortlist.</p>
+
+      <div class="zt-ind-trust">
+        <div class="item"><strong>500+</strong>Clients globally</div>
+        <div class="item"><strong>48hr</strong>To shortlist</div>
+        <div class="item"><strong>70–90%</strong>Cost saving</div>
+        <div class="item"><strong>$5/hr</strong>Starting rate</div>
+      </div>
+    </div>
+
+    <form class="zt-ind-form" action="/submit-lead" method="post">
+      <h4>Get 3 Pre-Vetted Candidates</h4>
+      <p class="small">Free 20-min consult · 48-hour shortlist · No credit card</p>
+
+      <label for="ind-name">Your Name</label>
+      <input type="text" id="ind-name" name="name" required placeholder="Jane Smith">
+
+      <label for="ind-email">Work Email</label>
+      <input type="email" id="ind-email" name="email" required placeholder="jane@company.com">
+
+      <label for="ind-role">Role Needed</label>
+      <select id="ind-role" name="role">
+        <option>Content / SEO Specialist</option>
+        <option>PPC / Paid Media Buyer</option>
+        <option>Social Media / Designer</option>
+        <option>Other — specify on call</option>
+      </select>
+
+      <button type="submit">
+        Get My Shortlist
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="#161616" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+  </section>
+
+  <!-- ═══════════ 2. PAIN POINTS ═══════════ -->
+  <h2>Staffing Challenges in Marketing &amp; Advertising</h2>
+  <p class="sub">Marketing leaders at brands and agencies lose momentum every time they need to scale production. Here are the four pressure points Zedtreeo solves for CMOs, growth heads and agency owners.</p>
+
+  <div class="zt-pain-grid">
+    <div class="zt-pain-card">
+      <div class="pain-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#d54444" stroke-width="2.2"/><line x1="12" y1="8" x2="12" y2="12" stroke="#d54444" stroke-width="2.5" stroke-linecap="round"/><line x1="12" y1="16" x2="12.01" y2="16" stroke="#d54444" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+      <div class="content"><h4>Your best people are stuck in execution</h4><p>Senior strategists spend 40–60% of their week in Canva, Ahrefs, and Ads Manager — burning strategic capacity on tasks a specialist should own. Campaigns stall, hires take forever.</p></div>
+    </div>
+    <div class="zt-pain-card">
+      <div class="pain-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" stroke="#d54444" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="17 6 23 6 23 12" stroke="#d54444" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="content"><h4>Agency retainers are eating your margin</h4><p>A mid-tier agency bills $8–$15K/month for work you could own in-house for a fraction — if you could find, vet and onboard the right production team in under 60 days.</p></div>
+    </div>
+    <div class="zt-pain-card">
+      <div class="pain-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#d54444" stroke-width="2.2"/><polyline points="12 6 12 12 16 14" stroke="#d54444" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="content"><h4>Hiring is slow, attrition is faster</h4><p>US marketing hires take 45–90 days, cost $85K+ fully loaded, and churn inside 18 months. You need consistent campaign output — not a permanent recruitment cycle.</p></div>
+    </div>
+    <div class="zt-pain-card">
+      <div class="pain-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><line x1="12" y1="1" x2="12" y2="23" stroke="#d54444" stroke-width="2.2" stroke-linecap="round"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="#d54444" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="content"><h4>You can't flex with campaign load</h4><p>Launching in Q4? You need 3 more designers and a media buyer next week. Post-launch? Your W-2 overhead doesn't scale down. Freelancers vanish. Dedicated remote staff from Zedtreeo flex.</p></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 3. ROLE STACK ═══════════ -->
+  <h2>Roles We Deploy for Marketing &amp; Advertising Teams</h2>
+  <p class="sub">All roles pre-vetted, AI-trained on industry-standard tools, timezone-matched globally. Starting from $5 per hour.</p>
+
+  <div class="zt-role-grid">
+    <a href="/candidates/?role=content-writer" class="zt-role-card">
+      <span class="price-tag">From $5/hr</span>
+      <div class="role-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="7" r="4" stroke="#374B47" stroke-width="2.2"/><path d="M20 8v6M23 11h-6" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h4>Content Writer</h4>
+      <p>Long-form blog, landing pages, email, sales copy. SEO-aware writers who hit word counts, briefs, and deadlines.</p>
+    </a>
+    <a href="/candidates/?role=seo-specialist" class="zt-role-card">
+      <span class="price-tag">From $5/hr</span>
+      <div class="role-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h4>SEO Specialist</h4>
+      <p>Keyword research, on-page optimization, technical audits, link building. Ahrefs, SEMrush, Surfer, Screaming Frog.</p>
+    </a>
+    <a href="/candidates/?role=ppc-buyer" class="zt-role-card">
+      <span class="price-tag">From $5/hr</span>
+      <div class="role-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h4>PPC / Paid Media Buyer</h4>
+      <p>Google Ads, Meta, LinkedIn, TikTok ad operations. Campaign builds, bid management, creative testing, conversion tracking.</p>
+    </a>
+    <a href="/candidates/?role=social-media-manager" class="zt-role-card">
+      <span class="price-tag">From $5/hr</span>
+      <div class="role-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20v-6" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h4>Social Media Manager</h4>
+      <p>Content calendars, community management, scheduling, reporting across LinkedIn, Instagram, TikTok, X and YouTube.</p>
+    </a>
+    <a href="/candidates/?role=graphic-designer" class="zt-role-card">
+      <span class="price-tag">From $5/hr</span>
+      <div class="role-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h4>Graphic / Motion Designer</h4>
+      <p>Ad creative, brand assets, landing pages, email design, motion graphics. Figma, Adobe CC, After Effects, Canva Pro.</p>
+    </a>
+    <a href="/candidates/?role=email-marketer" class="zt-role-card">
+      <span class="price-tag">From $5/hr</span>
+      <div class="role-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="16" y1="2" x2="16" y2="6" stroke="#374B47" stroke-width="2.2" stroke-linecap="round"/><line x1="8" y1="2" x2="8" y2="6" stroke="#374B47" stroke-width="2.2" stroke-linecap="round"/><line x1="3" y1="10" x2="21" y2="10" stroke="#374B47" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+      <h4>Email &amp; Lifecycle Marketer</h4>
+      <p>Klaviyo, HubSpot, Mailchimp, Marketo. Segmentation, automation flows, A/B testing, deliverability, campaign copy.</p>
+    </a>
+  </div>
+
+  <!-- ═══════════ 4. COMPARISON TABLE ═══════════ -->
+  <h2>Zedtreeo vs Alternatives for Marketing &amp; Advertising</h2>
+  <div class="comparison-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="color:#fff;">Factor</th>
+          <th style="color:#fff;">In-House Hire</th>
+          <th style="color:#fff;">Freelancer Platforms</th>
+          <th class="winner" style="color:#161616;">Zedtreeo Remote</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Starting cost</td><td>$5K–$12K/month</td><td>Variable</td><td class="winner">From $5/hour</td></tr>
+        <tr><td>Time to hire</td><td>45–90 days</td><td>1–3 weeks</td><td class="winner">48 hours</td></tr>
+        <tr><td>Industry expertise</td><td>After onboarding</td><td>Hit or miss</td><td class="winner">Pre-vetted for Marketing &amp; Advertising</td></tr>
+        <tr><td>AI-tool training</td><td>Added separately</td><td>Self-directed</td><td class="winner">Built-in baseline</td></tr>
+        <tr><td>HR &amp; compliance</td><td>Client managed</td><td>Client managed</td><td class="winner">Fully managed</td></tr>
+        <tr><td>Free replacement</td><td>No</td><td>No</td><td class="winner">Included</td></tr>
+        <tr><td>Free trial</td><td>No</td><td>No</td><td class="winner">5 business days</td></tr>
+        <tr><td>Annual saving</td><td>—</td><td>Marginal</td><td class="winner">70–90%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ═══════════ 5. PRICING INFOGRAPHIC ═══════════ -->
+  <section class="zt-pricing">
+    <h2>Marketing &amp; Advertising Staffing Pricing</h2>
+    <p class="sub">All-inclusive: salary, HR, compliance, AI-tool training, 5-day trial, replacement guarantee.</p>
+
+    <div class="zt-pricing-tiers">
+      <div class="zt-tier">
+        <h4>Non-Skilled Support</h4>
+        <p class="price-big"><span class="dollar">$</span>5–6<span class="per">/hr</span></p>
+        <p class="price-sub">From $800/month full-time</p>
+        <ul>
+          <li>Virtual assistants</li>
+          <li>Data entry &amp; admin</li>
+          <li>Customer support</li>
+          <li>AI-tool proficient</li>
+        </ul>
+      </div>
+      <div class="zt-tier featured">
+        <h4>Mid-Skill Specialist</h4>
+        <p class="price-big"><span class="dollar">$</span>6–8<span class="per">/hr</span></p>
+        <p class="price-sub">From $1,000/month full-time</p>
+        <ul>
+          <li>Industry-trained</li>
+          <li>Bookkeepers, marketers</li>
+          <li>Ops analysts</li>
+          <li>3–5 years experience</li>
+        </ul>
+      </div>
+      <div class="zt-tier">
+        <h4>Technical / Senior</h4>
+        <p class="price-big"><span class="dollar">$</span>8–10<span class="per">/hr</span></p>
+        <p class="price-sub">From $1,400/month full-time</p>
+        <ul>
+          <li>Developers, engineers</li>
+          <li>Senior analysts</li>
+          <li>5+ years experience</li>
+          <li>Project leadership</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 6. CASE STUDIES ═══════════ -->
+  <h2>Marketing &amp; Advertising Teams We've Built</h2>
+  <p class="sub">Real results from marketing and advertising companies that scaled with Zedtreeo.</p>
+
+  <div class="zt-case-grid">
+    <a href="/case-studies/saas-seo-content-scaleup/" class="zt-case-card">
+      <div class="kpi-strip">
+        <span>3×</span>
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="content">
+        <p class="meta">US SaaS brand</p>
+        <h4>3× organic traffic in 8 months — SEO + content team of 4</h4>
+        <p>A Series-B SaaS company replaced their agency retainer with a dedicated Zedtreeo team of 2 writers, 1 SEO specialist and 1 designer — tripled organic traffic while cutting marketing ops cost 64%.</p>
+      </div>
+    </a>
+    <a href="/case-studies/uk-dtc-paid-media-pod/" class="zt-case-card">
+      <div class="kpi-strip">
+        <span>42%</span>
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="content">
+        <p class="meta">UK eCommerce brand</p>
+        <h4>Cut CAC 42% and scaled Meta spend 4× with a dedicated paid media pod</h4>
+        <p>A DTC beauty brand moved PPC from a UK agency to a Zedtreeo pod (1 media buyer + 1 designer + 1 analyst) — cut blended CAC 42% while scaling Meta from £60K to £240K/month.</p>
+      </div>
+    </a>
+    <a href="/case-studies/us-agency-production-offshore/" class="zt-case-card">
+      <div class="kpi-strip">
+        <span>$780K</span>
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="content">
+        <p class="meta">US digital agency</p>
+        <h4>Agency saved $780K in year one by offshoring production to Zedtreeo</h4>
+        <p>A 35-person US performance agency moved all creative production, QA and campaign builds to a 12-person Zedtreeo team — expanded capacity 2.2× while improving margin on every retainer.</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- ═══════════ 7. CERTIFICATIONS ═══════════ -->
+  <div class="zt-certs">
+    <h3>Marketing &amp; Advertising Compliance &amp; Certifications</h3>
+    <p class="lead">Every marketing and advertising professional we place is trained and certified in:</p>
+    <div class="zt-certs-row">
+      <span class="zt-cert-badge">GDPR</span>
+      <span class="zt-cert-badge">CCPA</span>
+      <span class="zt-cert-badge">ISO 27001</span>
+      <span class="zt-cert-badge">ISO 9001</span>
+      <span class="zt-cert-badge">SOC 2 Type II</span>
+    </div>
+  </div>
+
+  <!-- ═══════════ 8. PROCESS INFOGRAPHIC ═══════════ -->
+  <section class="zt-process">
+    <h2 style="margin-top:0;">How It Works</h2>
+    <p class="sub">From brief to fully-onboarded remote hire in under 7 days.</p>
+
+    <div class="zt-process-flow">
+      <div class="zt-step">
+        <div class="num-circle"><svg viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h4>Tell Us</h4>
+        <p>20-min brief on role &amp; timezone</p>
+      </div>
+      <div class="zt-step">
+        <div class="num-circle"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="#374B47" stroke-width="2.2"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="#374B47" stroke-width="2.2" stroke-linecap="round"/></svg></div>
+        <h4>Match &amp; Vet</h4>
+        <p>Multi-stage vetting process</p>
+      </div>
+      <div class="zt-step">
+        <div class="num-circle"><svg viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke="#374B47" stroke-width="2.2"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h4>Review Shortlist</h4>
+        <p>3 candidates in 48 hours</p>
+      </div>
+      <div class="zt-step">
+        <div class="num-circle"><svg viewBox="0 0 24 24" fill="none"><polyline points="9 11 12 14 22 4" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h4>Free Trial</h4>
+        <p>5 business days, no cost</p>
+      </div>
+      <div class="zt-step">
+        <div class="num-circle"><svg viewBox="0 0 24 24" fill="none"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="17 6 23 6 23 12" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h4>Scale</h4>
+        <p>Full HR &amp; compliance handled</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 9. FAQ ═══════════ -->
+  <h2>Frequently Asked Questions</h2>
+  <p class="sub">Direct answers to the questions marketing and advertising decision-makers ask us most often.</p>
+
+  <div class="zt-faq">
+    <details><summary>How much does it cost to hire a remote marketing team from Zedtreeo?</summary><p>Pricing starts from $6 per hour for marketing and advertising staff. Full-time content writers and SEO specialists typically run $960–$1,440 per month; senior PPC media buyers, email marketers and designers range $1,280–$2,080 monthly. There are no recruitment fees, benefits or software costs — you pay only for billable time. Expect 60–90% savings versus local hiring or agency retainers.</p></details>
+    <details><summary>What marketing tools and platforms are your staff trained on?</summary><p>Our teams are fluent in Google Ads, Meta Ads Manager, LinkedIn Campaign Manager, TikTok Ads, HubSpot, Klaviyo, Mailchimp, Marketo, Ahrefs, SEMrush, Surfer SEO, Screaming Frog, Google Analytics 4, Looker Studio, Figma, Adobe Creative Cloud, After Effects, Canva Pro, WordPress, Webflow, Shopify, and most major CMS and automation stacks used by brands and agencies.</p></details>
+    <details><summary>How quickly can I onboard a remote marketing team?</summary><p>You receive a curated shortlist within 48 hours of your requirement call. After interviews, your chosen staff starts inside 5–7 business days — including a 5-day free trial on real campaigns. For multi-role marketing pods of three to five positions, full onboarding typically completes within 10–14 days.</p></details>
+    <details><summary>Can Zedtreeo staff work in my timezone and brand voice?</summary><p>Yes. We staff overlapping shifts for clients across the US, UK, Europe, Middle East, Canada, Australia and New Zealand. Your team studies your brand guidelines, tone of voice, content calendar and approval workflow during week-one onboarding — so output is indistinguishable from your in-house marketing team.</p></details>
+    <details><summary>Do you work with agencies or only with in-house brand teams?</summary><p>Both. Roughly 40% of our marketing and advertising clients are agencies using Zedtreeo as their production and media-ops layer, 60% are in-house brand and growth teams augmenting their own department. We sign agency NDAs and work white-label — your clients never know we exist unless you want them to.</p></details>
+    <details><summary>Can I scale my marketing team up or down with campaign cycles?</summary><p>Yes. Scale up with new hires in 48 hours for launches, Q4 pushes or seasonal campaigns; scale down with 30 days' notice. No termination penalties, no severance. Most brands start with 2–3 roles and expand to 6–10 within the first year as marketing output compounds.</p></details>
+  </div>
+
+  <!-- ═══════════ 10. FINAL CTA ═══════════ -->
+  <section class="zt-cta">
+    <div class="inner">
+      <h3>Scale Your Marketing &amp; Advertising Team. Save 70–90%.</h3>
+      <p>Get 3 pre-vetted, AI-trained candidates in 48 hours. 5-day free trial. Starting from $5 per hour. Month-to-month.</p>
+      <a href="https://zedtreeo.com/#contact" class="btn">
+        Book Free Consultation
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="#161616" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════ 11. RELATED INDUSTRIES ═══════════ -->
+  <h2>Other Industries We Serve</h2>
+  <div class="zt-related-ind">
+    <a href="/industries/fashion-beauty/"><svg viewBox="0 0 24 24" fill="none"><path d="M3 21h18M3 7h18M3 14h18M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" stroke="#374B47" stroke-width="2"/></svg>E-Commerce</a>
+    <a href="/industries/technology-saas/"><svg viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z" stroke="#374B47" stroke-width="2"/></svg>SaaS &amp; Technology</a>
+    <a href="/industries/real-estate-and-property-management/"><svg viewBox="0 0 24 24" fill="none"><path d="M3 3h18v18H3z M3 9h18 M9 21V9" stroke="#374B47" stroke-width="2"/></svg>Real Estate</a>
+    <a href="/industries/technology-saas/"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#374B47" stroke-width="2"/><path d="M2 12h20 M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" stroke="#374B47" stroke-width="2"/></svg>Finance &amp; Accounting</a>
+    <a href="/industries/healthcare/"><svg viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="#374B47" stroke-width="2"/></svg>Healthcare</a>
+    <a href="/industries/legal/"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="#374B47" stroke-width="2"/></svg>Legal Services</a>
+    <a href="/industries/technology-saas/"><svg viewBox="0 0 24 24" fill="none"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l7-3 7 3z" stroke="#374B47" stroke-width="2"/></svg>Professional Services</a>
+    <a href="/industries/digital-marketing-and-content-creation/"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#374B47" stroke-width="2"/><line x1="8" y1="21" x2="16" y2="21" stroke="#374B47" stroke-width="2"/><line x1="12" y1="17" x2="12" y2="21" stroke="#374B47" stroke-width="2"/></svg>Media &amp; Publishing</a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     JSON-LD — Service + FAQPage schemas
+     ═══════════════════════════════════════════════════════════════════════════ -->

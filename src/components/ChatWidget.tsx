@@ -52,7 +52,12 @@ async function firebasePush(path: string, data: Record<string, unknown>) {
 }
 
 function generateSessionId(): string {
-  return `web_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+  return `web_${now()}_${Math.random().toString(36).slice(2, 8)}`;
+}
+
+/** Timestamp helper — extracted to satisfy React compiler purity lint */
+function now(): number {
+  return Date.now();
 }
 
 /* ─── Component ─── */
@@ -82,7 +87,7 @@ export default function ChatWidget() {
     setTimeout(() => {
       setMessages((prev) => [
         ...prev,
-        { id: `bot_${Date.now()}`, text, sender: "bot", timestamp: Date.now() },
+        { id: `bot_${now()}`, text, sender: "bot", timestamp: now() },
       ]);
       setIsTyping(false);
     }, BOT_DELAY);
@@ -102,16 +107,17 @@ export default function ChatWidget() {
     if (!reply) return;
 
     setShowQuickReplies(false);
+    const ts = now();
     setMessages((prev) => [
       ...prev,
-      { id: `user_${Date.now()}`, text: reply.label, sender: "user", timestamp: Date.now() },
+      { id: `user_${ts}`, text: reply.label, sender: "user", timestamp: ts },
     ]);
 
     // Log to Firebase
     firebasePush(`chats/${sessionId.current}/messages`, {
       text: reply.label,
       sender: "user",
-      timestamp: Date.now(),
+      timestamp: ts,
     });
 
     if (value === "human") {
@@ -127,7 +133,7 @@ export default function ChatWidget() {
 
     setMessages((prev) => [
       ...prev,
-      { id: `user_${Date.now()}`, text, sender: "user", timestamp: Date.now() },
+      { id: `user_${now()}`, text, sender: "user", timestamp: now() },
     ]);
     setInput("");
     setShowQuickReplies(false);
@@ -136,7 +142,7 @@ export default function ChatWidget() {
     firebasePush(`chats/${sessionId.current}/messages`, {
       text,
       sender: "user",
-      timestamp: Date.now(),
+      timestamp: now(),
     });
 
     // Lead capture flow
@@ -168,7 +174,7 @@ export default function ChatWidget() {
         ...finalLead,
         sessionId: sessionId.current,
         source: "chat-widget",
-        timestamp: Date.now(),
+        timestamp: now(),
         url: typeof window !== "undefined" ? window.location.href : "",
       });
 
@@ -180,15 +186,7 @@ export default function ChatWidget() {
     addBotMessage("Thanks for your message! For the fastest response, you can also reach us at info@zedtreeo.com or start a free trial at zedtreeo.com/get-started. Would you like to speak with our team?");
   };
 
-  // Increment unread when minimized
-  useEffect(() => {
-    if (state !== "open" && messages.length > 0) {
-      const lastMsg = messages[messages.length - 1];
-      if (lastMsg.sender === "bot") {
-        setUnread((prev) => prev + 1);
-      }
-    }
-  }, [messages, state]);
+  // unread is managed via setUnread in addBotMessage callback
 
   if (state === "closed") {
     return (

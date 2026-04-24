@@ -1,0 +1,484 @@
+<style>
+/* ═══ RESET & BASE ═══ */
+.zt-cs * { box-sizing: border-box; }
+.zt-cs { font-family: 'Geologica', system-ui, -apple-system, sans-serif; color: #5F6567; line-height: 1.7; font-size: 17px; max-width: 100%; }
+.zt-cs > *:not(.zt-cs-hero):not(.zt-cta):not(.zt-results-wrap) { max-width: 1180px; margin-left: auto; margin-right: auto; padding-left: 40px; padding-right: 40px; }
+.zt-cs h1, .zt-cs h2, .zt-cs h3, .zt-cs h4 { color: #161616; font-family: inherit; }
+.zt-cs h1 { font-size: 44px; font-weight: 600; line-height: 1.12; letter-spacing: -1.5px; margin: 0 0 18px; }
+.zt-cs h2 { font-size: 32px; font-weight: 700; line-height: 1.2; margin: 54px 0 20px; letter-spacing: -0.5px; }
+.zt-cs h3 { font-size: 22px; font-weight: 600; line-height: 1.3; margin: 28px 0 12px; }
+.zt-cs h4 { font-size: 18px; font-weight: 600; margin: 20px 0 8px; }
+.zt-cs p  { margin: 0 0 16px; }
+.zt-cs a  { color: #374B47; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(55,75,71,.3); transition: all .2s; }
+.zt-cs a:hover { color: #8FD299; border-bottom-color: #8FD299; }
+
+/* ═══ 1. HERO ═══ */
+.zt-cs-hero { position: relative; background: linear-gradient(135deg, #374B47 0%, #1e2b28 100%); color: #fff; padding: 80px 40px; border-radius: 0; margin: 0 0 48px; overflow: hidden; }
+.zt-cs-hero:before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(143,210,153,.15) 0%, transparent 70%); border-radius: 50%; }
+.zt-cs-hero .inner { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; }
+.zt-cs-hero .eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(143,210,153,.15); color: #8FD299; padding: 8px 18px; border-radius: 50px; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 22px; }
+.zt-cs-hero h1 { color: #fff; max-width: 880px; }
+.zt-cs-hero p.lede { color: #cfe0d5; font-size: 19px; max-width: 720px; margin: 0 0 36px; line-height: 1.55; }
+
+/* KPI Cards — Infographic */
+.zt-kpi-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+.zt-kpi { background: rgba(255,255,255,.06); border: 1px solid rgba(143,210,153,.25); backdrop-filter: blur(10px); padding: 28px 24px; border-radius: 0; position: relative; overflow: hidden; }
+.zt-kpi:before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #8FD299; }
+.zt-kpi .icon { width: 44px; height: 44px; margin: 0 0 14px; opacity: .9; }
+.zt-kpi .value { color: #8FD299; font-size: 44px; font-weight: 700; line-height: 1; margin: 0 0 6px; letter-spacing: -2px; }
+.zt-kpi .label { color: #e8f3ed; font-size: 14px; margin: 0; line-height: 1.4; }
+@media (max-width: 780px) { .zt-kpi-row { grid-template-columns: 1fr; } .zt-cs-hero h1 { font-size: 32px; } .zt-cs-hero { padding: 48px 28px; } }
+
+/* ═══ 2. SNAPSHOT ═══ */
+.zt-snapshot { background: #F7F7F7; border: 1px solid #e5e7eb; border-radius: 0; padding: 28px 32px; margin: 0 0 48px; }
+.zt-snapshot .title { display: flex; align-items: center; gap: 10px; margin: 0 0 18px; }
+.zt-snapshot .title h3 { margin: 0; font-size: 15px; color: #374B47; letter-spacing: 1.5px; text-transform: uppercase; }
+.zt-snapshot .title svg { width: 20px; height: 20px; }
+.zt-snap-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.zt-snap-grid .item { padding-left: 14px; border-left: 3px solid #8FD299; }
+.zt-snap-grid .item strong { display: block; color: #161616; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 4px; }
+.zt-snap-grid .item span { color: #5F6567; font-size: 15px; }
+@media (max-width: 780px) { .zt-snap-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ═══ 3. CHALLENGE CARDS ═══ */
+.zt-challenge-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 28px 0 40px; }
+.zt-challenge-card { background: #fff; border: 1px solid #e5e7eb; border-top: 4px solid #d54444; border-radius: 0; padding: 26px 24px; position: relative; }
+.zt-challenge-card .num { position: absolute; top: -18px; right: 18px; width: 36px; height: 36px; background: #d54444; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+.zt-challenge-card h4 { margin: 0 0 10px; color: #161616; }
+.zt-challenge-card p { margin: 0; font-size: 15px; line-height: 1.55; }
+@media (max-width: 780px) { .zt-challenge-grid { grid-template-columns: 1fr; } }
+
+/* ═══ 4. SOLUTION — TEAM GRAPHIC ═══ */
+.zt-solution { background: linear-gradient(135deg, #E4EDF3 0%, #F7F7F7 100%); border-radius: 0; padding: 40px 36px; margin: 28px 0 40px; }
+.zt-solution h3 { margin-top: 0; }
+.zt-team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 20px 0 0; }
+.zt-team-card { background: #fff; border-radius: 0; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start; box-shadow: 0 2px 8px rgba(22,22,22,.04); }
+.zt-team-card .avatar { width: 48px; height: 48px; background: #8FD299; border-radius: 0; display: flex; align-items: center; justify-content: center; color: #161616; font-weight: 700; flex-shrink: 0; }
+.zt-team-card .details strong { display: block; color: #161616; font-size: 16px; margin: 0 0 4px; }
+.zt-team-card .details span { color: #5F6567; font-size: 14px; }
+@media (max-width: 780px) { .zt-team-grid { grid-template-columns: 1fr; } }
+
+/* ═══ 5. TIMELINE INFOGRAPHIC ═══ */
+.zt-timeline-wrap { margin: 30px 0 40px; }
+.zt-timeline-svg { width: 100%; height: auto; display: block; margin-bottom: 20px; }
+.zt-phase-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.zt-phase-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 0; padding: 22px; position: relative; }
+.zt-phase-card .phase-num { position: absolute; top: -14px; left: 22px; background: #374B47; color: #8FD299; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; }
+.zt-phase-card .period { color: #8FD299; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 6px 0 8px; }
+.zt-phase-card h4 { margin: 0 0 6px; font-size: 16px; }
+.zt-phase-card p { margin: 0; font-size: 14px; }
+@media (max-width: 780px) { .zt-phase-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ═══ 6. RESULTS — BAR CHART INFOGRAPHIC ═══ */
+.zt-results-wrap { background: #161616; color: #fff; border-radius: 0; padding: 44px calc((100% - 1180px) / 2 + 40px); margin: 30px 0 40px; }
+.zt-results-wrap h3 { color: #fff; margin: 0 0 8px; font-size: 26px; }
+.zt-results-wrap p.lead { color: #a9b8b2; margin: 0 0 32px; font-size: 15px; }
+.zt-bar-chart { display: grid; gap: 22px; }
+.zt-bar-row { }
+.zt-bar-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.zt-bar-head .label { color: #fff; font-weight: 600; font-size: 15px; }
+.zt-bar-head .delta { color: #8FD299; font-weight: 700; font-size: 16px; }
+.zt-bar-track { background: rgba(255,255,255,.08); border-radius: 50px; height: 14px; position: relative; overflow: hidden; }
+.zt-bar-fill { height: 100%; background: linear-gradient(90deg, #8FD299 0%, #a5e0ac 100%); border-radius: 50px; position: relative; }
+.zt-bar-meta { display: flex; justify-content: space-between; margin-top: 6px; color: #a9b8b2; font-size: 12px; }
+
+/* ═══ 7. ROI DONUT INFOGRAPHIC ═══ */
+.zt-roi-wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 36px; align-items: center; background: #F7F7F7; border-radius: 0; padding: 40px 36px; margin: 30px 0 40px; }
+.zt-roi-donut { position: relative; text-align: center; }
+.zt-roi-donut .center-label { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+.zt-roi-donut .center-label .big { font-size: 42px; font-weight: 700; color: #161616; letter-spacing: -1.5px; display: block; }
+.zt-roi-donut .center-label .small { font-size: 13px; color: #5F6567; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+.zt-roi-table { }
+.zt-roi-table h3 { margin: 0 0 18px; }
+.zt-roi-table table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.zt-roi-table th { padding: 12px 14px; background: #374B47; color: #fff !important; text-align: left; font-weight: 600; }
+.zt-roi-table td { padding: 11px 14px; border-bottom: 1px solid #e5e7eb; background: #fff; }
+.zt-roi-table tr.total td { background: #f0faf2; font-weight: 700; color: #161616; border: 2px solid #8FD299; }
+@media (max-width: 880px) { .zt-roi-wrap { grid-template-columns: 1fr; } }
+
+/* ═══ 8. PULL QUOTE ═══ */
+.zt-quote { position: relative; background: #fff; border: 1px solid #e5e7eb; border-radius: 0; padding: 48px 44px 36px; margin: 40px 0; }
+.zt-quote .mark { position: absolute; top: -18px; left: 36px; background: #8FD299; color: #161616; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 700; font-family: Georgia, serif; line-height: 1; }
+.zt-quote .quote-text { font-size: 24px; font-weight: 300; line-height: 1.45; color: #161616; margin: 0 0 22px; letter-spacing: -0.3px; }
+.zt-quote .author-row { display: flex; align-items: center; gap: 16px; padding-top: 22px; border-top: 1px solid #e5e7eb; }
+.zt-quote .author-row img { width: 54px; height: 54px; border-radius: 50%; object-fit: cover; }
+.zt-quote .author-row .name { color: #161616; font-weight: 600; font-size: 16px; display: block; }
+.zt-quote .author-row .title { color: #5F6567; font-size: 14px; }
+.zt-quote .stars { margin-left: auto; color: #8FD299; font-size: 18px; letter-spacing: 2px; }
+
+/* ═══ 9. RELATED CARDS ═══ */
+.zt-related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 24px 0 40px; }
+.zt-related-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 0; padding: 22px; transition: all .2s; text-decoration: none !important; display: block; }
+.zt-related-card:hover { border-color: #8FD299; transform: translateY(-3px); box-shadow: 0 8px 24px rgba(143,210,153,.15); }
+.zt-related-card .icon { width: 40px; height: 40px; background: #f0faf2; border-radius: 0; display: flex; align-items: center; justify-content: center; margin: 0 0 14px; }
+.zt-related-card .meta { color: #8FD299; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 0 8px; }
+.zt-related-card h4 { margin: 0 0 8px; font-size: 16px; color: #161616; }
+.zt-related-card p { margin: 0; color: #5F6567; font-size: 14px; line-height: 1.5; }
+@media (max-width: 780px) { .zt-related-grid { grid-template-columns: 1fr; } }
+
+/* ═══ 10. CTA ═══ */
+.zt-cta { background: linear-gradient(135deg, #374B47 0%, #1e2b28 100%); color: #fff; padding: 50px 40px; border-radius: 0; margin: 40px 0; text-align: center; position: relative; overflow: hidden; }
+.zt-cta:before { content: ''; position: absolute; top: 0; right: 0; width: 280px; height: 280px; background: radial-gradient(circle, rgba(143,210,153,.15) 0%, transparent 70%); }
+.zt-cta .inner { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; }
+.zt-cta h3 { color: #fff !important; margin: 0 0 12px; font-size: 28px; }
+.zt-cta p  { color: #e8f3ed; margin: 0 auto 26px; max-width: 580px; font-size: 16px; }
+.zt-cta .btn { background: #8FD299; color: #161616 !important; padding: 15px 38px; border-radius: 50px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-size: 16px; border: none; transition: all .2s; }
+.zt-cta .btn:hover { background: #7ac284; transform: translateX(4px); }
+
+/* ═══ 11. AUTHOR EEAT ═══ */
+.zt-author { display: none; }
+.zt-author img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid #8FD299; }
+.zt-author .name { color: #161616; font-weight: 600; font-size: 16px; margin: 0; }
+.zt-author .bio  { color: #5F6567; font-size: 14px; margin: 4px 0 0; }
+.zt-author .meta { color: #8FD299; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; display: block; }
+</style>
+
+<article class="zt-cs" itemscope itemtype="https://schema.org/Article">
+  <meta itemprop="headline" content="2x Course Launch Velocity and 22-Point NPS Improvement With a Remote Education Operations Pod">
+  <meta itemprop="datePublished" content="2026-04-17">
+  <meta itemprop="dateModified" content="2026-04-17">
+
+  <!-- ═══════════ 1. HERO WITH INFOGRAPHIC KPI CARDS ═══════════ -->
+  <section class="zt-cs-hero">
+    <div class="inner">
+      <div class="eyebrow">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3L22 4" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        CASE STUDY &middot; Education &amp; E-Learning
+      </div>
+      <h1>2x Course Launch Velocity and 22-Point NPS Improvement With a Remote Education Operations Pod</h1>
+      <p class="lede">Facing a 12-week average course development cycle, a learner NPS that had dropped to 31, and a support ticket backlog that was driving 18% monthly churn, the platform deployed a 6-person remote education operations pod that now handles instructional design, LMS administration, student success coordination, and content QA inside Canvas LMS, Articulate 360, and Salesforce Education Cloud &mdash; starting from $5/hour.</p>
+
+      <div class="zt-kpi-row">
+        <div class="zt-kpi">
+          <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="value">75%</p>
+          <p class="label">Lower education operations cost</p>
+        </div>
+        <div class="zt-kpi">
+          <svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#8FD299" stroke-width="2.5"/><path d="M12 6v6l4 2" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="value">2x</p>
+          <p class="label">Course launch velocity</p>
+        </div>
+        <div class="zt-kpi">
+          <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M23 6l-9.5 9.5-5-5L1 18" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 6h6v6" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="value">+22</p>
+          <p class="label">NPS point improvement</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 2. CLIENT SNAPSHOT ═══════════ -->
+  <section class="zt-snapshot">
+    <div class="title">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="6" width="20" height="14" rx="2" stroke="#374B47" stroke-width="2.2"/></svg>
+      <h3>Client Snapshot</h3>
+    </div>
+    <div class="zt-snap-grid">
+      <div class="item"><strong>Industry</strong><span>Education &amp; E-Learning / EdTech</span></div>
+      <div class="item"><strong>Company Size</strong><span>120 employees, 145K active learners, Series B</span></div>
+      <div class="item"><strong>Geography</strong><span>United States</span></div>
+      <div class="item"><strong>Stack</strong><span>Canvas LMS, Articulate 360, Camtasia, Salesforce Education Cloud, Zendesk, Tableau</span></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 3. THE CHALLENGE ═══════════ -->
+  <h2>The Challenge</h2>
+  <p>The platform serves 145K active learners across professional certification, corporate upskilling, and continuing education programs. Its 8-person content and operations team was managing 320+ active courses, a new-course pipeline that had ballooned to a 12-week development cycle, and a student support queue averaging 72-hour first-response time. Learner NPS had dropped from 53 to 31 over two quarters, monthly churn hit 18%, and the VP of Product flagged course quality inconsistency as the #1 barrier to enterprise contract renewals.</p>
+
+  <div class="zt-challenge-grid">
+    <div class="zt-challenge-card">
+      <span class="num">1</span>
+      <h4>Course development cycle was killing market responsiveness</h4>
+      <p>Average time from course brief to live catalog listing had stretched to 12 weeks. The instructional design team of two was juggling 14 courses in various stages of development, with content QA backlogs adding 2&ndash;3 weeks to every launch. Three enterprise clients had requested custom certification tracks that the team couldn&rsquo;t begin for 4+ months. Competitors were launching equivalent courses in 5&ndash;6 weeks, and the platform had lost two RFPs specifically citing time-to-launch as the deciding factor.</p>
+    </div>
+    <div class="zt-challenge-card">
+      <span class="num">2</span>
+      <h4>Learner NPS was in free fall</h4>
+      <p>Net Promoter Score dropped from 53 to 31 in two quarters. The primary drivers: 72-hour average first-response time on support tickets, outdated course content that hadn&rsquo;t been refreshed in 12+ months across 40% of the catalog, and broken interactive modules flagged by learners but sitting in a 180-ticket QA backlog. Enterprise renewal conversations were stalling &mdash; three accounts representing $1.8M in ARR had moved to &ldquo;at risk&rdquo; status in Salesforce.</p>
+    </div>
+    <div class="zt-challenge-card">
+      <span class="num">3</span>
+      <h4>LMS administration was consuming the product team</h4>
+      <p>Canvas LMS required daily administration &mdash; enrollment processing, grade book configuration, certificate issuance, SCORM package uploads, and integration troubleshooting with Salesforce Education Cloud. Two product managers were spending 30% of their time on LMS housekeeping instead of roadmap execution. The Tableau dashboards that leadership relied on for learner analytics hadn&rsquo;t been updated in 6 weeks because nobody had bandwidth.</p>
+    </div>
+    <div class="zt-challenge-card">
+      <span class="num">4</span>
+      <h4>Hiring education operations staff locally was cost-prohibitive</h4>
+      <p>A US-based instructional designer cost $75K&ndash;$95K fully loaded. An LMS administrator ran $65K&ndash;$82K. A student success coordinator cost $55K&ndash;$70K. To staff instructional design, LMS administration, student success, content QA, course production, and data analytics, the platform needed 6 hires &mdash; roughly $440K in annual compensation. The board had capped operations headcount growth pending path-to-profitability milestones.</p>
+    </div>
+  </div>
+
+  <!-- Pull Quote (Challenge context) -->
+  <div class="zt-quote">
+    <span class="mark">&ldquo;</span>
+    <p class="quote-text">Our NPS dropped 22 points in two quarters. Course launches were taking 12 weeks. Support tickets were sitting 72 hours before first response. Enterprise clients were going &ldquo;at risk&rdquo; in Salesforce, and our product managers were spending a third of their time processing Canvas enrollments. We needed six people and had budget for zero.</p>
+    <div class="author-row">
+      <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><circle cx="27" cy="27" r="27" fill="#374B47"/><text x="27" y="35" text-anchor="middle" font-family="Geologica,Inter,system-ui,sans-serif" font-weight="700" font-size="26" fill="#8FD299">Z</text></svg>
+      <div>
+        <span class="name">VP of Product</span>
+        <span class="title">US EdTech Platform (name withheld &mdash; NDA)</span>
+      </div>
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    </div>
+  </div>
+
+  <!-- ═══════════ 4. THE SOLUTION — VISUAL TEAM BUILD ═══════════ -->
+  <h2>The Solution: A Pre-Vetted Zedtreeo Team</h2>
+  <p>Zedtreeo deployed a 6-person remote education operations pod within 11 business days. The pod was structured as a full-service course lifecycle and learner experience team &mdash; instructional designers, an LMS administrator, a student success coordinator, a content QA specialist, a course production assistant, and a data analyst &mdash; all operating inside Canvas LMS, Articulate 360, Camtasia, Salesforce Education Cloud, Zendesk, and Tableau with the platform&rsquo;s brand guidelines, assessment rubrics, and learner communication templates.</p>
+
+  <div class="zt-solution">
+    <h3 style="margin-top:0;">Team Composition Deployed</h3>
+    <p style="margin-bottom:20px;">A 6-person education operations pod sized to double course launch velocity, clear the content QA backlog, cut support response time to under 4 hours, and recover 30% of product manager bandwidth consumed by LMS administration.</p>
+
+    <div class="zt-team-grid">
+      <div class="zt-team-card">
+        <div class="avatar">I</div>
+        <div class="details"><strong>Instructional Designers (2)</strong><span>Course curriculum architecture, learning objective mapping, Articulate 360 Storyline and Rise module development, assessment design, SCORM/xAPI packaging, accessibility compliance (WCAG 2.1 AA).</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">L</div>
+        <div class="details"><strong>LMS Administrator (1)</strong><span>Canvas LMS configuration, enrollment automation, grade book management, certificate issuance workflows, SCORM package deployment, Salesforce Education Cloud integration maintenance, user role provisioning.</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">S</div>
+        <div class="details"><strong>Student Success Coordinator (1)</strong><span>Zendesk ticket triage and resolution, learner onboarding guidance, completion rate monitoring, at-risk learner outreach, course feedback collection, retention intervention workflows.</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">Q</div>
+        <div class="details"><strong>Content QA Specialist (1)</strong><span>Course content accuracy review, interactive module testing, broken link auditing, assessment validation, brand consistency checks, accessibility compliance verification, catalog refresh scheduling.</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">P</div>
+        <div class="details"><strong>Course Production Assistant (1)</strong><span>Camtasia video editing, screen recording post-production, caption and transcript generation, slide deck formatting, asset library management, thumbnail and banner creation.</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">D</div>
+        <div class="details"><strong>Data Analyst (1)</strong><span>Tableau dashboard maintenance, learner engagement analytics, completion and dropout funnel analysis, NPS tracking, cohort performance reporting, A/B test data processing for course optimization.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Tools &amp; AI Stack Deployed</h3>
+  <p>The pod operates inside the platform&rsquo;s existing stack &mdash; Canvas LMS for course delivery and learner management, Articulate 360 for interactive content authoring, Camtasia for video production, Salesforce Education Cloud for CRM and enrollment tracking, Zendesk for learner support, and Tableau for analytics and reporting. All team members signed NDAs with learner data confidentiality protections, completed FERPA-awareness training, and passed Canvas LMS and Articulate 360 proficiency assessments before accessing any learner data or course content.</p>
+
+  <!-- ═══════════ 5. TIMELINE INFOGRAPHIC (SVG) ═══════════ -->
+  <h2>Execution Timeline</h2>
+  <div class="zt-timeline-wrap">
+    <svg class="zt-timeline-svg" viewBox="0 0 800 80" xmlns="http://www.w3.org/2000/svg">
+      <line x1="60" y1="40" x2="740" y2="40" stroke="#e5e7eb" stroke-width="3" stroke-linecap="round"/>
+      <line x1="60" y1="40" x2="740" y2="40" stroke="#8FD299" stroke-width="3" stroke-linecap="round" stroke-dasharray="680" stroke-dashoffset="0"/>
+      <g>
+        <circle cx="60" cy="40" r="18" fill="#374B47" stroke="#8FD299" stroke-width="3"/>
+        <text x="60" y="46" text-anchor="middle" fill="#8FD299" font-size="14" font-weight="700" font-family="Geologica, sans-serif">1</text>
+      </g>
+      <g>
+        <circle cx="287" cy="40" r="18" fill="#374B47" stroke="#8FD299" stroke-width="3"/>
+        <text x="287" y="46" text-anchor="middle" fill="#8FD299" font-size="14" font-weight="700" font-family="Geologica, sans-serif">2</text>
+      </g>
+      <g>
+        <circle cx="513" cy="40" r="18" fill="#374B47" stroke="#8FD299" stroke-width="3"/>
+        <text x="513" y="46" text-anchor="middle" fill="#8FD299" font-size="14" font-weight="700" font-family="Geologica, sans-serif">3</text>
+      </g>
+      <g>
+        <circle cx="740" cy="40" r="18" fill="#8FD299" stroke="#374B47" stroke-width="3"/>
+        <text x="740" y="46" text-anchor="middle" fill="#161616" font-size="14" font-weight="700" font-family="Geologica, sans-serif">4</text>
+      </g>
+    </svg>
+
+    <div class="zt-phase-grid">
+      <div class="zt-phase-card">
+        <span class="phase-num">1</span>
+        <p class="period">Week 1</p>
+        <h4>Kickoff &amp; Access</h4>
+        <p>Requirements call, NDA execution with learner data protections, FERPA-awareness training, Canvas LMS + Articulate 360 + Salesforce + Zendesk + Tableau access provisioning. 6 specialists shortlisted and interviewed by VP of Product in 48 hours.</p>
+      </div>
+      <div class="zt-phase-card">
+        <span class="phase-num">2</span>
+        <p class="period">Week 2&ndash;4</p>
+        <h4>Onboarding &amp; Trial</h4>
+        <p>5-day free trial on live course production queue. Brand guidelines imported, assessment rubrics documented, first 3 course modules built in Articulate 360 with QA scoring. Canvas proficiency and Zendesk workflow verified.</p>
+      </div>
+      <div class="zt-phase-card">
+        <span class="phase-num">3</span>
+        <p class="period">Month 2&ndash;3</p>
+        <h4>Full Operations Activation</h4>
+        <p>Course development cycle drops to 6 weeks. Content QA backlog of 180 tickets cleared. Support first-response time drops to 3.8 hours. Tableau dashboards refreshed weekly. Product manager LMS time reduced from 30% to 5%.</p>
+      </div>
+      <div class="zt-phase-card">
+        <span class="phase-num">4</span>
+        <p class="period">Month 4&ndash;6</p>
+        <h4>NPS Recovery &amp; Scale</h4>
+        <p>Learner NPS recovers from 31 to 53. Monthly churn drops from 18% to 11%. Course launch velocity hits 2x baseline. Three enterprise renewals secured. 75% cost reduction booked. Pod extended with 1 video production specialist.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 6. RESULTS — BAR CHART INFOGRAPHIC ═══════════ -->
+  <h2>The Results</h2>
+  <p>Within 90 days, the education operations function transformed from an understaffed bottleneck into a learner experience engine that doubled course output, recovered NPS by 22 points, and freed the product team to execute on roadmap priorities instead of processing enrollments and answering support tickets.</p>
+
+  <div class="zt-results-wrap">
+    <h3>Performance Before &rarr; After</h3>
+    <p class="lead">Measured improvements across 90 days post-onboarding of the engagement.</p>
+
+    <div class="zt-bar-chart">
+      <div class="zt-bar-row">
+        <div class="zt-bar-head">
+          <span class="label">Course Development Cycle</span>
+          <span class="delta">2x faster</span>
+        </div>
+        <div class="zt-bar-track"><div class="zt-bar-fill" style="width: 92%;"></div></div>
+        <div class="zt-bar-meta"><span>Before: 12 weeks</span><span>After: 6 weeks</span></div>
+      </div>
+
+      <div class="zt-bar-row">
+        <div class="zt-bar-head">
+          <span class="label">Learner NPS</span>
+          <span class="delta">+22 points</span>
+        </div>
+        <div class="zt-bar-track"><div class="zt-bar-fill" style="width: 78%;"></div></div>
+        <div class="zt-bar-meta"><span>Before: 31</span><span>After: 53</span></div>
+      </div>
+
+      <div class="zt-bar-row">
+        <div class="zt-bar-head">
+          <span class="label">Support First-Response Time</span>
+          <span class="delta">+95% faster</span>
+        </div>
+        <div class="zt-bar-track"><div class="zt-bar-fill" style="width: 70%;"></div></div>
+        <div class="zt-bar-meta"><span>Before: 72 hours</span><span>After: 3.8 hours</span></div>
+      </div>
+
+      <div class="zt-bar-row">
+        <div class="zt-bar-head">
+          <span class="label">Annual Education Operations Cost</span>
+          <span class="delta">&minus;75%</span>
+        </div>
+        <div class="zt-bar-track"><div class="zt-bar-fill" style="width: 85%;"></div></div>
+        <div class="zt-bar-meta"><span>Before: $520,000</span><span>After: $130,000</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 7. ROI — DONUT + TABLE INFOGRAPHIC ═══════════ -->
+  <h2>ROI: Zedtreeo vs In-House Hire</h2>
+  <div class="zt-roi-wrap">
+    <div class="zt-roi-donut">
+      <svg viewBox="0 0 200 200" width="220" height="220" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="80" fill="none" stroke="#e5e7eb" stroke-width="28"/>
+        <circle cx="100" cy="100" r="80" fill="none" stroke="#8FD299" stroke-width="28" stroke-dasharray="502" stroke-dashoffset="125" transform="rotate(-90 100 100)" stroke-linecap="round"/>
+      </svg>
+      <div class="center-label">
+        <span class="big">75%</span>
+        <span class="small">Cost Saved</span>
+      </div>
+    </div>
+
+    <div class="zt-roi-table">
+      <h3>12-Month Cost Breakdown</h3>
+      <table>
+        <thead>
+          <tr>
+            <th style="color:#fff;">Line Item</th>
+            <th style="color:#fff;">In-House (United States)</th>
+            <th style="color:#fff;">Zedtreeo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Salary + Benefits</td><td>$432,000</td><td>$130,000</td></tr>
+          <tr><td>Recruitment</td><td>$36,000</td><td>Included</td></tr>
+          <tr><td>HR &amp; Compliance</td><td>$22,000</td><td>Included</td></tr>
+          <tr><td>Tools</td><td>$30,000</td><td>Included</td></tr>
+          <tr class="total"><td><strong>Total Annual</strong></td><td><strong>$520,000</strong></td><td><strong>$130,000</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════ 8. TESTIMONIAL ═══════════ -->
+  <h2>Client Testimonial</h2>
+  <div class="zt-quote">
+    <span class="mark">&ldquo;</span>
+    <p class="quote-text">The Zedtreeo education pod operates to our brand standards, our assessment rubrics, our learner communication templates &mdash; same quality bar as our internal team, at a fraction of the cost. Course launches went from 12 weeks to 6. NPS recovered 22 points. Our product managers got 30% of their time back from Canvas administration. 75% cheaper was the board case; the NPS recovery is the retention case.</p>
+    <div class="author-row">
+      <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><circle cx="27" cy="27" r="27" fill="#374B47"/><text x="27" y="35" text-anchor="middle" font-family="Geologica,Inter,system-ui,sans-serif" font-weight="700" font-size="26" fill="#8FD299">Z</text></svg>
+      <div>
+        <span class="name">VP of Product</span>
+        <span class="title">US EdTech Platform (name withheld &mdash; NDA)</span>
+      </div>
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    </div>
+  </div>
+
+  <!-- ═══════════ 9. RELATED ROLES (CROSS-LINKS) ═══════════ -->
+  <h2>Roles Deployed on This Engagement</h2>
+  <p>Every role included: AI-tool training, HR management, compliance, and replacement guarantee. Starting from <strong>$5 per hour</strong>, fully timezone-matched globally.</p>
+
+  <div class="zt-related-grid">
+    <a href="/hire-virtual-assistants/" class="zt-related-card">
+      <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="7" r="4" stroke="#374B47" stroke-width="2.2"/></svg></div>
+      <p class="meta">ROLE</p>
+      <h4>Virtual Assistants</h4>
+      <p>Student success coordination, enrollment processing, learner communications, LMS administration. From $5/hour.</p>
+    </a>
+    <a href="/remote-staffing-services/hire-remote-designers/" class="zt-related-card">
+      <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <p class="meta">ROLE</p>
+      <h4>Graphic Designers</h4>
+      <p>Course visual design, interactive module graphics, thumbnail creation, brand asset production. From $5/hour.</p>
+    </a>
+    <a href="/remote-staffing-services/hire-remote-digital-marketing-staff/" class="zt-related-card">
+      <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <p class="meta">ROLE</p>
+      <h4>Content Writers</h4>
+      <p>Course content authoring, curriculum writing, assessment question development, knowledge base articles. From $5/hour.</p>
+    </a>
+  </div>
+
+  <!-- ═══════════ 10. PRIMARY CTA ═══════════ -->
+  <section class="zt-cta">
+    <div class="inner">
+      <h3>Build an Education Operations Team Like This</h3>
+      <p>Get 3 pre-vetted, AI-trained candidates in 48 hours. Starting from $5 per hour. 5-day free trial. Save 70&ndash;90%.</p>
+      <a href="https://zedtreeo.com/#contact" class="btn">
+        Hire Remote Staff Now
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="#161616" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════ 11. RELATED CASE STUDIES ═══════════ -->
+  <h2>More Education &amp; E-Learning Case Studies</h2>
+  <div class="zt-related-grid">
+    <a href="/case-study-remote-research-analytics/" class="zt-related-card">
+      <p class="meta">Research</p>
+      <h4>Remote Research Analytics: Faster Insights, Lower Cost</h4>
+      <p>A US research firm tripled analytical output and cut data processing costs with a remote Zedtreeo research pod.</p>
+    </a>
+    <a href="/case-study-remote-customer-service-agents/" class="zt-related-card">
+      <p class="meta">Support</p>
+      <h4>Remote Customer Service Agents: Faster Response, Higher CSAT</h4>
+      <p>A US platform cut first-response time, improved CSAT scores, and reduced support operations cost with a dedicated remote Zedtreeo pod.</p>
+    </a>
+    <a href="/case-study-media-remote-staffing/" class="zt-related-card">
+      <p class="meta">Media</p>
+      <h4>Media Remote Staffing: Scaled Content Production</h4>
+      <p>A US media company scaled content production, cut turnaround time, and reduced production costs with a remote Zedtreeo media pod.</p>
+    </a>
+  </div>
+
+  <!-- ═══════════ 12. AUTHOR EEAT ═══════════ -->
+  <div class="zt-author">
+    <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><circle cx="27" cy="27" r="27" fill="#374B47"/><text x="27" y="35" text-anchor="middle" font-family="Geologica,Inter,system-ui,sans-serif" font-weight="700" font-size="26" fill="#8FD299">Z</text></svg>
+    <div>
+      <p class="name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">The Zedtreeo Editorial Team</span></p>
+      <p class="bio">Remote Staffing Research &amp; Content, Zedtreeo</p>
+      <span class="meta">Published April 17, 2026</span>
+    </div>
+  </div>
+</article>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     JSON-LD — Article schema
+     ═══════════════════════════════════════════════════════════════════════════ -->

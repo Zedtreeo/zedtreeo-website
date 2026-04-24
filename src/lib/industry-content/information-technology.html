@@ -1,0 +1,704 @@
+<style>
+/* ============================================================
+   ZT ROLE PAGE — Infographic Edition
+   ============================================================ */
+.zt-role-wrap{font-family:'Geologica',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#5F6567;line-height:1.65;font-size:16px;max-width:100%;margin:0;padding:0;box-sizing:border-box}
+.zt-role-wrap *,.zt-role-wrap *:before,.zt-role-wrap *:after{box-sizing:border-box}
+.zt-role-wrap h1,.zt-role-wrap h2,.zt-role-wrap h3,.zt-role-wrap h4{font-family:'Geologica',sans-serif;color:#161616;margin:0}
+.zt-role-wrap a{color:#374B47;text-decoration:none;font-weight:600}
+.zt-role-wrap a:hover{color:#8FD299}
+.zt-role-wrap img,.zt-role-wrap svg{max-width:100%;height:auto;display:block}
+
+/* ---------- HERO ---------- */
+.zt-role-hero{position:relative;background:linear-gradient(135deg,#374B47 0%,#2a3a36 100%);color:#fff;padding:80px 40px 90px;overflow:hidden;border-radius:0}
+.zt-role-hero:before{content:'';position:absolute;top:-30%;right:-15%;width:700px;height:700px;background:radial-gradient(circle,rgba(143,210,153,.18) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.zt-role-hero:after{content:'';position:absolute;bottom:-40%;left:-20%;width:500px;height:500px;background:radial-gradient(circle,rgba(143,210,153,.10) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.zt-role-hero-inner{position:relative;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:center}
+.zt-role-eyebrow{display:inline-block;background:rgba(143,210,153,.2);color:#8FD299;padding:6px 14px;border-radius:50px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px}
+.zt-role-hero h1{color:#fff;font-size:52px;line-height:1.1;font-weight:700;margin-bottom:18px;letter-spacing:-.5px}
+.zt-role-hero p.zt-role-lede{color:#e8f3ed;font-size:19px;line-height:1.55;margin-bottom:28px;max-width:560px}
+.zt-role-hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.zt-btn-primary{background:#8FD299;color:#161616 !important;padding:15px 30px;border-radius:50px;font-weight:700;display:inline-flex;align-items:center;gap:8px;font-size:16px;transition:transform .2s}
+.zt-btn-primary:hover{transform:translateY(-2px);color:#161616 !important}
+.zt-btn-secondary{background:transparent;color:#fff !important;padding:15px 28px;border-radius:50px;font-weight:600;display:inline-flex;align-items:center;gap:8px;border:2px solid rgba(255,255,255,.3);font-size:16px}
+.zt-btn-secondary:hover{border-color:#8FD299;color:#8FD299 !important}
+.zt-role-trust{display:flex;gap:22px;flex-wrap:wrap;padding-top:18px;border-top:1px solid rgba(255,255,255,.1)}
+.zt-role-trust-item{display:flex;align-items:center;gap:8px;color:#e8f3ed;font-size:14px}
+.zt-role-trust-item svg{width:18px;height:18px;flex-shrink:0}
+
+/* Hero stat card */
+.zt-role-hero-card{background:#fff;border-radius:20px;padding:36px 30px;box-shadow:0 30px 80px rgba(0,0,0,.28);color:#161616}
+.zt-role-hero-card h3{font-size:14px;color:#8FD299;text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-bottom:20px}
+.zt-role-price{font-size:56px;font-weight:800;color:#161616;line-height:1;margin-bottom:6px}
+.zt-role-price small{font-size:18px;font-weight:500;color:#5F6567;margin-left:4px}
+.zt-role-price-sub{color:#5F6567;font-size:14px;margin-bottom:22px}
+.zt-role-hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px;padding:18px 0;border-top:1px solid #E4EDF3;border-bottom:1px solid #E4EDF3}
+.zt-role-hero-stat{text-align:center}
+.zt-role-hero-stat-v{font-size:24px;font-weight:700;color:#374B47;line-height:1}
+.zt-role-hero-stat-l{font-size:12px;color:#5F6567;margin-top:4px}
+
+/* ---------- SECTION BASE ---------- */
+.zt-role-section{padding:80px 40px;max-width:1180px;margin:0 auto}
+.zt-role-section-head{text-align:center;max-width:780px;margin:0 auto 50px}
+.zt-role-section-eyebrow{display:inline-block;background:#E4EDF3;color:#374B47;padding:6px 14px;border-radius:50px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px}
+.zt-role-section h2{font-size:40px;line-height:1.15;font-weight:700;color:#161616;margin-bottom:16px;letter-spacing:-.5px}
+.zt-role-section-head p{font-size:18px;line-height:1.6;color:#5F6567}
+.zt-role-alt-bg{background:#E4EDF3}
+.zt-role-alt-bg .zt-role-section{max-width:1180px;margin:0 auto}
+
+/* ---------- VALUE PROPS ---------- */
+.zt-role-vp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.zt-role-vp-card{background:#fff;border-radius:16px;padding:34px 26px;text-align:left;border:1px solid #E4EDF3;transition:all .25s}
+.zt-role-vp-card:hover{border-color:#8FD299;box-shadow:0 20px 50px rgba(55,75,71,.08);transform:translateY(-4px)}
+.zt-role-vp-icon{width:56px;height:56px;background:linear-gradient(135deg,#8FD299 0%,#a5e0ac 100%);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:22px}
+.zt-role-vp-icon svg{width:28px;height:28px;color:#161616}
+.zt-role-vp-card h3{font-size:20px;font-weight:700;margin-bottom:10px;line-height:1.25}
+.zt-role-vp-card p{font-size:15px;line-height:1.6;color:#5F6567;margin:0}
+
+/* ---------- WHO FOR / NOT FOR ---------- */
+.zt-role-who-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.zt-role-who-card{background:#fff;border-radius:20px;padding:36px 32px;border:2px solid #E4EDF3}
+.zt-role-who-card.good{border-color:#8FD299;background:linear-gradient(135deg,#f0faf2 0%,#fff 60%)}
+.zt-role-who-card.bad{border-color:#f3dcdc;background:linear-gradient(135deg,#fdf3f3 0%,#fff 60%)}
+.zt-role-who-card h3{font-size:22px;font-weight:700;margin-bottom:22px;display:flex;align-items:center;gap:10px}
+.zt-role-who-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.zt-role-who-card.good .zt-role-who-icon{background:#8FD299;color:#161616}
+.zt-role-who-card.bad .zt-role-who-icon{background:#e0a2a2;color:#fff}
+.zt-role-who-icon svg{width:20px;height:20px}
+.zt-role-who-list{list-style:none;padding:0;margin:0}
+.zt-role-who-list li{padding:12px 0 12px 32px;position:relative;border-bottom:1px solid rgba(0,0,0,.05);color:#5F6567;font-size:15px;line-height:1.5}
+.zt-role-who-list li:last-child{border-bottom:none}
+.zt-role-who-list li:before{position:absolute;left:0;top:12px;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#fff;line-height:1}
+.zt-role-who-card.good .zt-role-who-list li:before{content:'✓';background:#8FD299;color:#161616}
+.zt-role-who-card.bad .zt-role-who-list li:before{content:'✗';background:#e0a2a2}
+
+/* ---------- PRICING ANCHOR ---------- */
+.zt-role-price-anchor{background:linear-gradient(135deg,#374B47 0%,#2a3a36 100%);color:#fff;border-radius:24px;padding:60px 40px;text-align:center;position:relative;overflow:hidden}
+.zt-role-price-anchor:before{content:'';position:absolute;top:-50%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(143,210,153,.15) 0%,transparent 70%);border-radius:50%}
+.zt-role-price-anchor-inner{position:relative;z-index:1}
+.zt-role-price-anchor h3{color:#fff;font-size:22px;margin-bottom:10px;font-weight:600}
+.zt-role-price-big{font-size:120px;font-weight:800;color:#8FD299;line-height:1;margin:20px 0;letter-spacing:-3px}
+.zt-role-price-big small{font-size:32px;color:#fff;font-weight:500;margin-left:6px;letter-spacing:0}
+.zt-role-price-anchor p{color:#e8f3ed;font-size:17px;max-width:600px;margin:0 auto 26px}
+.zt-role-price-breakdown{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px;padding-top:36px;border-top:1px solid rgba(255,255,255,.15)}
+.zt-role-price-item{text-align:center}
+.zt-role-price-item-label{font-size:12px;color:#8FD299;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+.zt-role-price-item-value{font-size:26px;font-weight:700;color:#fff;line-height:1.2}
+.zt-role-price-item-sub{font-size:13px;color:#e8f3ed;margin-top:4px}
+
+/* ---------- SKILLS WITH PROGRESS BARS ---------- */
+.zt-role-skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.zt-role-skills-col h3{font-size:22px;font-weight:700;color:#161616;margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid #8FD299;display:inline-block}
+.zt-role-skill{margin-bottom:22px}
+.zt-role-skill-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.zt-role-skill-name{font-weight:600;color:#161616;font-size:15px}
+.zt-role-skill-pct{font-size:13px;font-weight:700;color:#374B47}
+.zt-role-skill-bar{height:8px;background:#E4EDF3;border-radius:50px;overflow:hidden}
+.zt-role-skill-fill{height:100%;background:linear-gradient(90deg,#8FD299 0%,#a5e0ac 100%);border-radius:50px;transition:width 1s ease-out}
+
+/* ---------- TOOL STACK ---------- */
+.zt-role-tools-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.zt-role-tool{background:#fff;border:1px solid #E4EDF3;border-radius:14px;padding:22px 14px;text-align:center;transition:all .2s}
+.zt-role-tool:hover{border-color:#8FD299;transform:translateY(-3px);box-shadow:0 10px 30px rgba(55,75,71,.08)}
+.zt-role-tool-icon{width:48px;height:48px;margin:0 auto 12px;border-radius:12px;background:#F7F7F7;display:flex;align-items:center;justify-content:center}
+.zt-role-tool-icon svg{width:28px;height:28px;color:#374B47}
+.zt-role-tool-name{font-size:13px;font-weight:700;color:#161616;line-height:1.2}
+
+/* ---------- COMPARISON TABLE ---------- */
+.zt-role-compare{background:#fff;border-radius:20px;overflow:hidden;border:1px solid #E4EDF3;box-shadow:0 10px 40px rgba(55,75,71,.06)}
+.zt-role-compare table{width:100%;border-collapse:collapse}
+.zt-role-compare th,.zt-role-compare td{padding:18px 22px;text-align:left;border-bottom:1px solid #E4EDF3;font-size:15px}
+.zt-role-compare th{background:#161616;color:#fff !important;font-weight:700;font-size:14px;letter-spacing:.5px}
+.zt-role-compare th.winner{background:#8FD299;color:#161616 !important}
+.zt-role-compare td:first-child{font-weight:700;color:#161616;background:#F7F7F7}
+.zt-role-compare td.winner{background:#f0faf2;color:#161616;font-weight:700}
+.zt-role-compare td.winner:before{content:'★ ';color:#8FD299;margin-right:4px}
+
+/* ---------- PROCESS (5 STEPS) ---------- */
+.zt-role-process{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;position:relative;padding-top:30px}
+.zt-role-process:before{content:'';position:absolute;top:58px;left:10%;right:10%;height:2px;background:repeating-linear-gradient(90deg,#8FD299 0,#8FD299 8px,transparent 8px,transparent 16px);z-index:0}
+.zt-role-step{position:relative;text-align:center;z-index:1}
+.zt-role-step-num{width:56px;height:56px;border-radius:50%;background:#fff;border:3px solid #8FD299;color:#374B47;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;box-shadow:0 6px 20px rgba(143,210,153,.3)}
+.zt-role-step-title{font-size:16px;font-weight:700;color:#161616;margin-bottom:6px;line-height:1.25}
+.zt-role-step-desc{font-size:13px;color:#5F6567;line-height:1.5}
+
+/* ---------- CASE STUDIES ---------- */
+.zt-role-cases{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.zt-role-case{background:#fff;border-radius:18px;overflow:hidden;border:1px solid #E4EDF3;transition:all .25s}
+.zt-role-case:hover{border-color:#8FD299;box-shadow:0 20px 50px rgba(55,75,71,.1);transform:translateY(-4px)}
+.zt-role-case-kpi{background:#161616;color:#8FD299;padding:22px 24px;font-size:28px;font-weight:800;line-height:1.1}
+.zt-role-case-kpi small{font-size:13px;color:#e8f3ed;display:block;margin-top:4px;font-weight:500;letter-spacing:0}
+.zt-role-case-body{padding:24px}
+.zt-role-case-body h4{font-size:17px;font-weight:700;color:#161616;margin-bottom:10px;line-height:1.3}
+.zt-role-case-body p{font-size:14px;line-height:1.55;color:#5F6567;margin-bottom:14px}
+.zt-role-case-body a{font-size:14px;font-weight:600;color:#374B47}
+.zt-role-case-body a:hover{color:#8FD299}
+
+/* ---------- TESTIMONIALS ---------- */
+.zt-role-testim-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.zt-role-testim{background:#fff;border-radius:18px;padding:30px 28px;border:1px solid #E4EDF3;position:relative}
+.zt-role-testim-stars{display:flex;gap:4px;margin-bottom:16px}
+.zt-role-testim-stars svg{width:18px;height:18px;color:#8FD299}
+.zt-role-testim-quote{font-size:15px;line-height:1.6;color:#161616;margin-bottom:22px;font-style:italic}
+.zt-role-testim-author{display:flex;align-items:center;gap:14px;padding-top:18px;border-top:1px solid #E4EDF3}
+.zt-role-testim-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#8FD299 0%,#a5e0ac 100%);display:flex;align-items:center;justify-content:center;color:#161616;font-weight:700;font-size:16px;flex-shrink:0}
+.zt-role-testim-meta{flex:1}
+.zt-role-testim-name{font-size:14px;font-weight:700;color:#161616;line-height:1.2}
+.zt-role-testim-title{font-size:13px;color:#5F6567;margin-top:2px}
+
+/* ---------- FAQ ---------- */
+.zt-role-faq-wrap{max-width:860px;margin:0 auto}
+.zt-role-faq-item{background:#fff;border:1px solid #E4EDF3;border-radius:14px;margin-bottom:14px;overflow:hidden;transition:all .2s}
+.zt-role-faq-item[open]{border-color:#8FD299;box-shadow:0 10px 30px rgba(55,75,71,.08)}
+.zt-role-faq-item summary{padding:22px 26px;font-size:17px;font-weight:700;color:#161616;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.zt-role-faq-item summary::-webkit-details-marker{display:none}
+.zt-role-faq-toggle{width:32px;height:32px;border-radius:50%;background:#E4EDF3;color:#374B47;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;flex-shrink:0;transition:all .2s}
+.zt-role-faq-item[open] .zt-role-faq-toggle{background:#8FD299;transform:rotate(45deg)}
+.zt-role-faq-item p{padding:0 26px 24px;font-size:15px;line-height:1.65;color:#5F6567;margin:0}
+
+/* ---------- CTA ---------- */
+.zt-role-cta{position:relative;background:linear-gradient(135deg,#374B47 0%,#1f2f2c 100%);color:#fff;border-radius:24px;padding:70px 40px;text-align:center;overflow:hidden}
+.zt-role-cta:before{content:'';position:absolute;top:-30%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(143,210,153,.18) 0%,transparent 70%);border-radius:50%}
+.zt-role-cta:after{content:'';position:absolute;bottom:-40%;right:-15%;width:600px;height:600px;background:radial-gradient(circle,rgba(143,210,153,.10) 0%,transparent 70%);border-radius:50%}
+.zt-role-cta-inner{position:relative;z-index:1;max-width:700px;margin:0 auto}
+.zt-role-cta h2{color:#fff;font-size:40px;line-height:1.15;margin-bottom:16px;font-weight:700}
+.zt-role-cta p{color:#e8f3ed;font-size:18px;margin-bottom:30px}
+.zt-role-cta-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.zt-role-cta-signals{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:26px;padding-top:26px;border-top:1px solid rgba(255,255,255,.1)}
+.zt-role-cta-signal{display:flex;align-items:center;gap:8px;color:#e8f3ed;font-size:14px;font-weight:500}
+.zt-role-cta-signal svg{width:20px;height:20px;color:#8FD299}
+
+/* ---------- RELATED ROLES ---------- */
+.zt-role-related-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.zt-role-related{background:#fff;border:1px solid #E4EDF3;border-radius:12px;padding:18px 16px;text-align:center;color:#161616 !important;font-weight:600;font-size:14px;display:flex;flex-direction:column;align-items:center;gap:10px;transition:all .2s}
+.zt-role-related:hover{border-color:#8FD299;transform:translateY(-2px);box-shadow:0 10px 30px rgba(55,75,71,.08)}
+.zt-role-related svg{width:24px;height:24px;color:#374B47}
+
+/* ---------- AUTHOR BOX ---------- */
+.zt-role-author{background:#F7F7F7;border-radius:18px;padding:28px;display:flex;gap:20px;align-items:center;max-width:700px;margin:0 auto;border:1px solid #E4EDF3}
+.zt-role-author-photo{width:72px;height:72px;border-radius:50%;overflow:hidden;flex-shrink:0;background:#E4EDF3}
+.zt-role-author-photo img{width:100%;height:100%;object-fit:cover}
+.zt-role-author-info h4{font-size:17px;font-weight:700;color:#161616;margin-bottom:4px}
+.zt-role-author-info p{font-size:14px;color:#5F6567;line-height:1.5;margin:0}
+.zt-role-author-meta{font-size:12px;color:#8b8b8b;margin-top:6px}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1000px){
+  .zt-role-hero-inner{grid-template-columns:1fr;gap:40px}
+  .zt-role-hero h1{font-size:40px}
+  .zt-role-vp-grid{grid-template-columns:1fr 1fr}
+  .zt-role-tools-grid{grid-template-columns:repeat(3,1fr)}
+  .zt-role-process{grid-template-columns:repeat(5,1fr);gap:12px}
+  .zt-role-related-grid{grid-template-columns:repeat(2,1fr)}
+  .zt-role-cases,.zt-role-testim-grid{grid-template-columns:1fr}
+  .zt-role-section h2{font-size:32px}
+  .zt-role-section{padding:60px 24px}
+  .zt-role-hero{padding:60px 24px 70px}
+  .zt-role-price-big{font-size:90px}
+  .zt-role-price-big small{font-size:26px}
+  .zt-role-who-grid,.zt-role-skills-grid{grid-template-columns:1fr;gap:24px}
+}
+@media (max-width:600px){
+  .zt-role-vp-grid{grid-template-columns:1fr}
+  .zt-role-tools-grid{grid-template-columns:repeat(2,1fr)}
+  .zt-role-process{grid-template-columns:1fr;gap:24px}
+  .zt-role-process:before{display:none}
+  .zt-role-price-breakdown{grid-template-columns:1fr}
+  .zt-role-hero h1{font-size:34px}
+  .zt-role-section h2{font-size:28px}
+  .zt-role-author{flex-direction:column;text-align:center}
+  .zt-role-hero-stats{grid-template-columns:1fr}
+}
+</style>
+
+<!-- ============================================================
+     SVG SPRITE (Hidden — referenced by <use>)
+     ============================================================ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="zt-role-i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="zt-role-i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+    <symbol id="zt-role-i-star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+    <symbol id="zt-role-i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+    <symbol id="zt-role-i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+    <symbol id="zt-role-i-dollar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></symbol>
+    <symbol id="zt-role-i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="zt-role-i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="zt-role-i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+    <symbol id="zt-role-i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+    <symbol id="zt-role-i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+    <symbol id="zt-role-i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></symbol>
+    <symbol id="zt-role-i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="zt-role-i-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============================================================
+     PAGE START
+     ============================================================ -->
+<div class="zt-role-wrap" itemscope itemtype="https://schema.org/Service">
+  <meta itemprop="serviceType" content="Remote Information Technology Staff Staffing">
+  <meta itemprop="provider" content="Zedtreeo">
+  <meta itemprop="areaServed" content="Global">
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="zt-role-hero">
+  <div class="zt-role-hero-inner">
+    <div>
+      <span class="zt-role-eyebrow">HIRE INFORMATION TECHNOLOGY STAFF</span>
+      <h1 itemprop="name">Remote Staffing for Information Technology — From $8/hour</h1>
+      <p class="zt-role-lede" itemprop="description">Dedicated IT support engineers, sysadmins, junior and mid-level developers, DevOps, cloud, cybersecurity and QA staff embedded with your technology team — starting from $8 per hour, with 48-hour shortlist and 5-day free trial.</p>
+      <div class="zt-role-hero-ctas">
+        <a href="#get-shortlist" class="zt-btn-primary">Get My Shortlist in 48 Hours <svg width="16" height="16"><use href="#zt-role-i-arrow"/></svg></a>
+        <a href="#pricing" class="zt-btn-secondary">See Pricing</a>
+      </div>
+      <div class="zt-role-trust">
+        <div class="zt-role-trust-item"><svg><use href="#zt-role-i-check"/></svg>5-day free trial</div>
+        <div class="zt-role-trust-item"><svg><use href="#zt-role-i-check"/></svg>No long-term contract</div>
+        <div class="zt-role-trust-item"><svg><use href="#zt-role-i-check"/></svg>Replace anytime</div>
+      </div>
+    </div>
+    <div class="zt-role-hero-card">
+      <h3>Starting Rate</h3>
+      <div class="zt-role-price">$8<small>/hour</small></div>
+      <div class="zt-role-price-sub">Full-time dedicated · No hidden fees</div>
+      <div class="zt-role-hero-stats">
+        <div class="zt-role-hero-stat">
+          <div class="zt-role-hero-stat-v">48 hrs</div>
+          <div class="zt-role-hero-stat-l">Shortlist Ready</div>
+        </div>
+        <div class="zt-role-hero-stat">
+          <div class="zt-role-hero-stat-v">70–90%</div>
+          <div class="zt-role-hero-stat-l">Cost Savings</div>
+        </div>
+      </div>
+      <a href="#get-shortlist" class="zt-btn-primary" style="width:100%;justify-content:center">Request Candidates</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     VALUE PROPS
+     ============================================================ -->
+<section class="zt-role-section">
+  <div class="zt-role-section-head">
+    <span class="zt-role-section-eyebrow">WHY ZEDTREEO</span>
+    <h2>Why Tech Companies &amp; MSPs Build Teams With Zedtreeo</h2>
+    <p>Talent shortages. Comp inflation. 24×7 support demands. Zedtreeo gives you dedicated IT staff — software-stack matched, security-cleared, and available in every timezone.</p>
+  </div>
+  <div class="zt-role-vp-grid">
+    <div class="zt-role-vp-card">
+      <div class="zt-role-vp-icon"><svg><use href="#zt-role-i-bolt"/></svg></div>
+      <h3>Stack-matched hires</h3>
+      <p>We pre-match on exact tech stack — AWS, Azure, GCP, Kubernetes, Terraform, Python, Node, Java, .NET, React, Golang. Your new IT hire codes in your language, in your repo, from week one.</p>
+    </div>
+    <div class="zt-role-vp-card">
+      <div class="zt-role-vp-icon"><svg><use href="#zt-role-i-dollar"/></svg></div>
+      <h3>70–90% cost savings</h3>
+      <p>A US junior developer runs $90K+ fully loaded. A Zedtreeo mid-level developer starts at $1,280/month — you can run a 5-person engineering pod for less than one US hire, without recruiting cycles.</p>
+    </div>
+    <div class="zt-role-vp-card">
+      <div class="zt-role-vp-icon"><svg><use href="#zt-role-i-shield"/></svg></div>
+      <h3>24×7 coverage built-in</h3>
+      <p>Our timezone spread enables true follow-the-sun support: US East + APAC gives you 20 hours of coverage daily. Tier 1/2 IT support, monitoring rotations, on-call escalation — staffed without burning out onshore teams.</p>
+    </div>
+    <div class="zt-role-vp-card">
+      <div class="zt-role-vp-icon"><svg><use href="#zt-role-i-globe"/></svg></div>
+      <h3>Long retention, deep context</h3>
+      <p>Average Zedtreeo IT hire stays 2–3+ years — vs. 14-month US industry average. The context compounds: your new hire isn't relearning your codebase every year.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHO FOR / NOT FOR
+     ============================================================ -->
+<div class="zt-role-alt-bg">
+  <section class="zt-role-section">
+    <div class="zt-role-section-head">
+      <span class="zt-role-section-eyebrow">FIT CHECK</span>
+      <h2>Is a Information Technology Staff from Zedtreeo Right for You?</h2>
+      <p>Be honest — here's who wins with us and who doesn't.</p>
+    </div>
+    <div class="zt-role-who-grid">
+      <div class="zt-role-who-card good">
+        <h3><span class="zt-role-who-icon"><svg><use href="#zt-role-i-check"/></svg></span>This Is For You If…</h3>
+        <ul class="zt-role-who-list">
+          <li>You lead engineering, IT or product at a SaaS company, MSP or tech-forward business and need reliable capacity</li>
+          <li>You're scaling support tickets or on-call rotations and want 24×7 coverage without doubling payroll</li>
+          <li>You run an MSP delivering outsourced IT to SMBs and need white-label engineers to serve clients at lower cost</li>
+          <li>You want DevOps, cloud or cybersecurity talent but onshore comp is burning your runway</li>
+          <li>Your onshore engineers are stuck on support instead of high-value product work</li>
+        </ul>
+      </div>
+      <div class="zt-role-who-card bad">
+        <h3><span class="zt-role-who-icon"><svg><use href="#zt-role-i-x"/></svg></span>This Is Not For You If…</h3>
+        <ul class="zt-role-who-list">
+          <li>You need a CTO or VP Engineering to set roadmap (we fill execution, not leadership)</li>
+          <li>Your work requires US-person or bar-clearance access (classified, ITAR, FedRAMP High)</li>
+          <li>You need physical datacenter or on-prem hardware presence</li>
+          <li>Your architecture work requires onsite whiteboarding sessions that can't run over Zoom</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     PRICING ANCHOR
+     ============================================================ -->
+<section class="zt-role-section" id="pricing">
+  <div class="zt-role-price-anchor">
+    <div class="zt-role-price-anchor-inner">
+      <h3>TRANSPARENT PRICING</h3>
+      <div class="zt-role-price-big">$8<small>/hour, starting</small></div>
+      <p>Dedicated information technology staff from Zedtreeo — 70–90% lower than local hiring, with zero recruitment fees, zero HR overhead, zero hidden costs.</p>
+      <div class="zt-role-price-breakdown" itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+        <meta itemprop="lowPrice" content="8">
+        <meta itemprop="priceCurrency" content="USD">
+        <meta itemprop="availability" content="https://schema.org/InStock">
+        <div class="zt-role-price-item">
+          <div class="zt-role-price-item-label">HOURLY</div>
+          <div class="zt-role-price-item-value">$8+</div>
+          <div class="zt-role-price-item-sub">per hour</div>
+        </div>
+        <div class="zt-role-price-item">
+          <div class="zt-role-price-item-label">MONTHLY</div>
+          <div class="zt-role-price-item-value">$1,280+</div>
+          <div class="zt-role-price-item-sub">full-time · 160 hrs</div>
+        </div>
+        <div class="zt-role-price-item">
+          <div class="zt-role-price-item-label">ANNUAL</div>
+          <div class="zt-role-price-item-value">$15,360+</div>
+          <div class="zt-role-price-item-sub">1,920 hrs</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SKILLS WITH PROGRESS BARS
+     ============================================================ -->
+<div class="zt-role-alt-bg">
+  <section class="zt-role-section">
+    <div class="zt-role-section-head">
+      <span class="zt-role-section-eyebrow">CAPABILITIES</span>
+      <h2>What Your Information Technology Staff Can Do on Day One</h2>
+      <p>Pre-vetted, role-ready skills — no ramp-up needed.</p>
+    </div>
+    <div class="zt-role-skills-grid">
+      <div class="zt-role-skills-col">
+        <h3>Core Skills</h3>
+        <div class="zt-role-skill">
+          <div class="zt-role-skill-row"><span class="zt-role-skill-name">IT Support &amp; Service Desk (Tier 1/2/3)</span><span class="zt-role-skill-pct">96%</span></div>
+          <div class="zt-role-skill-bar"><div class="zt-role-skill-fill" style="width:96%"></div></div>
+        </div>
+        <div class="zt-role-skill">
+          <div class="zt-role-skill-row"><span class="zt-role-skill-name">Cloud (AWS / Azure / GCP)</span><span class="zt-role-skill-pct">93%</span></div>
+          <div class="zt-role-skill-bar"><div class="zt-role-skill-fill" style="width:93%"></div></div>
+        </div>
+        <div class="zt-role-skill">
+          <div class="zt-role-skill-row"><span class="zt-role-skill-name">DevOps &amp; SRE (Kubernetes, Terraform, CI/CD)</span><span class="zt-role-skill-pct">90%</span></div>
+          <div class="zt-role-skill-bar"><div class="zt-role-skill-fill" style="width:90%"></div></div>
+        </div>
+        <div class="zt-role-skill">
+          <div class="zt-role-skill-row"><span class="zt-role-skill-name">Full-Stack Development</span><span class="zt-role-skill-pct">92%</span></div>
+          <div class="zt-role-skill-bar"><div class="zt-role-skill-fill" style="width:92%"></div></div>
+        </div>
+      </div>
+      <div class="zt-role-skills-col">
+        <h3>Advanced Skills</h3>
+        <div class="zt-role-skill">
+          <div class="zt-role-skill-row"><span class="zt-role-skill-name">Cybersecurity &amp; SOC Operations</span><span class="zt-role-skill-pct">88%</span></div>
+          <div class="zt-role-skill-bar"><div class="zt-role-skill-fill" style="width:88%"></div></div>
+        </div>
+        <div class="zt-role-skill">
+          <div class="zt-role-skill-row"><span class="zt-role-skill-name">Database Administration (SQL, NoSQL)</span><span class="zt-role-skill-pct">91%</span></div>
+          <div class="zt-role-skill-bar"><div class="zt-role-skill-fill" style="width:91%"></div></div>
+        </div>
+        <div class="zt-role-skill">
+          <div class="zt-role-skill-row"><span class="zt-role-skill-name">QA &amp; Test Automation</span><span class="zt-role-skill-pct">93%</span></div>
+          <div class="zt-role-skill-bar"><div class="zt-role-skill-fill" style="width:93%"></div></div>
+        </div>
+        <div class="zt-role-skill">
+          <div class="zt-role-skill-row"><span class="zt-role-skill-name">Network &amp; Infrastructure Engineering</span><span class="zt-role-skill-pct">89%</span></div>
+          <div class="zt-role-skill-bar"><div class="zt-role-skill-fill" style="width:89%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     TOOL STACK
+     ============================================================ -->
+<section class="zt-role-section">
+  <div class="zt-role-section-head">
+    <span class="zt-role-section-eyebrow">TOOLS & STACK</span>
+    <h2>Fluent in Your Tools</h2>
+    <p>Your Information Technology Staff plugs into your existing stack — no retraining, no migration, no downtime.</p>
+  </div>
+  <div class="zt-role-tools-grid">
+    <div class="zt-role-tool"><div class="zt-role-tool-icon"><svg><use href="#zt-role-i-tool"/></svg></div><div class="zt-role-tool-name">AWS / Azure / GCP</div></div>
+    <div class="zt-role-tool"><div class="zt-role-tool-icon"><svg><use href="#zt-role-i-tool"/></svg></div><div class="zt-role-tool-name">Kubernetes / Docker / Terraform</div></div>
+    <div class="zt-role-tool"><div class="zt-role-tool-icon"><svg><use href="#zt-role-i-tool"/></svg></div><div class="zt-role-tool-name">Jira / ServiceNow / Freshservice</div></div>
+    <div class="zt-role-tool"><div class="zt-role-tool-icon"><svg><use href="#zt-role-i-tool"/></svg></div><div class="zt-role-tool-name">GitHub / GitLab / Bitbucket</div></div>
+    <div class="zt-role-tool"><div class="zt-role-tool-icon"><svg><use href="#zt-role-i-tool"/></svg></div><div class="zt-role-tool-name">Datadog / New Relic / PagerDuty</div></div>
+    <div class="zt-role-tool"><div class="zt-role-tool-icon"><svg><use href="#zt-role-i-tool"/></svg></div><div class="zt-role-tool-name">Splunk / CrowdStrike / SentinelOne</div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     COMPARISON TABLE
+     ============================================================ -->
+<div class="zt-role-alt-bg">
+  <section class="zt-role-section">
+    <div class="zt-role-section-head">
+      <span class="zt-role-section-eyebrow">THE COMPARISON</span>
+      <h2>Zedtreeo vs Local Hire vs Freelancers</h2>
+      <p>Here's what a information technology staff actually costs you across the three options.</p>
+    </div>
+    <div class="zt-role-compare">
+      <table>
+        <thead>
+          <tr>
+            <th style="color:#fff;">Factor</th>
+            <th style="color:#fff;">Local Information Technology Staff</th>
+            <th style="color:#fff;">Freelancer</th>
+            <th class="winner" style="color:#161616;">Zedtreeo Information Technology Staff</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Hourly Cost</td><td>$58</td><td>$40</td><td class="winner">$8/hr</td></tr>
+          <tr><td>Time to Hire</td><td>6–10 weeks</td><td>1–2 weeks</td><td class="winner">48 hours</td></tr>
+          <tr><td>Dedicated Commitment</td><td>Yes</td><td>No</td><td class="winner">Yes</td></tr>
+          <tr><td>Vetting / Testing</td><td>You do it</td><td>Minimal</td><td class="winner">Done by us</td></tr>
+          <tr><td>Replacement</td><td>Rehire cycle</td><td>Find new one</td><td class="winner">Swap in days</td></tr>
+          <tr><td>Free Trial</td><td>None</td><td>Rare</td><td class="winner">5-day free trial</td></tr>
+          <tr><td>HR / Payroll Overhead</td><td>Yours</td><td>1099 handling</td><td class="winner">Ours</td></tr>
+          <tr><td>Annual Savings</td><td>Baseline</td><td>20–40%</td><td class="winner">70–90%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     PROCESS — 5 STEPS
+     ============================================================ -->
+<section class="zt-role-section">
+  <div class="zt-role-section-head">
+    <span class="zt-role-section-eyebrow">HOW IT WORKS</span>
+    <h2>From Requirement to Working Information Technology Staff in 5 Steps</h2>
+    <p>A structured process that gets you a working hire in a week — not a month.</p>
+  </div>
+  <div class="zt-role-process">
+    <div class="zt-role-step">
+      <div class="zt-role-step-num">1</div>
+      <div class="zt-role-step-title">Tell Us What You Need</div>
+      <div class="zt-role-step-desc">30-min call: role scope, stack, hours, timezone overlap.</div>
+    </div>
+    <div class="zt-role-step">
+      <div class="zt-role-step-num">2</div>
+      <div class="zt-role-step-title">Match & Vet</div>
+      <div class="zt-role-step-desc">We shortlist 2–3 vetted candidates in 48 hours.</div>
+    </div>
+    <div class="zt-role-step">
+      <div class="zt-role-step-num">3</div>
+      <div class="zt-role-step-title">Interview & Pick</div>
+      <div class="zt-role-step-desc">You interview. You choose. Zero pressure.</div>
+    </div>
+    <div class="zt-role-step">
+      <div class="zt-role-step-num">4</div>
+      <div class="zt-role-step-title">5-Day Free Trial</div>
+      <div class="zt-role-step-desc">Test on real work. If it doesn't fit, we replace — no charge.</div>
+    </div>
+    <div class="zt-role-step">
+      <div class="zt-role-step-num">5</div>
+      <div class="zt-role-step-title">Onboard & Scale</div>
+      <div class="zt-role-step-desc">Dedicated information technology staff, monthly billing, ongoing support.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CASE STUDIES
+     ============================================================ -->
+<div class="zt-role-alt-bg">
+  <section class="zt-role-section">
+    <div class="zt-role-section-head">
+      <span class="zt-role-section-eyebrow">PROOF IT WORKS</span>
+      <h2>IT Teams Who Moved the Needle</h2>
+      <p>Real clients. Real outcomes. Real savings.</p>
+    </div>
+    <div class="zt-role-cases">
+      <a href="https://zedtreeo.com/case-study-remote-software-developers/" class="zt-role-case">
+        <div class="zt-role-case-kpi">68%<small>DevOps cost reduction</small></div>
+        <div class="zt-role-case-body">
+          <h4>SaaS company cut DevOps cost 68% while doubling deploys</h4>
+          <p>A growth-stage B2B SaaS had one overworked onshore DevOps engineer and frequent production incidents. A Zedtreeo 3-person DevOps pod (1 senior SRE, 2 mid-level) took deploy frequency from weekly to daily — at a fraction of onshore fully loaded cost.</p>
+          <span>Read case study →</span>
+        </div>
+      </a>
+      <a href="https://zedtreeo.com/case-study-remote-it-support-teams/" class="zt-role-case">
+        <div class="zt-role-case-kpi">2.6×<small>Client book growth</small></div>
+        <div class="zt-role-case-body">
+          <h4>MSP scaled to 80 SMB clients with offshore Tier 1/2 pod</h4>
+          <p>A US MSP was stuck at 30 SMB clients due to technician capacity. A 12-person Zedtreeo IT support pod handling Tier 1/2 tickets 24×7 grew the book to 80 clients without adding onshore seats — margin per client up 40%.</p>
+          <span>Read case study →</span>
+        </div>
+      </a>
+      <a href="https://zedtreeo.com/case-study-remote-cybersecurity-experts/" class="zt-role-case">
+        <div class="zt-role-case-kpi">24×7<small>SOC coverage</small></div>
+        <div class="zt-role-case-body">
+          <h4>Enterprise SOC ran 24×7 coverage with offshore cybersecurity team</h4>
+          <p>A mid-enterprise needed 24×7 SOC monitoring without building out a third shift onshore. A Zedtreeo cybersecurity pod (3 analysts, 1 senior) ran L1/L2 monitoring with 8-minute mean time to triage — matching their US benchmark.</p>
+          <span>Read case study →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+<section class="zt-role-section">
+  <div class="zt-role-section-head">
+    <span class="zt-role-section-eyebrow">WHAT CLIENTS SAY</span>
+    <h2>Trusted by Operators Globally</h2>
+    <p>Founders and COOs who scaled their teams with Zedtreeo IT teams.</p>
+  </div>
+  <div class="zt-role-testim-grid">
+    <div class="zt-role-testim">
+      <div class="zt-role-testim-stars">
+        <svg><use href="#zt-role-i-star"/></svg><svg><use href="#zt-role-i-star"/></svg><svg><use href="#zt-role-i-star"/></svg><svg><use href="#zt-role-i-star"/></svg><svg><use href="#zt-role-i-star"/></svg>
+      </div>
+      <p class="zt-role-testim-quote">"My Zedtreeo DevOps pod knows our AWS better than my original onshore team did. Deploy frequency is up, incidents are down, and I didn't have to hire a single onshore SRE to get here."</p>
+      <div class="zt-role-testim-author">
+        <div class="zt-role-testim-avatar">MB</div>
+        <div class="zt-role-testim-meta">
+          <div class="zt-role-testim-name">Michael B.</div>
+          <div class="zt-role-testim-title">VP Engineering, US SaaS</div>
+        </div>
+      </div>
+    </div>
+    <div class="zt-role-testim">
+      <div class="zt-role-testim-stars">
+        <svg><use href="#zt-role-i-star"/></svg><svg><use href="#zt-role-i-star"/></svg><svg><use href="#zt-role-i-star"/></svg><svg><use href="#zt-role-i-star"/></svg><svg><use href="#zt-role-i-star"/></svg>
+      </div>
+      <p class="zt-role-testim-quote">"Zedtreeo changed our business model. We went from pitching on quality-at-high-price to quality-at-sensible-price. Our close rate tripled. That's a new company, really."</p>
+      <div class="zt-role-testim-author">
+        <div class="zt-role-testim-avatar">HS</div>
+        <div class="zt-role-testim-meta">
+          <div class="zt-role-testim-name">Helena S.</div>
+          <div class="zt-role-testim-title">CEO, UK MSP</div>
+        </div>
+      </div>
+    </div>
+    <div class="zt-role-testim">
+      <div class="zt-role-testim-stars">
+        <svg><use href="#zt-role-i-star"/></svg><svg><use href="#zt-role-i-star"/></svg><svg><use href="#zt-role-i-star"/></svg><svg><use href="#zt-role-i-star"/></svg><svg><use href="#zt-role-i-star"/></svg>
+      </div>
+      <p class="zt-role-testim-quote">"I get 24×7 SOC coverage at a cost that fits my risk budget. Zedtreeo SOC analysts are certified, responsive, and part of my team in every meaningful way."</p>
+      <div class="zt-role-testim-author">
+        <div class="zt-role-testim-avatar">NG</div>
+        <div class="zt-role-testim-meta">
+          <div class="zt-role-testim-name">Nathan G.</div>
+          <div class="zt-role-testim-title">CISO, AU Financial Services</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<div class="zt-role-alt-bg">
+  <section class="zt-role-section">
+    <div class="zt-role-section-head">
+      <span class="zt-role-section-eyebrow">QUESTIONS</span>
+      <h2>Frequently Asked Questions</h2>
+      <p>Everything operators ask before hiring a information technology staff from Zedtreeo.</p>
+    </div>
+    <div class="zt-role-faq-wrap">
+      <details class="zt-role-faq-item"><summary>How much does remote IT staffing cost at Zedtreeo?<span class="zt-role-faq-toggle">+</span></summary><p>IT staff starts from $8/hour ($1,280/month, $15,360/year). IT support Tier 1 sits at $6–8/hour, mid-level developers at $8–10/hour, senior developers, DevOps and cybersecurity at $10–12/hour, senior architects and cloud specialists at $12–15/hour. Total cost lands 70–90% below onshore equivalents.</p></details>
+      <details class="zt-role-faq-item"><summary>What IT roles can you staff?<span class="zt-role-faq-toggle">+</span></summary><p>IT support (Tier 1/2/3), sysadmins, junior and mid-level full-stack developers, DevOps and SRE, cloud engineers (AWS, Azure, GCP), cybersecurity analysts and SOC staff, QA automation engineers, DBAs, network engineers and technical project managers.</p></details>
+      <details class="zt-role-faq-item"><summary>Can you provide 24×7 coverage?<span class="zt-role-faq-toggle">+</span></summary><p>Yes. Our timezone spread enables follow-the-sun support and on-call rotations. For 24×7 SOC, NOC or IT support, we staff across multiple shifts with proper handoff documentation. You get continuous coverage without burning out your onshore team.</p></details>
+      <details class="zt-role-faq-item"><summary>How fast can we onboard an IT hire?<span class="zt-role-faq-toggle">+</span></summary><p>Shortlist of 2–3 pre-vetted candidates within 48 hours. Technical screen, live coding challenge or troubleshooting simulation, and stack-specific matching complete in week one. Most IT hires are in sandbox access and first tickets by day 7.</p></details>
+      <details class="zt-role-faq-item"><summary>Can you staff cybersecurity and SOC roles?<span class="zt-role-faq-toggle">+</span></summary><p>Yes. We place SOC analysts (L1/L2/L3), vulnerability management specialists, GRC analysts, cloud security engineers, pen testers and SIEM engineers. Certifications include CompTIA Security+, CEH, CISSP, Azure/AWS security specialties. ISO 27001-certified work environments.</p></details>
+      <details class="zt-role-faq-item"><summary>Do you handle IP, code confidentiality and GitHub access?<span class="zt-role-faq-toggle">+</span></summary><p>Yes. Mutual NDA, IP assignment, VPN-only GitHub/GitLab access, ISO 27001-certified offices, disabled USB/external drives, and full audit logs. Your source code stays in your repos — no offline copies, no personal-device access.</p></details>
+      <details class="zt-role-faq-item"><summary>Can I hire one engineer or do I need a pod?<span class="zt-role-faq-toggle">+</span></summary><p>Either. Many clients start with one senior engineer and scale to pods of 3–10 as they grow. MSPs often staff Tier 1/2 pods of 8–15 from day one for 24×7 client coverage. We recommend the shape that fits your roadmap — not a fixed package.</p></details>
+      <details class="zt-role-faq-item"><summary>What if an engineer isn't the right fit?<span class="zt-role-faq-toggle">+</span></summary><p>We run a 5-day free trial at the start. If fit isn't right, no bill. Post-trial, we track output (tickets closed, PRs merged, deploy success rate, code review quality) and replace within 7–14 days if performance drops. Retention sits well above the industry 14-month US average.</p></details>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     CTA
+     ============================================================ -->
+<section class="zt-role-section" id="get-shortlist">
+  <div class="zt-role-cta">
+    <div class="zt-role-cta-inner">
+      <h2>Ready to Hire Your Information Technology Staff?</h2>
+      <p>Get a curated shortlist in 48 hours. 5-day free trial. No long-term contract. Starting from $8 per hour.</p>
+      <div class="zt-role-cta-buttons">
+        <a href="/contact/" class="zt-btn-primary">Get My Shortlist <svg width="16" height="16"><use href="#zt-role-i-arrow"/></svg></a>
+        <a href="/candidates/" class="zt-btn-secondary">Browse Candidates</a>
+      </div>
+      <div class="zt-role-cta-signals">
+        <div class="zt-role-cta-signal"><svg><use href="#zt-role-i-clock"/></svg>48-hour shortlist</div>
+        <div class="zt-role-cta-signal"><svg><use href="#zt-role-i-check"/></svg>5-day free trial</div>
+        <div class="zt-role-cta-signal"><svg><use href="#zt-role-i-dollar"/></svg>From $8/hour</div>
+        <div class="zt-role-cta-signal"><svg><use href="#zt-role-i-shield"/></svg>Replace anytime</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     AUTHOR / EEAT BOX
+     ============================================================ -->
+<section class="zt-role-section" style="padding-top:0" itemprop="author" itemscope itemtype="https://schema.org/Person">
+  <div class="zt-role-author">
+    <div class="zt-role-author-photo"><img src="https://zedtreeo.com/wp-content/uploads/2026/03/anita-singh-author.jpg" alt="Anita Singh" loading="lazy" itemprop="image"></div>
+    <div class="zt-role-author-info">
+      <h4 itemprop="name">Anita Singh</h4>
+      <p itemprop="jobTitle">Head of Content, Zedtreeo</p>
+      <div class="zt-role-author-meta">Last updated: 2026-04-16 · Reviewed by Zedtreeo hiring team</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     RELATED ROLES
+     ============================================================ -->
+<div class="zt-role-alt-bg">
+  <section class="zt-role-section">
+    <div class="zt-role-section-head">
+      <span class="zt-role-section-eyebrow">EXPLORE MORE</span>
+      <h2>Other Roles We Staff Globally</h2>
+      <p>Build out your full remote team, one specialist at a time.</p>
+    </div>
+    <div class="zt-role-related-grid">
+      <a href="https://zedtreeo.com/remote-staffing-services/hire-remote-it-staff/" class="zt-role-related"><svg><use href="#zt-role-i-code"/></svg>IT Staff Service</a>
+      <a href="https://zedtreeo.com/remote-staffing-services/hire-remote-it-staff/" class="zt-role-related"><svg><use href="#zt-role-i-users"/></svg>QA &amp; Testing</a>
+      <a href="https://zedtreeo.com/remote-staffing-services/hire-remote-digital-marketing-staff/" class="zt-role-related"><svg><use href="#zt-role-i-briefcase"/></svg>Digital Marketing</a>
+      <a href="https://zedtreeo.com/remote-staffing-services/hire-remote-customer-support/" class="zt-role-related"><svg><use href="#zt-role-i-shield"/></svg>Customer Support</a>
+      <a href="https://zedtreeo.com/remote-staffing-services/hire-remote-it-staff/" class="zt-role-related"><svg><use href="#zt-role-i-dollar"/></svg>Research &amp; Analytics</a>
+      <a href="https://zedtreeo.com/remote-staffing-services/hire-remote-digital-marketing-staff/" class="zt-role-related"><svg><use href="#zt-role-i-globe"/></svg>Designers</a>
+      <a href="https://zedtreeo.com/remote-staffing-services/hire-remote-administrative-and-assistant/" class="zt-role-related"><svg><use href="#zt-role-i-tool"/></svg>Administrative &amp; VA</a>
+      <a href="https://zedtreeo.com/remote-staffing-services/hire-remote-hr-and-recruitment-staff/" class="zt-role-related"><svg><use href="#zt-role-i-calendar"/></svg>HR &amp; Recruitment</a>
+    </div>
+  </section>
+</div>
+
+</div><!-- /.zt-role-wrap -->
+
+<!-- ============================================================
+     JSON-LD SCHEMA — Service + FAQPage + BreadcrumbList
+     ============================================================ -->

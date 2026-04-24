@@ -1,0 +1,484 @@
+<style>
+/* ═══ RESET & BASE ═══ */
+.zt-cs * { box-sizing: border-box; }
+.zt-cs { font-family: 'Geologica', system-ui, -apple-system, sans-serif; color: #5F6567; line-height: 1.7; font-size: 17px; max-width: 100%; }
+.zt-cs > *:not(.zt-cs-hero):not(.zt-cta):not(.zt-results-wrap) { max-width: 1180px; margin-left: auto; margin-right: auto; padding-left: 40px; padding-right: 40px; }
+.zt-cs h1, .zt-cs h2, .zt-cs h3, .zt-cs h4 { color: #161616; font-family: inherit; }
+.zt-cs h1 { font-size: 44px; font-weight: 600; line-height: 1.12; letter-spacing: -1.5px; margin: 0 0 18px; }
+.zt-cs h2 { font-size: 32px; font-weight: 700; line-height: 1.2; margin: 54px 0 20px; letter-spacing: -0.5px; }
+.zt-cs h3 { font-size: 22px; font-weight: 600; line-height: 1.3; margin: 28px 0 12px; }
+.zt-cs h4 { font-size: 18px; font-weight: 600; margin: 20px 0 8px; }
+.zt-cs p  { margin: 0 0 16px; }
+.zt-cs a  { color: #374B47; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(55,75,71,.3); transition: all .2s; }
+.zt-cs a:hover { color: #8FD299; border-bottom-color: #8FD299; }
+
+/* ═══ 1. HERO ═══ */
+.zt-cs-hero { position: relative; background: linear-gradient(135deg, #374B47 0%, #1e2b28 100%); color: #fff; padding: 80px 40px; border-radius: 0; margin: 0 0 48px; overflow: hidden; }
+.zt-cs-hero:before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(143,210,153,.15) 0%, transparent 70%); border-radius: 50%; }
+.zt-cs-hero .inner { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; }
+.zt-cs-hero .eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(143,210,153,.15); color: #8FD299; padding: 8px 18px; border-radius: 50px; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 22px; }
+.zt-cs-hero h1 { color: #fff; max-width: 880px; }
+.zt-cs-hero p.lede { color: #cfe0d5; font-size: 19px; max-width: 720px; margin: 0 0 36px; line-height: 1.55; }
+
+/* KPI Cards — Infographic */
+.zt-kpi-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+.zt-kpi { background: rgba(255,255,255,.06); border: 1px solid rgba(143,210,153,.25); backdrop-filter: blur(10px); padding: 28px 24px; border-radius: 0; position: relative; overflow: hidden; }
+.zt-kpi:before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #8FD299; }
+.zt-kpi .icon { width: 44px; height: 44px; margin: 0 0 14px; opacity: .9; }
+.zt-kpi .value { color: #8FD299; font-size: 44px; font-weight: 700; line-height: 1; margin: 0 0 6px; letter-spacing: -2px; }
+.zt-kpi .label { color: #e8f3ed; font-size: 14px; margin: 0; line-height: 1.4; }
+@media (max-width: 780px) { .zt-kpi-row { grid-template-columns: 1fr; } .zt-cs-hero h1 { font-size: 32px; } .zt-cs-hero { padding: 48px 28px; } }
+
+/* ═══ 2. SNAPSHOT ═══ */
+.zt-snapshot { background: #F7F7F7; border: 1px solid #e5e7eb; border-radius: 0; padding: 28px 32px; margin: 0 0 48px; }
+.zt-snapshot .title { display: flex; align-items: center; gap: 10px; margin: 0 0 18px; }
+.zt-snapshot .title h3 { margin: 0; font-size: 15px; color: #374B47; letter-spacing: 1.5px; text-transform: uppercase; }
+.zt-snapshot .title svg { width: 20px; height: 20px; }
+.zt-snap-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.zt-snap-grid .item { padding-left: 14px; border-left: 3px solid #8FD299; }
+.zt-snap-grid .item strong { display: block; color: #161616; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 4px; }
+.zt-snap-grid .item span { color: #5F6567; font-size: 15px; }
+@media (max-width: 780px) { .zt-snap-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ═══ 3. CHALLENGE CARDS ═══ */
+.zt-challenge-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 28px 0 40px; }
+.zt-challenge-card { background: #fff; border: 1px solid #e5e7eb; border-top: 4px solid #d54444; border-radius: 0; padding: 26px 24px; position: relative; }
+.zt-challenge-card .num { position: absolute; top: -18px; right: 18px; width: 36px; height: 36px; background: #d54444; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+.zt-challenge-card h4 { margin: 0 0 10px; color: #161616; }
+.zt-challenge-card p { margin: 0; font-size: 15px; line-height: 1.55; }
+@media (max-width: 780px) { .zt-challenge-grid { grid-template-columns: 1fr; } }
+
+/* ═══ 4. SOLUTION — TEAM GRAPHIC ═══ */
+.zt-solution { background: linear-gradient(135deg, #E4EDF3 0%, #F7F7F7 100%); border-radius: 0; padding: 40px 36px; margin: 28px 0 40px; }
+.zt-solution h3 { margin-top: 0; }
+.zt-team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 20px 0 0; }
+.zt-team-card { background: #fff; border-radius: 0; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start; box-shadow: 0 2px 8px rgba(22,22,22,.04); }
+.zt-team-card .avatar { width: 48px; height: 48px; background: #8FD299; border-radius: 0; display: flex; align-items: center; justify-content: center; color: #161616; font-weight: 700; flex-shrink: 0; }
+.zt-team-card .details strong { display: block; color: #161616; font-size: 16px; margin: 0 0 4px; }
+.zt-team-card .details span { color: #5F6567; font-size: 14px; }
+@media (max-width: 780px) { .zt-team-grid { grid-template-columns: 1fr; } }
+
+/* ═══ 5. TIMELINE INFOGRAPHIC ═══ */
+.zt-timeline-wrap { margin: 30px 0 40px; }
+.zt-timeline-svg { width: 100%; height: auto; display: block; margin-bottom: 20px; }
+.zt-phase-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.zt-phase-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 0; padding: 22px; position: relative; }
+.zt-phase-card .phase-num { position: absolute; top: -14px; left: 22px; background: #374B47; color: #8FD299; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; }
+.zt-phase-card .period { color: #8FD299; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 6px 0 8px; }
+.zt-phase-card h4 { margin: 0 0 6px; font-size: 16px; }
+.zt-phase-card p { margin: 0; font-size: 14px; }
+@media (max-width: 780px) { .zt-phase-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ═══ 6. RESULTS — BAR CHART INFOGRAPHIC ═══ */
+.zt-results-wrap { background: #161616; color: #fff; border-radius: 0; padding: 44px calc((100% - 1180px) / 2 + 40px); margin: 30px 0 40px; }
+.zt-results-wrap h3 { color: #fff; margin: 0 0 8px; font-size: 26px; }
+.zt-results-wrap p.lead { color: #a9b8b2; margin: 0 0 32px; font-size: 15px; }
+.zt-bar-chart { display: grid; gap: 22px; }
+.zt-bar-row { }
+.zt-bar-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.zt-bar-head .label { color: #fff; font-weight: 600; font-size: 15px; }
+.zt-bar-head .delta { color: #8FD299; font-weight: 700; font-size: 16px; }
+.zt-bar-track { background: rgba(255,255,255,.08); border-radius: 50px; height: 14px; position: relative; overflow: hidden; }
+.zt-bar-fill { height: 100%; background: linear-gradient(90deg, #8FD299 0%, #a5e0ac 100%); border-radius: 50px; position: relative; }
+.zt-bar-meta { display: flex; justify-content: space-between; margin-top: 6px; color: #a9b8b2; font-size: 12px; }
+
+/* ═══ 7. ROI DONUT INFOGRAPHIC ═══ */
+.zt-roi-wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 36px; align-items: center; background: #F7F7F7; border-radius: 0; padding: 40px 36px; margin: 30px 0 40px; }
+.zt-roi-donut { position: relative; text-align: center; }
+.zt-roi-donut .center-label { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+.zt-roi-donut .center-label .big { font-size: 42px; font-weight: 700; color: #161616; letter-spacing: -1.5px; display: block; }
+.zt-roi-donut .center-label .small { font-size: 13px; color: #5F6567; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+.zt-roi-table { }
+.zt-roi-table h3 { margin: 0 0 18px; }
+.zt-roi-table table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.zt-roi-table th { padding: 12px 14px; background: #374B47; color: #fff !important; text-align: left; font-weight: 600; }
+.zt-roi-table td { padding: 11px 14px; border-bottom: 1px solid #e5e7eb; background: #fff; }
+.zt-roi-table tr.total td { background: #f0faf2; font-weight: 700; color: #161616; border: 2px solid #8FD299; }
+@media (max-width: 880px) { .zt-roi-wrap { grid-template-columns: 1fr; } }
+
+/* ═══ 8. PULL QUOTE ═══ */
+.zt-quote { position: relative; background: #fff; border: 1px solid #e5e7eb; border-radius: 0; padding: 48px 44px 36px; margin: 40px 0; }
+.zt-quote .mark { position: absolute; top: -18px; left: 36px; background: #8FD299; color: #161616; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 700; font-family: Georgia, serif; line-height: 1; }
+.zt-quote .quote-text { font-size: 24px; font-weight: 300; line-height: 1.45; color: #161616; margin: 0 0 22px; letter-spacing: -0.3px; }
+.zt-quote .author-row { display: flex; align-items: center; gap: 16px; padding-top: 22px; border-top: 1px solid #e5e7eb; }
+.zt-quote .author-row img { width: 54px; height: 54px; border-radius: 50%; object-fit: cover; }
+.zt-quote .author-row .name { color: #161616; font-weight: 600; font-size: 16px; display: block; }
+.zt-quote .author-row .title { color: #5F6567; font-size: 14px; }
+.zt-quote .stars { margin-left: auto; color: #8FD299; font-size: 18px; letter-spacing: 2px; }
+
+/* ═══ 9. RELATED CARDS ═══ */
+.zt-related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 24px 0 40px; }
+.zt-related-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 0; padding: 22px; transition: all .2s; text-decoration: none !important; display: block; }
+.zt-related-card:hover { border-color: #8FD299; transform: translateY(-3px); box-shadow: 0 8px 24px rgba(143,210,153,.15); }
+.zt-related-card .icon { width: 40px; height: 40px; background: #f0faf2; border-radius: 0; display: flex; align-items: center; justify-content: center; margin: 0 0 14px; }
+.zt-related-card .meta { color: #8FD299; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 0 8px; }
+.zt-related-card h4 { margin: 0 0 8px; font-size: 16px; color: #161616; }
+.zt-related-card p { margin: 0; color: #5F6567; font-size: 14px; line-height: 1.5; }
+@media (max-width: 780px) { .zt-related-grid { grid-template-columns: 1fr; } }
+
+/* ═══ 10. CTA ═══ */
+.zt-cta { background: linear-gradient(135deg, #374B47 0%, #1e2b28 100%); color: #fff; padding: 50px 40px; border-radius: 0; margin: 40px 0; text-align: center; position: relative; overflow: hidden; }
+.zt-cta:before { content: ''; position: absolute; top: 0; right: 0; width: 280px; height: 280px; background: radial-gradient(circle, rgba(143,210,153,.15) 0%, transparent 70%); }
+.zt-cta .inner { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; }
+.zt-cta h3 { color: #fff !important; margin: 0 0 12px; font-size: 28px; }
+.zt-cta p  { color: #e8f3ed; margin: 0 auto 26px; max-width: 580px; font-size: 16px; }
+.zt-cta .btn { background: #8FD299; color: #161616 !important; padding: 15px 38px; border-radius: 50px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-size: 16px; border: none; transition: all .2s; }
+.zt-cta .btn:hover { background: #7ac284; transform: translateX(4px); }
+
+/* ═══ 11. AUTHOR EEAT ═══ */
+.zt-author { display: none; }
+.zt-author img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid #8FD299; }
+.zt-author .name { color: #161616; font-weight: 600; font-size: 16px; margin: 0; }
+.zt-author .bio  { color: #5F6567; font-size: 14px; margin: 4px 0 0; }
+.zt-author .meta { color: #8FD299; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; display: block; }
+</style>
+
+<article class="zt-cs" itemscope itemtype="https://schema.org/Article">
+  <meta itemprop="headline" content="94% Harmful Content Removed Within SLA and 83% Cost Savings With a Remote Content Moderation Pod">
+  <meta itemprop="datePublished" content="2026-04-17">
+  <meta itemprop="dateModified" content="2026-04-17">
+
+  <!-- ═══════════ 1. HERO WITH INFOGRAPHIC KPI CARDS ═══════════ -->
+  <section class="zt-cs-hero">
+    <div class="inner">
+      <div class="eyebrow">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3L22 4" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        CASE STUDY &middot; Social Media &amp; Digital Platforms
+      </div>
+      <h1>94% Harmful Content Removed Within SLA and 83% Cost Savings With a Remote Content Moderation Pod</h1>
+      <p class="lede">Facing regulatory pressure from the EU Digital Services Act, a 72-hour content-review backlog, and moderator burnout that was driving 40% quarterly turnover, the platform deployed an 8-person remote moderation and trust-and-safety pod that now delivers 94% SLA-compliant harmful content removal, 60% faster queue processing, and round-the-clock coverage &mdash; starting from $5/hour.</p>
+
+      <div class="zt-kpi-row">
+        <div class="zt-kpi">
+          <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="value">83%</p>
+          <p class="label">Lower moderation operating cost</p>
+        </div>
+        <div class="zt-kpi">
+          <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M23 6l-9.5 9.5-5-5L1 18" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 6h6v6" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="value">94%</p>
+          <p class="label">Harmful content removed within SLA</p>
+        </div>
+        <div class="zt-kpi">
+          <svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#8FD299" stroke-width="2.5"/><path d="M12 6v6l4 2" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="value">60%</p>
+          <p class="label">Faster queue processing time</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 2. CLIENT SNAPSHOT ═══════════ -->
+  <section class="zt-snapshot">
+    <div class="title">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="6" width="20" height="14" rx="2" stroke="#374B47" stroke-width="2.2"/></svg>
+      <h3>Client Snapshot</h3>
+    </div>
+    <div class="zt-snap-grid">
+      <div class="item"><strong>Industry</strong><span>Social Media &amp; Digital Platforms</span></div>
+      <div class="item"><strong>Company Size</strong><span>12M MAU, 110 employees, Series B</span></div>
+      <div class="item"><strong>Geography</strong><span>United States</span></div>
+      <div class="item"><strong>Stack</strong><span>Hive Moderation, AWS Rekognition, Zendesk, Jira, Metabase, Internal Admin Tools</span></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 3. THE CHALLENGE ═══════════ -->
+  <h2>The Challenge</h2>
+  <p>The platform hosts a UGC marketplace with 12 million monthly active users generating 380,000+ pieces of content daily &mdash; images, video, text posts, and marketplace listings. A 4-person in-house moderation team covered 10 AM&ndash;8 PM ET, leaving overnight and weekend queues unreviewed for 14+ hours. The EU Digital Services Act timeline was six months out, CSAM reporting obligations were tightening, and the most recent brand-safety incident &mdash; a hate-speech cluster that went viral before moderators saw it &mdash; cost the platform two mid-tier advertising partners worth $1.8M in combined annual revenue.</p>
+
+  <div class="zt-challenge-grid">
+    <div class="zt-challenge-card">
+      <span class="num">1</span>
+      <h4>Queue backlogs were creating regulatory and brand risk</h4>
+      <p>Average time-to-first-review had stretched to 11.4 hours. During overnight and weekend windows, the queue accumulated 26,000+ unreviewed items. Two DSA transparency report deadlines were approaching, and the legal team flagged that the platform&rsquo;s current review cadence would fail the &ldquo;expeditious removal&rdquo; threshold for illegal content under Article 16.</p>
+    </div>
+    <div class="zt-challenge-card">
+      <span class="num">2</span>
+      <h4>Moderator burnout was destroying retention and quality</h4>
+      <p>The 4-person in-house team was turning over at 40% per quarter. Each departing moderator cost $18K in recruiting and retraining. Accuracy on Tier-2 escalations had dropped to 71% as fatigued reviewers rushed through graphic-content queues. Two moderators filed HR complaints citing inadequate wellness support for CSAM and self-harm exposure.</p>
+    </div>
+    <div class="zt-challenge-card">
+      <span class="num">3</span>
+      <h4>Scaling locally was cost-prohibitive and slow</h4>
+      <p>A US-based content moderator costs $52K&ndash;$68K fully loaded with a 10&ndash;14 week hiring cycle. To achieve 18/7 coverage with proper shift rotation and wellness breaks, the platform needed 8&ndash;10 moderators &mdash; roughly $520K in annual payroll &mdash; and the trust-and-safety budget was capped at $180K for the fiscal year.</p>
+    </div>
+    <div class="zt-challenge-card">
+      <span class="num">4</span>
+      <h4>AI-only moderation was generating unacceptable false positives</h4>
+      <p>The platform had deployed Hive Moderation and AWS Rekognition for automated first-pass filtering, but 23% of auto-flagged content were false positives &mdash; legitimate creator posts being suppressed. Creator complaints about wrongful takedowns increased 180% in Q3, and three top creators with combined 2.1M followers publicly threatened to leave the platform.</p>
+    </div>
+  </div>
+
+  <!-- Pull Quote (Challenge context) -->
+  <div class="zt-quote">
+    <span class="mark">&ldquo;</span>
+    <p class="quote-text">We lost two ad partners in a single week because harmful content sat in the queue for 14 hours before anyone saw it. Our AI filters were catching volume, but they were also suppressing legitimate creators at a rate that was destroying platform trust. We needed human judgment at scale &mdash; and we needed it in a cost envelope that our Series B runway could sustain.</p>
+    <div class="author-row">
+      <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><circle cx="27" cy="27" r="27" fill="#374B47"/><text x="27" y="35" text-anchor="middle" font-family="Geologica,Inter,system-ui,sans-serif" font-weight="700" font-size="26" fill="#8FD299">Z</text></svg>
+      <div>
+        <span class="name">VP of Trust &amp; Safety</span>
+        <span class="title">US Social Media Platform (name withheld &mdash; NDA)</span>
+      </div>
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    </div>
+  </div>
+
+  <!-- ═══════════ 4. THE SOLUTION — VISUAL TEAM BUILD ═══════════ -->
+  <h2>The Solution: A Pre-Vetted Zedtreeo Team</h2>
+  <p>Zedtreeo deployed an 8-person remote content moderation and trust-and-safety pod within 10 business days. The pod was structured as a tiered moderation operation &mdash; Tier-1 queue processors for high-volume first-pass review, Tier-2 specialists for nuanced policy decisions and appeals, a dedicated CSAM/harm escalation handler with NCMEC reporting certification, a quality auditor, and a reporting analyst &mdash; all operating inside Hive Moderation, AWS Rekognition, Zendesk, Jira, and Metabase with the client&rsquo;s content policy framework and escalation playbooks.</p>
+
+  <div class="zt-solution">
+    <h3 style="margin-top:0;">Team Composition Deployed</h3>
+    <p style="margin-bottom:20px;">An 8-person moderation pod sized to deliver 18/7 coverage, sub-2-hour first-review SLA, 94% policy-compliant removal rate, and DSA-ready reporting without adding headcount to the client&rsquo;s payroll.</p>
+
+    <div class="zt-team-grid">
+      <div class="zt-team-card">
+        <div class="avatar">T1</div>
+        <div class="details"><strong>Tier-1 Content Moderators (3)</strong><span>High-volume queue processing, image/video/text review, Hive Moderation triage, false-positive correction, basic policy enforcement, first-pass labeling and tagging.</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">T2</div>
+        <div class="details"><strong>Tier-2 Policy Specialists (2)</strong><span>Nuanced policy interpretation, hate-speech context analysis, satire vs. violation adjudication, edge-case escalation, policy documentation updates, DSA compliance mapping.</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">E</div>
+        <div class="details"><strong>CSAM/Harm Escalation Handler (1)</strong><span>NCMEC CyberTipline reporting, self-harm and terrorism content escalation, law enforcement liaison support, evidence preservation, wellness-protocol-compliant shift rotation.</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">Q</div>
+        <div class="details"><strong>Quality Auditor (1)</strong><span>Random-sample accuracy audits, inter-rater reliability scoring, calibration session facilitation, policy drift detection, moderator coaching and feedback loops.</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">R</div>
+        <div class="details"><strong>Reporting &amp; Analytics Specialist (1)</strong><span>Metabase dashboard ownership, DSA transparency report data, queue-health KPIs, false-positive rate tracking, weekly executive summaries, trend detection for emerging abuse patterns.</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">A</div>
+        <div class="details"><strong>Appeals Reviewer (cross-trained)</strong><span>Creator appeal adjudication, reinstatement workflows, user communication templates, appeal-decision documentation, escalation to legal when required.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Tools &amp; AI Stack Deployed</h3>
+  <p>The pod operates inside the client&rsquo;s existing stack &mdash; Hive Moderation for AI-assisted content classification, AWS Rekognition for image/video analysis, Zendesk for creator appeals and communications, Jira for workflow tracking and escalation management, and Metabase for real-time queue analytics and DSA reporting. All moderators completed the platform&rsquo;s 40-hour content policy certification, signed NDAs covering user data and platform IP, passed background checks, and operate under strict data-access controls with session-level audit logging.</p>
+
+  <!-- ═══════════ 5. TIMELINE INFOGRAPHIC (SVG) ═══════════ -->
+  <h2>Execution Timeline</h2>
+  <div class="zt-timeline-wrap">
+    <svg class="zt-timeline-svg" viewBox="0 0 800 80" xmlns="http://www.w3.org/2000/svg">
+      <line x1="60" y1="40" x2="740" y2="40" stroke="#e5e7eb" stroke-width="3" stroke-linecap="round"/>
+      <line x1="60" y1="40" x2="740" y2="40" stroke="#8FD299" stroke-width="3" stroke-linecap="round" stroke-dasharray="680" stroke-dashoffset="0"/>
+      <g>
+        <circle cx="60" cy="40" r="18" fill="#374B47" stroke="#8FD299" stroke-width="3"/>
+        <text x="60" y="46" text-anchor="middle" fill="#8FD299" font-size="14" font-weight="700" font-family="Geologica, sans-serif">1</text>
+      </g>
+      <g>
+        <circle cx="287" cy="40" r="18" fill="#374B47" stroke="#8FD299" stroke-width="3"/>
+        <text x="287" y="46" text-anchor="middle" fill="#8FD299" font-size="14" font-weight="700" font-family="Geologica, sans-serif">2</text>
+      </g>
+      <g>
+        <circle cx="513" cy="40" r="18" fill="#374B47" stroke="#8FD299" stroke-width="3"/>
+        <text x="513" y="46" text-anchor="middle" fill="#8FD299" font-size="14" font-weight="700" font-family="Geologica, sans-serif">3</text>
+      </g>
+      <g>
+        <circle cx="740" cy="40" r="18" fill="#8FD299" stroke="#374B47" stroke-width="3"/>
+        <text x="740" y="46" text-anchor="middle" fill="#161616" font-size="14" font-weight="700" font-family="Geologica, sans-serif">4</text>
+      </g>
+    </svg>
+
+    <div class="zt-phase-grid">
+      <div class="zt-phase-card">
+        <span class="phase-num">1</span>
+        <p class="period">Week 1</p>
+        <h4>Kickoff &amp; Clearance</h4>
+        <p>Requirements call with VP of Trust &amp; Safety. NDA + data processing agreement signed. Background checks completed. Hive Moderation, Zendesk, Jira, and Metabase access provisioned. 8 moderators shortlisted and policy-tested in 48 hours.</p>
+      </div>
+      <div class="zt-phase-card">
+        <span class="phase-num">2</span>
+        <p class="period">Week 2&ndash;4</p>
+        <h4>Onboarding &amp; Trial</h4>
+        <p>5-day free trial on live moderation queue. 40-hour content policy certification completed. Escalation playbooks imported. Shift rotation configured for 18/7 coverage. First 12,000 items reviewed with 89% accuracy baseline established.</p>
+      </div>
+      <div class="zt-phase-card">
+        <span class="phase-num">3</span>
+        <p class="period">Month 2&ndash;3</p>
+        <h4>Full Coverage Activation</h4>
+        <p>18/7 moderation coverage activated. Queue backlog cleared from 26,000 to under 500 within 3 weeks. SLA compliance hits 91%. False-positive override rate stabilizes. CSAM reporting workflow fully operational with NCMEC integration.</p>
+      </div>
+      <div class="zt-phase-card">
+        <span class="phase-num">4</span>
+        <p class="period">Month 4&ndash;6</p>
+        <h4>Optimization &amp; DSA Readiness</h4>
+        <p>SLA compliance reaches 94%. Queue processing 60% faster. 83% cost reduction booked. First DSA transparency report submitted on time. Creator false-positive complaints drop 74%. Pod extended with 1 additional Tier-1 moderator for peak-hour surge capacity.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 6. RESULTS — BAR CHART INFOGRAPHIC ═══════════ -->
+  <h2>The Results</h2>
+  <p>Within one quarter, content moderation went from the platform&rsquo;s biggest regulatory liability to a competitive advantage &mdash; faster removal times, higher accuracy, DSA compliance locked in, and a cost structure that let the team scale without burning through Series B runway.</p>
+
+  <div class="zt-results-wrap">
+    <h3>Performance Before &rarr; After</h3>
+    <p class="lead">Measured improvements across 90 days post-onboarding of the engagement.</p>
+
+    <div class="zt-bar-chart">
+      <div class="zt-bar-row">
+        <div class="zt-bar-head">
+          <span class="label">Harmful Content SLA Compliance</span>
+          <span class="delta">+52% improvement</span>
+        </div>
+        <div class="zt-bar-track"><div class="zt-bar-fill" style="width: 94%;"></div></div>
+        <div class="zt-bar-meta"><span>Before: 62%</span><span>After: 94%</span></div>
+      </div>
+
+      <div class="zt-bar-row">
+        <div class="zt-bar-head">
+          <span class="label">Queue Processing Time (avg per item)</span>
+          <span class="delta">+60% faster</span>
+        </div>
+        <div class="zt-bar-track"><div class="zt-bar-fill" style="width: 82%;"></div></div>
+        <div class="zt-bar-meta"><span>Before: 4.2 minutes</span><span>After: 1.7 minutes</span></div>
+      </div>
+
+      <div class="zt-bar-row">
+        <div class="zt-bar-head">
+          <span class="label">False-Positive Override Rate</span>
+          <span class="delta">&minus;74% reduction</span>
+        </div>
+        <div class="zt-bar-track"><div class="zt-bar-fill" style="width: 74%;"></div></div>
+        <div class="zt-bar-meta"><span>Before: 23% false-positive rate</span><span>After: 6% false-positive rate</span></div>
+      </div>
+
+      <div class="zt-bar-row">
+        <div class="zt-bar-head">
+          <span class="label">Annual Moderation Operating Cost</span>
+          <span class="delta">&minus;83%</span>
+        </div>
+        <div class="zt-bar-track"><div class="zt-bar-fill" style="width: 85%;"></div></div>
+        <div class="zt-bar-meta"><span>Before: $788,000</span><span>After: $134,000</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 7. ROI — DONUT + TABLE INFOGRAPHIC ═══════════ -->
+  <h2>ROI: Zedtreeo vs In-House Hire</h2>
+  <div class="zt-roi-wrap">
+    <div class="zt-roi-donut">
+      <svg viewBox="0 0 200 200" width="220" height="220" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="80" fill="none" stroke="#e5e7eb" stroke-width="28"/>
+        <circle cx="100" cy="100" r="80" fill="none" stroke="#8FD299" stroke-width="28" stroke-dasharray="502" stroke-dashoffset="85" transform="rotate(-90 100 100)" stroke-linecap="round"/>
+      </svg>
+      <div class="center-label">
+        <span class="big">83%</span>
+        <span class="small">Cost Saved</span>
+      </div>
+    </div>
+
+    <div class="zt-roi-table">
+      <h3>12-Month Cost Breakdown</h3>
+      <table>
+        <thead>
+          <tr>
+            <th style="color:#fff;">Line Item</th>
+            <th style="color:#fff;">In-House (United States)</th>
+            <th style="color:#fff;">Zedtreeo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Salary + Benefits</td><td>$680,000</td><td>$134,000</td></tr>
+          <tr><td>Recruitment</td><td>$42,000</td><td>Included</td></tr>
+          <tr><td>HR &amp; Compliance</td><td>$28,000</td><td>Included</td></tr>
+          <tr><td>Tools &amp; Licenses</td><td>$38,000</td><td>Included</td></tr>
+          <tr class="total"><td><strong>Total Annual</strong></td><td><strong>$788,000</strong></td><td><strong>$134,000</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════ 8. TESTIMONIAL ═══════════ -->
+  <h2>Client Testimonial</h2>
+  <div class="zt-quote">
+    <span class="mark">&ldquo;</span>
+    <p class="quote-text">The Zedtreeo moderation pod operates to our content policy, our escalation playbooks, our SLA targets &mdash; same rigor as our internal trust-and-safety team, eight people deep across three shifts. We hit 94% SLA compliance in 90 days, submitted our first DSA transparency report on time, and our creator false-positive complaints dropped 74%. The 83% cost savings got budget approval; the regulatory readiness is what let our CEO sleep at night.</p>
+    <div class="author-row">
+      <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><circle cx="27" cy="27" r="27" fill="#374B47"/><text x="27" y="35" text-anchor="middle" font-family="Geologica,Inter,system-ui,sans-serif" font-weight="700" font-size="26" fill="#8FD299">Z</text></svg>
+      <div>
+        <span class="name">VP of Trust &amp; Safety</span>
+        <span class="title">US Social Media Platform (name withheld &mdash; NDA)</span>
+      </div>
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    </div>
+  </div>
+
+  <!-- ═══════════ 9. RELATED ROLES (CROSS-LINKS) ═══════════ -->
+  <h2>Roles Deployed on This Engagement</h2>
+  <p>Every role included: AI-tool training, HR management, compliance, and replacement guarantee. Starting from <strong>$5 per hour</strong>, fully timezone-matched globally.</p>
+
+  <div class="zt-related-grid">
+    <a href="/hire-virtual-assistants/" class="zt-related-card">
+      <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="7" r="4" stroke="#374B47" stroke-width="2.2"/></svg></div>
+      <p class="meta">ROLE</p>
+      <h4>Virtual Assistants</h4>
+      <p>Content moderation support, queue management, admin coordination, process documentation. From $5/hour.</p>
+    </a>
+    <a href="/remote-staffing-services/hire-remote-customer-support/" class="zt-related-card">
+      <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <p class="meta">ROLE</p>
+      <h4>Customer Service Representatives</h4>
+      <p>Creator support, appeals handling, user communications, ticket resolution. From $5/hour.</p>
+    </a>
+    <a href="/remote-staffing-services/hire-remote-research-analytics-staff/" class="zt-related-card">
+      <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <p class="meta">ROLE</p>
+      <h4>Data Analysts</h4>
+      <p>Moderation analytics, DSA reporting, queue-health dashboards, trend detection. From $5/hour.</p>
+    </a>
+  </div>
+
+  <!-- ═══════════ 10. PRIMARY CTA ═══════════ -->
+  <section class="zt-cta">
+    <div class="inner">
+      <h3>Build a Moderation Team Like This</h3>
+      <p>Get 3 pre-vetted, AI-trained candidates in 48 hours. Starting from $5 per hour. 5-day free trial. Save 70&ndash;90%.</p>
+      <a href="https://zedtreeo.com/#contact" class="btn">
+        Hire Remote Staff Now
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="#161616" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════ 11. RELATED CASE STUDIES ═══════════ -->
+  <h2>More Trust &amp; Safety Case Studies</h2>
+  <div class="zt-related-grid">
+    <a href="/case-study-remote-customer-service-agents/" class="zt-related-card">
+      <p class="meta">Customer Service</p>
+      <h4>45% Lower Wait Times and 85% Cost Reduction</h4>
+      <p>A US hospitality group cut guest wait times 45%, reduced support costs 85%, and improved booking accuracy 35% with a remote Zedtreeo CX pod.</p>
+    </a>
+    <a href="/case-study-remote-compliance-support/" class="zt-related-card">
+      <p class="meta">Compliance</p>
+      <h4>Remote Compliance Support: SLA Breaches Cut 81%</h4>
+      <p>A regulated platform stood up 24/7 compliance coverage and cut SLA breaches 81% with a dedicated remote pod.</p>
+    </a>
+    <a href="/case-study-remote-cybersecurity-experts/" class="zt-related-card">
+      <p class="meta">Cybersecurity</p>
+      <h4>24/7 SOC Coverage and 68% Lower MTTR</h4>
+      <p>A US FinTech built 24/7 SOC coverage, cut incident MTTR 68%, and reduced security operating cost 73% with a remote Zedtreeo cyber pod.</p>
+    </a>
+  </div>
+
+  <!-- ═══════════ 12. AUTHOR EEAT ═══════════ -->
+  <div class="zt-author">
+    <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><circle cx="27" cy="27" r="27" fill="#374B47"/><text x="27" y="35" text-anchor="middle" font-family="Geologica,Inter,system-ui,sans-serif" font-weight="700" font-size="26" fill="#8FD299">Z</text></svg>
+    <div>
+      <p class="name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">The Zedtreeo Editorial Team</span></p>
+      <p class="bio">Remote Staffing Research &amp; Content, Zedtreeo</p>
+      <span class="meta">Published April 17, 2026</span>
+    </div>
+  </div>
+</article>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     JSON-LD — Article schema
+     ═══════════════════════════════════════════════════════════════════════════ -->

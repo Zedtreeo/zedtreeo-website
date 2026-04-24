@@ -1,0 +1,484 @@
+<style>
+/* ═══ RESET & BASE ═══ */
+.zt-cs * { box-sizing: border-box; }
+.zt-cs { font-family: 'Geologica', system-ui, -apple-system, sans-serif; color: #5F6567; line-height: 1.7; font-size: 17px; max-width: 100%; }
+.zt-cs > *:not(.zt-cs-hero):not(.zt-cta):not(.zt-results-wrap) { max-width: 1180px; margin-left: auto; margin-right: auto; padding-left: 40px; padding-right: 40px; }
+.zt-cs h1, .zt-cs h2, .zt-cs h3, .zt-cs h4 { color: #161616; font-family: inherit; }
+.zt-cs h1 { font-size: 44px; font-weight: 600; line-height: 1.12; letter-spacing: -1.5px; margin: 0 0 18px; }
+.zt-cs h2 { font-size: 32px; font-weight: 700; line-height: 1.2; margin: 54px 0 20px; letter-spacing: -0.5px; }
+.zt-cs h3 { font-size: 22px; font-weight: 600; line-height: 1.3; margin: 28px 0 12px; }
+.zt-cs h4 { font-size: 18px; font-weight: 600; margin: 20px 0 8px; }
+.zt-cs p  { margin: 0 0 16px; }
+.zt-cs a  { color: #374B47; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(55,75,71,.3); transition: all .2s; }
+.zt-cs a:hover { color: #8FD299; border-bottom-color: #8FD299; }
+
+/* ═══ 1. HERO ═══ */
+.zt-cs-hero { position: relative; background: linear-gradient(135deg, #374B47 0%, #1e2b28 100%); color: #fff; padding: 80px 40px; border-radius: 0; margin: 0 0 48px; overflow: hidden; }
+.zt-cs-hero:before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(143,210,153,.15) 0%, transparent 70%); border-radius: 50%; }
+.zt-cs-hero .inner { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; }
+.zt-cs-hero .eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(143,210,153,.15); color: #8FD299; padding: 8px 18px; border-radius: 50px; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 22px; }
+.zt-cs-hero h1 { color: #fff; max-width: 880px; }
+.zt-cs-hero p.lede { color: #cfe0d5; font-size: 19px; max-width: 720px; margin: 0 0 36px; line-height: 1.55; }
+
+/* KPI Cards — Infographic */
+.zt-kpi-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+.zt-kpi { background: rgba(255,255,255,.06); border: 1px solid rgba(143,210,153,.25); backdrop-filter: blur(10px); padding: 28px 24px; border-radius: 0; position: relative; overflow: hidden; }
+.zt-kpi:before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #8FD299; }
+.zt-kpi .icon { width: 44px; height: 44px; margin: 0 0 14px; opacity: .9; }
+.zt-kpi .value { color: #8FD299; font-size: 44px; font-weight: 700; line-height: 1; margin: 0 0 6px; letter-spacing: -2px; }
+.zt-kpi .label { color: #e8f3ed; font-size: 14px; margin: 0; line-height: 1.4; }
+@media (max-width: 780px) { .zt-kpi-row { grid-template-columns: 1fr; } .zt-cs-hero h1 { font-size: 32px; } .zt-cs-hero { padding: 48px 28px; } }
+
+/* ═══ 2. SNAPSHOT ═══ */
+.zt-snapshot { background: #F7F7F7; border: 1px solid #e5e7eb; border-radius: 0; padding: 28px 32px; margin: 0 0 48px; }
+.zt-snapshot .title { display: flex; align-items: center; gap: 10px; margin: 0 0 18px; }
+.zt-snapshot .title h3 { margin: 0; font-size: 15px; color: #374B47; letter-spacing: 1.5px; text-transform: uppercase; }
+.zt-snapshot .title svg { width: 20px; height: 20px; }
+.zt-snap-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.zt-snap-grid .item { padding-left: 14px; border-left: 3px solid #8FD299; }
+.zt-snap-grid .item strong { display: block; color: #161616; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 4px; }
+.zt-snap-grid .item span { color: #5F6567; font-size: 15px; }
+@media (max-width: 780px) { .zt-snap-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ═══ 3. CHALLENGE CARDS ═══ */
+.zt-challenge-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 28px 0 40px; }
+.zt-challenge-card { background: #fff; border: 1px solid #e5e7eb; border-top: 4px solid #d54444; border-radius: 0; padding: 26px 24px; position: relative; }
+.zt-challenge-card .num { position: absolute; top: -18px; right: 18px; width: 36px; height: 36px; background: #d54444; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+.zt-challenge-card h4 { margin: 0 0 10px; color: #161616; }
+.zt-challenge-card p { margin: 0; font-size: 15px; line-height: 1.55; }
+@media (max-width: 780px) { .zt-challenge-grid { grid-template-columns: 1fr; } }
+
+/* ═══ 4. SOLUTION — TEAM GRAPHIC ═══ */
+.zt-solution { background: linear-gradient(135deg, #E4EDF3 0%, #F7F7F7 100%); border-radius: 0; padding: 40px 36px; margin: 28px 0 40px; }
+.zt-solution h3 { margin-top: 0; }
+.zt-team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 20px 0 0; }
+.zt-team-card { background: #fff; border-radius: 0; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start; box-shadow: 0 2px 8px rgba(22,22,22,.04); }
+.zt-team-card .avatar { width: 48px; height: 48px; background: #8FD299; border-radius: 0; display: flex; align-items: center; justify-content: center; color: #161616; font-weight: 700; flex-shrink: 0; }
+.zt-team-card .details strong { display: block; color: #161616; font-size: 16px; margin: 0 0 4px; }
+.zt-team-card .details span { color: #5F6567; font-size: 14px; }
+@media (max-width: 780px) { .zt-team-grid { grid-template-columns: 1fr; } }
+
+/* ═══ 5. TIMELINE INFOGRAPHIC ═══ */
+.zt-timeline-wrap { margin: 30px 0 40px; }
+.zt-timeline-svg { width: 100%; height: auto; display: block; margin-bottom: 20px; }
+.zt-phase-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.zt-phase-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 0; padding: 22px; position: relative; }
+.zt-phase-card .phase-num { position: absolute; top: -14px; left: 22px; background: #374B47; color: #8FD299; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; }
+.zt-phase-card .period { color: #8FD299; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 6px 0 8px; }
+.zt-phase-card h4 { margin: 0 0 6px; font-size: 16px; }
+.zt-phase-card p { margin: 0; font-size: 14px; }
+@media (max-width: 780px) { .zt-phase-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ═══ 6. RESULTS — BAR CHART INFOGRAPHIC ═══ */
+.zt-results-wrap { background: #161616; color: #fff; border-radius: 0; padding: 44px calc((100% - 1180px) / 2 + 40px); margin: 30px 0 40px; }
+.zt-results-wrap h3 { color: #fff; margin: 0 0 8px; font-size: 26px; }
+.zt-results-wrap p.lead { color: #a9b8b2; margin: 0 0 32px; font-size: 15px; }
+.zt-bar-chart { display: grid; gap: 22px; }
+.zt-bar-row { }
+.zt-bar-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.zt-bar-head .label { color: #fff; font-weight: 600; font-size: 15px; }
+.zt-bar-head .delta { color: #8FD299; font-weight: 700; font-size: 16px; }
+.zt-bar-track { background: rgba(255,255,255,.08); border-radius: 50px; height: 14px; position: relative; overflow: hidden; }
+.zt-bar-fill { height: 100%; background: linear-gradient(90deg, #8FD299 0%, #a5e0ac 100%); border-radius: 50px; position: relative; }
+.zt-bar-meta { display: flex; justify-content: space-between; margin-top: 6px; color: #a9b8b2; font-size: 12px; }
+
+/* ═══ 7. ROI DONUT INFOGRAPHIC ═══ */
+.zt-roi-wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 36px; align-items: center; background: #F7F7F7; border-radius: 0; padding: 40px 36px; margin: 30px 0 40px; }
+.zt-roi-donut { position: relative; text-align: center; }
+.zt-roi-donut .center-label { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+.zt-roi-donut .center-label .big { font-size: 42px; font-weight: 700; color: #161616; letter-spacing: -1.5px; display: block; }
+.zt-roi-donut .center-label .small { font-size: 13px; color: #5F6567; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+.zt-roi-table { }
+.zt-roi-table h3 { margin: 0 0 18px; }
+.zt-roi-table table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.zt-roi-table th { padding: 12px 14px; background: #374B47; color: #fff !important; text-align: left; font-weight: 600; }
+.zt-roi-table td { padding: 11px 14px; border-bottom: 1px solid #e5e7eb; background: #fff; }
+.zt-roi-table tr.total td { background: #f0faf2; font-weight: 700; color: #161616; border: 2px solid #8FD299; }
+@media (max-width: 880px) { .zt-roi-wrap { grid-template-columns: 1fr; } }
+
+/* ═══ 8. PULL QUOTE ═══ */
+.zt-quote { position: relative; background: #fff; border: 1px solid #e5e7eb; border-radius: 0; padding: 48px 44px 36px; margin: 40px 0; }
+.zt-quote .mark { position: absolute; top: -18px; left: 36px; background: #8FD299; color: #161616; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 700; font-family: Georgia, serif; line-height: 1; }
+.zt-quote .quote-text { font-size: 24px; font-weight: 300; line-height: 1.45; color: #161616; margin: 0 0 22px; letter-spacing: -0.3px; }
+.zt-quote .author-row { display: flex; align-items: center; gap: 16px; padding-top: 22px; border-top: 1px solid #e5e7eb; }
+.zt-quote .author-row img { width: 54px; height: 54px; border-radius: 50%; object-fit: cover; }
+.zt-quote .author-row .name { color: #161616; font-weight: 600; font-size: 16px; display: block; }
+.zt-quote .author-row .title { color: #5F6567; font-size: 14px; }
+.zt-quote .stars { margin-left: auto; color: #8FD299; font-size: 18px; letter-spacing: 2px; }
+
+/* ═══ 9. RELATED CARDS ═══ */
+.zt-related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 24px 0 40px; }
+.zt-related-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 0; padding: 22px; transition: all .2s; text-decoration: none !important; display: block; }
+.zt-related-card:hover { border-color: #8FD299; transform: translateY(-3px); box-shadow: 0 8px 24px rgba(143,210,153,.15); }
+.zt-related-card .icon { width: 40px; height: 40px; background: #f0faf2; border-radius: 0; display: flex; align-items: center; justify-content: center; margin: 0 0 14px; }
+.zt-related-card .meta { color: #8FD299; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 0 8px; }
+.zt-related-card h4 { margin: 0 0 8px; font-size: 16px; color: #161616; }
+.zt-related-card p { margin: 0; color: #5F6567; font-size: 14px; line-height: 1.5; }
+@media (max-width: 780px) { .zt-related-grid { grid-template-columns: 1fr; } }
+
+/* ═══ 10. CTA ═══ */
+.zt-cta { background: linear-gradient(135deg, #374B47 0%, #1e2b28 100%); color: #fff; padding: 50px 40px; border-radius: 0; margin: 40px 0; text-align: center; position: relative; overflow: hidden; }
+.zt-cta:before { content: ''; position: absolute; top: 0; right: 0; width: 280px; height: 280px; background: radial-gradient(circle, rgba(143,210,153,.15) 0%, transparent 70%); }
+.zt-cta .inner { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; }
+.zt-cta h3 { color: #fff !important; margin: 0 0 12px; font-size: 28px; }
+.zt-cta p  { color: #e8f3ed; margin: 0 auto 26px; max-width: 580px; font-size: 16px; }
+.zt-cta .btn { background: #8FD299; color: #161616 !important; padding: 15px 38px; border-radius: 50px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-size: 16px; border: none; transition: all .2s; }
+.zt-cta .btn:hover { background: #7ac284; transform: translateX(4px); }
+
+/* ═══ 11. AUTHOR EEAT ═══ */
+.zt-author { display: none; }
+.zt-author img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid #8FD299; }
+.zt-author .name { color: #161616; font-weight: 600; font-size: 16px; margin: 0; }
+.zt-author .bio  { color: #5F6567; font-size: 14px; margin: 4px 0 0; }
+.zt-author .meta { color: #8FD299; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; display: block; }
+</style>
+
+<article class="zt-cs" itemscope itemtype="https://schema.org/Article">
+  <meta itemprop="headline" content="40% Faster Booking Resolution and +28 NPS With a Remote Hospitality Ops Team">
+  <meta itemprop="datePublished" content="2026-04-17">
+  <meta itemprop="dateModified" content="2026-04-17">
+
+  <!-- ═══════════ 1. HERO WITH INFOGRAPHIC KPI CARDS ═══════════ -->
+  <section class="zt-cs-hero">
+    <div class="inner">
+      <div class="eyebrow">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3L22 4" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        CASE STUDY &middot; Hospitality &amp; Tourism
+      </div>
+      <h1>40% Faster Booking Resolution and +28 NPS With a Remote Hospitality Ops Team</h1>
+      <p class="lede">Facing 9-minute average booking resolution times, a 31-point NPS decline over two quarters, and zero revenue management coverage outside business hours, the group deployed a 7-person remote hospitality ops pod that now handles reservations, night audit, guest relations, and OTA optimization inside Opera PMS, Sabre, and Revinate &mdash; starting from $5/hour.</p>
+
+      <div class="zt-kpi-row">
+        <div class="zt-kpi">
+          <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="value">80%</p>
+          <p class="label">Lower hospitality ops cost</p>
+        </div>
+        <div class="zt-kpi">
+          <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M23 6l-9.5 9.5-5-5L1 18" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 6h6v6" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="value">+28</p>
+          <p class="label">Net Promoter Score improvement</p>
+        </div>
+        <div class="zt-kpi">
+          <svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#8FD299" stroke-width="2.5"/><path d="M12 6v6l4 2" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="value">40%</p>
+          <p class="label">Faster booking resolution</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 2. CLIENT SNAPSHOT ═══════════ -->
+  <section class="zt-snapshot">
+    <div class="title">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="6" width="20" height="14" rx="2" stroke="#374B47" stroke-width="2.2"/></svg>
+      <h3>Client Snapshot</h3>
+    </div>
+    <div class="zt-snap-grid">
+      <div class="item"><strong>Industry</strong><span>Hospitality &amp; Tourism</span></div>
+      <div class="item"><strong>Company Size</strong><span>15 properties, $54M annual revenue, 940 employees</span></div>
+      <div class="item"><strong>Geography</strong><span>United States</span></div>
+      <div class="item"><strong>Stack</strong><span>Opera PMS, Sabre, Amadeus, Revinate, ReviewPro, Canary Technologies</span></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 3. THE CHALLENGE ═══════════ -->
+  <h2>The Challenge</h2>
+  <p>The group operates 15 hotel and resort properties across the US, processing 3,100+ reservation requests and 1,400+ guest service inquiries per week during peak season. A six-person in-house operations team covered 8 AM&ndash;6 PM ET Monday through Friday, leaving evenings, weekends, and holidays &mdash; when 47% of booking inquiries and 62% of negative reviews originated &mdash; with no live support. NPS had dropped from 58 to 27 in two quarters, OTA listing scores were slipping below competitive thresholds on Booking.com and Expedia, and the VP of Revenue estimated $1.8M in annual revenue leakage from abandoned reservations and unmanaged rate parity violations.</p>
+
+  <div class="zt-challenge-grid">
+    <div class="zt-challenge-card">
+      <span class="num">1</span>
+      <h4>Booking resolution times were driving abandonment</h4>
+      <p>Average booking resolution hit 9 minutes during peak hours, with a 28% call abandonment rate. Modification and cancellation requests queued for an average of 14 hours overnight. The six-person team was triaging 620+ daily contacts across phone, email, and OTA messaging with no overflow capacity &mdash; and post-stay surveys showed a 3.2/5 satisfaction score on the reservations experience alone.</p>
+    </div>
+    <div class="zt-challenge-card">
+      <span class="num">2</span>
+      <h4>Night audit gaps were creating revenue reconciliation errors</h4>
+      <p>With no overnight audit coverage, daily revenue reconciliation was batched to the following morning. Opera PMS posting errors accumulated overnight &mdash; an average of 23 discrepancies per property per week &mdash; requiring 12 hours of manual correction. The finance team traced $142K in quarterly revenue variance directly to unresolved night audit exceptions across the portfolio.</p>
+    </div>
+    <div class="zt-challenge-card">
+      <span class="num">3</span>
+      <h4>OTA listing scores were dropping below competitive thresholds</h4>
+      <p>ReviewPro sentiment scores fell 18% in Q3, and three properties dropped below 8.0 on Booking.com &mdash; the threshold where organic visibility declines sharply. Response time to guest reviews averaged 72 hours. OTA content updates (photos, descriptions, rate parity) were running 3&ndash;4 weeks behind competitive sets, costing an estimated $420K annually in lost OTA-sourced bookings.</p>
+    </div>
+    <div class="zt-challenge-card">
+      <span class="num">4</span>
+      <h4>Local hiring math didn&rsquo;t support a 7-person ops team</h4>
+      <p>A mid-level US hospitality operations coordinator cost $48K&ndash;$62K fully loaded with a 6&ndash;10 week hiring cycle in a tight labor market. To staff reservation coverage, night audit, guest relations, revenue management, and OTA optimization the group needed 7 hires &mdash; roughly $385K annual payroll before benefits &mdash; and the COO had capped ops overhead at 4.2% of revenue.</p>
+    </div>
+  </div>
+
+  <!-- Pull Quote (Challenge context) -->
+  <div class="zt-quote">
+    <span class="mark">&ldquo;</span>
+    <p class="quote-text">Our NPS dropped 31 points in two quarters. Guests were waiting 9 minutes to modify a reservation, reviews were going unanswered for three days, and our night audit was a next-morning afterthought. We were a premium brand delivering economy-tier service operations.</p>
+    <div class="author-row">
+      <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><circle cx="27" cy="27" r="27" fill="#374B47"/><text x="27" y="35" text-anchor="middle" font-family="Geologica,Inter,system-ui,sans-serif" font-weight="700" font-size="26" fill="#8FD299">Z</text></svg>
+      <div>
+        <span class="name">VP of Operations</span>
+        <span class="title">US Hotel &amp; Resort Group (name withheld &mdash; NDA)</span>
+      </div>
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    </div>
+  </div>
+
+  <!-- ═══════════ 4. THE SOLUTION — VISUAL TEAM BUILD ═══════════ -->
+  <h2>The Solution: A Pre-Vetted Zedtreeo Team</h2>
+  <p>Zedtreeo deployed a 7-person remote hospitality operations pod within 10 business days. The pod was structured as a full-cycle hospitality ops team &mdash; reservation agents, night audit assistants, a guest relations coordinator, a revenue management analyst, a loyalty program admin, and an OTA listing manager &mdash; all operating inside Opera PMS, Sabre, Amadeus, Revinate, ReviewPro, and Canary Technologies with the client&rsquo;s brand standards, escalation matrix, and property-specific SOPs.</p>
+
+  <div class="zt-solution">
+    <h3 style="margin-top:0;">Team Composition Deployed</h3>
+    <p style="margin-bottom:20px;">A 7-person hospitality ops pod sized to hold a 5-minute booking resolution SLA, same-day review response, overnight audit coverage, and continuous OTA optimization across 15 properties.</p>
+
+    <div class="zt-team-grid">
+      <div class="zt-team-card">
+        <div class="avatar">R</div>
+        <div class="details"><strong>Reservation Agents (2)</strong><span>Inbound call/email booking, Opera PMS reservation entry, rate quoting, modification/cancellation processing, group block management, upsell scripting, Sabre GDS coordination.</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">N</div>
+        <div class="details"><strong>Night Audit Assistant (1)</strong><span>Overnight Opera PMS posting verification, revenue reconciliation, rate discrepancy flagging, end-of-day batch processing, no-show management, occupancy reporting.</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">G</div>
+        <div class="details"><strong>Guest Relations Coordinator (1)</strong><span>ReviewPro monitoring, guest review response within 4 hours, pre-arrival preference coordination, VIP briefings, service recovery case management, NPS tracking.</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">V</div>
+        <div class="details"><strong>Revenue Management Analyst (1)</strong><span>Revinate rate intelligence, competitive set monitoring, dynamic pricing recommendations, demand forecasting, rate parity audits across OTA channels.</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">L</div>
+        <div class="details"><strong>Loyalty Program Admin (1)</strong><span>Member enrollment processing, points reconciliation, tier upgrade management, loyalty campaign execution, guest profile enrichment, Canary Technologies digital tipping coordination.</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">O</div>
+        <div class="details"><strong>OTA Listing Manager (1)</strong><span>Booking.com/Expedia/Airbnb content optimization, photo/description updates, rate parity enforcement, channel manager coordination, review response on OTA platforms.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Tools &amp; AI Stack Deployed</h3>
+  <p>The pod operates inside the client&rsquo;s existing stack &mdash; Opera PMS for reservations and night audit, Sabre and Amadeus for GDS distribution, Revinate for revenue intelligence, ReviewPro for reputation management, and Canary Technologies for digital guest engagement. All agents completed brand-voice certification, property-specific training modules, and Opera PMS proficiency testing before going live. AI-assisted macros in ReviewPro reduced average review response drafting time by 35% within the first month.</p>
+
+  <!-- ═══════════ 5. TIMELINE INFOGRAPHIC (SVG) ═══════════ -->
+  <h2>Execution Timeline</h2>
+  <div class="zt-timeline-wrap">
+    <svg class="zt-timeline-svg" viewBox="0 0 800 80" xmlns="http://www.w3.org/2000/svg">
+      <line x1="60" y1="40" x2="740" y2="40" stroke="#e5e7eb" stroke-width="3" stroke-linecap="round"/>
+      <line x1="60" y1="40" x2="740" y2="40" stroke="#8FD299" stroke-width="3" stroke-linecap="round" stroke-dasharray="680" stroke-dashoffset="0"/>
+      <g>
+        <circle cx="60" cy="40" r="18" fill="#374B47" stroke="#8FD299" stroke-width="3"/>
+        <text x="60" y="46" text-anchor="middle" fill="#8FD299" font-size="14" font-weight="700" font-family="Geologica, sans-serif">1</text>
+      </g>
+      <g>
+        <circle cx="287" cy="40" r="18" fill="#374B47" stroke="#8FD299" stroke-width="3"/>
+        <text x="287" y="46" text-anchor="middle" fill="#8FD299" font-size="14" font-weight="700" font-family="Geologica, sans-serif">2</text>
+      </g>
+      <g>
+        <circle cx="513" cy="40" r="18" fill="#374B47" stroke="#8FD299" stroke-width="3"/>
+        <text x="513" y="46" text-anchor="middle" fill="#8FD299" font-size="14" font-weight="700" font-family="Geologica, sans-serif">3</text>
+      </g>
+      <g>
+        <circle cx="740" cy="40" r="18" fill="#8FD299" stroke="#374B47" stroke-width="3"/>
+        <text x="740" y="46" text-anchor="middle" fill="#161616" font-size="14" font-weight="700" font-family="Geologica, sans-serif">4</text>
+      </g>
+    </svg>
+
+    <div class="zt-phase-grid">
+      <div class="zt-phase-card">
+        <span class="phase-num">1</span>
+        <p class="period">Week 1</p>
+        <h4>Kickoff &amp; Property Training</h4>
+        <p>Requirements call, NDA execution, Opera PMS + Sabre + Revinate + ReviewPro access provisioning. 7 agents shortlisted and interviewed by VP of Operations in 48 hours. Property-specific brand training started.</p>
+      </div>
+      <div class="zt-phase-card">
+        <span class="phase-num">2</span>
+        <p class="period">Week 2&ndash;4</p>
+        <h4>Onboarding &amp; Trial</h4>
+        <p>5-day free trial on live reservation queue. Property SOPs imported, Opera PMS workflows mapped, night audit procedures documented, first 400 guest interactions handled with QA scoring. ReviewPro response templates calibrated.</p>
+      </div>
+      <div class="zt-phase-card">
+        <span class="phase-num">3</span>
+        <p class="period">Month 2&ndash;3</p>
+        <h4>Full Coverage Activation</h4>
+        <p>18-hour daily coverage activated across all 15 properties. Night audit running overnight. Booking resolution drops to 5.4 minutes. Review response time falls to under 4 hours. NPS climbs from 27 to 42.</p>
+      </div>
+      <div class="zt-phase-card">
+        <span class="phase-num">4</span>
+        <p class="period">Month 4&ndash;6</p>
+        <h4>Optimization &amp; Revenue Impact</h4>
+        <p>OTA scores recover above 8.5 across all properties. Revenue management analyst identifies $312K in rate parity savings. NPS reaches 55. 80% cost reduction booked. Pod extended with 1 seasonal support agent for holiday peaks.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 6. RESULTS — BAR CHART INFOGRAPHIC ═══════════ -->
+  <h2>The Results</h2>
+  <p>Within 90 days, the hospitality operations function transformed from the brand&rsquo;s weakest service layer into a revenue-protecting, guest-satisfaction-driving machine that outperformed the previous in-house team across every tracked metric.</p>
+
+  <div class="zt-results-wrap">
+    <h3>Performance Before &rarr; After</h3>
+    <p class="lead">Measured improvements across 90 days post-onboarding of the engagement.</p>
+
+    <div class="zt-bar-chart">
+      <div class="zt-bar-row">
+        <div class="zt-bar-head">
+          <span class="label">Average Booking Resolution Time</span>
+          <span class="delta">+40% faster</span>
+        </div>
+        <div class="zt-bar-track"><div class="zt-bar-fill" style="width: 92%;"></div></div>
+        <div class="zt-bar-meta"><span>Before: 9 minutes</span><span>After: 5.4 minutes</span></div>
+      </div>
+
+      <div class="zt-bar-row">
+        <div class="zt-bar-head">
+          <span class="label">Net Promoter Score (NPS)</span>
+          <span class="delta">+28 points</span>
+        </div>
+        <div class="zt-bar-track"><div class="zt-bar-fill" style="width: 78%;"></div></div>
+        <div class="zt-bar-meta"><span>Before: 27</span><span>After: 55</span></div>
+      </div>
+
+      <div class="zt-bar-row">
+        <div class="zt-bar-head">
+          <span class="label">Guest Review Response Time</span>
+          <span class="delta">+94% faster</span>
+        </div>
+        <div class="zt-bar-track"><div class="zt-bar-fill" style="width: 65%;"></div></div>
+        <div class="zt-bar-meta"><span>Before: 72 hours</span><span>After: 4 hours</span></div>
+      </div>
+
+      <div class="zt-bar-row">
+        <div class="zt-bar-head">
+          <span class="label">Annual Hospitality Ops Cost</span>
+          <span class="delta">&minus;80%</span>
+        </div>
+        <div class="zt-bar-track"><div class="zt-bar-fill" style="width: 85%;"></div></div>
+        <div class="zt-bar-meta"><span>Before: $420,000</span><span>After: $84,000</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 7. ROI — DONUT + TABLE INFOGRAPHIC ═══════════ -->
+  <h2>ROI: Zedtreeo vs In-House Hire</h2>
+  <div class="zt-roi-wrap">
+    <div class="zt-roi-donut">
+      <svg viewBox="0 0 200 200" width="220" height="220" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="80" fill="none" stroke="#e5e7eb" stroke-width="28"/>
+        <circle cx="100" cy="100" r="80" fill="none" stroke="#8FD299" stroke-width="28" stroke-dasharray="502" stroke-dashoffset="100" transform="rotate(-90 100 100)" stroke-linecap="round"/>
+      </svg>
+      <div class="center-label">
+        <span class="big">80%</span>
+        <span class="small">Cost Saved</span>
+      </div>
+    </div>
+
+    <div class="zt-roi-table">
+      <h3>12-Month Cost Breakdown</h3>
+      <table>
+        <thead>
+          <tr>
+            <th style="color:#fff;">Line Item</th>
+            <th style="color:#fff;">In-House (United States)</th>
+            <th style="color:#fff;">Zedtreeo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Salary + Benefits</td><td>$340,000</td><td>$84,000</td></tr>
+          <tr><td>Recruitment</td><td>$36,000</td><td>Included</td></tr>
+          <tr><td>HR &amp; Compliance</td><td>$24,000</td><td>Included</td></tr>
+          <tr><td>Tools</td><td>$20,000</td><td>Included</td></tr>
+          <tr class="total"><td><strong>Total Annual</strong></td><td><strong>$420,000</strong></td><td><strong>$84,000</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════ 8. TESTIMONIAL ═══════════ -->
+  <h2>Client Testimonial</h2>
+  <div class="zt-quote">
+    <span class="mark">&ldquo;</span>
+    <p class="quote-text">The Zedtreeo hospitality pod feels like an extension of our on-property teams &mdash; same brand voice, same attention to guest preferences, same urgency on service recovery. Booking resolution dropped from 9 minutes to under 6, our NPS climbed 28 points, and night audit errors practically disappeared. 80% cheaper was the budget case; the 55 NPS is the brand case.</p>
+    <div class="author-row">
+      <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><circle cx="27" cy="27" r="27" fill="#374B47"/><text x="27" y="35" text-anchor="middle" font-family="Geologica,Inter,system-ui,sans-serif" font-weight="700" font-size="26" fill="#8FD299">Z</text></svg>
+      <div>
+        <span class="name">VP of Operations</span>
+        <span class="title">US Hotel &amp; Resort Group (name withheld &mdash; NDA)</span>
+      </div>
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    </div>
+  </div>
+
+  <!-- ═══════════ 9. RELATED ROLES (CROSS-LINKS) ═══════════ -->
+  <h2>Roles Deployed on This Engagement</h2>
+  <p>Every role included: AI-tool training, HR management, compliance, and replacement guarantee. Starting from <strong>$5 per hour</strong>, fully timezone-matched globally.</p>
+
+  <div class="zt-related-grid">
+    <a href="/hire-virtual-assistants/" class="zt-related-card">
+      <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="7" r="4" stroke="#374B47" stroke-width="2.2"/></svg></div>
+      <p class="meta">ROLE</p>
+      <h4>Virtual Assistants</h4>
+      <p>Scheduling, guest coordination, email management, CRM updates. From $5/hour.</p>
+    </a>
+    <a href="/remote-staffing-services/hire-remote-customer-support/" class="zt-related-card">
+      <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <p class="meta">ROLE</p>
+      <h4>Customer Service Representatives</h4>
+      <p>Phone, email, live chat agents with hospitality CRM proficiency. From $5/hour.</p>
+    </a>
+    <a href="/remote-staffing-services/hire-remote-administrative-and-assistant/" class="zt-related-card">
+      <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <p class="meta">ROLE</p>
+      <h4>Data Entry Specialists</h4>
+      <p>PMS data entry, reservation processing, night audit reconciliation. From $5/hour.</p>
+    </a>
+  </div>
+
+  <!-- ═══════════ 10. PRIMARY CTA ═══════════ -->
+  <section class="zt-cta">
+    <div class="inner">
+      <h3>Build a Hospitality Ops Team Like This</h3>
+      <p>Get 3 pre-vetted, AI-trained candidates in 48 hours. Starting from $5 per hour. 5-day free trial. Save 70&ndash;90%.</p>
+      <a href="https://zedtreeo.com/#contact" class="btn">
+        Hire Remote Staff Now
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="#161616" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════ 11. RELATED CASE STUDIES ═══════════ -->
+  <h2>More Hospitality &amp; Tourism Case Studies</h2>
+  <div class="zt-related-grid">
+    <a href="/case-study-remote-customer-service-agents/" class="zt-related-card">
+      <p class="meta">Customer Service</p>
+      <h4>45% Lower Wait Times and 85% Cost Reduction</h4>
+      <p>A US hospitality group cut guest wait times 45%, reduced support costs 85%, and improved booking accuracy 35% with an 8-person remote CX pod.</p>
+    </a>
+    <a href="/case-study-remote-fashion-brand-staffing/" class="zt-related-card">
+      <p class="meta">Fashion &amp; Retail</p>
+      <h4>3&times; Faster Campaigns and 80% Staffing Savings</h4>
+      <p>A fashion brand launched campaigns 3&times; faster, cut staffing costs 80%, and achieved 16-hour daily support coverage with a remote creative + CX pod.</p>
+    </a>
+    <a href="/case-study-remote-compliance-support/" class="zt-related-card">
+      <p class="meta">Compliance</p>
+      <h4>Remote Compliance Support: SLA Breaches Cut 81%</h4>
+      <p>A regulated platform stood up 24/7 compliance coverage and cut SLA breaches 81% with a dedicated remote pod.</p>
+    </a>
+  </div>
+
+  <!-- ═══════════ 12. AUTHOR EEAT ═══════════ -->
+  <div class="zt-author">
+    <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><circle cx="27" cy="27" r="27" fill="#374B47"/><text x="27" y="35" text-anchor="middle" font-family="Geologica,Inter,system-ui,sans-serif" font-weight="700" font-size="26" fill="#8FD299">Z</text></svg>
+    <div>
+      <p class="name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">The Zedtreeo Editorial Team</span></p>
+      <p class="bio">Remote Staffing Research &amp; Content, Zedtreeo</p>
+      <span class="meta">Published April 17, 2026</span>
+    </div>
+  </div>
+</article>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     JSON-LD — Article schema
+     ═══════════════════════════════════════════════════════════════════════════ -->

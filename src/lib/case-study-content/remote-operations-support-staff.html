@@ -1,0 +1,484 @@
+<style>
+/* ═══ RESET & BASE ═══ */
+.zt-cs * { box-sizing: border-box; }
+.zt-cs { font-family: 'Geologica', system-ui, -apple-system, sans-serif; color: #5F6567; line-height: 1.7; font-size: 17px; max-width: 100%; }
+.zt-cs > *:not(.zt-cs-hero):not(.zt-cta):not(.zt-results-wrap) { max-width: 1180px; margin-left: auto; margin-right: auto; padding-left: 40px; padding-right: 40px; }
+.zt-cs h1, .zt-cs h2, .zt-cs h3, .zt-cs h4 { color: #161616; font-family: inherit; }
+.zt-cs h1 { font-size: 44px; font-weight: 600; line-height: 1.12; letter-spacing: -1.5px; margin: 0 0 18px; }
+.zt-cs h2 { font-size: 32px; font-weight: 700; line-height: 1.2; margin: 54px 0 20px; letter-spacing: -0.5px; }
+.zt-cs h3 { font-size: 22px; font-weight: 600; line-height: 1.3; margin: 28px 0 12px; }
+.zt-cs h4 { font-size: 18px; font-weight: 600; margin: 20px 0 8px; }
+.zt-cs p  { margin: 0 0 16px; }
+.zt-cs a  { color: #374B47; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(55,75,71,.3); transition: all .2s; }
+.zt-cs a:hover { color: #8FD299; border-bottom-color: #8FD299; }
+
+/* ═══ 1. HERO ═══ */
+.zt-cs-hero { position: relative; background: linear-gradient(135deg, #374B47 0%, #1e2b28 100%); color: #fff; padding: 80px 40px; border-radius: 0; margin: 0 0 48px; overflow: hidden; }
+.zt-cs-hero:before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(143,210,153,.15) 0%, transparent 70%); border-radius: 50%; }
+.zt-cs-hero .inner { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; }
+.zt-cs-hero .eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(143,210,153,.15); color: #8FD299; padding: 8px 18px; border-radius: 50px; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 22px; }
+.zt-cs-hero h1 { color: #fff; max-width: 880px; }
+.zt-cs-hero p.lede { color: #cfe0d5; font-size: 19px; max-width: 720px; margin: 0 0 36px; line-height: 1.55; }
+
+/* KPI Cards — Infographic */
+.zt-kpi-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 36px; }
+.zt-kpi { background: rgba(255,255,255,.06); border: 1px solid rgba(143,210,153,.25); backdrop-filter: blur(10px); padding: 28px 24px; border-radius: 0; position: relative; overflow: hidden; }
+.zt-kpi:before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #8FD299; }
+.zt-kpi .icon { width: 44px; height: 44px; margin: 0 0 14px; opacity: .9; }
+.zt-kpi .value { color: #8FD299; font-size: 44px; font-weight: 700; line-height: 1; margin: 0 0 6px; letter-spacing: -2px; }
+.zt-kpi .label { color: #e8f3ed; font-size: 14px; margin: 0; line-height: 1.4; }
+@media (max-width: 780px) { .zt-kpi-row { grid-template-columns: 1fr; } .zt-cs-hero h1 { font-size: 32px; } .zt-cs-hero { padding: 48px 28px; } }
+
+/* ═══ 2. SNAPSHOT ═══ */
+.zt-snapshot { background: #F7F7F7; border: 1px solid #e5e7eb; border-radius: 0; padding: 28px 32px; margin: 0 0 48px; }
+.zt-snapshot .title { display: flex; align-items: center; gap: 10px; margin: 0 0 18px; }
+.zt-snapshot .title h3 { margin: 0; font-size: 15px; color: #374B47; letter-spacing: 1.5px; text-transform: uppercase; }
+.zt-snapshot .title svg { width: 20px; height: 20px; }
+.zt-snap-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.zt-snap-grid .item { padding-left: 14px; border-left: 3px solid #8FD299; }
+.zt-snap-grid .item strong { display: block; color: #161616; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 4px; }
+.zt-snap-grid .item span { color: #5F6567; font-size: 15px; }
+@media (max-width: 780px) { .zt-snap-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ═══ 3. CHALLENGE CARDS ═══ */
+.zt-challenge-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 28px 0 40px; }
+.zt-challenge-card { background: #fff; border: 1px solid #e5e7eb; border-top: 4px solid #d54444; border-radius: 0; padding: 26px 24px; position: relative; }
+.zt-challenge-card .num { position: absolute; top: -18px; right: 18px; width: 36px; height: 36px; background: #d54444; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+.zt-challenge-card h4 { margin: 0 0 10px; color: #161616; }
+.zt-challenge-card p { margin: 0; font-size: 15px; line-height: 1.55; }
+@media (max-width: 780px) { .zt-challenge-grid { grid-template-columns: 1fr; } }
+
+/* ═══ 4. SOLUTION — TEAM GRAPHIC ═══ */
+.zt-solution { background: linear-gradient(135deg, #E4EDF3 0%, #F7F7F7 100%); border-radius: 0; padding: 40px 36px; margin: 28px 0 40px; }
+.zt-solution h3 { margin-top: 0; }
+.zt-team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 20px 0 0; }
+.zt-team-card { background: #fff; border-radius: 0; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start; box-shadow: 0 2px 8px rgba(22,22,22,.04); }
+.zt-team-card .avatar { width: 48px; height: 48px; background: #8FD299; border-radius: 0; display: flex; align-items: center; justify-content: center; color: #161616; font-weight: 700; flex-shrink: 0; }
+.zt-team-card .details strong { display: block; color: #161616; font-size: 16px; margin: 0 0 4px; }
+.zt-team-card .details span { color: #5F6567; font-size: 14px; }
+@media (max-width: 780px) { .zt-team-grid { grid-template-columns: 1fr; } }
+
+/* ═══ 5. TIMELINE INFOGRAPHIC ═══ */
+.zt-timeline-wrap { margin: 30px 0 40px; }
+.zt-timeline-svg { width: 100%; height: auto; display: block; margin-bottom: 20px; }
+.zt-phase-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.zt-phase-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 0; padding: 22px; position: relative; }
+.zt-phase-card .phase-num { position: absolute; top: -14px; left: 22px; background: #374B47; color: #8FD299; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; }
+.zt-phase-card .period { color: #8FD299; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 6px 0 8px; }
+.zt-phase-card h4 { margin: 0 0 6px; font-size: 16px; }
+.zt-phase-card p { margin: 0; font-size: 14px; }
+@media (max-width: 780px) { .zt-phase-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ═══ 6. RESULTS — BAR CHART INFOGRAPHIC ═══ */
+.zt-results-wrap { background: #161616; color: #fff; border-radius: 0; padding: 44px calc((100% - 1180px) / 2 + 40px); margin: 30px 0 40px; }
+.zt-results-wrap h3 { color: #fff; margin: 0 0 8px; font-size: 26px; }
+.zt-results-wrap p.lead { color: #a9b8b2; margin: 0 0 32px; font-size: 15px; }
+.zt-bar-chart { display: grid; gap: 22px; }
+.zt-bar-row { }
+.zt-bar-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.zt-bar-head .label { color: #fff; font-weight: 600; font-size: 15px; }
+.zt-bar-head .delta { color: #8FD299; font-weight: 700; font-size: 16px; }
+.zt-bar-track { background: rgba(255,255,255,.08); border-radius: 50px; height: 14px; position: relative; overflow: hidden; }
+.zt-bar-fill { height: 100%; background: linear-gradient(90deg, #8FD299 0%, #a5e0ac 100%); border-radius: 50px; position: relative; }
+.zt-bar-meta { display: flex; justify-content: space-between; margin-top: 6px; color: #a9b8b2; font-size: 12px; }
+
+/* ═══ 7. ROI DONUT INFOGRAPHIC ═══ */
+.zt-roi-wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 36px; align-items: center; background: #F7F7F7; border-radius: 0; padding: 40px 36px; margin: 30px 0 40px; }
+.zt-roi-donut { position: relative; text-align: center; }
+.zt-roi-donut .center-label { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+.zt-roi-donut .center-label .big { font-size: 42px; font-weight: 700; color: #161616; letter-spacing: -1.5px; display: block; }
+.zt-roi-donut .center-label .small { font-size: 13px; color: #5F6567; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+.zt-roi-table { }
+.zt-roi-table h3 { margin: 0 0 18px; }
+.zt-roi-table table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.zt-roi-table th { padding: 12px 14px; background: #374B47; color: #fff !important; text-align: left; font-weight: 600; }
+.zt-roi-table td { padding: 11px 14px; border-bottom: 1px solid #e5e7eb; background: #fff; }
+.zt-roi-table tr.total td { background: #f0faf2; font-weight: 700; color: #161616; border: 2px solid #8FD299; }
+@media (max-width: 880px) { .zt-roi-wrap { grid-template-columns: 1fr; } }
+
+/* ═══ 8. PULL QUOTE ═══ */
+.zt-quote { position: relative; background: #fff; border: 1px solid #e5e7eb; border-radius: 0; padding: 48px 44px 36px; margin: 40px 0; }
+.zt-quote .mark { position: absolute; top: -18px; left: 36px; background: #8FD299; color: #161616; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: 700; font-family: Georgia, serif; line-height: 1; }
+.zt-quote .quote-text { font-size: 24px; font-weight: 300; line-height: 1.45; color: #161616; margin: 0 0 22px; letter-spacing: -0.3px; }
+.zt-quote .author-row { display: flex; align-items: center; gap: 16px; padding-top: 22px; border-top: 1px solid #e5e7eb; }
+.zt-quote .author-row img { width: 54px; height: 54px; border-radius: 50%; object-fit: cover; }
+.zt-quote .author-row .name { color: #161616; font-weight: 600; font-size: 16px; display: block; }
+.zt-quote .author-row .title { color: #5F6567; font-size: 14px; }
+.zt-quote .stars { margin-left: auto; color: #8FD299; font-size: 18px; letter-spacing: 2px; }
+
+/* ═══ 9. RELATED CARDS ═══ */
+.zt-related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 24px 0 40px; }
+.zt-related-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 0; padding: 22px; transition: all .2s; text-decoration: none !important; display: block; }
+.zt-related-card:hover { border-color: #8FD299; transform: translateY(-3px); box-shadow: 0 8px 24px rgba(143,210,153,.15); }
+.zt-related-card .icon { width: 40px; height: 40px; background: #f0faf2; border-radius: 0; display: flex; align-items: center; justify-content: center; margin: 0 0 14px; }
+.zt-related-card .meta { color: #8FD299; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 0 8px; }
+.zt-related-card h4 { margin: 0 0 8px; font-size: 16px; color: #161616; }
+.zt-related-card p { margin: 0; color: #5F6567; font-size: 14px; line-height: 1.5; }
+@media (max-width: 780px) { .zt-related-grid { grid-template-columns: 1fr; } }
+
+/* ═══ 10. CTA ═══ */
+.zt-cta { background: linear-gradient(135deg, #374B47 0%, #1e2b28 100%); color: #fff; padding: 50px 40px; border-radius: 0; margin: 40px 0; text-align: center; position: relative; overflow: hidden; }
+.zt-cta:before { content: ''; position: absolute; top: 0; right: 0; width: 280px; height: 280px; background: radial-gradient(circle, rgba(143,210,153,.15) 0%, transparent 70%); }
+.zt-cta .inner { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; }
+.zt-cta h3 { color: #fff !important; margin: 0 0 12px; font-size: 28px; }
+.zt-cta p  { color: #e8f3ed; margin: 0 auto 26px; max-width: 580px; font-size: 16px; }
+.zt-cta .btn { background: #8FD299; color: #161616 !important; padding: 15px 38px; border-radius: 50px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-size: 16px; border: none; transition: all .2s; }
+.zt-cta .btn:hover { background: #7ac284; transform: translateX(4px); }
+
+/* ═══ 11. AUTHOR EEAT ═══ */
+.zt-author { display: none; }
+.zt-author img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid #8FD299; }
+.zt-author .name { color: #161616; font-weight: 600; font-size: 16px; margin: 0; }
+.zt-author .bio  { color: #5F6567; font-size: 14px; margin: 4px 0 0; }
+.zt-author .meta { color: #8FD299; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; display: block; }
+</style>
+
+<article class="zt-cs" itemscope itemtype="https://schema.org/Article">
+  <meta itemprop="headline" content="35% Fewer Fulfillment Errors and 79% Cost Savings With a Remote E-Commerce Operations Pod">
+  <meta itemprop="datePublished" content="2026-04-17">
+  <meta itemprop="dateModified" content="2026-04-17">
+
+  <!-- ═══════════ 1. HERO WITH INFOGRAPHIC KPI CARDS ═══════════ -->
+  <section class="zt-cs-hero">
+    <div class="inner">
+      <div class="eyebrow">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3L22 4" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        CASE STUDY &middot; E-Commerce &amp; DTC Brands
+      </div>
+      <h1>35% Fewer Fulfillment Errors and 79% Cost Savings With a Remote E-Commerce Operations Pod</h1>
+      <p class="lede">Battling a 7.2% order-error rate, vendor disputes stretching past two weeks, and an ops team stretched so thin the founder was personally approving purchase orders at midnight, the brand deployed a 6-person remote operations pod that now delivers 35% fewer fulfillment errors, 48-hour vendor dispute resolution, and 79% cost savings &mdash; starting from $5/hour.</p>
+
+      <div class="zt-kpi-row">
+        <div class="zt-kpi">
+          <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="value">79%</p>
+          <p class="label">Lower operations support cost</p>
+        </div>
+        <div class="zt-kpi">
+          <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M23 6l-9.5 9.5-5-5L1 18" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 6h6v6" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="value">35%</p>
+          <p class="label">Fewer fulfillment errors</p>
+        </div>
+        <div class="zt-kpi">
+          <svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#8FD299" stroke-width="2.5"/><path d="M12 6v6l4 2" stroke="#8FD299" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="value">48hr</p>
+          <p class="label">Vendor dispute resolution SLA</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 2. CLIENT SNAPSHOT ═══════════ -->
+  <section class="zt-snapshot">
+    <div class="title">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="6" width="20" height="14" rx="2" stroke="#374B47" stroke-width="2.2"/></svg>
+      <h3>Client Snapshot</h3>
+    </div>
+    <div class="zt-snap-grid">
+      <div class="item"><strong>Industry</strong><span>E-Commerce &amp; DTC Brands</span></div>
+      <div class="item"><strong>Company Size</strong><span>$24M revenue, 85 employees, 12,000+ SKUs</span></div>
+      <div class="item"><strong>Geography</strong><span>United States</span></div>
+      <div class="item"><strong>Stack</strong><span>Shopify Plus, ShipStation, NetSuite, Gorgias, Klaviyo, Looker</span></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 3. THE CHALLENGE ═══════════ -->
+  <h2>The Challenge</h2>
+  <p>The brand sells premium wellness and home goods through Shopify Plus, shipping 4,200+ orders per week via a 3PL network with 3 fulfillment centers across the US. A 3-person ops team managed everything from order exceptions and inventory reconciliation to vendor negotiations and returns processing. Revenue had grown 140% year-over-year, but the ops infrastructure hadn&rsquo;t scaled &mdash; and the cracks were showing in every customer review, every vendor invoice, and every inventory count.</p>
+
+  <div class="zt-challenge-grid">
+    <div class="zt-challenge-card">
+      <span class="num">1</span>
+      <h4>Fulfillment errors were eroding customer LTV</h4>
+      <p>The order-error rate hit 7.2% &mdash; wrong items, incorrect quantities, mislabeled shipments. Each error cost an average of $34 in reshipping, replacement product, and customer-service labor. At 4,200 orders/week, that translated to $530K in annual error cost. NPS dropped 18 points in two quarters, and repeat-purchase rate fell from 42% to 31%.</p>
+    </div>
+    <div class="zt-challenge-card">
+      <span class="num">2</span>
+      <h4>Vendor disputes were bleeding margin</h4>
+      <p>Average vendor-dispute resolution time had stretched to 16 days. The brand worked with 48 suppliers, and at any given time 12&ndash;15 open disputes sat in a shared inbox that nobody owned. $186K in vendor credits went unrecovered in the prior fiscal year because disputes expired past the contractual claim window. Gross margin compressed 3.4 points as a result.</p>
+    </div>
+    <div class="zt-challenge-card">
+      <span class="num">3</span>
+      <h4>Inventory visibility was a spreadsheet nightmare</h4>
+      <p>NetSuite and Shopify Plus inventory counts diverged by 8&ndash;12% on any given day. The team ran manual reconciliation in Google Sheets every Friday, but by Monday the numbers had drifted again. Two stockout incidents on hero SKUs during a flash sale cost $92K in lost revenue and triggered 340 customer-support tickets in 48 hours.</p>
+    </div>
+    <div class="zt-challenge-card">
+      <span class="num">4</span>
+      <h4>The founder was the backup for every ops function</h4>
+      <p>With only 3 ops staff, the founder personally handled after-hours order exceptions, vendor escalations, and inventory emergencies. In Q3, the founder logged 22 hours/week on operational tasks that should have been handled by a mid-level ops coordinator &mdash; time that wasn&rsquo;t going into product development, fundraising, or strategic partnerships.</p>
+    </div>
+  </div>
+
+  <!-- Pull Quote (Challenge context) -->
+  <div class="zt-quote">
+    <span class="mark">&ldquo;</span>
+    <p class="quote-text">I was approving purchase orders at midnight and chasing vendor credits on weekends. We grew 140% in revenue but our ops team was the same three people from when we were doing $8 million. Every stockout, every wrong shipment, every expired vendor claim was money we lit on fire because we couldn&rsquo;t staff fast enough.</p>
+    <div class="author-row">
+      <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><circle cx="27" cy="27" r="27" fill="#374B47"/><text x="27" y="35" text-anchor="middle" font-family="Geologica,Inter,system-ui,sans-serif" font-weight="700" font-size="26" fill="#8FD299">Z</text></svg>
+      <div>
+        <span class="name">Founder &amp; CEO</span>
+        <span class="title">US DTC E-Commerce Brand (name withheld &mdash; NDA)</span>
+      </div>
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    </div>
+  </div>
+
+  <!-- ═══════════ 4. THE SOLUTION — VISUAL TEAM BUILD ═══════════ -->
+  <h2>The Solution: A Pre-Vetted Zedtreeo Team</h2>
+  <p>Zedtreeo deployed a 6-person remote operations support pod within 9 business days. The pod was structured as a full-cycle e-commerce operations team &mdash; order management specialists for exception handling and QA, an inventory coordinator for NetSuite/Shopify reconciliation, a vendor liaison officer for dispute resolution and procurement support, a shipping/logistics analyst for carrier optimization, a returns processor, and an ops data analyst &mdash; all operating inside Shopify Plus, ShipStation, NetSuite, Gorgias, and Looker with the brand&rsquo;s SOPs and approval workflows.</p>
+
+  <div class="zt-solution">
+    <h3 style="margin-top:0;">Team Composition Deployed</h3>
+    <p style="margin-bottom:20px;">A 6-person ops pod sized to process 4,200+ weekly orders, manage 48 vendor relationships, and maintain real-time inventory accuracy across 3 fulfillment centers &mdash; without adding headcount to the client&rsquo;s payroll.</p>
+
+    <div class="zt-team-grid">
+      <div class="zt-team-card">
+        <div class="avatar">O</div>
+        <div class="details"><strong>Order Management Specialists (2)</strong><span>Order exception handling, address verification, split-shipment coordination, Shopify Plus order editing, ShipStation label QA, cancellation/modification workflows, chargeback documentation.</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">I</div>
+        <div class="details"><strong>Inventory Coordinator (1)</strong><span>NetSuite/Shopify Plus reconciliation, daily cycle counts, reorder-point monitoring, 3PL inventory audits, stockout prevention alerts, SKU-level demand forecasting support.</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">V</div>
+        <div class="details"><strong>Vendor Liaison Officer (1)</strong><span>Vendor dispute resolution, credit-recovery tracking, PO management, lead-time monitoring, supplier scorecarding, cost-negotiation support, new-vendor onboarding documentation.</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">S</div>
+        <div class="details"><strong>Shipping &amp; Logistics Analyst (1)</strong><span>Carrier rate analysis, ShipStation routing optimization, delivery-exception tracking, 3PL SLA monitoring, shipping-cost allocation, late-shipment root-cause analysis.</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">R</div>
+        <div class="details"><strong>Returns Processor (cross-trained)</strong><span>RMA intake and disposition, restocking coordination, refund/exchange processing, return-reason categorization, defect-rate tracking, warranty claim management.</span></div>
+      </div>
+      <div class="zt-team-card">
+        <div class="avatar">D</div>
+        <div class="details"><strong>Ops Data Analyst (1)</strong><span>Looker dashboard ownership, fulfillment KPI tracking, vendor-performance reporting, inventory-health scorecards, weekly executive summaries, ad-hoc analysis for strategic decisions.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Tools &amp; AI Stack Deployed</h3>
+  <p>The pod operates inside the client&rsquo;s existing stack &mdash; Shopify Plus for order management, ShipStation for shipping and label generation, NetSuite for ERP and inventory, Gorgias for customer-facing escalations, Klaviyo for post-purchase communications, and Looker for ops analytics. All team members completed the brand&rsquo;s SOP certification, signed NDAs covering customer data and vendor contracts, and operate under role-based access controls with full audit trails in NetSuite.</p>
+
+  <!-- ═══════════ 5. TIMELINE INFOGRAPHIC (SVG) ═══════════ -->
+  <h2>Execution Timeline</h2>
+  <div class="zt-timeline-wrap">
+    <svg class="zt-timeline-svg" viewBox="0 0 800 80" xmlns="http://www.w3.org/2000/svg">
+      <line x1="60" y1="40" x2="740" y2="40" stroke="#e5e7eb" stroke-width="3" stroke-linecap="round"/>
+      <line x1="60" y1="40" x2="740" y2="40" stroke="#8FD299" stroke-width="3" stroke-linecap="round" stroke-dasharray="680" stroke-dashoffset="0"/>
+      <g>
+        <circle cx="60" cy="40" r="18" fill="#374B47" stroke="#8FD299" stroke-width="3"/>
+        <text x="60" y="46" text-anchor="middle" fill="#8FD299" font-size="14" font-weight="700" font-family="Geologica, sans-serif">1</text>
+      </g>
+      <g>
+        <circle cx="287" cy="40" r="18" fill="#374B47" stroke="#8FD299" stroke-width="3"/>
+        <text x="287" y="46" text-anchor="middle" fill="#8FD299" font-size="14" font-weight="700" font-family="Geologica, sans-serif">2</text>
+      </g>
+      <g>
+        <circle cx="513" cy="40" r="18" fill="#374B47" stroke="#8FD299" stroke-width="3"/>
+        <text x="513" y="46" text-anchor="middle" fill="#8FD299" font-size="14" font-weight="700" font-family="Geologica, sans-serif">3</text>
+      </g>
+      <g>
+        <circle cx="740" cy="40" r="18" fill="#8FD299" stroke="#374B47" stroke-width="3"/>
+        <text x="740" y="46" text-anchor="middle" fill="#161616" font-size="14" font-weight="700" font-family="Geologica, sans-serif">4</text>
+      </g>
+    </svg>
+
+    <div class="zt-phase-grid">
+      <div class="zt-phase-card">
+        <span class="phase-num">1</span>
+        <p class="period">Week 1</p>
+        <h4>Kickoff &amp; Access</h4>
+        <p>Requirements call with Founder and Head of Ops. NDA + data processing agreement signed. Shopify Plus, ShipStation, NetSuite, Gorgias, and Looker access provisioned. 6 specialists shortlisted and SOP-tested in 48 hours.</p>
+      </div>
+      <div class="zt-phase-card">
+        <span class="phase-num">2</span>
+        <p class="period">Week 2&ndash;4</p>
+        <h4>Onboarding &amp; Trial</h4>
+        <p>5-day free trial on live order queue. Brand SOPs imported. NetSuite/Shopify reconciliation workflow established. First 1,200 orders processed with 96% accuracy. Vendor-dispute backlog triaged and prioritized.</p>
+      </div>
+      <div class="zt-phase-card">
+        <span class="phase-num">3</span>
+        <p class="period">Month 2&ndash;3</p>
+        <h4>Backlog Clearance &amp; Stabilization</h4>
+        <p>15 open vendor disputes resolved within 48 hours each. $68K in previously-expired vendor credits recovered. Inventory variance reduced from 12% to 3.1%. Fulfillment error rate drops from 7.2% to 5.1%. Founder reclaims 18 hours/week.</p>
+      </div>
+      <div class="zt-phase-card">
+        <span class="phase-num">4</span>
+        <p class="period">Month 4&ndash;6</p>
+        <h4>Optimization &amp; Scale</h4>
+        <p>Fulfillment error rate reaches 4.7% (35% reduction). 48-hour vendor SLA sustained at 97% compliance. 79% cost reduction booked. Looker dashboards deliver real-time ops visibility. Pod extended with 1 procurement coordinator for Q4 peak season.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 6. RESULTS — BAR CHART INFOGRAPHIC ═══════════ -->
+  <h2>The Results</h2>
+  <p>Within one quarter, operations went from the brand&rsquo;s growth bottleneck to its competitive moat &mdash; fewer errors, faster vendor resolution, real-time inventory visibility, and a cost structure that freed the founder to focus on product and partnerships instead of purchase orders.</p>
+
+  <div class="zt-results-wrap">
+    <h3>Performance Before &rarr; After</h3>
+    <p class="lead">Measured improvements across 90 days post-onboarding of the engagement.</p>
+
+    <div class="zt-bar-chart">
+      <div class="zt-bar-row">
+        <div class="zt-bar-head">
+          <span class="label">Fulfillment Error Rate</span>
+          <span class="delta">&minus;35% reduction</span>
+        </div>
+        <div class="zt-bar-track"><div class="zt-bar-fill" style="width: 85%;"></div></div>
+        <div class="zt-bar-meta"><span>Before: 7.2%</span><span>After: 4.7%</span></div>
+      </div>
+
+      <div class="zt-bar-row">
+        <div class="zt-bar-head">
+          <span class="label">Vendor Dispute Resolution Time</span>
+          <span class="delta">+87% faster</span>
+        </div>
+        <div class="zt-bar-track"><div class="zt-bar-fill" style="width: 88%;"></div></div>
+        <div class="zt-bar-meta"><span>Before: 16 days</span><span>After: 48 hours</span></div>
+      </div>
+
+      <div class="zt-bar-row">
+        <div class="zt-bar-head">
+          <span class="label">Inventory Variance (NetSuite vs Shopify)</span>
+          <span class="delta">&minus;74% reduction</span>
+        </div>
+        <div class="zt-bar-track"><div class="zt-bar-fill" style="width: 74%;"></div></div>
+        <div class="zt-bar-meta"><span>Before: 12%</span><span>After: 3.1%</span></div>
+      </div>
+
+      <div class="zt-bar-row">
+        <div class="zt-bar-head">
+          <span class="label">Annual Operations Support Cost</span>
+          <span class="delta">&minus;79%</span>
+        </div>
+        <div class="zt-bar-track"><div class="zt-bar-fill" style="width: 82%;"></div></div>
+        <div class="zt-bar-meta"><span>Before: $500,000</span><span>After: $105,000</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ 7. ROI — DONUT + TABLE INFOGRAPHIC ═══════════ -->
+  <h2>ROI: Zedtreeo vs In-House Hire</h2>
+  <div class="zt-roi-wrap">
+    <div class="zt-roi-donut">
+      <svg viewBox="0 0 200 200" width="220" height="220" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="80" fill="none" stroke="#e5e7eb" stroke-width="28"/>
+        <circle cx="100" cy="100" r="80" fill="none" stroke="#8FD299" stroke-width="28" stroke-dasharray="502" stroke-dashoffset="105" transform="rotate(-90 100 100)" stroke-linecap="round"/>
+      </svg>
+      <div class="center-label">
+        <span class="big">79%</span>
+        <span class="small">Cost Saved</span>
+      </div>
+    </div>
+
+    <div class="zt-roi-table">
+      <h3>12-Month Cost Breakdown</h3>
+      <table>
+        <thead>
+          <tr>
+            <th style="color:#fff;">Line Item</th>
+            <th style="color:#fff;">In-House (United States)</th>
+            <th style="color:#fff;">Zedtreeo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Salary + Benefits</td><td>$420,000</td><td>$105,000</td></tr>
+          <tr><td>Recruitment</td><td>$30,000</td><td>Included</td></tr>
+          <tr><td>HR &amp; Compliance</td><td>$22,000</td><td>Included</td></tr>
+          <tr><td>Tools &amp; Licenses</td><td>$28,000</td><td>Included</td></tr>
+          <tr class="total"><td><strong>Total Annual</strong></td><td><strong>$500,000</strong></td><td><strong>$105,000</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════ 8. TESTIMONIAL ═══════════ -->
+  <h2>Client Testimonial</h2>
+  <div class="zt-quote">
+    <span class="mark">&ldquo;</span>
+    <p class="quote-text">The Zedtreeo ops pod works inside our Shopify Plus, our NetSuite, our ShipStation &mdash; same SOPs, same approval chains, same KPIs as if they sat in our office. We cut fulfillment errors 35%, recovered $68K in vendor credits that were about to expire, and I haven&rsquo;t approved a purchase order at midnight in four months. 79% cheaper was the number that convinced our board; the 48-hour vendor SLA is what convinced me.</p>
+    <div class="author-row">
+      <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><circle cx="27" cy="27" r="27" fill="#374B47"/><text x="27" y="35" text-anchor="middle" font-family="Geologica,Inter,system-ui,sans-serif" font-weight="700" font-size="26" fill="#8FD299">Z</text></svg>
+      <div>
+        <span class="name">Founder &amp; CEO</span>
+        <span class="title">US DTC E-Commerce Brand (name withheld &mdash; NDA)</span>
+      </div>
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    </div>
+  </div>
+
+  <!-- ═══════════ 9. RELATED ROLES (CROSS-LINKS) ═══════════ -->
+  <h2>Roles Deployed on This Engagement</h2>
+  <p>Every role included: AI-tool training, HR management, compliance, and replacement guarantee. Starting from <strong>$5 per hour</strong>, fully timezone-matched globally.</p>
+
+  <div class="zt-related-grid">
+    <a href="/hire-virtual-assistants/" class="zt-related-card">
+      <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="7" r="4" stroke="#374B47" stroke-width="2.2"/></svg></div>
+      <p class="meta">ROLE</p>
+      <h4>Virtual Assistants</h4>
+      <p>Order management, vendor coordination, inventory tracking, returns processing. From $5/hour.</p>
+    </a>
+    <a href="/remote-staffing-services/hire-remote-administrative-and-assistant/" class="zt-related-card">
+      <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <p class="meta">ROLE</p>
+      <h4>Data Entry Specialists</h4>
+      <p>SKU management, inventory reconciliation, PO data entry, catalog updates. From $5/hour.</p>
+    </a>
+    <a href="/remote-staffing-services/hire-remote-administrative-and-assistant/" class="zt-related-card">
+      <div class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="#374B47" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <p class="meta">ROLE</p>
+      <h4>Project Managers</h4>
+      <p>Ops workflow coordination, vendor management, 3PL liaison, process optimization. From $5/hour.</p>
+    </a>
+  </div>
+
+  <!-- ═══════════ 10. PRIMARY CTA ═══════════ -->
+  <section class="zt-cta">
+    <div class="inner">
+      <h3>Build an Ops Team Like This</h3>
+      <p>Get 3 pre-vetted, AI-trained candidates in 48 hours. Starting from $5 per hour. 5-day free trial. Save 70&ndash;90%.</p>
+      <a href="https://zedtreeo.com/#contact" class="btn">
+        Hire Remote Staff Now
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="#161616" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════ 11. RELATED CASE STUDIES ═══════════ -->
+  <h2>More E-Commerce &amp; DTC Case Studies</h2>
+  <div class="zt-related-grid">
+    <a href="/case-study-remote-customer-support/" class="zt-related-card">
+      <p class="meta">Customer Support</p>
+      <h4>Remote Customer Support: Faster Resolution, Lower Cost</h4>
+      <p>An e-commerce brand scaled customer support coverage, cut resolution time, and reduced costs with a dedicated remote Zedtreeo CX pod.</p>
+    </a>
+    <a href="/case-study-remote-fashion-brand-staffing/" class="zt-related-card">
+      <p class="meta">Fashion &amp; Retail</p>
+      <h4>3&times; Faster Campaigns and 80% Staffing Savings</h4>
+      <p>A UK fashion brand launched campaigns 3&times; faster, cut staffing costs 80%, and achieved 16-hour daily support coverage with a remote creative + CX pod.</p>
+    </a>
+    <a href="/case-study-remote-data-analysis/" class="zt-related-card">
+      <p class="meta">Data &amp; Analytics</p>
+      <h4>Remote Data Analysis: Insights Delivered 3&times; Faster</h4>
+      <p>A growth-stage company tripled analytics throughput and cut reporting costs with a dedicated remote data pod.</p>
+    </a>
+  </div>
+
+  <!-- ═══════════ 12. AUTHOR EEAT ═══════════ -->
+  <div class="zt-author">
+    <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><circle cx="27" cy="27" r="27" fill="#374B47"/><text x="27" y="35" text-anchor="middle" font-family="Geologica,Inter,system-ui,sans-serif" font-weight="700" font-size="26" fill="#8FD299">Z</text></svg>
+    <div>
+      <p class="name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">The Zedtreeo Editorial Team</span></p>
+      <p class="bio">Remote Staffing Research &amp; Content, Zedtreeo</p>
+      <span class="meta">Published April 17, 2026</span>
+    </div>
+  </div>
+</article>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     JSON-LD — Article schema
+     ═══════════════════════════════════════════════════════════════════════════ -->

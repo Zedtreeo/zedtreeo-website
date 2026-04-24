@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   {
@@ -19,16 +20,27 @@ const navLinks = [
       { label: "DevOps & Cloud", href: "/hire/devops-engineers" },
     ],
   },
-  { label: "How It Works", href: "/#how-it-works" },
+  { label: "How It Works", href: "/how-it-works" },
   { label: "Candidates", href: "/candidates" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
 ];
 
 export default function Header() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+
+  /** Check if a nav link is active based on current pathname */
+  const isActive = (href: string, hasChildren?: boolean) => {
+    if (hasChildren) {
+      // Services dropdown: active when on /services/*, /hire/*
+      return pathname.startsWith("/services") || pathname.startsWith("/hire");
+    }
+    if (href === "/") return pathname === "/";
+    return pathname === href || pathname.startsWith(href + "/");
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -37,6 +49,11 @@ export default function Header() {
   }, []);
 
   // Close mobile menu on route change
+  useEffect(() => {
+    setMobileOpen(false);
+    setServicesOpen(false);
+  }, [pathname]);
+
   useEffect(() => {
     if (mobileOpen) {
       document.body.style.overflow = "hidden";
@@ -85,7 +102,9 @@ export default function Header() {
                 <button
                   aria-expanded={servicesOpen}
                   aria-haspopup="true"
-                  className="px-4 py-2 text-sm font-medium text-white/90 hover:text-white transition-colors flex items-center gap-1 bg-transparent border-none cursor-pointer"
+                  className={`px-4 py-2 text-sm font-medium transition-colors flex items-center gap-1 bg-transparent border-none cursor-pointer ${
+                    isActive(link.href, true) ? "text-zt-accent" : "text-white/90 hover:text-white"
+                  }`}
                 >
                   {link.label}
                   <svg
@@ -128,7 +147,9 @@ export default function Header() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="px-4 py-2 text-sm font-medium text-white/90 hover:text-white no-underline transition-colors"
+                className={`px-4 py-2 text-sm font-medium no-underline transition-colors ${
+                  isActive(link.href) ? "text-zt-accent" : "text-white/90 hover:text-white"
+                }`}
               >
                 {link.label}
               </Link>
@@ -185,7 +206,9 @@ export default function Header() {
               <div key={link.label}>
                 <button
                   onClick={() => setServicesOpen(!servicesOpen)}
-                  className="w-full flex items-center justify-between py-3 px-4 text-base font-medium text-white bg-transparent border-none cursor-pointer"
+                  className={`w-full flex items-center justify-between py-3 px-4 text-base font-medium bg-transparent border-none cursor-pointer ${
+                    isActive(link.href, true) ? "text-zt-accent" : "text-white"
+                  }`}
                 >
                   {link.label}
                   <svg
@@ -217,7 +240,9 @@ export default function Header() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="py-3 px-4 text-base font-medium text-white no-underline transition-colors hover:text-zt-accent"
+                className={`py-3 px-4 text-base font-medium no-underline transition-colors ${
+                  isActive(link.href) ? "text-zt-accent" : "text-white hover:text-zt-accent"
+                }`}
               >
                 {link.label}
               </Link>
