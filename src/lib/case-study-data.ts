@@ -1,13 +1,16 @@
 import { readFileSync } from "fs";
 import { join } from "path";
 
-export type CaseStudyPage = {
+export type CaseStudyPageMeta = {
   slug: string;
   title: string;
   metaTitle: string;
   metaDescription: string;
   focusKeyword: string;
   startingRate: string;
+};
+
+export type CaseStudyPage = CaseStudyPageMeta & {
   content: string;
 };
 
@@ -20,7 +23,7 @@ function loadContent(slug: string): string {
   }
 }
 
-export const case_study_content_data: CaseStudyPage[] = [
+export const case_study_content_data: CaseStudyPageMeta[] = [
   {
     slug: "media-remote-staffing",
     title: "70% Lower Creative Staffing Cost and 3× Content Output With a Remote Media Team",
@@ -28,7 +31,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "70% Lower Creative Staffing Cost and 3× Content Output With a Remote Media Team. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "70% Lower Creative Staffing Cost and 3× Content Output With ",
     startingRate: "$5/hr",
-    content: loadContent("media-remote-staffing"),
   },
   {
     slug: "remote-3d-rendering-experts",
@@ -37,7 +39,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "2× Rendering Throughput and 80% Lower Visualization Cost in One Quarter. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "2× Rendering Throughput and 80% Lower Visualization Cost in ",
     startingRate: "$5/hr",
-    content: loadContent("remote-3d-rendering-experts"),
   },
   {
     slug: "remote-compliance-support",
@@ -46,7 +47,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "81% Fewer SLA Breaches and 75% Lower Compliance Cost With a Remote Compliance Pod. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "81% Fewer SLA Breaches and 75% Lower Compliance Cost With a ",
     startingRate: "$5/hr",
-    content: loadContent("remote-compliance-support"),
   },
   {
     slug: "remote-crop-monitoring",
@@ -55,7 +55,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "60% Lower Field Reporting Cost and 2.5× Seasonal Scaling With a Remote Agri-Data Team. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "60% Lower Field Reporting Cost and 2.5× Seasonal Scaling Wit",
     startingRate: "$5/hr",
-    content: loadContent("remote-crop-monitoring"),
   },
   {
     slug: "remote-customer-service-agents",
@@ -64,7 +63,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "45% Lower Wait Times and 85% Support Cost Reduction With a Remote Customer Service Team. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "45% Lower Wait Times and 85% Support Cost Reduction With a R",
     startingRate: "$5/hr",
-    content: loadContent("remote-customer-service-agents"),
   },
   {
     slug: "remote-customer-support",
@@ -73,7 +71,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "CSAT +24 Points and 59% Lower Ticket Cost With a Remote CX Team. Starting from $35/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "CSAT +24 Points and 59% Lower Ticket Cost With a Remote CX T",
     startingRate: "$35/hr",
-    content: loadContent("remote-customer-support"),
   },
   {
     slug: "remote-cybersecurity-experts",
@@ -82,7 +79,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "24/7 SOC Coverage and 68% Lower MTTR With a Remote Cybersecurity Team. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "24/7 SOC Coverage and 68% Lower MTTR With a Remote Cybersecu",
     startingRate: "$5/hr",
-    content: loadContent("remote-cybersecurity-experts"),
   },
   {
     slug: "remote-data-analysis",
@@ -91,7 +87,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "3× Reporting Velocity and 64% Lower Analytics Cost. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "3× Reporting Velocity and 64% Lower Analytics Cost",
     startingRate: "$5/hr",
-    content: loadContent("remote-data-analysis"),
   },
   {
     slug: "remote-drafting-teams",
@@ -100,7 +95,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "40% Faster Drawings and 85% Drafting Cost Savings With a Remote Architecture Drafting Team. Starting from $145/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "40% Faster Drawings and 85% Drafting Cost Savings With a Rem",
     startingRate: "$145/hr",
-    content: loadContent("remote-drafting-teams"),
   },
   {
     slug: "remote-fashion-brand-staffing",
@@ -109,7 +103,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "3× Faster Campaign Launches and 80% Lower Staffing Costs With a Remote Fashion Brand Team. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "3× Faster Campaign Launches and 80% Lower Staffing Costs Wit",
     startingRate: "$5/hr",
-    content: loadContent("remote-fashion-brand-staffing"),
   },
   {
     slug: "remote-finance-accounting-staff",
@@ -118,7 +111,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "Month-End Close Compressed From 12 Days to 4 With a Remote Finance Team. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "Month-End Close Compressed From 12 Days to 4 With a Remote F",
     startingRate: "$5/hr",
-    content: loadContent("remote-finance-accounting-staff"),
   },
   {
     slug: "remote-healthcare-compliance",
@@ -127,7 +119,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "70% Faster HIPAA Compliance Turnaround With a Dedicated Remote Healthcare Team. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "70% Faster HIPAA Compliance Turnaround With a Dedicated Remo",
     startingRate: "$5/hr",
-    content: loadContent("remote-healthcare-compliance"),
   },
   {
     slug: "remote-hospitality-support-staff",
@@ -136,7 +127,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "40% Faster Booking Resolution and +28 NPS With a Remote Hospitality Ops Team. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "40% Faster Booking Resolution and +28 NPS With a Remote Hosp",
     startingRate: "$5/hr",
-    content: loadContent("remote-hospitality-support-staff"),
   },
   {
     slug: "remote-hr-recruitment",
@@ -145,7 +135,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "55% Shorter Time-to-Fill and 3x Candidate Pipeline With a Remote HR & Recruitment Team. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "55% Shorter Time-to-Fill and 3x Candidate Pipeline With a Re",
     startingRate: "$5/hr",
-    content: loadContent("remote-hr-recruitment"),
   },
   {
     slug: "remote-it-support-teams",
@@ -154,7 +143,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "24/7 IT Support Coverage With 71% Lower Operating Cost. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "24/7 IT Support Coverage With 71% Lower Operating Cost",
     startingRate: "$5/hr",
-    content: loadContent("remote-it-support-teams"),
   },
   {
     slug: "remote-legal-experts",
@@ -163,7 +151,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "3× Matter Throughput and 40% Lower Partner Non-Billable Hours. Starting from $650/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "3× Matter Throughput and 40% Lower Partner Non-Billable Hour",
     startingRate: "$650/hr",
-    content: loadContent("remote-legal-experts"),
   },
   {
     slug: "remote-legal-staff",
@@ -172,7 +159,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "62% Faster Contract Review and 40% More Billable Hours With a Remote Legal Support Team. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "62% Faster Contract Review and 40% More Billable Hours With ",
     startingRate: "$5/hr",
-    content: loadContent("remote-legal-staff"),
   },
   {
     slug: "remote-marketing-teams-for-seo-content",
@@ -181,7 +167,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "Organic Leads Up 214% With a Dedicated Remote SEO & Content Team. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "Organic Leads Up 214% With a Dedicated Remote SEO & Content ",
     startingRate: "$5/hr",
-    content: loadContent("remote-marketing-teams-for-seo-content"),
   },
   {
     slug: "remote-marketing-teams",
@@ -190,7 +175,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "4× Campaign Throughput and 63% Lower Creative-Production Cost. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "4× Campaign Throughput and 63% Lower Creative-Production Cos",
     startingRate: "$5/hr",
-    content: loadContent("remote-marketing-teams"),
   },
   {
     slug: "remote-medical-billing-coding-staff",
@@ -199,7 +183,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "First-Pass Denial Rate Cut 45% and AR Turnover 22 Days Faster. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "First-Pass Denial Rate Cut 45% and AR Turnover 22 Days Faste",
     startingRate: "$5/hr",
-    content: loadContent("remote-medical-billing-coding-staff"),
   },
   {
     slug: "remote-moderation-compliance",
@@ -208,7 +191,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "94% Harmful Content Removed Within SLA and 83% Cost Savings With a Remote Content Moderation Pod. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "94% Harmful Content Removed Within SLA and 83% Cost Savings ",
     startingRate: "$5/hr",
-    content: loadContent("remote-moderation-compliance"),
   },
   {
     slug: "remote-operations-support-staff",
@@ -217,7 +199,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "35% Fewer Fulfillment Errors and 79% Cost Savings With a Remote E-Commerce Operations Pod. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "35% Fewer Fulfillment Errors and 79% Cost Savings With a Rem",
     startingRate: "$5/hr",
-    content: loadContent("remote-operations-support-staff"),
   },
   {
     slug: "remote-paralegals-for-case-preparation",
@@ -226,7 +207,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "Case Prep Cycle Cut 62% With a Remote Paralegal Team. Starting from $120/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "Case Prep Cycle Cut 62% With a Remote Paralegal Team",
     startingRate: "$120/hr",
-    content: loadContent("remote-paralegals-for-case-preparation"),
   },
   {
     slug: "remote-research-analytics",
@@ -235,7 +215,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "3x Research Throughput and 76% Cost Savings With a Remote Consulting Research & Analytics Pod. Starting from $185/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "3x Research Throughput and 76% Cost Savings With a Remote Co",
     startingRate: "$185/hr",
-    content: loadContent("remote-research-analytics"),
   },
   {
     slug: "remote-software-developers",
@@ -244,7 +223,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "2.4× Engineering Velocity Without Inflating Burn. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "2.4× Engineering Velocity Without Inflating Burn",
     startingRate: "$5/hr",
-    content: loadContent("remote-software-developers"),
   },
   {
     slug: "remote-staffing-solution-for-geotechnical-consultancy",
@@ -253,7 +231,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "50% Faster Report Turnaround and 3x Project Throughput With a Remote Geotechnical Analysis Pod. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "50% Faster Report Turnaround and 3x Project Throughput With ",
     startingRate: "$5/hr",
-    content: loadContent("remote-staffing-solution-for-geotechnical-consultancy"),
   },
   {
     slug: "remote-staffing-solutions-for-education",
@@ -262,7 +239,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "2x Course Launch Velocity and 22-Point NPS Improvement With a Remote Education Operations Pod. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "2x Course Launch Velocity and 22-Point NPS Improvement With ",
     startingRate: "$5/hr",
-    content: loadContent("remote-staffing-solutions-for-education"),
   },
   {
     slug: "remote-structural-engineering",
@@ -271,7 +247,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "45% Faster Drawing Delivery and 97% First-Submission Pass Rate With a Remote Structural Engineering Pod. Starting from $5/hr. Pre-vetted talent, free 5-day",
     focusKeyword: "45% Faster Drawing Delivery and 97% First-Submission Pass Ra",
     startingRate: "$5/hr",
-    content: loadContent("remote-structural-engineering"),
   },
   {
     slug: "scaling-a-boutique-investment-firm-with-remote-financial-talent",
@@ -280,7 +255,6 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "3x Deal Screening Throughput and 74% Cost Savings With a Remote Investment Operations Pod. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "3x Deal Screening Throughput and 74% Cost Savings With a Rem",
     startingRate: "$5/hr",
-    content: loadContent("scaling-a-boutique-investment-firm-with-remote-financial-talent"),
   },
   {
     slug: "virtual-healthcare-assistants",
@@ -289,12 +263,13 @@ export const case_study_content_data: CaseStudyPage[] = [
     metaDescription: "40% Shorter Patient Wait Times and 92% Verification Accuracy With a Remote Healthcare Admin Pod. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "40% Shorter Patient Wait Times and 92% Verification Accuracy",
     startingRate: "$5/hr",
-    content: loadContent("virtual-healthcare-assistants"),
   },
 ];
 
 export function getCaseStudyPage(slug: string): CaseStudyPage | undefined {
-  return case_study_content_data.find((p) => p.slug === slug);
+  const meta = case_study_content_data.find((p) => p.slug === slug);
+  if (!meta) return undefined;
+  return { ...meta, content: loadContent(slug) };
 }
 
 export function getAllCaseStudyPageSlugs(): string[] {

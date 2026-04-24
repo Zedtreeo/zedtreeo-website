@@ -1,13 +1,16 @@
 import { readFileSync } from "fs";
 import { join } from "path";
 
-export type IndustryPage = {
+export type IndustryPageMeta = {
   slug: string;
   title: string;
   metaTitle: string;
   metaDescription: string;
   focusKeyword: string;
   startingRate: string;
+};
+
+export type IndustryPage = IndustryPageMeta & {
   content: string;
 };
 
@@ -20,7 +23,7 @@ function loadContent(slug: string): string {
   }
 }
 
-export const industry_content_data: IndustryPage[] = [
+export const industry_content_data: IndustryPageMeta[] = [
   {
     slug: "agriculture-and-agtech",
     title: "Remote Staffing for Agriculture & AgTech — From $5/hour",
@@ -28,7 +31,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated GIS analysts, agronomy admins, crop data annotation specialists, compliance coordinators, farm operations support and AgTech customer success sta",
     focusKeyword: "Remote Staffing for Agriculture & AgTech — From $5/hour",
     startingRate: "$5/hr",
-    content: loadContent("agriculture-and-agtech"),
   },
   {
     slug: "architecture-and-engineering",
@@ -37,7 +39,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated CAD drafters, Revit BIM modelers, structural and MEP engineers, construction document specialists and estimators embedded with your firm — starti",
     focusKeyword: "Remote Staffing for Architecture & Engineering — From $7/hou",
     startingRate: "$7/hr",
-    content: loadContent("architecture-and-engineering"),
   },
   {
     slug: "automotive-and-transportation",
@@ -46,7 +47,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated fleet operations, dispatch coordinators, parts specialists, dealership back-office staff and logistics support embedded with your team — starting",
     focusKeyword: "Remote Staffing for Automotive & Transportation — From $6/ho",
     startingRate: "$6/hr",
-    content: loadContent("automotive-and-transportation"),
   },
   {
     slug: "construction-and-contracting",
@@ -55,7 +55,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated estimators, project management support, submittal & RFI coordinators, schedulers, document controllers, change order specialists and BIM coor",
     focusKeyword: "Remote Staffing for Construction & Contracting — From $7/hou",
     startingRate: "$7/hr",
-    content: loadContent("construction-and-contracting"),
   },
   {
     slug: "digital-marketing-and-content-creation",
@@ -64,7 +63,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated SEO writers, PPC managers, paid social specialists, video editors, graphic designers, CRO analysts and full-stack content pods embedded with your",
     focusKeyword: "Remote Staffing for Digital Marketing Agencies & Content Tea",
     startingRate: "$6/hr",
-    content: loadContent("digital-marketing-and-content-creation"),
   },
   {
     slug: "e-commerce-and-retail",
@@ -73,7 +71,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated listing and catalog managers, Shopify and Amazon specialists, customer service agents, returns and order ops staff embedded with your e-commerce ",
     focusKeyword: "Remote Staffing for E-Commerce & Retail — From $5/hour",
     startingRate: "$5/hr",
-    content: loadContent("e-commerce-and-retail"),
   },
   {
     slug: "education-e-learning",
@@ -82,7 +79,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated instructional designers, LMS administrators, online tutors, course content writers, enrollment VAs and student support staff embedded with your i",
     focusKeyword: "Remote Staffing for Education & E-Learning — From $5/hour",
     startingRate: "$5/hr",
-    content: loadContent("education-e-learning"),
   },
   {
     slug: "fashion-beauty",
@@ -91,7 +87,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated product listing staff, catalog managers, merchandisers, tech pack designers, photo retouchers, customer experience agents and influencer coordina",
     focusKeyword: "Remote Staffing for Fashion & Beauty Brands — From $5/hour",
     startingRate: "$5/hr",
-    content: loadContent("fashion-beauty"),
   },
   {
     slug: "finance-and-accounting",
@@ -100,7 +95,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated bookkeepers, AR/AP specialists, staff accountants, controllers, financial analysts and FP&A support embedded with your finance team — startin",
     focusKeyword: "Remote Staffing for Finance & Accounting — From $7/hour",
     startingRate: "$7/hr",
-    content: loadContent("finance-and-accounting"),
   },
   {
     slug: "healthcare-and-telemedicine",
@@ -109,7 +103,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "HIPAA-trained medical virtual assistants, coders, billers, RCM specialists and telehealth support staff embedded with your practice — starting from $6 per ",
     focusKeyword: "Remote Staffing for Healthcare & Telemedicine — From $6/hour",
     startingRate: "$6/hr",
-    content: loadContent("healthcare-and-telemedicine"),
   },
   {
     slug: "hospitality-tourism",
@@ -118,7 +111,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated reservations agents, guest services staff, revenue management analysts, OTA specialists, concierge VAs and corporate travel coordinators embedded",
     focusKeyword: "Remote Staffing for Hospitality & Tourism — From $5/hour",
     startingRate: "$5/hr",
-    content: loadContent("hospitality-tourism"),
   },
   {
     slug: "human-resources-and-recruitment",
@@ -127,7 +119,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated recruiters, candidate sourcers, HR generalists, payroll and benefits admin, onboarding specialists and HRIS coordinators embedded with your staff",
     focusKeyword: "Remote Staffing for HR & Recruitment Firms — From $6/hour",
     startingRate: "$6/hr",
-    content: loadContent("human-resources-and-recruitment"),
   },
   {
     slug: "information-technology",
@@ -136,7 +127,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated IT support engineers, sysadmins, junior and mid-level developers, DevOps, cloud, cybersecurity and QA staff embedded with your technology team — ",
     focusKeyword: "Remote Staffing for Information Technology — From $8/hour",
     startingRate: "$8/hr",
-    content: loadContent("information-technology"),
   },
   {
     slug: "insurance",
@@ -145,7 +135,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated underwriting assistants, claims processors, policy admin staff, agency CSRs, compliance analysts and actuarial support embedded with your carrier",
     focusKeyword: "Remote Staffing for Insurance — From $7/hour",
     startingRate: "$7/hr",
-    content: loadContent("insurance"),
   },
   {
     slug: "law",
@@ -154,7 +143,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated paralegals, legal virtual assistants, probate specialists, case prep researchers and document review support embedded with your firm — starting f",
     focusKeyword: "Remote Staffing for Law Firms — Paralegals & Legal VAs From ",
     startingRate: "$7/hr",
-    content: loadContent("law"),
   },
   {
     slug: "logistics-supply-chain-and-freight",
@@ -163,7 +151,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated dispatchers, freight brokers, 3PL operations coordinators, track-and-trace specialists, customs & import/export admins, warehouse admin and s",
     focusKeyword: "Remote Staffing for Logistics, Supply Chain & Freight — From",
     startingRate: "$6/hr",
-    content: loadContent("logistics-supply-chain-and-freight"),
   },
   {
     slug: "manufacturing-and-industrial",
@@ -172,7 +159,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated supply chain analysts, production admins, QA/QC documentation specialists, purchasing assistants, ERP operators and industrial engineers embedded",
     focusKeyword: "Remote Staffing for Manufacturing & Industrial — From $6/hou",
     startingRate: "$6/hr",
-    content: loadContent("manufacturing-and-industrial"),
   },
   {
     slug: "marketing-advertising",
@@ -181,7 +167,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Scale Your Marketing & Advertising Team Without Scaling Your Payroll. Starting from $5/hr. Pre-vetted talent, free 5-day trial.",
     focusKeyword: "Scale Your Marketing & Advertising Team Without Scaling Your",
     startingRate: "$5/hr",
-    content: loadContent("marketing-advertising"),
   },
   {
     slug: "marketing-and-advertising",
@@ -190,7 +175,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated content writers, SEO specialists, PPC managers, social media executives, email marketers and creative designers embedded with your marketing team",
     focusKeyword: "Remote Staffing for Marketing & Advertising — From $5/hour",
     startingRate: "$5/hr",
-    content: loadContent("marketing-and-advertising"),
   },
   {
     slug: "media-entertainment-and-publishing",
@@ -199,7 +183,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated video editors, post-production coordinators, rights & clearances staff, editorial assistants, content ops, subtitlers and trafficking admin e",
     focusKeyword: "Remote Staffing for Media, Entertainment & Publishing — From",
     startingRate: "$6/hr",
-    content: loadContent("media-entertainment-and-publishing"),
   },
   {
     slug: "nonprofit-and-ngo",
@@ -208,7 +191,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated grant writers, donor operations specialists, program admins, fundraising coordinators, communications staff and volunteer managers embedded with ",
     focusKeyword: "Remote Staffing for Nonprofits & NGOs — From $5/hour",
     startingRate: "$5/hr",
-    content: loadContent("nonprofit-and-ngo"),
   },
   {
     slug: "real-estate-and-property-management",
@@ -217,7 +199,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated leasing admins, listing coordinators, transaction coordinators, property management back-office and tenant support staff embedded with your team ",
     focusKeyword: "Remote Staffing for Real Estate & Property Management — From",
     startingRate: "$5/hr",
-    content: loadContent("real-estate-and-property-management"),
   },
   {
     slug: "saas-and-technology",
@@ -226,7 +207,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated customer success managers, customer support reps, onboarding specialists, SDRs, BDRs, RevOps analysts, implementation consultants and DevOps supp",
     focusKeyword: "Remote Staffing for SaaS & Technology Companies — From $8/ho",
     startingRate: "$8/hr",
-    content: loadContent("saas-and-technology"),
   },
   {
     slug: "startups-and-venture-backed",
@@ -235,7 +215,6 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated full-stack operators, executive assistants, customer support, SDRs, marketing ops, finance admin and GTM generalists embedded with your pre-seed ",
     focusKeyword: "Remote Staffing for Startups & Venture-Backed Companies — Fr",
     startingRate: "$6/hr",
-    content: loadContent("startups-and-venture-backed"),
   },
   {
     slug: "telecom-and-utilities",
@@ -244,12 +223,13 @@ export const industry_content_data: IndustryPage[] = [
     metaDescription: "Dedicated BSS/OSS admins, customer ops reps, NOC tier 1–2 support, field dispatchers, billing analysts and regulatory compliance staff embedded with your M",
     focusKeyword: "Remote Staffing for Telecom & Utilities — From $6/hour",
     startingRate: "$6/hr",
-    content: loadContent("telecom-and-utilities"),
   },
 ];
 
 export function getIndustryPage(slug: string): IndustryPage | undefined {
-  return industry_content_data.find((p) => p.slug === slug);
+  const meta = industry_content_data.find((p) => p.slug === slug);
+  if (!meta) return undefined;
+  return { ...meta, content: loadContent(slug) };
 }
 
 export function getAllIndustryPageSlugs(): string[] {

@@ -17,7 +17,7 @@ export type Author = {
   image?: string;
 };
 
-export type BlogPost = {
+export type BlogPostMeta = {
   slug: string;
   title: string;
   metaTitle: string;
@@ -33,6 +33,9 @@ export type BlogPost = {
   image?: string;
   imageAlt?: string;
   author?: string; // author slug — defaults to "anita-singh"
+};
+
+export type BlogPost = BlogPostMeta & {
   /** HTML content — injected via dangerouslySetInnerHTML with zt-blog-content class */
   content: string;
 };
@@ -92,7 +95,7 @@ function loadBlogContent(slug: string): string {
   }
 }
 
-export const blogPosts: BlogPost[] = [
+export const blogPosts: BlogPostMeta[] = [
   {
     slug: "outsourcing-costs",
     title: "Outsourcing Costs in 2026: Complete Pricing Breakdown by Role & Region",
@@ -111,7 +114,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/blog/outsourcing-costs-2026.svg",
     imageAlt: "Outsourcing costs comparison chart showing pricing by role and region in 2026",
     author: "anita-singh",
-    content: loadBlogContent("outsourcing-costs"),
   },
   {
     slug: "hire-remote-developers-guide",
@@ -131,7 +133,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/blog/hire-remote-developers.svg",
     imageAlt: "Guide to hiring remote developers in 2026",
     author: "anita-singh",
-    content: loadBlogContent("hire-remote-developers-guide"),
   },
   {
     slug: "virtual-assistant-pricing",
@@ -150,7 +151,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/blog/va-pricing-2026.svg",
     imageAlt: "Virtual assistant pricing comparison in 2026",
     author: "anita-singh",
-    content: loadBlogContent("virtual-assistant-pricing"),
   },
   {
     slug: "ai-vs-outsourcing",
@@ -169,7 +169,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/blog/ai-vs-outsourcing.svg",
     imageAlt: "AI vs outsourcing decision framework",
     author: "anita-singh",
-    content: loadBlogContent("ai-vs-outsourcing"),
   },
   {
     slug: "outsource-payroll-services",
@@ -188,7 +187,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/blog/outsource-payroll.svg",
     imageAlt: "Guide to outsourcing payroll services",
     author: "anita-singh",
-    content: loadBlogContent("outsource-payroll-services"),
   },
   {
     slug: "bpo-services",
@@ -207,7 +205,6 @@ export const blogPosts: BlogPost[] = [
     image: "/images/blog/bpo-services.svg",
     imageAlt: "BPO services guide for 2026",
     author: "anita-singh",
-    content: loadBlogContent("bpo-services"),
   },
   {
     slug: "best-remote-staffing-agencies",
@@ -227,29 +224,30 @@ export const blogPosts: BlogPost[] = [
     image: "/images/blog/best-staffing-agencies.svg",
     imageAlt: "Best remote staffing agencies comparison 2026",
     author: "anita-singh",
-    content: loadBlogContent("best-remote-staffing-agencies"),
   },
 ];
 
 /* ─── Helpers ─── */
 
 export function getBlogPost(slug: string): BlogPost | undefined {
-  return blogPosts.find((p) => p.slug === slug);
+  const meta = blogPosts.find((p) => p.slug === slug);
+  if (!meta) return undefined;
+  return { ...meta, content: loadBlogContent(slug) };
 }
 
 export function getAllBlogSlugs(): string[] {
   return blogPosts.map((p) => p.slug);
 }
 
-export function getFeaturedPosts(): BlogPost[] {
+export function getFeaturedPosts(): BlogPostMeta[] {
   return blogPosts.filter((p) => p.featured);
 }
 
-export function getPostsByCategory(category: BlogCategory): BlogPost[] {
+export function getPostsByCategory(category: BlogCategory): BlogPostMeta[] {
   return blogPosts.filter((p) => p.category === category);
 }
 
-export function getRelatedPosts(currentSlug: string, limit = 3): BlogPost[] {
+export function getRelatedPosts(currentSlug: string, limit = 3): BlogPostMeta[] {
   const current = getBlogPost(currentSlug);
   if (!current) return blogPosts.slice(0, limit);
   return blogPosts

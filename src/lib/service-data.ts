@@ -1,13 +1,16 @@
 import { readFileSync } from "fs";
 import { join } from "path";
 
-export type ServicePage = {
+export type ServicePageMeta = {
   slug: string;
   title: string;
   metaTitle: string;
   metaDescription: string;
   focusKeyword: string;
   startingRate: string;
+};
+
+export type ServicePage = ServicePageMeta & {
   content: string;
 };
 
@@ -20,7 +23,7 @@ function loadContent(slug: string): string {
   }
 }
 
-export const service_content_data: ServicePage[] = [
+export const service_content_data: ServicePageMeta[] = [
   {
     slug: "architecture-engineering",
     title: "Hire Remote Architecture & Engineering Staff — Without the Overhead",
@@ -28,7 +31,6 @@ export const service_content_data: ServicePage[] = [
     metaDescription: "Vetted CAD drafters, BIM modelers, structural engineers and MEP designers embedded with your firm — starting from $7 per hour, with a 48-hour shortlist and",
     focusKeyword: "Hire Remote Architecture & Engineering Staff — Without the O",
     startingRate: "$75/hr",
-    content: loadContent("architecture-engineering"),
   },
   {
     slug: "hire-remote-administrative-and-assistant",
@@ -37,7 +39,6 @@ export const service_content_data: ServicePage[] = [
     metaDescription: "Vetted virtual assistants, executive assistants, admin coordinators and ops support embedded with your team — starting from $5 per hour, with a 48-hour sho",
     focusKeyword: "Hire Remote Virtual Assistants & Administrative Staff From $",
     startingRate: "$5/hr",
-    content: loadContent("hire-remote-administrative-and-assistant"),
   },
   {
     slug: "hire-remote-customer-support",
@@ -46,7 +47,6 @@ export const service_content_data: ServicePage[] = [
     metaDescription: "Vetted customer support agents, chat specialists, tier-1/tier-2 technical support and help desk staff embedded with your brand — starting from $5 per hour,",
     focusKeyword: "Hire Remote Customer Support Staff — 24/7 Coverage From $5/h",
     startingRate: "$5/hr",
-    content: loadContent("hire-remote-customer-support"),
   },
   {
     slug: "hire-remote-designers",
@@ -55,7 +55,6 @@ export const service_content_data: ServicePage[] = [
     metaDescription: "Vetted UI/UX designers, brand and graphic designers, motion specialists and design-ops leads embedded with your team — starting from $6 per hour, with a 48",
     focusKeyword: "Hire Remote Designers — UI/UX, Graphic & Motion From $6/hr",
     startingRate: "$6/hr",
-    content: loadContent("hire-remote-designers"),
   },
   {
     slug: "hire-remote-digital-marketing-staff",
@@ -64,7 +63,6 @@ export const service_content_data: ServicePage[] = [
     metaDescription: "Vetted SEO specialists, PPC buyers, content writers, social managers and email marketers embedded with your brand — starting from $6 per hour, with a 48-ho",
     focusKeyword: "Hire Remote Digital Marketing Staff — SEO, PPC, Content & So",
     startingRate: "$6/hr",
-    content: loadContent("hire-remote-digital-marketing-staff"),
   },
   {
     slug: "hire-remote-finance-accounting-staff",
@@ -73,7 +71,6 @@ export const service_content_data: ServicePage[] = [
     metaDescription: "Vetted bookkeepers, AP/AR specialists, accountants, financial analysts and controllers embedded with your finance team — starting from $7 per hour, with a ",
     focusKeyword: "Hire Remote Finance & Accounting Staff — Bookkeepers, AP/AR ",
     startingRate: "$7/hr",
-    content: loadContent("hire-remote-finance-accounting-staff"),
   },
   {
     slug: "hire-remote-hr-and-recruitment-staff",
@@ -82,7 +79,6 @@ export const service_content_data: ServicePage[] = [
     metaDescription: "Vetted recruiters, sourcers, HR operations specialists and onboarding coordinators embedded with your team — starting from $6 per hour, with a 48-hour shor",
     focusKeyword: "Hire Remote HR & Recruitment Staff From $6/hr",
     startingRate: "$6/hr",
-    content: loadContent("hire-remote-hr-and-recruitment-staff"),
   },
   {
     slug: "hire-remote-it-staff",
@@ -91,7 +87,6 @@ export const service_content_data: ServicePage[] = [
     metaDescription: "Vetted full-stack developers, DevOps engineers, cloud architects and QA automation specialists embedded with your team — starting from $9 per hour, with a ",
     focusKeyword: "Hire Remote IT Staff — Developers, DevOps & Cloud Engineers ",
     startingRate: "$9/hr",
-    content: loadContent("hire-remote-it-staff"),
   },
   {
     slug: "hire-remote-legal-staff",
@@ -100,7 +95,6 @@ export const service_content_data: ServicePage[] = [
     metaDescription: "Vetted paralegals, legal assistants, contract reviewers, e-discovery and document review specialists embedded with your firm or in-house team — starting fr",
     focusKeyword: "Hire Remote Legal Staff — Paralegals, Contract Reviewers & D",
     startingRate: "$8/hr",
-    content: loadContent("hire-remote-legal-staff"),
   },
   {
     slug: "hire-remote-medical-staff",
@@ -109,7 +103,6 @@ export const service_content_data: ServicePage[] = [
     metaDescription: "Vetted medical billers, coders, virtual medical assistants, prior authorization and claims specialists embedded with your practice — starting from $7 per h",
     focusKeyword: "Hire Remote Medical Staff — Billers, Coders & Virtual Assist",
     startingRate: "$7/hr",
-    content: loadContent("hire-remote-medical-staff"),
   },
   {
     slug: "hire-remote-research-analytics-staff",
@@ -118,7 +111,6 @@ export const service_content_data: ServicePage[] = [
     metaDescription: "Vetted data analysts, BI engineers, market research analysts and insights specialists embedded with your team — starting from $7 per hour, with a 48-hour s",
     focusKeyword: "Hire Remote Research & Analytics Staff From $7/hr",
     startingRate: "$7/hr",
-    content: loadContent("hire-remote-research-analytics-staff"),
   },
   {
     slug: "quality-assurance-and-testing",
@@ -127,7 +119,6 @@ export const service_content_data: ServicePage[] = [
     metaDescription: "Vetted QA automation engineers, manual testers, SDETs, performance engineers and test leads embedded with your team — starting from $8 per hour, with a 48-",
     focusKeyword: "Hire Remote QA & Testing Engineers From $8/hr",
     startingRate: "$8/hr",
-    content: loadContent("quality-assurance-and-testing"),
   },
   {
     slug: "sales-and-business-development",
@@ -136,12 +127,13 @@ export const service_content_data: ServicePage[] = [
     metaDescription: "Vetted SDRs, BDRs, account managers, sales operations analysts and revenue support embedded with your GTM team — starting from $6 per hour, with a 48-hour ",
     focusKeyword: "Hire Remote Sales & Business Development Staff From $6/hr",
     startingRate: "$6/hr",
-    content: loadContent("sales-and-business-development"),
   },
 ];
 
 export function getServicePage(slug: string): ServicePage | undefined {
-  return service_content_data.find((p) => p.slug === slug);
+  const meta = service_content_data.find((p) => p.slug === slug);
+  if (!meta) return undefined;
+  return { ...meta, content: loadContent(slug) };
 }
 
 export function getAllServicePageSlugs(): string[] {
