@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   getBlogPost,
   getAllBlogSlugs,
@@ -8,7 +9,7 @@ import {
   categoryLabels,
 } from "@/lib/blog-data";
 import JsonLd, { articleSchema } from "@/components/JsonLd";
-import { Breadcrumb, FAQ, CTASection } from "@/components/ui";
+import { Breadcrumb, CTASection } from "@/components/ui";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -123,11 +124,14 @@ export default async function BlogPostPage({ params }: PageProps) {
         <div className="max-w-zt-narrow mx-auto">
           {/* Featured image */}
           {post.image && (
-            <div className="w-full rounded-zt overflow-hidden mb-10 -mt-10 shadow-zt-card-hover">
-              <img
+            <div className="relative w-full aspect-[16/9] rounded-zt overflow-hidden mb-10 -mt-10 shadow-zt-card-hover">
+              <Image
                 src={post.image}
                 alt={post.imageAlt || post.title}
-                className="w-full h-auto"
+                fill
+                sizes="(max-width: 860px) 100vw, 860px"
+                priority
+                className="object-cover"
               />
             </div>
           )}
@@ -187,11 +191,13 @@ export default async function BlogPostPage({ params }: PageProps) {
                   className="group block rounded-zt bg-white shadow-zt-card hover:shadow-zt-card-hover transition-all no-underline overflow-hidden"
                 >
                   {rp.image ? (
-                    <div className="w-full h-40 overflow-hidden bg-zt-near-white">
-                      <img
+                    <div className="relative w-full h-40 overflow-hidden bg-zt-near-white">
+                      <Image
                         src={rp.image}
                         alt={rp.imageAlt || rp.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                   ) : (

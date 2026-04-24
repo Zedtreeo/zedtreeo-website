@@ -94,6 +94,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Focus visible ring for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid var(--color-zt-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 body {
   font-family: var(--font-geologica);
   color: var(--color-zt-body);
@@ -245,6 +252,24 @@ a.zt-btn {
 
 @media (max-width: 700px) {
   .zt-who { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   REDUCED MOTION PREFERENCE
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* ============================================

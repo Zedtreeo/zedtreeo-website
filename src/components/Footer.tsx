@@ -26,7 +26,7 @@ export default function Footer() {
   return (
     <footer className="bg-zt-primary text-white">
       {/* Main Footer */}
-      <div className="max-w-zt-content mx-auto px-6 py-16">
+      <nav aria-label="Footer navigation" className="max-w-zt-content mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
@@ -141,7 +141,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      </div>
+      </nav>
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10">

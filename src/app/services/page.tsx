@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import JsonLd from "@/components/JsonLd";
 import { Breadcrumb, SectionHeading, CTASection, TrustBar } from "@/components/ui";
 
@@ -90,11 +91,13 @@ export default function ServicesPage() {
                 className="group block rounded-zt bg-white shadow-zt-card hover:shadow-zt-card-hover transition-all no-underline overflow-hidden"
               >
                 {cat.image && (
-                  <div className="w-full h-44 overflow-hidden">
-                    <img
+                  <div className="relative w-full h-44 overflow-hidden">
+                    <Image
                       src={cat.image}
                       alt={cat.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                 )}

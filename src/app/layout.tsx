@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geologica } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,9 +8,17 @@ import "./globals.css";
 const geologica = Geologica({
   variable: "--font-geologica-var",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
+  preload: true,
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#374B47",
+};
 
 export const metadata: Metadata = {
   title: {
@@ -74,9 +82,6 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   manifest: "/manifest.webmanifest",
-  other: {
-    "theme-color": "#374B47",
-  },
 };
 
 export default function RootLayout({
@@ -87,12 +92,20 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geologica.variable} h-full`}>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <JsonLd data={organizationSchema()} />
         <JsonLd data={websiteSchema()} />
       </head>
       <body className="min-h-full flex flex-col antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-zt-accent focus:text-zt-headings focus:px-4 focus:py-2 focus:rounded-zt-pill focus:font-semibold focus:text-sm"
+        >
+          Skip to main content
+        </a>
         <Header />
-        <div className="pt-[72px] flex-1">{children}</div>
+        <div id="main-content" className="pt-[72px] flex-1">{children}</div>
         <Footer />
       </body>
     </html>

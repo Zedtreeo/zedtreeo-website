@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Breadcrumb, TrustBar } from "@/components/ui";
+import Link from "next/link";
+import { Breadcrumb } from "@/components/ui";
 
 /* ─── Types ─── */
 type FormData = {
@@ -104,9 +105,9 @@ export default function GetStartedPage() {
               candidates within <strong className="text-white">48 hours</strong>.
               Check your inbox for a confirmation email.
             </p>
-            <a href="/" className="zt-btn no-underline">
+            <Link href="/" className="zt-btn no-underline">
               Back to Home
-            </a>
+            </Link>
           </div>
         </section>
       </main>

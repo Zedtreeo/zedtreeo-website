@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import JsonLd from "@/components/JsonLd";
 import { blogPosts, categoryLabels, type BlogCategory } from "@/lib/blog-data";
 import { Breadcrumb, SectionHeading, CTASection } from "@/components/ui";
@@ -97,7 +98,7 @@ export default function BlogPage() {
             />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {featured.map((post) => (
-                <BlogCard key={post.slug} post={post} featured />
+                <BlogCard key={post.slug} post={post} />
               ))}
             </div>
           </div>
@@ -129,10 +130,8 @@ export default function BlogPage() {
 
 function BlogCard({
   post,
-  featured = false,
 }: {
   post: (typeof blogPosts)[0];
-  featured?: boolean;
 }) {
   return (
     <Link
@@ -140,11 +139,13 @@ function BlogCard({
       className="group block rounded-zt bg-white shadow-zt-card hover:shadow-zt-card-hover transition-all no-underline overflow-hidden"
     >
       {post.image && (
-        <div className="w-full h-48 overflow-hidden bg-zt-near-white">
-          <img
+        <div className="relative w-full h-48 overflow-hidden bg-zt-near-white">
+          <Image
             src={post.image}
             alt={post.imageAlt || post.title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
           />
         </div>
       )}

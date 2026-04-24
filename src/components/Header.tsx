@@ -73,7 +73,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-1">
           {navLinks.map((link) =>
             link.children ? (
               <div
@@ -82,7 +82,11 @@ export default function Header() {
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
-                <button className="px-4 py-2 text-sm font-medium text-white/90 hover:text-white transition-colors flex items-center gap-1 bg-transparent border-none cursor-pointer">
+                <button
+                  aria-expanded={servicesOpen}
+                  aria-haspopup="true"
+                  className="px-4 py-2 text-sm font-medium text-white/90 hover:text-white transition-colors flex items-center gap-1 bg-transparent border-none cursor-pointer"
+                >
                   {link.label}
                   <svg
                     className={`w-3.5 h-3.5 transition-transform ${servicesOpen ? "rotate-180" : ""}`}
@@ -146,7 +150,8 @@ export default function Header() {
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="lg:hidden flex flex-col items-center justify-center w-10 h-10 gap-1.5 bg-transparent border-none cursor-pointer"
-          aria-label="Toggle menu"
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileOpen}
         >
           <span
             className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
@@ -174,7 +179,7 @@ export default function Header() {
             : "opacity-0 pointer-events-none"
         }`}
       >
-        <nav className="flex flex-col p-6 gap-1 overflow-y-auto max-h-[calc(100vh-72px)]">
+        <nav aria-label="Mobile navigation" className="flex flex-col p-6 gap-1 overflow-y-auto max-h-[calc(100vh-72px)]">
           {navLinks.map((link) =>
             link.children ? (
               <div key={link.label}>

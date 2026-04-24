@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import { Breadcrumb, SectionHeading, CTASection, TrustBar } from "@/components/ui";
 

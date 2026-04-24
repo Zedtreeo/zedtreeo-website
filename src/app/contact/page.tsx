@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Breadcrumb, CTASection } from "@/components/ui";
+import { Breadcrumb } from "@/components/ui";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {

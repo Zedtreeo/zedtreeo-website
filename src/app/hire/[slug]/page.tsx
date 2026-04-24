@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { getHirePageData, getAllHireSlugs } from "@/lib/hire-data";
 import JsonLd, { serviceSchema } from "@/components/JsonLd";
 import { Breadcrumb, FAQ, TrustBar, Button, SectionHeading, CTASection } from "@/components/ui";
@@ -110,11 +111,13 @@ export default async function HirePage({ params }: PageProps) {
             {/* Right: Hero image */}
             <div className="hidden lg:flex justify-center">
               <div className="w-full max-w-md rounded-zt overflow-hidden">
-                <img
+                <Image
                   src={data.heroImage}
                   alt={`Hire Remote ${data.title}`}
+                  width={400}
+                  height={300}
                   className="w-full h-auto"
-                  loading="eager"
+                  priority
                 />
               </div>
             </div>

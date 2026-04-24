@@ -1,3 +1,4 @@
+import Image from "next/image";
 import JsonLd from "@/components/JsonLd";
 
 const homeJsonLd = {
@@ -114,11 +115,13 @@ export default function HomePage() {
                 className="group block rounded-zt bg-white shadow-zt-card hover:shadow-zt-card-hover transition-all no-underline overflow-hidden"
               >
                 {service.image && (
-                  <div className="w-full h-44 overflow-hidden">
-                    <img
+                  <div className="relative w-full h-44 overflow-hidden">
+                    <Image
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                 )}
@@ -150,11 +153,13 @@ export default function HomePage() {
             {steps.map((step, i) => (
               <div key={i} className="text-center">
                 {step.image ? (
-                  <div className="w-full h-36 rounded-zt overflow-hidden mb-4">
-                    <img
+                  <div className="relative w-full h-36 rounded-zt overflow-hidden mb-4">
+                    <Image
                       src={step.image}
                       alt={step.title}
-                      className="w-full h-full object-cover"
+                      fill
+                      sizes="(max-width: 640px) 100vw, 20vw"
+                      className="object-cover"
                     />
                   </div>
                 ) : (
