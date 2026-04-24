@@ -1,0 +1,16 @@
+{
+  "name": "Zedtreeo — Hire Dedicated Remote Employees",
+  "short_name": "Zedtreeo",
+  "description": "Hire pre-vetted remote employees from India starting at $5/hour.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#374B47",
+  "theme_color": "#374B47",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

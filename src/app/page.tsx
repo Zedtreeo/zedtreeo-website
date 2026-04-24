@@ -1,6 +1,30 @@
+import JsonLd from "@/components/JsonLd";
+
+const homeJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Remote Staffing Services by Zedtreeo",
+  description:
+    "Hire dedicated remote employees across software, finance, marketing, legal, healthcare, and more — starting at $5/hour.",
+  url: "https://zedtreeo.com",
+  numberOfItems: 9,
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Software Development", url: "https://zedtreeo.com/hire/full-stack-developer" },
+    { "@type": "ListItem", position: 2, name: "Finance & Accounting", url: "https://zedtreeo.com/hire/virtual-assistant-for-bookkeeping" },
+    { "@type": "ListItem", position: 3, name: "Digital Marketing", url: "https://zedtreeo.com/hire/digital-marketer" },
+    { "@type": "ListItem", position: 4, name: "Legal & Compliance", url: "https://zedtreeo.com/hire/virtual-legal-staff" },
+    { "@type": "ListItem", position: 5, name: "Healthcare & RCM", url: "https://zedtreeo.com/hire/revenue-cycle-management-staff" },
+    { "@type": "ListItem", position: 6, name: "Virtual Assistants", url: "https://zedtreeo.com/hire/virtual-assistants" },
+    { "@type": "ListItem", position: 7, name: "E-Commerce & Retail", url: "https://zedtreeo.com/hire/remote-employees-for-your-business" },
+    { "@type": "ListItem", position: 8, name: "Cybersecurity & IT", url: "https://zedtreeo.com/hire/cyber-security-expert" },
+    { "@type": "ListItem", position: 9, name: "Real Estate & Operations", url: "https://zedtreeo.com/hire/remote-employees-for-your-business" },
+  ],
+};
+
 export default function HomePage() {
   return (
     <main>
+      <JsonLd data={homeJsonLd} />
       {/* Hero Section */}
       <section className="relative bg-zt-primary text-white py-zt-section px-6 overflow-hidden">
         {/* Background image */}

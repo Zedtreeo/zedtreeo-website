@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geologica } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd, { organizationSchema, websiteSchema } from "@/components/JsonLd";
 import "./globals.css";
 
 const geologica = Geologica({
@@ -72,6 +73,10 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  manifest: "/manifest.webmanifest",
+  other: {
+    "theme-color": "#374B47",
+  },
 };
 
 export default function RootLayout({
@@ -81,6 +86,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geologica.variable} h-full`}>
+      <head>
+        <JsonLd data={organizationSchema()} />
+        <JsonLd data={websiteSchema()} />
+      </head>
       <body className="min-h-full flex flex-col antialiased">
         <Header />
         <div className="pt-[72px] flex-1">{children}</div>
