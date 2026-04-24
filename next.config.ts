@@ -45,14 +45,14 @@ const nextConfig: NextConfig = {
     return [
       /* ─── WordPress infrastructure ─── */
       { source: "/wp-admin", destination: "/", permanent: true },
-      { source: "/wp-admin/:path*", destination: "/", permanent: true },
+      { source: "/wp-admin{/:path}+", destination: "/", permanent: true },
       { source: "/wp-login.php", destination: "/", permanent: true },
-      { source: "/wp-content/:path*", destination: "/", permanent: true },
-      { source: "/wp-includes/:path*", destination: "/", permanent: true },
-      { source: "/wp-json/:path*", destination: "/", permanent: true },
+      { source: "/wp-content{/:path}+", destination: "/", permanent: true },
+      { source: "/wp-includes{/:path}+", destination: "/", permanent: true },
+      { source: "/wp-json{/:path}+", destination: "/", permanent: true },
       { source: "/xmlrpc.php", destination: "/", permanent: true },
       { source: "/feed", destination: "/blog", permanent: true },
-      { source: "/feed/:path*", destination: "/blog", permanent: true },
+      { source: "/feed{/:path}+", destination: "/blog", permanent: true },
 
       /* ─── Old hire pages → new /hire/ routes (301) ─── */
       { source: "/hire-full-stack-developer", destination: "/hire/full-stack-developer", permanent: true },
@@ -169,7 +169,7 @@ const nextConfig: NextConfig = {
       { source: "/our-commitments/", destination: "/about", permanent: true },
       { source: "/our-people", destination: "/about", permanent: true },
       { source: "/our-people/", destination: "/about", permanent: true },
-      { source: "/our-people/:path*", destination: "/about", permanent: true },
+      { source: "/our-people{/:path}+", destination: "/about", permanent: true },
       { source: "/offices", destination: "/about", permanent: true },
       { source: "/offices/", destination: "/about", permanent: true },
       { source: "/ai-program", destination: "/about", permanent: true },
@@ -212,8 +212,7 @@ const nextConfig: NextConfig = {
       { source: "/remote-staffing-services-zedtreeo", destination: "/services", permanent: true },
       { source: "/remote-staffing-services-zedtreeo/", destination: "/services", permanent: true },
 
-      /* ─── Strip trailing slashes (catch-all — must be last) ─── */
-      { source: "/:path+/", destination: "/:path+", permanent: true },
+      /* Trailing slashes handled by Next.js trailingSlash: false (default) */
     ];
   },
 };
