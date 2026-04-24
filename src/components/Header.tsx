@@ -67,8 +67,8 @@ export default function Header() {
             className="w-8 h-8"
             priority
           />
-          <span className="text-2xl font-bold text-white tracking-tight">
-            Zed<span className="text-zt-accent">treeo</span>
+          <span className="text-2xl tracking-tight">
+            <span className="font-extrabold text-white">Zed</span><span className="font-normal text-zt-accent">treeo</span>
           </span>
         </Link>
 
