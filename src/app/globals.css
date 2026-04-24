@@ -143,7 +143,9 @@ p {
   margin: 0 0 16px;
 }
 
-a {
+/* Links — scoped to content areas only, not nav/buttons */
+.zt-blog-content a,
+.zt-content-area a {
   color: var(--color-zt-primary);
   font-weight: 600;
   text-decoration: underline;
@@ -151,7 +153,8 @@ a {
   transition: color var(--zt-transition);
 }
 
-a:hover {
+.zt-blog-content a:hover,
+.zt-content-area a:hover {
   color: var(--color-zt-accent);
 }
 
