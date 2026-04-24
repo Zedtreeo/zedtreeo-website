@@ -151,9 +151,11 @@ p {
 }
 
 /* Reset link styles globally — let Tailwind/components handle styling */
-a {
-  text-decoration: none;
-  color: inherit;
+@layer base {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 /* Links — scoped to content areas only, not nav/buttons */
