@@ -32,7 +32,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2.5 no-underline">
               <Image
-                src="/zedtreeo-globe-white.svg"
+                src="/zedtreeo-logo-icon.svg"
                 alt=""
                 width={32}
                 height={32}

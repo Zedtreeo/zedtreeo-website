@@ -60,7 +60,7 @@ export default function HomePage() {
       {/* Trust Bar */}
       <section className="bg-zt-near-white py-8 px-6">
         <div className="max-w-zt-content mx-auto flex flex-wrap items-center justify-center gap-8 text-zt-body text-sm">
-          <span className="font-semibold">Trusted by 500+ companies globally</span>
+          <span className="font-semibold">Trusted by 200+ companies globally</span>
           <span>•</span>
           <span>ISO 27001 Certified</span>
           <span>•</span>
