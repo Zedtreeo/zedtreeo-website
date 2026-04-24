@@ -20,6 +20,8 @@ const navLinks = [
       { label: "DevOps & Cloud", href: "/hire/devops-engineers" },
     ],
   },
+  { label: "Industries", href: "/industries" },
+  { label: "Case Studies", href: "/case-studies" },
   { label: "How It Works", href: "/how-it-works" },
   { label: "Candidates", href: "/candidates" },
   { label: "Blog", href: "/blog" },

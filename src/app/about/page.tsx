@@ -214,6 +214,35 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Leadership Team */}
+      <section id="team" className="bg-zt-light-bg py-zt-section px-6">
+        <div className="max-w-zt-content mx-auto">
+          <SectionHeading
+            title="Meet Our Leadership"
+            subtitle="The people behind 500+ successful remote placements."
+            badge="Our Team"
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member) => (
+              <div key={member.name} className="text-center">
+                <div className="relative w-36 h-36 rounded-full overflow-hidden mx-auto mb-4 border-4 border-white shadow-zt-card">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    sizes="144px"
+                    className="object-cover"
+                  />
+                </div>
+                <h3 className="text-base font-semibold text-zt-headings mb-1 !mt-0">{member.name}</h3>
+                <p className="text-sm text-zt-accent font-medium mb-2">{member.role}</p>
+                <p className="text-xs text-zt-body mb-0 leading-relaxed">{member.bio}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <CTASection
         title="Ready to Build Your Remote Team?"
@@ -283,6 +312,33 @@ const certifications = [
   { icon: "\u2B50", title: "CMMI Level 3", desc: "Defined and managed process maturity across the organization." },
   { icon: "\uD83C\uDF10", title: "GDPR Compliant", desc: "Full compliance with EU data protection regulations." },
   { icon: "\uD83D\uDD12", title: "NDA-Backed", desc: "Every employee signs comprehensive NDAs before access." },
+];
+
+const teamMembers = [
+  {
+    name: "Shalini",
+    role: "Head of Operations",
+    image: "/images/team/shalini.webp",
+    bio: "Leads end-to-end staffing operations, overseeing vetting, onboarding, and client success across 50+ role categories.",
+  },
+  {
+    name: "Manish",
+    role: "Head of Technology",
+    image: "/images/team/manish.webp",
+    bio: "Drives technical hiring standards and AI training programs. Ensures every developer and IT professional meets enterprise-grade benchmarks.",
+  },
+  {
+    name: "Rashmi",
+    role: "Head of Client Success",
+    image: "/images/team/rashmi.webp",
+    bio: "Manages ongoing client relationships and retention. Ensures remote teams deliver measurable results from day one.",
+  },
+  {
+    name: "Deepali",
+    role: "Head of Talent Acquisition",
+    image: "/images/team/deepali.webp",
+    bio: "Oversees sourcing and screening pipelines. Responsible for maintaining the top-5% acceptance rate across all disciplines.",
+  },
 ];
 
 const regions = [

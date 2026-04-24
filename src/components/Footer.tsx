@@ -14,7 +14,9 @@ const serviceLinks = [
 
 const companyLinks = [
   { label: "About Us", href: "/about" },
-  { label: "How It Works", href: "/#how-it-works" },
+  { label: "How It Works", href: "/how-it-works" },
+  { label: "Industries", href: "/industries" },
+  { label: "Case Studies", href: "/case-studies" },
   { label: "Candidates", href: "/candidates" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
