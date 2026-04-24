@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { blogPosts } from "@/lib/blog-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://zedtreeo.com";
@@ -86,5 +87,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  return [...corePages, ...hirePages];
+  // Blog posts
+  const blogPages = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: post.dateModified || now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...corePages, ...hirePages, ...blogPages];
 }
