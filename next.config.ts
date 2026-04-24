@@ -195,8 +195,12 @@ const nextConfig: NextConfig = {
       { source: "/outsource-to-india", destination: "/hire/remote-employees-for-your-business", permanent: true },
       { source: "/outsource-to-india/", destination: "/hire/remote-employees-for-your-business", permanent: true },
 
-      /* ─── Case studies → /blog (301 permanent) ─── */
-      { source: "/case-study-:path*", destination: "/blog", permanent: true },
+      /* ─── Case studies → /case-studies (301 permanent) ─── */
+      { source: "/case-study-:path*", destination: "/case-studies", permanent: true },
+
+      /* ─── How It Works variations ─── */
+      { source: "/how-it-works-remote-staffing", destination: "/how-it-works", permanent: true },
+      { source: "/how-it-works-remote-staffing/", destination: "/how-it-works", permanent: true },
 
       /* ─── Catch remaining old blog posts with trailing slashes ─── */
       { source: "/best-remote-staffing-agency-for-remote-jobs", destination: "/blog/best-remote-staffing-agencies", permanent: true },
