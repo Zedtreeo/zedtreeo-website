@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   {
@@ -57,7 +58,15 @@ export default function Header() {
     >
       <div className="max-w-zt-content mx-auto px-6 flex items-center justify-between h-[72px]">
         {/* Logo */}
-        <Link href="/" className="flex items-center no-underline shrink-0">
+        <Link href="/" className="flex items-center gap-2 no-underline shrink-0">
+          <Image
+            src="/zedtreeo-tree-white.svg"
+            alt=""
+            width={36}
+            height={36}
+            className="w-9 h-9"
+            priority
+          />
           <span className="text-2xl font-bold text-white tracking-tight">
             Zed<span className="text-zt-accent">treeo</span>
           </span>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const serviceLinks = [
   { label: "Software Development", href: "/hire/full-stack-developer" },
@@ -29,7 +30,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="no-underline">
+            <Link href="/" className="flex items-center gap-2 no-underline">
+              <Image
+                src="/zedtreeo-tree-white.svg"
+                alt=""
+                width={36}
+                height={36}
+                className="w-9 h-9"
+              />
               <span className="text-2xl font-bold text-white tracking-tight">
                 Zed<span className="text-zt-accent">treeo</span>
               </span>

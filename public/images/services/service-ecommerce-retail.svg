@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bgec" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#111C1A;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1D2E2B;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="glowec"><feGaussianBlur stdDeviation="8" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgec)" rx="24"/>
+  <g opacity="0.04" stroke="#8FD299" stroke-width="0.5">
+    <line x1="0" y1="150" x2="800" y2="150"/><line x1="0" y1="300" x2="800" y2="300"/><line x1="0" y1="450" x2="800" y2="450"/>
+    <line x1="200" y1="0" x2="200" y2="600"/><line x1="400" y1="0" x2="400" y2="600"/><line x1="600" y1="0" x2="600" y2="600"/>
+  </g>
+  <circle cx="680" cy="100" r="200" fill="#8FD299" opacity="0.025"/>
+  <rect x="270" y="40" width="260" height="40" rx="20" fill="rgba(143,210,153,0.15)" stroke="rgba(143,210,153,0.3)" stroke-width="1"/>
+  <text x="400" y="66" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#8FD299" text-anchor="middle" letter-spacing="1.5">E-COMMERCE &amp; RETAIL</text>
+  <!-- Storefront + cart mockup -->
+  <g transform="translate(400,245)" filter="url(#glowec)">
+    <!-- Browser/store window -->
+    <rect x="-130" y="-95" width="260" height="190" rx="12" fill="rgba(143,210,153,0.04)" stroke="rgba(143,210,153,0.2)" stroke-width="1.5"/>
+    <rect x="-130" y="-95" width="260" height="28" rx="12" fill="rgba(143,210,153,0.08)"/>
+    <rect x="-130" y="-79" width="260" height="12" fill="rgba(143,210,153,0.08)"/>
+    <circle cx="-112" cy="-81" r="4" fill="rgba(255,100,100,0.4)"/><circle cx="-98" cy="-81" r="4" fill="rgba(255,200,50,0.4)"/><circle cx="-84" cy="-81" r="4" fill="rgba(143,210,153,0.4)"/>
+    <!-- URL bar -->
+    <rect x="-60" y="-89" width="120" height="16" rx="8" fill="rgba(143,210,153,0.06)" stroke="rgba(143,210,153,0.15)" stroke-width="0.5"/>
+    <text x="0" y="-78" font-family="system-ui,sans-serif" font-size="7" fill="rgba(143,210,153,0.4)" text-anchor="middle">yourstore.com</text>
+    <!-- Product grid -->
+    <g transform="translate(0,-15)">
+      <!-- Product card 1 -->
+      <rect x="-110" y="-35" width="65" height="80" rx="6" fill="rgba(143,210,153,0.06)" stroke="rgba(143,210,153,0.15)" stroke-width="0.8"/>
+      <rect x="-105" y="-30" width="55" height="35" rx="4" fill="rgba(143,210,153,0.08)"/>
+      <rect x="-105" y="10" width="35" height="3" rx="1.5" fill="rgba(143,210,153,0.25)"/>
+      <rect x="-105" y="17" width="25" height="3" rx="1.5" fill="rgba(143,210,153,0.15)"/>
+      <text x="-105" y="32" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#8FD299">$29</text>
+      <rect x="-72" y="26" width="20" height="12" rx="6" fill="rgba(143,210,153,0.2)" stroke="rgba(143,210,153,0.35)" stroke-width="0.6"/>
+      <text x="-62" y="35" font-family="system-ui,sans-serif" font-size="6" fill="#8FD299" text-anchor="middle">Add</text>
+      <!-- Product card 2 -->
+      <rect x="-35" y="-35" width="65" height="80" rx="6" fill="rgba(143,210,153,0.06)" stroke="rgba(143,210,153,0.15)" stroke-width="0.8"/>
+      <rect x="-30" y="-30" width="55" height="35" rx="4" fill="rgba(143,210,153,0.08)"/>
+      <rect x="-30" y="10" width="40" height="3" rx="1.5" fill="rgba(143,210,153,0.25)"/>
+      <rect x="-30" y="17" width="28" height="3" rx="1.5" fill="rgba(143,210,153,0.15)"/>
+      <text x="-30" y="32" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#8FD299">$49</text>
+      <rect x="3" y="26" width="20" height="12" rx="6" fill="rgba(143,210,153,0.2)" stroke="rgba(143,210,153,0.35)" stroke-width="0.6"/>
+      <text x="13" y="35" font-family="system-ui,sans-serif" font-size="6" fill="#8FD299" text-anchor="middle">Add</text>
+      <!-- Product card 3 -->
+      <rect x="40" y="-35" width="65" height="80" rx="6" fill="rgba(143,210,153,0.06)" stroke="rgba(143,210,153,0.15)" stroke-width="0.8"/>
+      <rect x="45" y="-30" width="55" height="35" rx="4" fill="rgba(143,210,153,0.08)"/>
+      <rect x="45" y="10" width="30" height="3" rx="1.5" fill="rgba(143,210,153,0.25)"/>
+      <rect x="45" y="17" width="22" height="3" rx="1.5" fill="rgba(143,210,153,0.15)"/>
+      <text x="45" y="32" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#8FD299">$89</text>
+      <rect x="78" y="26" width="20" height="12" rx="6" fill="rgba(143,210,153,0.3)" stroke="rgba(143,210,153,0.5)" stroke-width="0.6"/>
+      <text x="88" y="35" font-family="system-ui,sans-serif" font-size="6" fill="#8FD299" text-anchor="middle">Add</text>
+    </g>
+    <!-- Shopping cart badge -->
+    <g transform="translate(105,-90)">
+      <circle cx="0" cy="0" r="16" fill="rgba(143,210,153,0.15)" stroke="rgba(143,210,153,0.4)" stroke-width="1"/>
+      <path d="M-6,-3 L-4,-3 L-2,5 L6,5 L7,-1 L-1,-1" fill="none" stroke="#8FD299" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="-1" cy="8" r="1.5" fill="#8FD299"/><circle cx="5" cy="8" r="1.5" fill="#8FD299"/>
+      <circle cx="6" cy="-6" r="6" fill="#8FD299"/>
+      <text x="6" y="-3" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#111C1A" text-anchor="middle">3</text>
+    </g>
+    <!-- Tool badges -->
+    <g transform="translate(150,-40)">
+      <rect x="0" y="0" width="58" height="22" rx="11" fill="rgba(143,210,153,0.12)" stroke="rgba(143,210,153,0.25)" stroke-width="0.8"/>
+      <text x="29" y="15" font-family="system-ui,sans-serif" font-size="9" fill="rgba(143,210,153,0.7)" text-anchor="middle">Shopify</text>
+    </g>
+    <g transform="translate(150,-8)">
+      <rect x="0" y="0" width="62" height="22" rx="11" fill="rgba(143,210,153,0.12)" stroke="rgba(143,210,153,0.25)" stroke-width="0.8"/>
+      <text x="31" y="15" font-family="system-ui,sans-serif" font-size="9" fill="rgba(143,210,153,0.7)" text-anchor="middle">Amazon</text>
+    </g>
+    <g transform="translate(150,24)">
+      <rect x="0" y="0" width="68" height="22" rx="11" fill="rgba(143,210,153,0.12)" stroke="rgba(143,210,153,0.25)" stroke-width="0.8"/>
+      <text x="34" y="15" font-family="system-ui,sans-serif" font-size="9" fill="rgba(143,210,153,0.7)" text-anchor="middle">WooCommerce</text>
+    </g>
+  </g>
+  <text x="400" y="440" font-family="system-ui,-apple-system,sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">E-Commerce &amp; Retail</text>
+  <text x="400" y="475" font-family="system-ui,-apple-system,sans-serif" font-size="15" fill="rgba(255,255,255,0.55)" text-anchor="middle">Product listers, customer support &amp; Shopify/Amazon specialists</text>
+  <g opacity="0.15" fill="#8FD299"><circle cx="100" cy="100" r="2"/><circle cx="120" cy="100" r="2"/><circle cx="140" cy="100" r="2"/><circle cx="100" cy="120" r="2"/><circle cx="120" cy="120" r="2"/><circle cx="140" cy="120" r="2"/></g>
+</svg>

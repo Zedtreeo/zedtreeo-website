@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#111C1A;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1D2E2B;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="accent1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8FD299;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#6BC07A;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="glow1">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg1)" rx="24"/>
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04" stroke="#8FD299" stroke-width="0.5">
+    <line x1="0" y1="100" x2="800" y2="100"/><line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/><line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/><line x1="200" y1="0" x2="200" y2="600"/>
+    <line x1="400" y1="0" x2="400" y2="600"/><line x1="600" y1="0" x2="600" y2="600"/>
+  </g>
+  <!-- Decorative circle -->
+  <circle cx="650" cy="120" r="180" fill="#8FD299" opacity="0.03"/>
+  <circle cx="150" cy="480" r="120" fill="#8FD299" opacity="0.03"/>
+  <!-- Step badge -->
+  <rect x="320" y="40" width="160" height="40" rx="20" fill="rgba(143,210,153,0.15)" stroke="rgba(143,210,153,0.3)" stroke-width="1"/>
+  <text x="400" y="66" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#8FD299" text-anchor="middle" letter-spacing="2">STEP 1</text>
+  <!-- Main icon - clipboard with checklist -->
+  <g transform="translate(400,260)" filter="url(#glow1)">
+    <!-- Clipboard body -->
+    <rect x="-70" y="-80" width="140" height="180" rx="12" fill="rgba(143,210,153,0.08)" stroke="url(#accent1)" stroke-width="2"/>
+    <!-- Clipboard clip -->
+    <rect x="-25" y="-95" width="50" height="30" rx="8" fill="rgba(143,210,153,0.15)" stroke="#8FD299" stroke-width="1.5"/>
+    <circle cx="0" cy="-80" r="6" fill="#8FD299"/>
+    <!-- Checklist lines -->
+    <rect x="-45" y="-45" width="16" height="16" rx="3" fill="none" stroke="#8FD299" stroke-width="1.5"/>
+    <polyline points="-42,-37 -38,-33 -32,-41" fill="none" stroke="#8FD299" stroke-width="2" stroke-linecap="round"/>
+    <rect x="-22" y="-43" width="55" height="4" rx="2" fill="rgba(143,210,153,0.4)"/>
+    <rect x="-22" y="-35" width="35" height="3" rx="1.5" fill="rgba(143,210,153,0.2)"/>
+    <rect x="-45" y="-10" width="16" height="16" rx="3" fill="none" stroke="#8FD299" stroke-width="1.5"/>
+    <polyline points="-42,-2 -38,2 -32,-6" fill="none" stroke="#8FD299" stroke-width="2" stroke-linecap="round"/>
+    <rect x="-22" y="-8" width="55" height="4" rx="2" fill="rgba(143,210,153,0.4)"/>
+    <rect x="-22" y="0" width="40" height="3" rx="1.5" fill="rgba(143,210,153,0.2)"/>
+    <rect x="-45" y="25" width="16" height="16" rx="3" fill="none" stroke="rgba(143,210,153,0.4)" stroke-width="1.5"/>
+    <rect x="-22" y="27" width="55" height="4" rx="2" fill="rgba(143,210,153,0.2)"/>
+    <rect x="-22" y="35" width="45" height="3" rx="1.5" fill="rgba(143,210,153,0.12)"/>
+    <rect x="-45" y="58" width="16" height="16" rx="3" fill="none" stroke="rgba(143,210,153,0.3)" stroke-width="1.5"/>
+    <rect x="-22" y="60" width="50" height="4" rx="2" fill="rgba(143,210,153,0.15)"/>
+    <rect x="-22" y="68" width="30" height="3" rx="1.5" fill="rgba(143,210,153,0.1)"/>
+  </g>
+  <!-- Arrow indicator -->
+  <g transform="translate(560,260)" opacity="0.3">
+    <circle cx="0" cy="0" r="24" fill="rgba(143,210,153,0.1)" stroke="rgba(143,210,153,0.2)" stroke-width="1"/>
+    <polyline points="-8,-8 4,0 -8,8" fill="none" stroke="#8FD299" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Title -->
+  <text x="400" y="440" font-family="system-ui,-apple-system,sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">Share Your Requirements</text>
+  <!-- Subtitle -->
+  <text x="400" y="475" font-family="system-ui,-apple-system,sans-serif" font-size="15" fill="rgba(255,255,255,0.55)" text-anchor="middle">Tell us the role, skills, and experience level you need</text>
+  <!-- Decorative dots -->
+  <g opacity="0.15" fill="#8FD299">
+    <circle cx="100" cy="100" r="2"/><circle cx="120" cy="100" r="2"/><circle cx="140" cy="100" r="2"/>
+    <circle cx="100" cy="120" r="2"/><circle cx="120" cy="120" r="2"/><circle cx="140" cy="120" r="2"/>
+    <circle cx="660" cy="480" r="2"/><circle cx="680" cy="480" r="2"/><circle cx="700" cy="480" r="2"/>
+    <circle cx="660" cy="500" r="2"/><circle cx="680" cy="500" r="2"/><circle cx="700" cy="500" r="2"/>
+  </g>
+</svg>

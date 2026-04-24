@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg3i" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#111C1A;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1D2E2B;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="glow3i"><feGaussianBlur stdDeviation="10" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg3i)" rx="24"/>
+  <g opacity="0.04" stroke="#8FD299" stroke-width="0.5">
+    <line x1="0" y1="100" x2="800" y2="100"/><line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/><line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/><line x1="200" y1="0" x2="200" y2="600"/>
+    <line x1="400" y1="0" x2="400" y2="600"/><line x1="600" y1="0" x2="600" y2="600"/>
+  </g>
+  <circle cx="650" cy="120" r="180" fill="#8FD299" opacity="0.03"/>
+  <circle cx="150" cy="480" r="120" fill="#8FD299" opacity="0.03"/>
+  <!-- Step badge -->
+  <rect x="320" y="40" width="160" height="40" rx="20" fill="rgba(143,210,153,0.15)" stroke="rgba(143,210,153,0.3)" stroke-width="1"/>
+  <text x="400" y="66" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#8FD299" text-anchor="middle" letter-spacing="2">STEP 3</text>
+  <!-- Video call / interview mockup -->
+  <g transform="translate(400,250)" filter="url(#glow3i)">
+    <!-- Video window -->
+    <rect x="-120" y="-90" width="240" height="170" rx="12" fill="rgba(143,210,153,0.04)" stroke="rgba(143,210,153,0.25)" stroke-width="1.5"/>
+    <!-- Title bar -->
+    <rect x="-120" y="-90" width="240" height="25" rx="12" fill="rgba(143,210,153,0.08)"/>
+    <rect x="-120" y="-77" width="240" height="12" fill="rgba(143,210,153,0.08)"/>
+    <circle cx="-102" cy="-77" r="4" fill="rgba(255,100,100,0.4)"/><circle cx="-88" cy="-77" r="4" fill="rgba(255,200,50,0.4)"/><circle cx="-74" cy="-77" r="4" fill="rgba(143,210,153,0.4)"/>
+    <!-- Two video panels side by side -->
+    <!-- Left panel - interviewer (you) -->
+    <rect x="-110" y="-58" width="105" height="95" rx="6" fill="rgba(143,210,153,0.06)" stroke="rgba(143,210,153,0.15)" stroke-width="0.8"/>
+    <circle cx="-58" cy="-28" r="16" fill="none" stroke="rgba(143,210,153,0.3)" stroke-width="1.2"/>
+    <circle cx="-58" cy="-32" r="7" fill="none" stroke="#8FD299" stroke-width="1" opacity="0.5"/>
+    <path d="M-70,-18 Q-70,-10 -58,-10 Q-46,-10 -46,-18" fill="none" stroke="#8FD299" stroke-width="1" opacity="0.5"/>
+    <text x="-58" y="18" font-family="system-ui,sans-serif" font-size="8" fill="rgba(143,210,153,0.5)" text-anchor="middle">You</text>
+    <rect x="-75" y="25" width="34" height="6" rx="3" fill="rgba(143,210,153,0.15)" stroke="rgba(143,210,153,0.25)" stroke-width="0.5"/>
+    <text x="-58" y="31" font-family="system-ui,sans-serif" font-size="5" fill="rgba(143,210,153,0.5)" text-anchor="middle">Muted</text>
+    <!-- Right panel - candidate -->
+    <rect x="5" y="-58" width="105" height="95" rx="6" fill="rgba(143,210,153,0.08)" stroke="rgba(143,210,153,0.2)" stroke-width="0.8"/>
+    <circle cx="58" cy="-28" r="16" fill="none" stroke="rgba(143,210,153,0.4)" stroke-width="1.2"/>
+    <circle cx="58" cy="-32" r="7" fill="none" stroke="#8FD299" stroke-width="1.2"/>
+    <path d="M46,-18 Q46,-10 58,-10 Q70,-10 70,-18" fill="none" stroke="#8FD299" stroke-width="1.2"/>
+    <text x="58" y="18" font-family="system-ui,sans-serif" font-size="8" fill="rgba(143,210,153,0.6)" text-anchor="middle">Candidate</text>
+    <!-- Speaking indicator -->
+    <g transform="translate(82,-55)">
+      <rect x="0" y="0" width="5" height="8" rx="2.5" fill="#8FD299" opacity="0.5"/>
+      <rect x="7" y="-3" width="5" height="14" rx="2.5" fill="#8FD299" opacity="0.7"/>
+      <rect x="14" y="-1" width="5" height="10" rx="2.5" fill="#8FD299" opacity="0.4"/>
+    </g>
+    <!-- Bottom control bar -->
+    <g transform="translate(0,50)">
+      <!-- Mic -->
+      <circle cx="-40" cy="0" r="12" fill="rgba(143,210,153,0.1)" stroke="rgba(143,210,153,0.25)" stroke-width="0.8"/>
+      <rect x="-43" y="-5" width="6" height="8" rx="3" fill="none" stroke="#8FD299" stroke-width="1"/>
+      <path d="M-47,3 Q-40,8 -33,3" fill="none" stroke="#8FD299" stroke-width="0.8"/>
+      <!-- Camera -->
+      <circle cx="0" cy="0" r="12" fill="rgba(143,210,153,0.1)" stroke="rgba(143,210,153,0.25)" stroke-width="0.8"/>
+      <rect x="-5" y="-4" width="8" height="6" rx="1" fill="none" stroke="#8FD299" stroke-width="1"/>
+      <polygon points="3,-2 7,-4 7,4 3,2" fill="none" stroke="#8FD299" stroke-width="0.8"/>
+      <!-- End call -->
+      <circle cx="40" cy="0" r="12" fill="rgba(255,80,80,0.15)" stroke="rgba(255,80,80,0.3)" stroke-width="0.8"/>
+      <rect x="33" y="-2" width="14" height="4" rx="2" fill="rgba(255,80,80,0.4)"/>
+    </g>
+    <!-- Thumbs up / choose badge -->
+    <g transform="translate(145,-30)">
+      <rect x="-20" y="-15" width="40" height="30" rx="15" fill="rgba(143,210,153,0.15)" stroke="rgba(143,210,153,0.4)" stroke-width="1"/>
+      <text x="0" y="5" font-family="system-ui,sans-serif" font-size="16" text-anchor="middle">&#x1F44D;</text>
+    </g>
+    <!-- No fees badge -->
+    <rect x="-45" y="75" width="90" height="28" rx="14" fill="rgba(143,210,153,0.15)" stroke="rgba(143,210,153,0.4)" stroke-width="1"/>
+    <text x="0" y="94" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#8FD299" text-anchor="middle">NO FEES</text>
+  </g>
+  <!-- Title -->
+  <text x="400" y="445" font-family="system-ui,-apple-system,sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">You Interview &amp; Choose</text>
+  <text x="400" y="480" font-family="system-ui,-apple-system,sans-serif" font-size="15" fill="rgba(255,255,255,0.55)" text-anchor="middle">Review profiles, watch skill demos — no pressure, no fees</text>
+  <!-- Decorative dots -->
+  <g opacity="0.15" fill="#8FD299">
+    <circle cx="100" cy="100" r="2"/><circle cx="120" cy="100" r="2"/><circle cx="140" cy="100" r="2"/>
+    <circle cx="100" cy="120" r="2"/><circle cx="120" cy="120" r="2"/><circle cx="140" cy="120" r="2"/>
+    <circle cx="660" cy="480" r="2"/><circle cx="680" cy="480" r="2"/><circle cx="700" cy="480" r="2"/>
+    <circle cx="660" cy="500" r="2"/><circle cx="680" cy="500" r="2"/><circle cx="700" cy="500" r="2"/>
+  </g>
+</svg>

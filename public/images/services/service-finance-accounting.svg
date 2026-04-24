@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bgfa" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#111C1A;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1D2E2B;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="glowfa"><feGaussianBlur stdDeviation="8" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgfa)" rx="24"/>
+  <g opacity="0.04" stroke="#8FD299" stroke-width="0.5">
+    <line x1="0" y1="150" x2="800" y2="150"/><line x1="0" y1="300" x2="800" y2="300"/><line x1="0" y1="450" x2="800" y2="450"/>
+    <line x1="200" y1="0" x2="200" y2="600"/><line x1="400" y1="0" x2="400" y2="600"/><line x1="600" y1="0" x2="600" y2="600"/>
+  </g>
+  <circle cx="680" cy="100" r="200" fill="#8FD299" opacity="0.025"/>
+  <rect x="270" y="40" width="260" height="40" rx="20" fill="rgba(143,210,153,0.15)" stroke="rgba(143,210,153,0.3)" stroke-width="1"/>
+  <text x="400" y="66" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#8FD299" text-anchor="middle" letter-spacing="1.5">FINANCE &amp; ACCOUNTING</text>
+  <!-- Chart + Calculator mockup -->
+  <g transform="translate(400,245)" filter="url(#glowfa)">
+    <!-- Chart background -->
+    <rect x="-120" y="-90" width="240" height="180" rx="12" fill="rgba(143,210,153,0.04)" stroke="rgba(143,210,153,0.2)" stroke-width="1.5"/>
+    <!-- Chart grid lines -->
+    <g stroke="rgba(143,210,153,0.06)" stroke-width="0.8">
+      <line x1="-100" y1="-50" x2="100" y2="-50"/><line x1="-100" y1="-15" x2="100" y2="-15"/>
+      <line x1="-100" y1="20" x2="100" y2="20"/><line x1="-100" y1="55" x2="100" y2="55"/>
+    </g>
+    <!-- Bar chart -->
+    <rect x="-85" y="10" width="22" height="55" rx="3" fill="rgba(143,210,153,0.15)" stroke="rgba(143,210,153,0.3)" stroke-width="1"/>
+    <rect x="-55" y="-10" width="22" height="75" rx="3" fill="rgba(143,210,153,0.2)" stroke="rgba(143,210,153,0.35)" stroke-width="1"/>
+    <rect x="-25" y="-30" width="22" height="95" rx="3" fill="rgba(143,210,153,0.25)" stroke="rgba(143,210,153,0.4)" stroke-width="1"/>
+    <rect x="5" y="-45" width="22" height="110" rx="3" fill="rgba(143,210,153,0.3)" stroke="rgba(143,210,153,0.45)" stroke-width="1"/>
+    <rect x="35" y="-20" width="22" height="85" rx="3" fill="rgba(143,210,153,0.2)" stroke="rgba(143,210,153,0.35)" stroke-width="1"/>
+    <rect x="65" y="-55" width="22" height="120" rx="3" fill="#8FD299" opacity="0.35" stroke="rgba(143,210,153,0.5)" stroke-width="1"/>
+    <!-- Trend line -->
+    <polyline points="-74,-5 -44,-25 -14,-40 16,-55 46,-35 76,-65" fill="none" stroke="#8FD299" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    <!-- Arrow up indicator -->
+    <g transform="translate(95,-70)">
+      <rect x="-18" y="-12" width="36" height="24" rx="12" fill="rgba(143,210,153,0.15)" stroke="rgba(143,210,153,0.3)" stroke-width="0.8"/>
+      <polyline points="-5,4 0,-4 5,4" fill="none" stroke="#8FD299" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <!-- Dollar sign -->
+    <text x="-100" y="-65" font-family="system-ui,sans-serif" font-size="16" font-weight="700" fill="rgba(143,210,153,0.4)">$</text>
+    <!-- Tool badges -->
+    <g transform="translate(140,-50)">
+      <rect x="0" y="0" width="52" height="22" rx="11" fill="rgba(143,210,153,0.12)" stroke="rgba(143,210,153,0.25)" stroke-width="0.8"/>
+      <text x="26" y="15" font-family="system-ui,sans-serif" font-size="9" fill="rgba(143,210,153,0.7)" text-anchor="middle">Xero</text>
+    </g>
+    <g transform="translate(140,-18)">
+      <rect x="0" y="0" width="60" height="22" rx="11" fill="rgba(143,210,153,0.12)" stroke="rgba(143,210,153,0.25)" stroke-width="0.8"/>
+      <text x="30" y="15" font-family="system-ui,sans-serif" font-size="9" fill="rgba(143,210,153,0.7)" text-anchor="middle">MYOB</text>
+    </g>
+    <g transform="translate(140,14)">
+      <rect x="0" y="0" width="48" height="22" rx="11" fill="rgba(143,210,153,0.12)" stroke="rgba(143,210,153,0.25)" stroke-width="0.8"/>
+      <text x="24" y="15" font-family="system-ui,sans-serif" font-size="9" fill="rgba(143,210,153,0.7)" text-anchor="middle">QBO</text>
+    </g>
+  </g>
+  <text x="400" y="440" font-family="system-ui,-apple-system,sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">Finance &amp; Accounting</text>
+  <text x="400" y="475" font-family="system-ui,-apple-system,sans-serif" font-size="15" fill="rgba(255,255,255,0.55)" text-anchor="middle">Bookkeepers, CPAs, payroll &amp; tax specialists</text>
+  <g opacity="0.15" fill="#8FD299">
+    <circle cx="100" cy="100" r="2"/><circle cx="120" cy="100" r="2"/><circle cx="140" cy="100" r="2"/>
+    <circle cx="100" cy="120" r="2"/><circle cx="120" cy="120" r="2"/><circle cx="140" cy="120" r="2"/>
+  </g>
+</svg>

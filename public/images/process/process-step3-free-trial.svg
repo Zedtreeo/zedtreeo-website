@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#111C1A;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1D2E2B;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="accent3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8FD299;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#6BC07A;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="glow3">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg3)" rx="24"/>
+  <g opacity="0.04" stroke="#8FD299" stroke-width="0.5">
+    <line x1="0" y1="100" x2="800" y2="100"/><line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/><line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/><line x1="200" y1="0" x2="200" y2="600"/>
+    <line x1="400" y1="0" x2="400" y2="600"/><line x1="600" y1="0" x2="600" y2="600"/>
+  </g>
+  <circle cx="650" cy="120" r="180" fill="#8FD299" opacity="0.03"/>
+  <circle cx="150" cy="480" r="120" fill="#8FD299" opacity="0.03"/>
+  <!-- Step badge -->
+  <rect x="320" y="40" width="160" height="40" rx="20" fill="rgba(143,210,153,0.15)" stroke="rgba(143,210,153,0.3)" stroke-width="1"/>
+  <text x="400" y="66" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#8FD299" text-anchor="middle" letter-spacing="2">STEP 3</text>
+  <!-- Main icon - rocket/launch with shield -->
+  <g transform="translate(400,245)" filter="url(#glow3)">
+    <!-- Shield/guarantee outline -->
+    <path d="M0,-85 L55,-65 L55,10 Q55,55 0,80 Q-55,55 -55,10 L-55,-65 Z" fill="rgba(143,210,153,0.05)" stroke="rgba(143,210,153,0.2)" stroke-width="1.5"/>
+    <!-- Inner rocket -->
+    <g transform="translate(0,-10)">
+      <!-- Rocket body -->
+      <path d="M0,-55 Q-20,-25 -18,15 L18,15 Q20,-25 0,-55 Z" fill="rgba(143,210,153,0.1)" stroke="url(#accent3)" stroke-width="1.5"/>
+      <!-- Rocket window -->
+      <circle cx="0" cy="-20" r="8" fill="rgba(143,210,153,0.15)" stroke="#8FD299" stroke-width="1.2"/>
+      <circle cx="0" cy="-20" r="4" fill="rgba(143,210,153,0.3)"/>
+      <!-- Rocket fins -->
+      <path d="M-18,5 L-32,25 L-18,20 Z" fill="rgba(143,210,153,0.15)" stroke="rgba(143,210,153,0.4)" stroke-width="1"/>
+      <path d="M18,5 L32,25 L18,20 Z" fill="rgba(143,210,153,0.15)" stroke="rgba(143,210,153,0.4)" stroke-width="1"/>
+      <!-- Flame -->
+      <path d="M-10,15 Q-8,35 0,45 Q8,35 10,15" fill="rgba(143,210,153,0.2)" stroke="rgba(143,210,153,0.5)" stroke-width="1"/>
+      <path d="M-5,15 Q-3,28 0,35 Q3,28 5,15" fill="rgba(143,210,153,0.3)"/>
+    </g>
+    <!-- 5-day badge -->
+    <rect x="-50" y="65" width="100" height="32" rx="16" fill="rgba(143,210,153,0.15)" stroke="rgba(143,210,153,0.4)" stroke-width="1"/>
+    <text x="0" y="86" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#8FD299" text-anchor="middle">5-DAY FREE</text>
+    <!-- Sparkle decorations -->
+    <g fill="#8FD299" opacity="0.4">
+      <path d="M70,-50 L73,-42 L80,-40 L73,-38 L70,-30 L67,-38 L60,-40 L67,-42 Z" transform="scale(0.6)"/>
+      <path d="M-75,-55 L-72,-47 L-65,-45 L-72,-43 L-75,-35 L-78,-43 L-85,-45 L-78,-47 Z" transform="scale(0.5)"/>
+      <path d="M80,20 L82,26 L88,28 L82,30 L80,36 L78,30 L72,28 L78,26 Z" transform="scale(0.5)"/>
+    </g>
+  </g>
+  <!-- Title -->
+  <text x="400" y="440" font-family="system-ui,-apple-system,sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">Start with a Free Trial</text>
+  <text x="400" y="475" font-family="system-ui,-apple-system,sans-serif" font-size="15" fill="rgba(255,255,255,0.55)" text-anchor="middle">5-day risk-free trial — only pay when you're satisfied</text>
+  <!-- Decorative dots -->
+  <g opacity="0.15" fill="#8FD299">
+    <circle cx="100" cy="100" r="2"/><circle cx="120" cy="100" r="2"/><circle cx="140" cy="100" r="2"/>
+    <circle cx="100" cy="120" r="2"/><circle cx="120" cy="120" r="2"/><circle cx="140" cy="120" r="2"/>
+    <circle cx="660" cy="480" r="2"/><circle cx="680" cy="480" r="2"/><circle cx="700" cy="480" r="2"/>
+    <circle cx="660" cy="500" r="2"/><circle cx="680" cy="500" r="2"/><circle cx="700" cy="500" r="2"/>
+  </g>
+</svg>
