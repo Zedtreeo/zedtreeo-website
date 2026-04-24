@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <!-- Outer circle -->
+  <circle cx="20" cy="20" r="18" stroke="#FFFFFF" stroke-width="1.8" fill="none"/>
+  <!-- Horizontal lines (latitude) -->
+  <ellipse cx="20" cy="12" rx="15" ry="1.5" stroke="#FFFFFF" stroke-width="1" fill="none" opacity="0.6"/>
+  <ellipse cx="20" cy="20" rx="18" ry="1.5" stroke="#FFFFFF" stroke-width="1.2" fill="none" opacity="0.8"/>
+  <ellipse cx="20" cy="28" rx="15" ry="1.5" stroke="#FFFFFF" stroke-width="1" fill="none" opacity="0.6"/>
+  <!-- Vertical meridian (center) -->
+  <ellipse cx="20" cy="20" rx="8" ry="18" stroke="#FFFFFF" stroke-width="1.5" fill="none"/>
+  <!-- Vertical meridian (offset) -->
+  <ellipse cx="20" cy="20" rx="15" ry="18" stroke="#FFFFFF" stroke-width="1" fill="none" opacity="0.5"/>
+</svg>

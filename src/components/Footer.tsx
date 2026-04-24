@@ -30,13 +30,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 no-underline">
+            <Link href="/" className="flex items-center gap-2.5 no-underline">
               <Image
-                src="/zedtreeo-tree-white.svg"
+                src="/zedtreeo-globe-white.svg"
                 alt=""
-                width={36}
-                height={36}
-                className="w-9 h-9"
+                width={32}
+                height={32}
+                className="w-8 h-8"
               />
               <span className="text-2xl font-bold text-white tracking-tight">
                 Zed<span className="text-zt-accent">treeo</span>
