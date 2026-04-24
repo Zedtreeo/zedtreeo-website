@@ -149,6 +149,9 @@ export function articleSchema(article: {
   datePublished: string;
   dateModified: string;
   image?: string;
+  authorName?: string;
+  authorRole?: string;
+  authorUrl?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -160,9 +163,15 @@ export function articleSchema(article: {
     dateModified: article.dateModified,
     image: article.image || "https://zedtreeo.com/og-image.png",
     author: {
-      "@type": "Organization",
-      name: "Zedtreeo",
-      url: "https://zedtreeo.com",
+      "@type": "Person",
+      name: article.authorName || "Zedtreeo Team",
+      jobTitle: article.authorRole || "Remote Staffing Expert",
+      url: article.authorUrl || "https://zedtreeo.com/about",
+      worksFor: {
+        "@type": "Organization",
+        name: "Zedtreeo",
+        url: "https://zedtreeo.com",
+      },
     },
     publisher: {
       "@type": "Organization",

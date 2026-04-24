@@ -6,6 +6,7 @@ import {
   getBlogPost,
   getAllBlogSlugs,
   getRelatedPosts,
+  getAuthor,
   categoryLabels,
 } from "@/lib/blog-data";
 import JsonLd, { articleSchema } from "@/components/JsonLd";
@@ -74,6 +75,9 @@ export default async function BlogPostPage({ params }: PageProps) {
           image: post.image
             ? `https://zedtreeo.com${post.image}`
             : undefined,
+          authorName: getAuthor(post.author).name,
+          authorRole: getAuthor(post.author).role,
+          authorUrl: getAuthor(post.author).linkedin || "https://zedtreeo.com/about",
         })}
       />
 
@@ -114,7 +118,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 })}
               </span>
             )}
-            <span>By Zedtreeo</span>
+            <span>By {getAuthor(post.author).name}</span>
           </div>
         </div>
       </section>
@@ -159,22 +163,57 @@ export default async function BlogPostPage({ params }: PageProps) {
             </div>
           )}
 
-          {/* Author Box */}
-          <div className="mt-10 p-6 rounded-zt bg-zt-near-white flex gap-5 items-start">
-            <div className="w-14 h-14 rounded-full bg-zt-primary flex items-center justify-center shrink-0">
-              <span className="text-white font-bold text-lg">Z</span>
-            </div>
-            <div>
-              <h4 className="text-base font-semibold text-zt-headings !mt-0 mb-1">
-                Zedtreeo Team
-              </h4>
-              <p className="text-sm text-zt-body mb-0">
-                Practical insights on remote staffing, outsourcing, and building
-                distributed teams. Written by industry practitioners with
-                hands-on experience placing 500+ remote professionals globally.
-              </p>
-            </div>
-          </div>
+          {/* Author Box — EEAT */}
+          {(() => {
+            const author = getAuthor(post.author);
+            return (
+              <div className="mt-10 p-7 rounded-zt border border-zt-border bg-zt-near-white">
+                <div className="flex gap-5 items-start">
+                  <div className="w-16 h-16 rounded-full bg-zt-primary flex items-center justify-center shrink-0">
+                    <span className="text-white font-bold text-xl">
+                      {author.name.split(" ").map((n) => n[0]).join("")}
+                    </span>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-lg font-semibold text-zt-headings !mt-0 mb-0.5">
+                      {author.name}
+                    </h4>
+                    <p className="text-sm text-zt-accent font-medium mb-2">
+                      {author.role}, Zedtreeo
+                    </p>
+                    <p className="text-sm text-zt-body mb-3 leading-relaxed">
+                      {author.bio}
+                    </p>
+                    {author.credentials && (
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        {author.credentials.map((cred) => (
+                          <span
+                            key={cred}
+                            className="px-2.5 py-1 rounded bg-white text-xs text-zt-headings font-medium border border-zt-border"
+                          >
+                            {cred}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    {author.linkedin && (
+                      <a
+                        href={author.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm text-zt-primary font-semibold hover:text-zt-accent transition-colors"
+                      >
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        Connect on LinkedIn
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            );
+          })()}
         </div>
       </section>
 

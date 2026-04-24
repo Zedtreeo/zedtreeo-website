@@ -7,6 +7,16 @@ export type BlogCategory =
   | "finance-accounting"
   | "case-studies";
 
+export type Author = {
+  name: string;
+  slug: string;
+  role: string;
+  bio: string;
+  credentials: string[];
+  linkedin?: string;
+  image?: string;
+};
+
 export type BlogPost = {
   slug: string;
   title: string;
@@ -22,9 +32,42 @@ export type BlogPost = {
   featured?: boolean;
   image?: string;
   imageAlt?: string;
+  author?: string; // author slug — defaults to "anita-singh"
   /** HTML content — injected via dangerouslySetInnerHTML with zt-blog-content class */
   content: string;
 };
+
+/* ─── Authors ─── */
+export const authors: Record<string, Author> = {
+  "anita-singh": {
+    name: "Anita Singh",
+    slug: "anita-singh",
+    role: "Senior Digital Marketing Strategist",
+    bio: "Anita has 16+ years of experience in remote staffing and outsourcing operations. She has guided hiring strategy for 500+ remote placements across software development, finance, marketing, legal, and healthcare verticals. Her expertise covers workforce cost modeling, vendor evaluation frameworks, and scaling distributed teams for businesses in the US, Europe, and Australia.",
+    credentials: [
+      "16+ years in remote staffing operations",
+      "500+ remote placements guided",
+      "Workforce cost modeling specialist",
+      "Published in HR.com, Staffing Industry Analysts",
+    ],
+    linkedin: "https://www.linkedin.com/in/anita-zedtreeo/",
+  },
+  "zedtreeo-team": {
+    name: "Zedtreeo Team",
+    slug: "zedtreeo-team",
+    role: "Remote Staffing Experts",
+    bio: "The Zedtreeo editorial team brings deep operational experience across remote staffing, outsourcing, and distributed workforce management. Our content is informed by real placement data from 500+ engagements and vetted by industry practitioners.",
+    credentials: [
+      "500+ remote professionals placed",
+      "200+ companies served globally",
+      "Operations across 50+ role categories",
+    ],
+  },
+};
+
+export function getAuthor(slug?: string): Author {
+  return authors[slug || "anita-singh"] || authors["anita-singh"];
+}
 
 export const categoryLabels: Record<BlogCategory, string> = {
   "remote-staffing": "Remote Staffing",
@@ -36,7 +79,19 @@ export const categoryLabels: Record<BlogCategory, string> = {
   "case-studies": "Case Studies",
 };
 
-/* ─── Sample posts (will be replaced by migrated content) ─── */
+/* ─── Published Track 2 articles ─── */
+import { readFileSync } from "fs";
+import { join } from "path";
+
+function loadBlogContent(slug: string): string {
+  try {
+    const filePath = join(process.cwd(), "src/lib/blog-content", `${slug}.html`);
+    return readFileSync(filePath, "utf-8");
+  } catch {
+    return `<p>Content for ${slug} is being prepared.</p>`;
+  }
+}
+
 export const blogPosts: BlogPost[] = [
   {
     slug: "outsourcing-costs",
@@ -55,7 +110,8 @@ export const blogPosts: BlogPost[] = [
     featured: true,
     image: "/images/blog/outsourcing-costs-2026.svg",
     imageAlt: "Outsourcing costs comparison chart showing pricing by role and region in 2026",
-    content: "<p>Content will be migrated from WordPress.</p>",
+    author: "anita-singh",
+    content: loadBlogContent("outsourcing-costs"),
   },
   {
     slug: "hire-remote-developers-guide",
@@ -74,7 +130,8 @@ export const blogPosts: BlogPost[] = [
     featured: true,
     image: "/images/blog/hire-remote-developers.svg",
     imageAlt: "Guide to hiring remote developers in 2026",
-    content: "<p>Content will be migrated from WordPress.</p>",
+    author: "anita-singh",
+    content: loadBlogContent("hire-remote-developers-guide"),
   },
   {
     slug: "virtual-assistant-pricing",
@@ -92,7 +149,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "10 min",
     image: "/images/blog/va-pricing-2026.svg",
     imageAlt: "Virtual assistant pricing comparison in 2026",
-    content: "<p>Content will be migrated from WordPress.</p>",
+    author: "anita-singh",
+    content: loadBlogContent("virtual-assistant-pricing"),
   },
   {
     slug: "ai-vs-outsourcing",
@@ -110,7 +168,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "11 min",
     image: "/images/blog/ai-vs-outsourcing.svg",
     imageAlt: "AI vs outsourcing decision framework",
-    content: "<p>Content will be migrated from WordPress.</p>",
+    author: "anita-singh",
+    content: loadBlogContent("ai-vs-outsourcing"),
   },
   {
     slug: "outsource-payroll-services",
@@ -128,7 +187,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "9 min",
     image: "/images/blog/outsource-payroll.svg",
     imageAlt: "Guide to outsourcing payroll services",
-    content: "<p>Content will be migrated from WordPress.</p>",
+    author: "anita-singh",
+    content: loadBlogContent("outsource-payroll-services"),
   },
   {
     slug: "bpo-services",
@@ -146,7 +206,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "13 min",
     image: "/images/blog/bpo-services.svg",
     imageAlt: "BPO services guide for 2026",
-    content: "<p>Content will be migrated from WordPress.</p>",
+    author: "anita-singh",
+    content: loadBlogContent("bpo-services"),
   },
   {
     slug: "best-remote-staffing-agencies",
@@ -165,7 +226,8 @@ export const blogPosts: BlogPost[] = [
     featured: true,
     image: "/images/blog/best-staffing-agencies.svg",
     imageAlt: "Best remote staffing agencies comparison 2026",
-    content: "<p>Content will be migrated from WordPress.</p>",
+    author: "anita-singh",
+    content: loadBlogContent("best-remote-staffing-agencies"),
   },
 ];
 
