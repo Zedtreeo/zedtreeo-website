@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geologica } from "next/font/google";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const geologica = Geologica({
@@ -79,7 +81,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geologica.variable} h-full`}>
-      <body className="min-h-full flex flex-col antialiased">{children}</body>
+      <body className="min-h-full flex flex-col antialiased">
+        <Header />
+        <div className="pt-[72px] flex-1">{children}</div>
+        <Footer />
+      </body>
     </html>
   );
 }
