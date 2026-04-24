@@ -1,3 +1,8 @@
+export type PlacementMetric = {
+  value: string;
+  label: string;
+};
+
 export type HirePageData = {
   slug: string;
   title: string;
@@ -10,6 +15,7 @@ export type HirePageData = {
   heroImage: string;
   focusKeyword: string;
   startingRate: string;
+  placementMetrics?: PlacementMetric[];
   benefits: { icon: string; title: string; description: string }[];
   skills: string[];
   pricingTiers: { tier: string; rate: string; includes: string }[];
@@ -37,6 +43,12 @@ export const hirePages: Record<string, HirePageData> = {
     heroImage: "/images/services/service-software-development.svg",
     focusKeyword: "hire full stack developer",
     startingRate: "$8/hr",
+    placementMetrics: [
+      { value: "120+", label: "Developers Placed" },
+      { value: "92%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.9/5", label: "Client Rating" },
+    ],
     benefits: [
       { icon: "\u26A1", title: "Ship Faster", description: "Full-stack capability means fewer handoffs. Your developer handles frontend, backend, APIs, and deployment." },
       { icon: "\uD83E\uDDE0", title: "AI-Augmented", description: "Every developer is trained on GitHub Copilot, Cursor, and LLM APIs \u2014 writing code 2\u20133x faster with AI assistance." },
@@ -91,6 +103,12 @@ export const hirePages: Record<string, HirePageData> = {
     heroImage: "/images/services/service-virtual-assistants.svg",
     focusKeyword: "hire virtual assistant",
     startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "85+", label: "VAs Placed" },
+      { value: "94%", label: "Retention Rate" },
+      { value: "<3 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
     benefits: [
       { icon: "\u23F0", title: "Reclaim 20+ Hours/Week", description: "Delegate email management, scheduling, data entry, and research. Focus on high-value decisions instead of admin." },
       { icon: "\uD83E\uDDE0", title: "AI-Powered Efficiency", description: "Every VA is trained on ChatGPT, Claude, Notion AI, and automation tools \u2014 completing tasks 2\u20133x faster than traditional assistants." },
@@ -146,6 +164,12 @@ export const hirePages: Record<string, HirePageData> = {
     heroImage: "/images/services/service-marketing.svg",
     focusKeyword: "hire digital marketer",
     startingRate: "$7/hr",
+    placementMetrics: [
+      { value: "45+", label: "Marketers Placed" },
+      { value: "91%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
     benefits: [
       { icon: "\uD83D\uDCC8", title: "Drive Growth", description: "Full-funnel marketing execution from awareness to conversion. SEO, paid ads, content, and email \u2014 all from one dedicated marketer." },
       { icon: "\uD83E\uDDE0", title: "AI-Powered Marketing", description: "Trained on ChatGPT, Jasper, Surfer SEO, and AI analytics tools. Create content, optimize campaigns, and analyze data faster." },
@@ -201,6 +225,12 @@ export const hirePages: Record<string, HirePageData> = {
     heroImage: "/images/services/service-finance-accounting.svg",
     focusKeyword: "hire bookkeeper",
     startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "60+", label: "Bookkeepers Placed" },
+      { value: "95%", label: "Retention Rate" },
+      { value: "<4 Days", label: "Avg. Match Time" },
+      { value: "4.9/5", label: "Client Rating" },
+    ],
     benefits: [
       { icon: "\uD83D\uDCCA", title: "Books Always Current", description: "Daily transaction recording, weekly reconciliations, monthly closes. Your financials are always accurate and up-to-date." },
       { icon: "\uD83E\uDDE0", title: "AI-Enhanced Accuracy", description: "Trained on AI accounting tools and automation platforms. Fewer errors, faster processing, smarter categorization." },
@@ -257,6 +287,12 @@ export const hirePages: Record<string, HirePageData> = {
     heroImage: "/images/services/service-legal.svg",
     focusKeyword: "hire legal staff",
     startingRate: "$6/hr",
+    placementMetrics: [
+      { value: "30+", label: "Legal Staff Placed" },
+      { value: "93%", label: "Retention Rate" },
+      { value: "<7 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
     benefits: [
       { icon: "\u2696\uFE0F", title: "Legal Expertise", description: "Qualified legal professionals with experience in corporate law, contracts, IP, real estate, and regulatory compliance." },
       { icon: "\uD83E\uDDE0", title: "AI-Enhanced Research", description: "Trained on legal AI tools for faster case research, document analysis, and contract review. Higher accuracy, lower cost." },
@@ -313,6 +349,12 @@ export const hirePages: Record<string, HirePageData> = {
     heroImage: "/images/services/service-healthcare.svg",
     focusKeyword: "hire medical billing staff",
     startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "35+", label: "RCM Staff Placed" },
+      { value: "96%", label: "Retention Rate" },
+      { value: "<7 Days", label: "Avg. Match Time" },
+      { value: "4.9/5", label: "Client Rating" },
+    ],
     benefits: [
       { icon: "\uD83C\uDFE5", title: "Reduce Claim Denials", description: "Experienced coders who get it right the first time. Clean claim rates above 95% reduce rework and accelerate reimbursement." },
       { icon: "\uD83D\uDCB0", title: "Faster Collections", description: "Dedicated AR follow-up specialists who pursue aged receivables systematically. Reduce days in AR by 20\u201340%." },
@@ -369,6 +411,12 @@ export const hirePages: Record<string, HirePageData> = {
     heroImage: "/images/services/service-logistics-operations.svg",
     focusKeyword: "hire cybersecurity expert",
     startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "20+", label: "Security Experts Placed" },
+      { value: "94%", label: "Retention Rate" },
+      { value: "<7 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
     benefits: [
       { icon: "\uD83D\uDEE1\uFE0F", title: "24/7 Threat Protection", description: "Dedicated security analysts monitoring your infrastructure around the clock. Detect and respond to threats before they escalate." },
       { icon: "\uD83D\uDD0D", title: "Proactive Testing", description: "Regular vulnerability assessments and penetration testing to find and fix weaknesses before attackers do." },
@@ -425,6 +473,12 @@ export const hirePages: Record<string, HirePageData> = {
     heroImage: "/images/services/service-software-development.svg",
     focusKeyword: "hire devops engineer",
     startingRate: "$9/hr",
+    placementMetrics: [
+      { value: "40+", label: "DevOps Engineers Placed" },
+      { value: "93%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.9/5", label: "Client Rating" },
+    ],
     benefits: [
       { icon: "\u2699\uFE0F", title: "Automate Everything", description: "Infrastructure as Code, CI/CD pipelines, automated testing and deployments. Ship faster with fewer manual errors." },
       { icon: "\u2601\uFE0F", title: "Multi-Cloud Expertise", description: "Certified across AWS, Azure, and GCP. Design, migrate, and optimize cloud infrastructure for cost and performance." },
@@ -481,6 +535,12 @@ export const hirePages: Record<string, HirePageData> = {
     heroImage: "/images/services/service-ecommerce-retail.svg",
     focusKeyword: "hire remote employees",
     startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "500+", label: "Professionals Placed" },
+      { value: "93%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
     benefits: [
       { icon: "\uD83C\uDF10", title: "Every Role, One Platform", description: "Software developers, accountants, marketers, legal staff, healthcare specialists, customer support, and more. Build your entire remote team through Zedtreeo." },
       { icon: "\uD83E\uDDE0", title: "AI-Trained Workforce", description: "Every employee is trained on relevant AI tools \u2014 GitHub Copilot, ChatGPT, Claude, Jasper, and industry-specific automation platforms." },
@@ -537,6 +597,12 @@ export const hirePages: Record<string, HirePageData> = {
     heroImage: "/images/services/service-virtual-assistants.svg",
     focusKeyword: "hire data entry assistant",
     startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "55+", label: "Data Entry Staff Placed" },
+      { value: "92%", label: "Retention Rate" },
+      { value: "<3 Days", label: "Avg. Match Time" },
+      { value: "4.7/5", label: "Client Rating" },
+    ],
     benefits: [
       { icon: "\u26A1", title: "Speed & Accuracy", description: "Professional data entry operators with 99%+ accuracy and 60+ WPM typing speed. Quality-checked output, every time." },
       { icon: "\uD83E\uDDE0", title: "AI-Enhanced Processing", description: "Trained on OCR tools, data extraction AI, and automation platforms. Process documents, invoices, and forms 2\u20133x faster." },
@@ -593,6 +659,12 @@ export const hirePages: Record<string, HirePageData> = {
     heroImage: "/images/services/service-ecommerce-retail.svg",
     focusKeyword: "hire graphic designer",
     startingRate: "$6/hr",
+    placementMetrics: [
+      { value: "35+", label: "Designers Placed" },
+      { value: "91%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
     benefits: [
       { icon: "\uD83C\uDFA8", title: "Full-Spectrum Design", description: "From brand identity to social media ads, pitch decks to packaging. One designer covers your entire visual communication needs." },
       { icon: "\uD83E\uDDE0", title: "AI-Powered Creativity", description: "Trained on Midjourney, Adobe Firefly, Canva AI, and DALL-E. Generate concepts faster, iterate quickly, and produce more variations." },
@@ -649,6 +721,12 @@ export const hirePages: Record<string, HirePageData> = {
     heroImage: "/images/services/service-virtual-assistants.svg",
     focusKeyword: "hire customer support representative",
     startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "70+", label: "Support Reps Placed" },
+      { value: "90%", label: "Retention Rate" },
+      { value: "<3 Days", label: "Avg. Match Time" },
+      { value: "4.7/5", label: "Client Rating" },
+    ],
     benefits: [
       { icon: "\uD83D\uDCAC", title: "Multichannel Coverage", description: "Phone, email, live chat, social media, and ticketing systems. One rep handles all channels or build a specialized team." },
       { icon: "\uD83E\uDDE0", title: "AI-Enhanced Support", description: "Trained on Zendesk AI, ChatGPT, and automation tools. Faster first response times, better resolution rates, and proactive issue detection." },
@@ -705,6 +783,12 @@ export const hirePages: Record<string, HirePageData> = {
     heroImage: "/images/services/service-marketing.svg",
     focusKeyword: "hire social media manager",
     startingRate: "$6/hr",
+    placementMetrics: [
+      { value: "25+", label: "SMM Staff Placed" },
+      { value: "92%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
     benefits: [
       { icon: "\uD83D\uDCF1", title: "Platform Mastery", description: "LinkedIn, Instagram, Facebook, Twitter/X, TikTok, YouTube, and Pinterest. Platform-native strategies that match each algorithm." },
       { icon: "\uD83E\uDDE0", title: "AI-Powered Content", description: "Trained on ChatGPT, Canva AI, and CapCut for rapid content creation. Produce 3\u20135x more content without sacrificing quality." },
@@ -761,6 +845,12 @@ export const hirePages: Record<string, HirePageData> = {
     heroImage: "/images/services/service-marketing.svg",
     focusKeyword: "hire content writer",
     startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "40+", label: "Writers Placed" },
+      { value: "91%", label: "Retention Rate" },
+      { value: "<4 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
     benefits: [
       { icon: "\u270D\uFE0F", title: "SEO-First Writing", description: "Every piece is optimized for search intent, on-page SEO, and featured snippets. Content that ranks, not just reads well." },
       { icon: "\uD83E\uDDE0", title: "AI-Augmented Output", description: "Trained on ChatGPT, Jasper, Surfer SEO, and Clearscope. Research faster, write smarter, and produce 2\u20133x more content with consistent quality." },
@@ -817,6 +907,12 @@ export const hirePages: Record<string, HirePageData> = {
     heroImage: "/images/services/service-marketing.svg",
     focusKeyword: "hire seo specialist",
     startingRate: "$6/hr",
+    placementMetrics: [
+      { value: "20+", label: "SEO Specialists Placed" },
+      { value: "93%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.9/5", label: "Client Rating" },
+    ],
     benefits: [
       { icon: "\uD83D\uDCC8", title: "Organic Growth Engine", description: "Data-driven SEO strategy covering technical health, content gaps, and link authority. Sustainable rankings that compound over time." },
       { icon: "\uD83E\uDDE0", title: "AI-Powered SEO", description: "Trained on Ahrefs, SEMrush, Surfer SEO, Screaming Frog, and AI content tools. Faster audits, smarter keyword targeting, and predictive ranking analysis." },

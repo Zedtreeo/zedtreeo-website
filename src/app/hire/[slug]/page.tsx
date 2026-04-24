@@ -125,6 +125,22 @@ export default async function HirePage({ params }: PageProps) {
         </div>
       </section>
 
+      {/* ───── Placement Metrics ───── */}
+      {data.placementMetrics && data.placementMetrics.length > 0 && (
+        <section className="bg-white border-b border-zt-border py-8 px-6">
+          <div className="max-w-zt-content mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+              {data.placementMetrics.map((metric) => (
+                <div key={metric.label}>
+                  <div className="text-2xl md:text-3xl font-bold text-zt-primary">{metric.value}</div>
+                  <div className="text-xs text-zt-body uppercase tracking-wider mt-1">{metric.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ───── Trust Bar ───── */}
       <TrustBar />
 

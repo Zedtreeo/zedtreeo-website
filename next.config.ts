@@ -139,23 +139,23 @@ const nextConfig: NextConfig = {
       { source: "/best-remote-staffing-agencies", destination: "/blog/best-remote-staffing-agencies", permanent: true },
       { source: "/best-remote-staffing-agencies/", destination: "/blog/best-remote-staffing-agencies", permanent: true },
 
-      /* ─── Old blog posts → /blog (until individual posts are migrated) ─── */
-      { source: "/best-practices-for-hiring-remote-staff", destination: "/blog", permanent: false },
-      { source: "/best-practices-for-hiring-remote-staff/", destination: "/blog", permanent: false },
-      { source: "/complete-guide-to-remote-team-management", destination: "/blog", permanent: false },
-      { source: "/complete-guide-to-remote-team-management/", destination: "/blog", permanent: false },
-      { source: "/remote-staffing-guide", destination: "/blog", permanent: false },
-      { source: "/remote-staffing-guide/", destination: "/blog", permanent: false },
-      { source: "/staff-augmentation-services", destination: "/blog", permanent: false },
-      { source: "/staff-augmentation-services/", destination: "/blog", permanent: false },
-      { source: "/staff-augmentation-vs-outsourcing-vs-ai-which-model-in-2026", destination: "/blog", permanent: false },
-      { source: "/staff-augmentation-vs-outsourcing-vs-ai-which-model-in-2026/", destination: "/blog", permanent: false },
-      { source: "/offshore-vs-outsourcing", destination: "/blog", permanent: false },
-      { source: "/offshore-vs-outsourcing/", destination: "/blog", permanent: false },
-      { source: "/why-remote-hiring", destination: "/blog", permanent: false },
-      { source: "/why-remote-hiring/", destination: "/blog", permanent: false },
-      { source: "/remote-vs-on-site-work-which-is-more-effective", destination: "/blog", permanent: false },
-      { source: "/remote-vs-on-site-work-which-is-more-effective/", destination: "/blog", permanent: false },
+      /* ─── Old blog posts → best-match articles (301 permanent) ─── */
+      { source: "/best-practices-for-hiring-remote-staff", destination: "/blog/hire-remote-developers-guide", permanent: true },
+      { source: "/best-practices-for-hiring-remote-staff/", destination: "/blog/hire-remote-developers-guide", permanent: true },
+      { source: "/complete-guide-to-remote-team-management", destination: "/blog/best-remote-staffing-agencies", permanent: true },
+      { source: "/complete-guide-to-remote-team-management/", destination: "/blog/best-remote-staffing-agencies", permanent: true },
+      { source: "/remote-staffing-guide", destination: "/blog/best-remote-staffing-agencies", permanent: true },
+      { source: "/remote-staffing-guide/", destination: "/blog/best-remote-staffing-agencies", permanent: true },
+      { source: "/staff-augmentation-services", destination: "/blog/bpo-services", permanent: true },
+      { source: "/staff-augmentation-services/", destination: "/blog/bpo-services", permanent: true },
+      { source: "/staff-augmentation-vs-outsourcing-vs-ai-which-model-in-2026", destination: "/blog/ai-vs-outsourcing", permanent: true },
+      { source: "/staff-augmentation-vs-outsourcing-vs-ai-which-model-in-2026/", destination: "/blog/ai-vs-outsourcing", permanent: true },
+      { source: "/offshore-vs-outsourcing", destination: "/blog/outsourcing-costs", permanent: true },
+      { source: "/offshore-vs-outsourcing/", destination: "/blog/outsourcing-costs", permanent: true },
+      { source: "/why-remote-hiring", destination: "/blog/hire-remote-developers-guide", permanent: true },
+      { source: "/why-remote-hiring/", destination: "/blog/hire-remote-developers-guide", permanent: true },
+      { source: "/remote-vs-on-site-work-which-is-more-effective", destination: "/blog/ai-vs-outsourcing", permanent: true },
+      { source: "/remote-vs-on-site-work-which-is-more-effective/", destination: "/blog/ai-vs-outsourcing", permanent: true },
 
       /* ─── Old static pages → new equivalents ─── */
       { source: "/about", destination: "/about", permanent: true },
@@ -195,8 +195,8 @@ const nextConfig: NextConfig = {
       { source: "/outsource-to-india", destination: "/hire/remote-employees-for-your-business", permanent: true },
       { source: "/outsource-to-india/", destination: "/hire/remote-employees-for-your-business", permanent: true },
 
-      /* ─── Case studies → /blog (until migrated individually) ─── */
-      { source: "/case-study-:path*", destination: "/blog", permanent: false },
+      /* ─── Case studies → /blog (301 permanent) ─── */
+      { source: "/case-study-:path*", destination: "/blog", permanent: true },
 
       /* ─── Catch remaining old blog posts with trailing slashes ─── */
       { source: "/best-remote-staffing-agency-for-remote-jobs", destination: "/blog/best-remote-staffing-agencies", permanent: true },

@@ -207,6 +207,60 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ───── Founder Story — EEAT Trust Anchor ───── */}
+      <section className="bg-zt-primary text-white py-zt-section px-6">
+        <div className="max-w-zt-narrow mx-auto">
+          <div className="text-center mb-10">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-zt-accent/20 text-zt-accent text-xs font-bold uppercase tracking-wider mb-4">
+              Our Story
+            </span>
+            <h2 className="text-white mb-4">Built by Operators, Not Middlemen</h2>
+          </div>
+          <div className="space-y-5 text-white/80 leading-relaxed">
+            <p>
+              Zedtreeo was founded in 2023 by a team that spent over a decade building and managing
+              remote teams across software, finance, marketing, legal, and healthcare. We saw the same
+              problems everywhere: agencies charging 3&ndash;4x markups, inconsistent vetting, zero
+              accountability after placement, and clients left managing people they never properly evaluated.
+            </p>
+            <p>
+              We built Zedtreeo to fix that. Every professional on our platform goes through a multi-stage
+              vetting process — technical assessments, communication screening, AI tool proficiency checks,
+              and background verification. We don&apos;t just match resumes to job descriptions. We evaluate
+              work quality, reliability, and timezone compatibility before you ever see a profile.
+            </p>
+            <p>
+              That&apos;s why we offer a <strong className="text-white">free 5-day trial</strong> on every
+              placement. We have skin in the game. If the hire doesn&apos;t work out, we replace them at
+              no cost. Over <strong className="text-white">500+ placements</strong> across 200+ companies
+              globally, our retention rate sits above 93%.
+            </p>
+            <p className="text-zt-accent font-medium">
+              We&apos;re not a marketplace. We&apos;re your dedicated hiring partner — with the operational
+              experience to back it up.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-8 md:gap-16 mt-12 pt-8 border-t border-white/10">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-zt-accent">500+</div>
+              <div className="text-xs text-white/60 uppercase tracking-wider mt-1">Professionals Placed</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-zt-accent">200+</div>
+              <div className="text-xs text-white/60 uppercase tracking-wider mt-1">Companies Served</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-zt-accent">93%+</div>
+              <div className="text-xs text-white/60 uppercase tracking-wider mt-1">Retention Rate</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-zt-accent">28+</div>
+              <div className="text-xs text-white/60 uppercase tracking-wider mt-1">Role Categories</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-zt-section px-6">
         <div className="max-w-zt-narrow mx-auto">
