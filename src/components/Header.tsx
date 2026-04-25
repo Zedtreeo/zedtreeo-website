@@ -334,7 +334,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
-              className="block text-center py-3 px-6 rounded-full border-2 border-white/30 text-white text-base font-semibold no-underline hover:border-zt-accent hover:text-zt-accent transition-colors"
+              className="block text-center py-2 px-5 rounded-full border border-white/30 text-white text-sm font-medium no-underline hover:border-zt-accent hover:text-zt-accent transition-colors"
             >
               Schedule a Call
             </a>

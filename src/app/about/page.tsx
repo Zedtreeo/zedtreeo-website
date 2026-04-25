@@ -103,13 +103,14 @@ export default function AboutPage() {
               </p>
             </div>
             <div>
-              <div className="relative rounded-zt overflow-hidden mb-6" style={{ height: "320px" }}>
+              <div className="relative rounded-zt overflow-hidden mb-6" style={{ height: "260px" }}>
                 <Image
                   src="/images/about/professional-team.webp"
                   alt="Zedtreeo remote staffing team collaborating in a modern office"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover rounded-zt"
+                  style={{ objectPosition: "center 20%" }}
                   priority
                 />
               </div>
