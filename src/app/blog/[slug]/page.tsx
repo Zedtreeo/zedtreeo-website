@@ -2,13 +2,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  getBlogPost,
-  getAllBlogSlugs,
-  getRelatedPosts,
-  getAuthor,
-  categoryLabels,
-} from "@/lib/blog-data";
+import { getAuthor, categoryLabels } from "@/lib/blog-data";
+import { getBlogPost, getAllBlogSlugs, getRelatedPosts } from "@/lib/blog-content";
 import JsonLd, { articleSchema } from "@/components/JsonLd";
 import { Breadcrumb, CTASection } from "@/components/ui";
 
