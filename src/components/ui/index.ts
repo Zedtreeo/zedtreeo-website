@@ -6,3 +6,6 @@ export { default as TrustBar } from "./TrustBar";
 export { default as Breadcrumb } from "./Breadcrumb";
 export { default as StatCard } from "./StatCard";
 export { default as FAQ } from "./FAQ";
+export { default as ScrollReveal } from "./ScrollReveal";
+export { default as AnimatedCounter } from "./AnimatedCounter";
+export { default as SkillPills } from "./SkillPills";

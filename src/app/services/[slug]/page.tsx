@@ -5,7 +5,7 @@ import Image from "next/image";
 import { getHirePageData, getAllHireSlugs } from "@/lib/hire-data";
 import { getServicePage, getAllServicePageSlugs } from "@/lib/service-data";
 import JsonLd, { serviceSchema, breadcrumbSchema } from "@/components/JsonLd";
-import { Breadcrumb, FAQ, TrustBar, Button, SectionHeading, CTASection } from "@/components/ui";
+import { Breadcrumb, FAQ, TrustBar, Button, SectionHeading, CTASection, ScrollReveal, AnimatedCounter, SkillPills } from "@/components/ui";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -163,7 +163,10 @@ function HirePageLayout({ data }: { data: NonNullable<ReturnType<typeof getHireP
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               {data.placementMetrics.map((metric) => (
                 <div key={metric.label}>
-                  <div className="text-2xl md:text-3xl font-bold text-zt-primary">{metric.value}</div>
+                  <AnimatedCounter
+                    value={metric.value}
+                    className="text-2xl md:text-3xl font-bold text-zt-primary block"
+                  />
                   <div className="text-xs text-zt-body uppercase tracking-wider mt-1">{metric.label}</div>
                 </div>
               ))}
@@ -177,20 +180,24 @@ function HirePageLayout({ data }: { data: NonNullable<ReturnType<typeof getHireP
       {/* Benefits */}
       <section className="py-zt-section px-6">
         <div className="max-w-zt-content mx-auto">
-          <SectionHeading
-            title={`Why Hire Remote ${data.title} with Zedtreeo`}
-            subtitle={`Every ${data.title.toLowerCase()} is pre-vetted, AI-trained, and matched to your timezone. Here's what sets them apart.`}
-            badge="Benefits"
-          />
+          <ScrollReveal>
+            <SectionHeading
+              title={`Why Hire Remote ${data.title} with Zedtreeo`}
+              subtitle={`Every ${data.title.toLowerCase()} is pre-vetted, AI-trained, and matched to your timezone. Here's what sets them apart.`}
+              badge="Benefits"
+            />
+          </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {data.benefits.map((benefit, i) => (
-              <div key={i} className="p-6 rounded-zt bg-white shadow-zt-card hover:shadow-zt-card-hover transition-all">
-                <div className="w-12 h-12 rounded-full bg-zt-accent/15 flex items-center justify-center mb-4 text-2xl">
-                  {benefit.icon}
+              <ScrollReveal key={i} delay={i * 100}>
+                <div className="p-6 rounded-zt bg-white shadow-zt-card hover:shadow-zt-card-hover transition-all h-full">
+                  <div className="w-12 h-12 rounded-full bg-zt-accent/15 flex items-center justify-center mb-4 text-2xl">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold text-zt-headings mb-2 !mt-0">{benefit.title}</h3>
+                  <p className="text-sm text-zt-body mb-0 leading-relaxed">{benefit.description}</p>
                 </div>
-                <h3 className="text-lg font-semibold text-zt-headings mb-2 !mt-0">{benefit.title}</h3>
-                <p className="text-sm text-zt-body mb-0 leading-relaxed">{benefit.description}</p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -199,41 +206,38 @@ function HirePageLayout({ data }: { data: NonNullable<ReturnType<typeof getHireP
       {/* Skills */}
       <section className="bg-zt-light-bg py-zt-section px-6">
         <div className="max-w-zt-content mx-auto">
-          <SectionHeading
-            title="Skills & Tools"
-            subtitle={`Our ${data.title.toLowerCase()} are proficient across the technologies and tools that matter most.`}
-            badge="Expertise"
-          />
-          <div className="flex flex-wrap justify-center gap-3">
-            {data.skills.map((skill) => (
-              <span
-                key={skill}
-                className="px-4 py-2 rounded-full bg-white text-zt-headings text-sm font-medium shadow-sm border border-zt-border hover:border-zt-accent hover:text-zt-accent transition-colors"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
+          <ScrollReveal>
+            <SectionHeading
+              title="Skills & Tools"
+              subtitle={`Our ${data.title.toLowerCase()} are proficient across the technologies and tools that matter most.`}
+              badge="Expertise"
+            />
+          </ScrollReveal>
+          <SkillPills skills={data.skills} />
         </div>
       </section>
 
       {/* How It Works */}
       <section className="py-zt-section px-6">
         <div className="max-w-zt-content mx-auto">
-          <SectionHeading
-            title="How It Works"
-            subtitle="From first conversation to a fully onboarded team member — in as little as 7 days."
-            badge="Process"
-          />
+          <ScrollReveal>
+            <SectionHeading
+              title="How It Works"
+              subtitle="From first conversation to a fully onboarded team member — in as little as 7 days."
+              badge="Process"
+            />
+          </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
             {processSteps.map((step, i) => (
-              <div key={i} className="text-center">
-                <div className="w-14 h-14 rounded-full bg-zt-accent text-zt-headings font-bold text-xl flex items-center justify-center mx-auto mb-4">
-                  {i + 1}
+              <ScrollReveal key={i} delay={i * 120}>
+                <div className="text-center">
+                  <div className="w-14 h-14 rounded-full bg-zt-accent text-zt-headings font-bold text-xl flex items-center justify-center mx-auto mb-4">
+                    {i + 1}
+                  </div>
+                  <h3 className="text-base font-semibold text-zt-headings mb-2 !mt-0">{step.title}</h3>
+                  <p className="text-sm text-zt-body mb-0">{step.desc}</p>
                 </div>
-                <h3 className="text-base font-semibold text-zt-headings mb-2 !mt-0">{step.title}</h3>
-                <p className="text-sm text-zt-body mb-0">{step.desc}</p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -284,7 +288,10 @@ function HirePageLayout({ data }: { data: NonNullable<ReturnType<typeof getHireP
           <div className="flex flex-wrap justify-center gap-8 md:gap-16 mt-16 pt-12 border-t border-white/10">
             {pricingStats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-zt-accent">{stat.value}</div>
+                <AnimatedCounter
+                  value={stat.value}
+                  className="text-3xl md:text-4xl font-bold text-zt-accent block"
+                />
                 <div className="text-xs text-white/60 uppercase tracking-wider mt-1">{stat.label}</div>
               </div>
             ))}
@@ -295,36 +302,43 @@ function HirePageLayout({ data }: { data: NonNullable<ReturnType<typeof getHireP
       {/* FAQ */}
       <section className="py-zt-section px-6">
         <div className="max-w-zt-narrow mx-auto">
-          <SectionHeading
-            title="Frequently Asked Questions"
-            subtitle={`Common questions about hiring remote ${data.title.toLowerCase()} through Zedtreeo.`}
-            badge="FAQs"
-          />
-          <FAQ items={data.faqs} />
+          <ScrollReveal>
+            <SectionHeading
+              title="Frequently Asked Questions"
+              subtitle={`Common questions about hiring remote ${data.title.toLowerCase()} through Zedtreeo.`}
+              badge="FAQs"
+            />
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <FAQ items={data.faqs} />
+          </ScrollReveal>
         </div>
       </section>
 
       {/* Related Roles */}
       <section className="bg-zt-light-bg py-zt-section px-6">
         <div className="max-w-zt-content mx-auto">
-          <SectionHeading
-            title="Explore Related Roles"
-            subtitle="Build a complete remote team across every function."
-          />
+          <ScrollReveal>
+            <SectionHeading
+              title="Explore Related Roles"
+              subtitle="Build a complete remote team across every function."
+            />
+          </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {data.relatedPages.map((page) => (
-              <Link
-                key={page.href}
-                href={page.href}
-                className="group block p-6 rounded-zt bg-white shadow-zt-card hover:shadow-zt-card-hover transition-all no-underline text-center"
-              >
-                <h3 className="text-base font-semibold text-zt-headings group-hover:text-zt-accent transition-colors !mt-0 mb-1">
-                  {page.title}
-                </h3>
-                <span className="text-sm text-zt-accent font-medium">
-                  Learn more &rarr;
-                </span>
-              </Link>
+            {data.relatedPages.map((page, i) => (
+              <ScrollReveal key={page.href} delay={i * 100}>
+                <Link
+                  href={page.href}
+                  className="group block p-6 rounded-zt bg-white shadow-zt-card hover:shadow-zt-card-hover transition-all no-underline text-center h-full"
+                >
+                  <h3 className="text-base font-semibold text-zt-headings group-hover:text-zt-accent transition-colors !mt-0 mb-1">
+                    {page.title}
+                  </h3>
+                  <span className="text-sm text-zt-accent font-medium">
+                    Learn more &rarr;
+                  </span>
+                </Link>
+              </ScrollReveal>
             ))}
           </div>
         </div>
