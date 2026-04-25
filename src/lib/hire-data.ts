@@ -1014,6 +1014,717 @@ export const hirePages: Record<string, HirePageData> = {
       { title: "AI/ML Engineers", href: "/services/hire-ai-ml-engineer" },
     ],
   },
+
+  "hire-mobile-app-developer": {
+    slug: "hire-mobile-app-developer",
+    title: "Mobile App Developers",
+    h1: "Hire Remote",
+    h1Accent: "Mobile App Developers",
+    metaTitle: "Hire Remote Mobile App Developers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote mobile app developers from India starting at $5/hr. iOS, Android, React Native, Flutter experts. Pre-vetted, AI-trained. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted mobile developers with production apps on the App Store and Google Play. iOS, Android, React Native, and Flutter — dedicated to your team, working your timezone.",
+    heroBullets: [
+      "iOS (Swift/SwiftUI), Android (Kotlin), React Native, Flutter",
+      "AI-trained: GitHub Copilot, Cursor, Claude for mobile dev",
+      "70–90% cost savings vs US/EU mobile developers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-software-development.svg",
+    focusKeyword: "hire mobile app developer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "120+", label: "Mobile Devs Placed" },
+      { value: "93%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "📱", title: "Native & Cross-Platform", description: "Every developer ships production apps — whether native iOS (Swift/SwiftUI), Android (Kotlin/Jetpack Compose), or cross-platform with React Native and Flutter. One hire, multiple platforms." },
+      { icon: "🧠", title: "AI-Augmented Development", description: "Trained on GitHub Copilot, Cursor, and AI debugging tools. Your mobile developer builds features 2–3x faster with AI-assisted code generation, testing, and performance profiling." },
+      { icon: "🏪", title: "App Store Expertise", description: "End-to-end app lifecycle management — from architecture and development through App Store/Google Play submission, review compliance, and post-launch monitoring." },
+      { icon: "⏰", title: "Your Timezone", description: "Your mobile developer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on sprint planning, code reviews, and feature demos." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior mobile developers from $5/hr. Replace $90–$180/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "🔒", title: "Enterprise Security", description: "ISO 27001 certified infrastructure. NDA-backed, GDPR compliant. Secure dev environments with code signing, encrypted builds, and controlled app distribution." },
+    ],
+    skills: [
+      "Swift", "SwiftUI", "UIKit", "Objective-C",
+      "Kotlin", "Jetpack Compose", "Java (Android)", "Android SDK",
+      "React Native", "Flutter", "Dart", "Expo",
+      "Firebase", "Core Data", "Room DB", "SQLite",
+      "REST APIs", "GraphQL", "WebSockets", "Push Notifications",
+      "App Store Connect", "Google Play Console", "CI/CD (Fastlane)", "TestFlight",
+      "XCTest", "Espresso", "Detox", "Performance Profiling",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "UI implementation from Figma, bug fixes, simple feature development, unit testing, app store submission support" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Feature ownership, API integration, state management, push notifications, in-app purchases, cross-platform development" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "App architecture, performance optimization, team leadership, CI/CD pipeline setup, offline-first design, app security hardening" },
+    ],
+    faqs: [
+      { question: "Do your mobile developers build native or cross-platform apps?", answer: "Both. We match you with the right specialist — native iOS (Swift/SwiftUI), native Android (Kotlin/Compose), or cross-platform (React Native, Flutter). Many of our senior developers have experience across multiple frameworks." },
+      { question: "Can your developer publish apps to the App Store and Google Play?", answer: "Yes. Our mobile developers handle the full lifecycle — development, testing, store listing optimization, submission, review compliance, and post-launch updates. They're experienced with App Store Connect and Google Play Console." },
+      { question: "How do you vet mobile app developers?", answer: "Every candidate completes a 6-stage screening: portfolio review with live app demos, mobile-specific coding challenge, system design for offline/real-time scenarios, AI tool proficiency test, English assessment, and cultural fit interview." },
+      { question: "Can I hire a developer for both iOS and Android?", answer: "Yes. Cross-platform developers using React Native or Flutter can build for both platforms from a single codebase. For native development, we can provide separate iOS and Android specialists, or a senior developer experienced in both." },
+      { question: "What industries do your mobile developers serve?", answer: "Healthcare, fintech, e-commerce, logistics, real estate, SaaS, and education. Our developers have built HIPAA-compliant health apps, PCI-compliant payment flows, real-time delivery tracking, and enterprise mobile solutions." },
+      { question: "What's included in the free 5-day trial?", answer: "Full access to your dedicated mobile developer for 5 business days. They'll work on a real task from your project — whether it's a feature build, bug fix, or architecture review. No cost, no commitment. Pay only if satisfied." },
+    ],
+    relatedPages: [
+      { title: "React Developers", href: "/services/hire-react-developer" },
+      { title: "Flutter Developers", href: "/services/flutter-developer" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+      { title: "AI/ML Engineers", href: "/services/hire-ai-ml-engineer" },
+    ],
+  },
+
+  "hire-ai-ml-engineer": {
+    slug: "hire-ai-ml-engineer",
+    title: "AI/ML Engineers",
+    h1: "Hire Remote",
+    h1Accent: "AI & Machine Learning Engineers",
+    metaTitle: "Hire Remote AI/ML Engineers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote AI/ML engineers from India starting at $5/hr. TensorFlow, PyTorch, NLP, computer vision, LLM experts. Pre-vetted, AI-trained. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted AI/ML engineers with production experience in deep learning, NLP, computer vision, and LLM integration. Dedicated to your team, working your timezone, deploying models from day one.",
+    heroBullets: [
+      "TensorFlow, PyTorch, scikit-learn, Hugging Face specialists",
+      "LLM integration: OpenAI, Claude, LangChain, RAG pipelines",
+      "70–90% cost savings vs US/EU AI engineers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-software-development.svg",
+    focusKeyword: "hire AI ML engineer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "60+", label: "AI/ML Engineers Placed" },
+      { value: "95%", label: "Retention Rate" },
+      { value: "<7 Days", label: "Avg. Match Time" },
+      { value: "4.9/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "🤖", title: "Production ML Pipelines", description: "Every AI/ML engineer builds end-to-end pipelines — from data preprocessing and feature engineering through model training, evaluation, deployment, and monitoring in production environments." },
+      { icon: "🧠", title: "LLM & GenAI Expertise", description: "Experienced with OpenAI, Anthropic Claude, LangChain, LlamaIndex, RAG architectures, fine-tuning, prompt engineering, and building AI-powered products that deliver real business value." },
+      { icon: "📊", title: "Full ML Stack", description: "TensorFlow, PyTorch, scikit-learn, XGBoost, Hugging Face Transformers, MLflow, Kubeflow, Weights & Biases — whatever your ML infrastructure demands." },
+      { icon: "⏰", title: "Your Timezone", description: "Your AI/ML engineer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on model reviews, experiment tracking, and deployment planning." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior AI/ML engineers from $5/hr. Replace $120–$250/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "🔒", title: "Data Security & Compliance", description: "ISO 27001 certified infrastructure. NDA-backed, GDPR and HIPAA compliant. Secure model training environments with data isolation, access controls, and audit trails." },
+    ],
+    skills: [
+      "Python", "TensorFlow", "PyTorch", "scikit-learn",
+      "Hugging Face", "LangChain", "LlamaIndex", "OpenAI API",
+      "NLP", "Computer Vision", "Deep Learning", "Reinforcement Learning",
+      "Pandas", "NumPy", "Apache Spark", "SQL",
+      "MLflow", "Kubeflow", "Weights & Biases", "DVC",
+      "AWS SageMaker", "Google Vertex AI", "Azure ML", "Docker",
+      "RAG Pipelines", "Fine-Tuning", "Prompt Engineering", "Vector Databases",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Data preprocessing, feature engineering, model training with existing frameworks, Jupyter notebook analysis, API integration for pre-built ML services" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Custom model development, NLP/CV pipelines, LLM integration (RAG, fine-tuning), MLOps setup, experiment tracking, production deployment" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "ML architecture design, research-to-production pipeline, team leadership, model optimization at scale, GenAI strategy, multi-model orchestration" },
+    ],
+    faqs: [
+      { question: "What AI/ML specializations do your engineers cover?", answer: "Our AI/ML engineers specialize in natural language processing (NLP), computer vision, recommendation systems, time-series forecasting, anomaly detection, and generative AI. Many have research publications and production experience with large-scale ML systems." },
+      { question: "Can your engineers build LLM-powered applications?", answer: "Yes. Our mid-level and senior engineers have production experience with OpenAI, Claude, LangChain, LlamaIndex, RAG architectures, vector databases (Pinecone, Weaviate, ChromaDB), fine-tuning, and prompt engineering for enterprise AI applications." },
+      { question: "How do you vet AI/ML engineers?", answer: "Every candidate completes a 6-stage screening: portfolio review with published models or papers, live ML coding challenge (model design, feature engineering), system design for scalable ML, LLM/GenAI proficiency test, English assessment, and cultural fit interview." },
+      { question: "Can your engineer handle both research and production ML?", answer: "Yes. Our senior engineers bridge the gap between experimental notebooks and production systems. They set up MLOps pipelines with MLflow, Kubeflow, or Vertex AI for reproducible training, versioning, and automated deployment." },
+      { question: "What cloud platforms do your AI/ML engineers work with?", answer: "AWS SageMaker, Google Vertex AI, Azure ML, and self-hosted GPU clusters. They're experienced with containerized model serving (Docker, Kubernetes), serverless inference, and cost-optimized training across cloud providers." },
+      { question: "Do you offer AI/ML engineers for specific industries?", answer: "Yes. We've placed AI/ML engineers in healthcare (medical imaging, drug discovery), fintech (fraud detection, credit scoring), e-commerce (recommendation engines), logistics (demand forecasting), and SaaS (intelligent automation, chatbots)." },
+    ],
+    relatedPages: [
+      { title: "React Developers", href: "/services/hire-react-developer" },
+      { title: "DevOps Engineers", href: "/services/devops-engineers" },
+      { title: "Cybersecurity Experts", href: "/services/cyber-security-expert" },
+      { title: "Mobile App Developers", href: "/services/hire-mobile-app-developer" },
+    ],
+  },
+
+  /* ─── Tier 1 Expansion: WordPress Developer ─── */
+
+  "hire-wordpress-developer": {
+    slug: "hire-wordpress-developer",
+    title: "WordPress Developers",
+    h1: "Hire Remote",
+    h1Accent: "WordPress Developers",
+    metaTitle: "Hire Remote WordPress Developers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote WordPress developers from India starting at $5/hr. Theme, plugin, WooCommerce, Elementor experts. Pre-vetted, AI-trained. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted WordPress developers with production experience in custom themes, plugins, WooCommerce, Elementor, and headless WordPress. Dedicated to your team, shipping from day one.",
+    heroBullets: [
+      "Custom themes, plugins, Gutenberg blocks, Elementor",
+      "WooCommerce, multisite, headless WordPress (REST/GraphQL)",
+      "70–90% cost savings vs US/EU WordPress developers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-software-development.svg",
+    focusKeyword: "hire wordpress developer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "150+", label: "WP Devs Placed" },
+      { value: "93%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "🎨", title: "Custom Theme & Plugin Development", description: "Every WordPress developer builds pixel-perfect custom themes and plugins from scratch — not just page builder drag-and-drop. Clean, maintainable, standards-compliant code." },
+      { icon: "🛒", title: "WooCommerce Expertise", description: "Full WooCommerce development — custom product types, payment gateways, shipping integrations, subscription plugins, and performance optimization for high-traffic stores." },
+      { icon: "🧠", title: "AI-Augmented Development", description: "Trained on GitHub Copilot, Cursor, and AI debugging tools. Your developer builds themes and plugins 2–3x faster with AI-assisted code generation and testing." },
+      { icon: "⏰", title: "Your Timezone", description: "Your WordPress developer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on site updates, deployments, and troubleshooting." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior WordPress developers from $5/hr. Replace $60–$120/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "🔒", title: "Security & Performance", description: "Hardened WordPress installations — security audits, malware removal, performance optimization, caching strategies, and CDN configuration. OWASP-compliant development practices." },
+    ],
+    skills: [
+      "WordPress Core", "PHP 8+", "MySQL", "JavaScript",
+      "Custom Themes", "Custom Plugins", "Gutenberg Blocks", "Block Editor",
+      "Elementor", "Divi", "ACF Pro", "WPBakery",
+      "WooCommerce", "Subscriptions", "Payment Gateways", "Shipping APIs",
+      "REST API", "GraphQL (WPGraphQL)", "Headless WordPress", "Next.js + WP",
+      "Yoast SEO", "LiteSpeed Cache", "Cloudflare", "Security Hardening",
+      "Git", "CI/CD", "Docker", "Multisite",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Theme customization, plugin configuration, content updates, basic WooCommerce setup, bug fixes, page builder layouts" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Custom theme/plugin development, WooCommerce stores, REST API integrations, Gutenberg blocks, performance optimization" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "Headless WordPress architecture, multisite networks, complex WooCommerce builds, team leadership, security audits, migration planning" },
+    ],
+    faqs: [
+      { question: "Can your WordPress developers build custom themes from scratch?", answer: "Yes. Our developers build fully custom WordPress themes using underscores or starter themes — not just page builder modifications. Clean PHP, proper template hierarchy, Gutenberg block support, and WordPress coding standards compliance." },
+      { question: "Do your developers work with WooCommerce?", answer: "Yes. Our mid-level and senior developers have production experience building WooCommerce stores — custom product types, payment gateway integrations (Stripe, PayPal, Square), subscription plugins, inventory management, and high-traffic performance optimization." },
+      { question: "Can you build headless WordPress sites?", answer: "Yes. Our senior developers build headless WordPress with Next.js, Gatsby, or Nuxt.js frontends using WPGraphQL or REST API. This gives you WordPress content management with modern frontend performance and developer experience." },
+      { question: "How do you vet WordPress developers?", answer: "Every candidate completes a 6-stage screening: portfolio review with live site demos, WordPress coding challenge (theme/plugin development), security best practices assessment, AI tool proficiency test, English assessment, and cultural fit interview." },
+      { question: "Can your developer handle WordPress security?", answer: "Yes. Our developers follow OWASP security guidelines — input sanitization, nonce verification, capability checks, SQL injection prevention, XSS protection, and security hardening. They also handle malware cleanup and security audits." },
+      { question: "Do you support WordPress multisite?", answer: "Yes. Our senior developers have experience with WordPress multisite networks — domain mapping, network-level plugin management, shared vs. independent themes, and centralized user management for enterprise deployments." },
+    ],
+    relatedPages: [
+      { title: "PHP Developers", href: "/services/hire-php-developer" },
+      { title: "Shopify Developers", href: "/services/hire-shopify-developer" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+      { title: "Frontend Developers", href: "/services/hire-frontend-developer" },
+    ],
+  },
+
+  /* ─── Tier 1 Expansion: PHP Developer ─── */
+
+  "hire-php-developer": {
+    slug: "hire-php-developer",
+    title: "PHP Developers",
+    h1: "Hire Remote",
+    h1Accent: "PHP Developers",
+    metaTitle: "Hire Remote PHP Developers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote PHP developers from India starting at $5/hr. Laravel, Symfony, CodeIgniter, WordPress experts. Pre-vetted, AI-trained. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted PHP developers with production experience in Laravel, Symfony, WordPress, and API development. Dedicated to your team, working your timezone, delivering clean, scalable code.",
+    heroBullets: [
+      "Laravel, Symfony, CodeIgniter, CakePHP specialists",
+      "WordPress, Magento, Drupal backend development",
+      "70–90% cost savings vs US/EU PHP developers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-software-development.svg",
+    focusKeyword: "hire php developer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "200+", label: "PHP Devs Placed" },
+      { value: "92%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "⚡", title: "Modern PHP Development", description: "Every PHP developer writes clean, modern PHP 8+ code — typed properties, enums, fibers, attributes, and match expressions. No legacy spaghetti code." },
+      { icon: "🏗️", title: "Framework Expertise", description: "Production experience with Laravel, Symfony, CodeIgniter, and CakePHP. From RESTful APIs and microservices to full-stack MVC applications and SaaS platforms." },
+      { icon: "🧠", title: "AI-Augmented Development", description: "Trained on GitHub Copilot, Cursor, and AI debugging tools. Your PHP developer builds features 2–3x faster with AI-assisted code generation, testing, and refactoring." },
+      { icon: "⏰", title: "Your Timezone", description: "Your PHP developer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on code reviews, deployments, and sprint planning." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior PHP developers from $5/hr. Replace $60–$130/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "🔒", title: "Security-First Development", description: "OWASP-compliant coding practices — SQL injection prevention, XSS protection, CSRF tokens, input validation, and secure authentication. PCI-DSS experience for e-commerce." },
+    ],
+    skills: [
+      "PHP 8+", "Laravel", "Symfony", "CodeIgniter",
+      "WordPress", "Magento", "Drupal", "WooCommerce",
+      "MySQL", "PostgreSQL", "Redis", "Elasticsearch",
+      "REST APIs", "GraphQL", "OAuth", "JWT",
+      "PHPUnit", "Pest", "Behat", "PHPStan",
+      "Docker", "Composer", "Git", "CI/CD",
+      "AWS", "DigitalOcean", "Nginx", "Apache",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Bug fixes, feature development, Laravel/WordPress CRUD, API endpoints, unit testing, database queries" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Feature ownership, Laravel/Symfony architecture, complex API development, database optimization, code reviews, third-party integrations" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "System architecture, microservices design, performance optimization, team leadership, legacy code modernization, SaaS platform development" },
+    ],
+    faqs: [
+      { question: "What PHP frameworks do your developers specialize in?", answer: "Our PHP developers are proficient in Laravel (most popular), Symfony, CodeIgniter, and CakePHP. For CMS work, they handle WordPress, Magento 2, and Drupal. Most senior developers have cross-framework experience." },
+      { question: "Can your PHP developers build APIs?", answer: "Yes. Our developers build RESTful and GraphQL APIs using Laravel, Symfony, or Lumen. They implement authentication (OAuth2, JWT, Sanctum), rate limiting, versioning, documentation (Swagger/OpenAPI), and comprehensive testing." },
+      { question: "Do your developers work with legacy PHP codebases?", answer: "Yes. Our senior developers specialize in legacy code modernization — upgrading PHP versions, migrating to frameworks, refactoring procedural code to OOP, adding test coverage, and improving performance without breaking existing functionality." },
+      { question: "How do you vet PHP developers?", answer: "Every candidate completes a 6-stage screening: portfolio review, live PHP coding challenge (OOP, design patterns, framework usage), database design assessment, AI tool proficiency test, English assessment, and cultural fit interview." },
+      { question: "Can your developer handle both backend and WordPress?", answer: "Yes. Many of our PHP developers are full-stack WordPress experts — custom theme and plugin development plus Laravel/Symfony API backends. We match you with the right specialist based on your primary tech stack." },
+      { question: "What databases do your PHP developers work with?", answer: "MySQL and PostgreSQL primarily, with experience in Redis for caching, Elasticsearch for search, MongoDB for document stores, and SQLite for lightweight applications. They write optimized queries and handle database migrations." },
+    ],
+    relatedPages: [
+      { title: "WordPress Developers", href: "/services/hire-wordpress-developer" },
+      { title: "Laravel Developers", href: "/services/hire-nodejs-developer" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+      { title: "Python Developers", href: "/services/hire-python-developer" },
+    ],
+  },
+
+  /* ─── Tier 1 Expansion: Python Developer ─── */
+
+  "hire-python-developer": {
+    slug: "hire-python-developer",
+    title: "Python Developers",
+    h1: "Hire Remote",
+    h1Accent: "Python Developers",
+    metaTitle: "Hire Remote Python Developers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote Python developers from India starting at $5/hr. Django, FastAPI, Flask, data science, automation experts. Pre-vetted, AI-trained. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted Python developers with production experience in Django, FastAPI, Flask, data engineering, and automation. Dedicated to your team, building scalable backends from day one.",
+    heroBullets: [
+      "Django, FastAPI, Flask, Celery specialists",
+      "Data engineering, automation, scripting, API development",
+      "70–90% cost savings vs US/EU Python developers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-software-development.svg",
+    focusKeyword: "hire python developer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "180+", label: "Python Devs Placed" },
+      { value: "94%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.9/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "🐍", title: "Full Python Ecosystem", description: "Every Python developer works across web frameworks (Django, FastAPI, Flask), data engineering (Pandas, PySpark), automation (Selenium, Scrapy), and scripting — whatever your stack demands." },
+      { icon: "📊", title: "Data & Analytics", description: "Build data pipelines, ETL workflows, reporting dashboards, and analytics platforms. Experience with Pandas, NumPy, Airflow, dbt, and integration with BI tools like Metabase and Tableau." },
+      { icon: "🧠", title: "AI-Augmented Development", description: "Trained on GitHub Copilot, Cursor, and Claude Code. Your developer writes Python 2–3x faster with AI-assisted code generation, debugging, and automated test creation." },
+      { icon: "⏰", title: "Your Timezone", description: "Your Python developer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on code reviews, sprint planning, and deployment coordination." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior Python developers from $5/hr. Replace $80–$160/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "🔒", title: "Production-Grade Code", description: "Type-hinted, well-tested, PEP 8 compliant Python. Comprehensive unit and integration tests with pytest. Structured logging, error handling, and monitoring integration." },
+    ],
+    skills: [
+      "Python 3.10+", "Django", "FastAPI", "Flask",
+      "Celery", "Redis", "RabbitMQ", "AsyncIO",
+      "PostgreSQL", "MongoDB", "SQLAlchemy", "Alembic",
+      "Pandas", "NumPy", "PySpark", "Airflow",
+      "REST APIs", "GraphQL", "WebSockets", "gRPC",
+      "pytest", "unittest", "Selenium", "Scrapy",
+      "Docker", "Kubernetes", "AWS Lambda", "CI/CD",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Django/Flask CRUD apps, REST API endpoints, bug fixes, scripting, data processing scripts, unit testing" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "FastAPI microservices, async programming, data pipelines, Celery task queues, third-party integrations, database optimization" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "System architecture, distributed systems, team leadership, performance optimization, data platform design, cloud-native Python applications" },
+    ],
+    faqs: [
+      { question: "What Python frameworks do your developers work with?", answer: "Django (full-stack MVC), FastAPI (high-performance async APIs), Flask (lightweight microservices), and Tornado (real-time WebSocket apps). Most senior developers have experience across multiple frameworks and choose based on project requirements." },
+      { question: "Can your Python developer handle data engineering?", answer: "Yes. Our developers build ETL pipelines with Airflow, dbt, and PySpark. They work with data warehouses (BigQuery, Redshift, Snowflake), process large datasets with Pandas, and create automated reporting systems." },
+      { question: "Do your developers write automated tests?", answer: "Yes. Every developer follows test-driven development practices — unit tests with pytest, integration tests, API testing, and end-to-end testing. They also set up CI/CD pipelines with automated test execution on every commit." },
+      { question: "Can your developer build web scrapers?", answer: "Yes. Our developers build production-grade scrapers using Scrapy, BeautifulSoup, Selenium, and Playwright. They handle anti-bot measures, rate limiting, proxy rotation, and structured data extraction at scale." },
+      { question: "How do you vet Python developers?", answer: "Every candidate completes a 6-stage screening: portfolio review, live Python coding challenge (algorithms, OOP, framework usage), system design assessment, AI tool proficiency test, English assessment, and cultural fit interview." },
+      { question: "Can I hire a Python developer for AI/ML projects?", answer: "For dedicated AI/ML work, we recommend our specialized AI/ML engineers. However, many of our Python developers have foundational ML experience with scikit-learn and can handle data preprocessing, feature engineering, and model serving tasks." },
+    ],
+    relatedPages: [
+      { title: "AI/ML Engineers", href: "/services/hire-ai-ml-engineer" },
+      { title: "Node.js Developers", href: "/services/hire-nodejs-developer" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+      { title: "PHP Developers", href: "/services/hire-php-developer" },
+    ],
+  },
+
+  /* ─── Tier 1 Expansion: Node.js Developer ─── */
+
+  "hire-nodejs-developer": {
+    slug: "hire-nodejs-developer",
+    title: "Node.js Developers",
+    h1: "Hire Remote",
+    h1Accent: "Node.js Developers",
+    metaTitle: "Hire Remote Node.js Developers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote Node.js developers from India starting at $5/hr. Express, NestJS, serverless, real-time app experts. Pre-vetted, AI-trained. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted Node.js developers with production experience in Express, NestJS, serverless architectures, and real-time applications. Dedicated to your team, building scalable APIs from day one.",
+    heroBullets: [
+      "Express.js, NestJS, Fastify, Hapi specialists",
+      "Real-time apps: Socket.io, WebSockets, event-driven architecture",
+      "70–90% cost savings vs US/EU Node.js developers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-software-development.svg",
+    focusKeyword: "hire nodejs developer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "130+", label: "Node Devs Placed" },
+      { value: "93%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "⚡", title: "High-Performance APIs", description: "Every Node.js developer builds fast, non-blocking APIs with Express, NestJS, or Fastify. Event-driven architecture, streaming, and efficient I/O handling for high-throughput applications." },
+      { icon: "🔄", title: "Real-Time Applications", description: "Production experience with Socket.io, WebSockets, Server-Sent Events, and pub/sub systems. Chat apps, live dashboards, collaborative tools, and real-time notification systems." },
+      { icon: "🧠", title: "AI-Augmented Development", description: "Trained on GitHub Copilot, Cursor, and Claude Code. Your Node.js developer builds features 2–3x faster with AI-assisted code generation, debugging, and automated testing." },
+      { icon: "⏰", title: "Your Timezone", description: "Your Node.js developer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on code reviews, deployments, and architectural decisions." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior Node.js developers from $5/hr. Replace $80–$150/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "☁️", title: "Cloud-Native & Serverless", description: "AWS Lambda, Azure Functions, Google Cloud Functions, and containerized deployments. Build cost-efficient, auto-scaling backends that handle millions of requests." },
+    ],
+    skills: [
+      "Node.js", "TypeScript", "Express.js", "NestJS",
+      "Fastify", "Hapi", "Koa", "Socket.io",
+      "MongoDB", "PostgreSQL", "Redis", "Elasticsearch",
+      "REST APIs", "GraphQL", "gRPC", "WebSockets",
+      "AWS Lambda", "Serverless", "Docker", "Kubernetes",
+      "Jest", "Mocha", "Supertest", "Artillery",
+      "RabbitMQ", "Kafka", "Bull Queue", "CI/CD",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Express API endpoints, CRUD operations, MongoDB/PostgreSQL queries, bug fixes, unit testing, basic Socket.io integration" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "NestJS microservices, real-time features, message queues, caching strategies, third-party API integrations, database optimization" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "System architecture, distributed systems, serverless design, team leadership, performance optimization, event-driven architecture at scale" },
+    ],
+    faqs: [
+      { question: "What Node.js frameworks do your developers use?", answer: "Express.js (most popular), NestJS (enterprise TypeScript), Fastify (high-performance), Hapi, and Koa. Our senior developers choose the right framework based on project scale, team structure, and performance requirements." },
+      { question: "Can your developers build real-time applications?", answer: "Yes. Our developers build production real-time systems with Socket.io, native WebSockets, and Server-Sent Events. Chat applications, live collaboration tools, real-time dashboards, multiplayer features, and notification systems." },
+      { question: "Do your Node.js developers work with TypeScript?", answer: "Yes. The majority of our mid-level and senior Node.js developers work in TypeScript by default. Strong typing, interfaces, generics, decorators — especially with NestJS which is TypeScript-first." },
+      { question: "Can your developer handle serverless architecture?", answer: "Yes. Our developers build serverless APIs on AWS Lambda, Azure Functions, and Google Cloud Functions. They optimize cold starts, manage connection pooling, implement API Gateway patterns, and design cost-efficient event-driven architectures." },
+      { question: "How do you vet Node.js developers?", answer: "Every candidate completes a 6-stage screening: portfolio review, live Node.js coding challenge (async patterns, API design, error handling), system design for scalable backends, AI tool proficiency test, English assessment, and cultural fit interview." },
+      { question: "Can I hire a full-stack JavaScript developer?", answer: "Yes. Many of our Node.js developers are full-stack JavaScript/TypeScript experts — Node.js + React/Next.js. If you need a dedicated frontend specialist, we also offer React developers and frontend developers separately." },
+    ],
+    relatedPages: [
+      { title: "React Developers", href: "/services/hire-react-developer" },
+      { title: "Python Developers", href: "/services/hire-python-developer" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+      { title: "DevOps Engineers", href: "/services/devops-engineers" },
+    ],
+  },
+
+  /* ─── Tier 1 Expansion: .NET Developer ─── */
+
+  "hire-dotnet-developer": {
+    slug: "hire-dotnet-developer",
+    title: ".NET Developers",
+    h1: "Hire Remote",
+    h1Accent: ".NET Developers",
+    metaTitle: "Hire Remote .NET Developers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote .NET developers from India starting at $5/hr. C#, ASP.NET Core, Blazor, Azure experts. Pre-vetted, AI-trained. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted .NET developers with production experience in C#, ASP.NET Core, Blazor, and Azure. Dedicated to your team, building enterprise-grade applications from day one.",
+    heroBullets: [
+      "C#, ASP.NET Core, Blazor, .NET MAUI specialists",
+      "Azure cloud, SQL Server, Entity Framework, microservices",
+      "70–90% cost savings vs US/EU .NET developers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-software-development.svg",
+    focusKeyword: "hire dotnet developer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "110+", label: ".NET Devs Placed" },
+      { value: "94%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.9/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "🏢", title: "Enterprise-Grade Development", description: "Every .NET developer builds robust, scalable enterprise applications — SOLID principles, clean architecture, domain-driven design, and CQRS/MediatR patterns for complex business domains." },
+      { icon: "☁️", title: "Azure Cloud Native", description: "Production experience with Azure App Service, Functions, Service Bus, Cosmos DB, and Azure DevOps. Build cloud-native applications with auto-scaling, monitoring, and CI/CD pipelines." },
+      { icon: "🧠", title: "AI-Augmented Development", description: "Trained on GitHub Copilot, Visual Studio IntelliCode, and AI debugging tools. Your .NET developer builds features 2–3x faster with AI-assisted code generation and automated testing." },
+      { icon: "⏰", title: "Your Timezone", description: "Your .NET developer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on code reviews, architecture decisions, and sprint planning." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior .NET developers from $5/hr. Replace $80–$160/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "🔒", title: "Security & Compliance", description: "Identity management with Azure AD/IdentityServer, role-based access control, data encryption, audit logging, and compliance with SOC 2, HIPAA, and PCI-DSS requirements." },
+    ],
+    skills: [
+      "C#", "ASP.NET Core", ".NET 8", "Blazor",
+      "Entity Framework Core", "Dapper", "LINQ", "SignalR",
+      "SQL Server", "PostgreSQL", "Cosmos DB", "Redis",
+      "Azure App Service", "Azure Functions", "Azure DevOps", "Service Bus",
+      "REST APIs", "gRPC", "GraphQL", "Microservices",
+      "xUnit", "NUnit", "Moq", "SpecFlow",
+      "Docker", "Kubernetes", "CI/CD", ".NET MAUI",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "ASP.NET Core API development, Entity Framework queries, bug fixes, unit testing, CRUD applications, Blazor component development" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Microservices architecture, Azure cloud deployment, SignalR real-time features, complex domain modeling, performance optimization, code reviews" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "Enterprise architecture, DDD/CQRS patterns, team leadership, legacy modernization (.NET Framework to .NET 8), Azure infrastructure design, SaaS platform development" },
+    ],
+    faqs: [
+      { question: "What .NET technologies do your developers work with?", answer: "C#, ASP.NET Core, Blazor (Server and WASM), .NET MAUI for cross-platform, Entity Framework Core, SignalR for real-time, and .NET 8 minimal APIs. They also work with legacy .NET Framework for modernization projects." },
+      { question: "Can your developers work with Azure?", answer: "Yes. Our .NET developers have production experience with Azure App Service, Functions, Service Bus, Cosmos DB, Blob Storage, Azure AD, and Azure DevOps CI/CD pipelines. Many hold Azure certifications." },
+      { question: "Do your developers handle legacy .NET modernization?", answer: "Yes. Our senior developers specialize in migrating .NET Framework applications to .NET 8 — incremental migration strategies, API compatibility shims, database migration, and containerization without breaking existing functionality." },
+      { question: "Can your developer build Blazor applications?", answer: "Yes. Our developers build Blazor Server and Blazor WebAssembly applications — component libraries, state management, JavaScript interop, authentication with Azure AD, and progressive web app features." },
+      { question: "How do you vet .NET developers?", answer: "Every candidate completes a 6-stage screening: portfolio review, live C# coding challenge (OOP, design patterns, async programming), architecture assessment (DDD, CQRS, microservices), AI tool proficiency test, English assessment, and cultural fit interview." },
+      { question: "Can I hire a .NET developer for Dynamics 365 or SharePoint?", answer: "Yes. We have .NET developers with experience in Dynamics 365 customization, Power Platform, SharePoint Framework (SPFx), and Microsoft Graph API. Let us know your specific Microsoft ecosystem requirements during matching." },
+    ],
+    relatedPages: [
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+      { title: "React Developers", href: "/services/hire-react-developer" },
+      { title: "DevOps Engineers", href: "/services/devops-engineers" },
+      { title: "Python Developers", href: "/services/hire-python-developer" },
+    ],
+  },
+
+  /* ─── Tier 1 Expansion: Shopify Developer ─── */
+
+  "hire-shopify-developer": {
+    slug: "hire-shopify-developer",
+    title: "Shopify Developers",
+    h1: "Hire Remote",
+    h1Accent: "Shopify Developers",
+    metaTitle: "Hire Remote Shopify Developers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote Shopify developers from India starting at $5/hr. Shopify Plus, Liquid, headless, custom app experts. Pre-vetted, AI-trained. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted Shopify developers with production experience in Shopify Plus, custom themes, app development, and headless commerce. Dedicated to your team, scaling your store from day one.",
+    heroBullets: [
+      "Shopify Plus, Liquid, Hydrogen, custom app development",
+      "Theme customization, checkout optimization, migration",
+      "70–90% cost savings vs US/EU Shopify developers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-ecommerce-retail.svg",
+    focusKeyword: "hire shopify developer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "75+", label: "Shopify Devs Placed" },
+      { value: "93%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "🛒", title: "Shopify Plus Expertise", description: "Every developer handles Shopify Plus — Shopify Functions, checkout extensibility, B2B features, multi-store management, Launchpad for flash sales, and Scripts for custom pricing logic." },
+      { icon: "🎨", title: "Custom Theme Development", description: "Pixel-perfect Liquid themes built from scratch or customized from Dawn. OS 2.0 features, dynamic sections, metafields, JSON templates, and performance-optimized storefront experiences." },
+      { icon: "🧠", title: "AI-Augmented Development", description: "Trained on GitHub Copilot and Shopify CLI. Your developer builds themes and apps faster with AI-assisted Liquid code generation, debugging, and automated testing." },
+      { icon: "⏰", title: "Your Timezone", description: "Your Shopify developer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on store updates, campaign launches, and troubleshooting." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior Shopify developers from $5/hr. Replace $70–$140/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "📈", title: "Conversion Optimization", description: "Speed optimization, A/B testing integration, checkout funnel improvements, upsell/cross-sell flows, and analytics implementation. Your developer focuses on revenue, not just features." },
+    ],
+    skills: [
+      "Shopify", "Shopify Plus", "Liquid", "Hydrogen",
+      "Dawn Theme", "OS 2.0", "Metafields", "Shopify CLI",
+      "Custom Apps", "Shopify Functions", "Checkout Extensions", "Shopify Scripts",
+      "React (Hydrogen)", "Remix", "Node.js", "GraphQL",
+      "Shopify Admin API", "Storefront API", "REST API", "Webhooks",
+      "Payment Gateways", "Shipping Integrations", "ERP Connectors", "Klaviyo",
+      "PageSpeed", "Core Web Vitals", "SEO", "Google Analytics 4",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Theme customization, product setup, app configuration, content updates, basic Liquid modifications, bug fixes" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Custom theme development, app integrations, checkout customization, migration from other platforms, metafield architecture, performance optimization" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "Shopify Plus architecture, headless commerce (Hydrogen), custom app development, B2B features, multi-store management, team leadership" },
+    ],
+    faqs: [
+      { question: "Do your developers work with Shopify Plus?", answer: "Yes. Our mid-level and senior developers have production experience with Shopify Plus — Shopify Functions, checkout extensibility, B2B wholesale channels, Launchpad, Scripts, Flow automation, and multi-store architecture." },
+      { question: "Can your developer build custom Shopify apps?", answer: "Yes. Our developers build public and custom Shopify apps using Node.js, React, and the Shopify App Bridge. They handle OAuth authentication, webhooks, billing API integration, and app store submission." },
+      { question: "Can you migrate my store to Shopify?", answer: "Yes. Our developers handle migrations from WooCommerce, Magento, BigCommerce, and custom platforms. They migrate products, customers, orders, SEO URLs, and set up 301 redirects to preserve search rankings." },
+      { question: "Do your developers handle headless Shopify?", answer: "Yes. Our senior developers build headless storefronts using Hydrogen (Shopify's React framework), Remix, Next.js, or Gatsby with the Storefront API. Custom frontends with Shopify's backend commerce engine." },
+      { question: "How do you vet Shopify developers?", answer: "Every candidate completes a 6-stage screening: portfolio review with live store demos, Liquid/theme coding challenge, Shopify API integration assessment, AI tool proficiency test, English assessment, and cultural fit interview." },
+      { question: "Can your developer optimize my store's speed?", answer: "Yes. Our developers optimize Core Web Vitals — lazy loading, image compression, critical CSS, JavaScript defer, app audit and cleanup, theme code optimization, and CDN configuration. Faster stores convert better." },
+    ],
+    relatedPages: [
+      { title: "WordPress Developers", href: "/services/hire-wordpress-developer" },
+      { title: "Frontend Developers", href: "/services/hire-frontend-developer" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+      { title: "Digital Marketers", href: "/services/digital-marketer" },
+    ],
+  },
+
+  /* ─── Tier 1 Expansion: iOS Developer ─── */
+
+  "hire-ios-developer": {
+    slug: "hire-ios-developer",
+    title: "iOS Developers",
+    h1: "Hire Remote",
+    h1Accent: "iOS Developers",
+    metaTitle: "Hire Remote iOS Developers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote iOS developers from India starting at $5/hr. Swift, SwiftUI, UIKit, Objective-C experts. Pre-vetted, AI-trained. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted iOS developers with production apps on the App Store. Swift, SwiftUI, UIKit, and Objective-C — dedicated to your team, building polished Apple experiences from day one.",
+    heroBullets: [
+      "Swift 5+, SwiftUI, UIKit, Objective-C specialists",
+      "App Store optimization, TestFlight, CI/CD with Fastlane",
+      "70–90% cost savings vs US/EU iOS developers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-software-development.svg",
+    focusKeyword: "hire ios developer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "90+", label: "iOS Devs Placed" },
+      { value: "94%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.9/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "🍎", title: "Native iOS Excellence", description: "Every iOS developer builds polished, performant native apps — SwiftUI for modern declarative UI, UIKit for complex custom interfaces, and Combine/async-await for reactive, responsive experiences." },
+      { icon: "📱", title: "Full Apple Ecosystem", description: "iPhone, iPad, Apple Watch, Apple TV, and Mac Catalyst. Widgets, App Clips, SiriKit, HealthKit, ARKit, and Core ML — whatever Apple platform your product targets." },
+      { icon: "🧠", title: "AI-Augmented Development", description: "Trained on Xcode Predictive Code, GitHub Copilot, and AI debugging tools. Your iOS developer builds features faster with AI-assisted code generation, testing, and performance profiling." },
+      { icon: "⏰", title: "Your Timezone", description: "Your iOS developer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on code reviews, sprint planning, and App Store submissions." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior iOS developers from $5/hr. Replace $90–$180/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "🚀", title: "App Store Success", description: "App Store review compliance, ASO (App Store Optimization), TestFlight management, phased rollouts, crash monitoring with Crashlytics, and analytics integration for data-driven iteration." },
+    ],
+    skills: [
+      "Swift 5+", "SwiftUI", "UIKit", "Objective-C",
+      "Combine", "Async/Await", "Core Data", "SwiftData",
+      "Core Animation", "Core Graphics", "ARKit", "Core ML",
+      "HealthKit", "StoreKit", "CloudKit", "Push Notifications",
+      "Xcode", "Instruments", "TestFlight", "Fastlane",
+      "XCTest", "Quick/Nimble", "Snapshot Testing", "UI Testing",
+      "REST APIs", "GraphQL", "WebSockets", "Firebase",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "UI implementation from Figma, bug fixes, simple feature development, unit testing, AutoLayout constraints, basic API integration" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Feature ownership, SwiftUI migration, Core Data modeling, push notifications, in-app purchases, CI/CD setup, performance optimization" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "App architecture (MVVM, Clean, TCA), team leadership, complex animations, ARKit/Core ML integration, App Store strategy, legacy codebase modernization" },
+    ],
+    faqs: [
+      { question: "Do your iOS developers use SwiftUI or UIKit?", answer: "Both. Our developers are proficient in SwiftUI for new projects and UIKit for maintaining existing apps. Senior developers handle incremental SwiftUI migration in legacy UIKit codebases and choose the right approach based on your iOS version support requirements." },
+      { question: "Can your developer publish apps to the App Store?", answer: "Yes. Our iOS developers handle the complete submission process — App Store Connect configuration, screenshots, app descriptions, TestFlight beta testing, review guideline compliance, and responding to App Review rejections." },
+      { question: "What architectures do your iOS developers use?", answer: "MVVM is most common, but our senior developers also work with Clean Architecture, VIPER, TCA (The Composable Architecture), and Redux-style patterns. They choose based on app complexity, team size, and testability requirements." },
+      { question: "Can your developer work with Apple Watch or iPad?", answer: "Yes. Our developers build for the full Apple ecosystem — iPhone, iPad (adaptive layouts), Apple Watch (WatchKit/SwiftUI), Apple TV (tvOS), and Mac Catalyst. Multi-platform experience with shared codebases." },
+      { question: "How do you vet iOS developers?", answer: "Every candidate completes a 6-stage screening: portfolio review with live App Store apps, iOS coding challenge (Swift, UI implementation, architecture patterns), performance profiling assessment, AI tool proficiency test, English assessment, and cultural fit interview." },
+      { question: "Can your developer handle in-app purchases?", answer: "Yes. Our developers implement StoreKit 2 for subscriptions, consumables, and non-consumables. They handle receipt validation (server-side), subscription management, promotional offers, refund handling, and revenue analytics." },
+    ],
+    relatedPages: [
+      { title: "Android Developers", href: "/services/hire-android-developer" },
+      { title: "Mobile App Developers", href: "/services/hire-mobile-app-developer" },
+      { title: "React Developers", href: "/services/hire-react-developer" },
+      { title: "Flutter Developers", href: "/services/flutter-developer" },
+    ],
+  },
+
+  /* ─── Tier 1 Expansion: Android Developer ─── */
+
+  "hire-android-developer": {
+    slug: "hire-android-developer",
+    title: "Android Developers",
+    h1: "Hire Remote",
+    h1Accent: "Android Developers",
+    metaTitle: "Hire Remote Android Developers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote Android developers from India starting at $5/hr. Kotlin, Jetpack Compose, Java experts. Pre-vetted, AI-trained. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted Android developers with production apps on Google Play. Kotlin, Jetpack Compose, and Java — dedicated to your team, building high-quality Android experiences from day one.",
+    heroBullets: [
+      "Kotlin, Jetpack Compose, Java, Android SDK specialists",
+      "Google Play publishing, Material Design 3, Firebase",
+      "70–90% cost savings vs US/EU Android developers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-software-development.svg",
+    focusKeyword: "hire android developer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "140+", label: "Android Devs Placed" },
+      { value: "93%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "🤖", title: "Modern Android Development", description: "Every Android developer uses Kotlin-first development — Jetpack Compose for modern declarative UI, Coroutines for async operations, and Hilt for dependency injection. Production-quality, Google-recommended architecture." },
+      { icon: "📱", title: "Full Android Ecosystem", description: "Phones, tablets, Wear OS, Android TV, and Android Auto. Material Design 3, adaptive layouts, foldable device support, and widget development — whatever Android platform your product needs." },
+      { icon: "🧠", title: "AI-Augmented Development", description: "Trained on Android Studio Gemini, GitHub Copilot, and AI debugging tools. Your Android developer builds features 2–3x faster with AI-assisted code generation, layout preview, and automated testing." },
+      { icon: "⏰", title: "Your Timezone", description: "Your Android developer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on code reviews, sprint planning, and Play Store deployments." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior Android developers from $5/hr. Replace $80–$160/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "🚀", title: "Google Play Success", description: "Play Store compliance, ASO (App Store Optimization), staged rollouts, crash monitoring with Crashlytics, Android Vitals optimization, and review management for higher ratings." },
+    ],
+    skills: [
+      "Kotlin", "Jetpack Compose", "Java", "Android SDK",
+      "Coroutines", "Flow", "Hilt/Dagger", "Room Database",
+      "Material Design 3", "Navigation Component", "WorkManager", "CameraX",
+      "Firebase", "Google Maps", "ML Kit", "Play Billing",
+      "Retrofit", "OkHttp", "GraphQL (Apollo)", "WebSockets",
+      "JUnit", "Espresso", "Mockito", "Robolectric",
+      "Gradle", "Fastlane", "CI/CD", "ProGuard/R8",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "UI implementation, bug fixes, simple feature development, unit testing, RecyclerView/LazyColumn lists, basic API integration" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Jetpack Compose migration, feature ownership, Room database design, push notifications, in-app purchases, CI/CD setup, performance optimization" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "App architecture (MVVM, MVI, Clean), team leadership, Compose design systems, background processing, modularization, legacy codebase modernization" },
+    ],
+    faqs: [
+      { question: "Do your Android developers use Kotlin or Java?", answer: "Kotlin is our default for new Android projects — it's Google's recommended language. Our developers are proficient in both Kotlin and Java, and senior developers handle Java-to-Kotlin migration in legacy codebases." },
+      { question: "Can your developer publish apps to Google Play?", answer: "Yes. Our Android developers handle the complete publishing process — Play Console configuration, screenshots, store listing optimization, staged rollouts, pre-launch reports, policy compliance, and responding to review feedback." },
+      { question: "Do your developers work with Jetpack Compose?", answer: "Yes. Our mid-level and senior developers build modern UIs with Jetpack Compose — declarative layouts, state management, navigation, animations, and Material Design 3. They also handle incremental migration from XML layouts." },
+      { question: "Can your developer handle offline-first Android apps?", answer: "Yes. Our developers build offline-first apps using Room database, WorkManager for background sync, conflict resolution strategies, and data caching with DataStore. Essential for field service, logistics, and healthcare applications." },
+      { question: "How do you vet Android developers?", answer: "Every candidate completes a 6-stage screening: portfolio review with live Play Store apps, Android coding challenge (Kotlin, Compose, architecture patterns), performance optimization assessment, AI tool proficiency test, English assessment, and cultural fit interview." },
+      { question: "Can your developer integrate Firebase?", answer: "Yes. Our developers implement Firebase Authentication, Firestore, Realtime Database, Cloud Messaging (FCM), Crashlytics, Remote Config, Analytics, and Cloud Functions. Firebase is a standard part of most Android projects we deliver." },
+    ],
+    relatedPages: [
+      { title: "iOS Developers", href: "/services/hire-ios-developer" },
+      { title: "Mobile App Developers", href: "/services/hire-mobile-app-developer" },
+      { title: "React Developers", href: "/services/hire-react-developer" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+    ],
+  },
+
+  /* ─── Tier 1 Expansion: Frontend Developer ─── */
+
+  "hire-frontend-developer": {
+    slug: "hire-frontend-developer",
+    title: "Frontend Developers",
+    h1: "Hire Remote",
+    h1Accent: "Frontend Developers",
+    metaTitle: "Hire Remote Frontend Developers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote frontend developers from India starting at $5/hr. React, Vue, Angular, TypeScript experts. Pre-vetted, AI-trained. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted frontend developers with production experience in React, Vue.js, Angular, and TypeScript. Dedicated to your team, crafting fast, accessible, pixel-perfect interfaces from day one.",
+    heroBullets: [
+      "React, Vue.js, Angular, Svelte, TypeScript specialists",
+      "Design-to-code, accessibility, Core Web Vitals optimization",
+      "70–90% cost savings vs US/EU frontend developers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-software-development.svg",
+    focusKeyword: "hire frontend developer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "170+", label: "Frontend Devs Placed" },
+      { value: "93%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "🎨", title: "Pixel-Perfect Implementation", description: "Every frontend developer translates Figma, Sketch, and Adobe XD designs into responsive, cross-browser interfaces with pixel-level precision. Design systems, component libraries, and style guides." },
+      { icon: "⚡", title: "Performance-First", description: "Core Web Vitals optimization — code splitting, lazy loading, tree shaking, image optimization, critical CSS, and lighthouse scores above 90. Fast sites convert better and rank higher." },
+      { icon: "🧠", title: "AI-Augmented Development", description: "Trained on GitHub Copilot, Cursor, and v0.dev. Your frontend developer builds UIs 2–3x faster with AI-assisted component generation, responsive layouts, and automated accessibility testing." },
+      { icon: "⏰", title: "Your Timezone", description: "Your frontend developer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on design reviews, code reviews, and sprint demos." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior frontend developers from $5/hr. Replace $80–$150/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "♿", title: "Accessibility Built-In", description: "WCAG 2.1 AA compliance, semantic HTML, ARIA attributes, keyboard navigation, screen reader testing, and focus management. Accessible interfaces that serve all users." },
+    ],
+    skills: [
+      "React", "Vue.js", "Angular", "Svelte",
+      "TypeScript", "JavaScript ES6+", "HTML5", "CSS3",
+      "Next.js", "Nuxt.js", "Remix", "Astro",
+      "Tailwind CSS", "SCSS/SASS", "Styled Components", "CSS Modules",
+      "Redux", "Pinia", "NgRx", "Zustand",
+      "Jest", "Cypress", "Playwright", "Storybook",
+      "Webpack", "Vite", "Figma-to-Code", "Core Web Vitals",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Figma-to-code implementation, responsive layouts, component development, CSS styling, bug fixes, basic unit testing" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Feature ownership, state management, API integration, design system components, performance optimization, accessibility compliance, code reviews" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "Frontend architecture, micro-frontend design, team leadership, design system creation, build optimization, migration planning, Core Web Vitals strategy" },
+    ],
+    faqs: [
+      { question: "What frontend frameworks do your developers work with?", answer: "React (most popular), Vue.js, Angular, and Svelte. With meta-frameworks: Next.js, Nuxt.js, Remix, Astro, and SvelteKit. Our senior developers choose the right framework based on your project needs, team skills, and performance requirements." },
+      { question: "Can your developer implement designs from Figma?", answer: "Yes. Our frontend developers specialize in design-to-code — pixel-perfect translation of Figma, Sketch, and Adobe XD mockups into responsive, cross-browser HTML/CSS/JS. They work with auto-layout, design tokens, and component variants." },
+      { question: "Do your developers optimize for Core Web Vitals?", answer: "Yes. Every developer focuses on LCP, FID/INP, and CLS scores — code splitting, lazy loading, font optimization, image formats (WebP/AVIF), critical CSS extraction, and JavaScript bundle reduction. Faster sites rank higher and convert better." },
+      { question: "Can your developer build accessible interfaces?", answer: "Yes. Our developers build WCAG 2.1 AA compliant interfaces — semantic HTML, ARIA labels, keyboard navigation, focus management, screen reader testing, color contrast, and reduced motion preferences. Accessibility is built in, not bolted on." },
+      { question: "How do you vet frontend developers?", answer: "Every candidate completes a 6-stage screening: portfolio review with live site demos, frontend coding challenge (component design, responsive layout, state management), performance optimization assessment, AI tool proficiency test, English assessment, and cultural fit interview." },
+      { question: "Can I hire a frontend developer who also does backend?", answer: "For full-stack needs, we recommend our dedicated full-stack developers. However, many of our frontend developers have working knowledge of Node.js APIs, headless CMS integration, and serverless functions for frontend-adjacent backend tasks." },
+    ],
+    relatedPages: [
+      { title: "React Developers", href: "/services/hire-react-developer" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+      { title: "UI/UX Designers", href: "/services/graphic-designer" },
+      { title: "Mobile App Developers", href: "/services/hire-mobile-app-developer" },
+    ],
+  },
 };
 
 export function getHirePageData(slug: string): HirePageData | undefined {
