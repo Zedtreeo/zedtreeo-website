@@ -86,9 +86,9 @@
 
 /* ═══ 7. ROI DONUT INFOGRAPHIC ═══ */
 .zt-roi-wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 36px; align-items: center; background: #F7F7F7; border-radius: 0; padding: 48px 44px; margin: 30px 0 40px; }
-.zt-roi-donut { position: relative; text-align: center; }
+.zt-roi-donut { position: relative; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .zt-roi-donut .center-label { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
-.zt-roi-donut .center-label .big { font-size: 30px; font-weight: 700; color: #161616; letter-spacing: -1px; display: block; line-height: 1; }
+.zt-roi-donut .center-label .big { font-size: 26px; font-weight: 700; color: #161616; letter-spacing: -0.5px; display: block; line-height: 1; }
 .zt-roi-donut .center-label .small { font-size: 13px; color: #5F6567; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
 .zt-roi-table { }
 .zt-roi-table h3 { margin: 0 0 18px; }
@@ -354,6 +354,7 @@
   <h2>ROI: Zedtreeo vs In-House Hire</h2>
   <div class="zt-roi-wrap">
     <div class="zt-roi-donut">
+      <div style="position:relative;display:inline-block;width:200px;height:200px;">
       <svg viewBox="0 0 200 200" width="200" height="200" style="max-width:200px;height:auto;" xmlns="http://www.w3.org/2000/svg">
         <circle cx="100" cy="100" r="70" fill="none" stroke="#e5e7eb" stroke-width="18"/>
         <circle cx="100" cy="100" r="70" fill="none" stroke="#8FD299" stroke-width="18" stroke-dasharray="440" stroke-dashoffset="114" transform="rotate(-90 100 100)" stroke-linecap="round"/>
@@ -362,7 +363,7 @@
         <span class="big">74%</span>
         <span class="small">Cost Saved</span>
       </div>
-    </div>
+    </div></div>
 
     <div class="zt-roi-table">
       <h3>12-Month Cost Breakdown</h3>
