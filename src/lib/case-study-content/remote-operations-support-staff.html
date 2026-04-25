@@ -70,23 +70,25 @@
 @media (max-width: 780px) { .zt-phase-grid { grid-template-columns: 1fr 1fr; } }
 
 /* ═══ 6. RESULTS — BAR CHART INFOGRAPHIC ═══ */
-.zt-results-wrap { background: #161616; color: #fff; border-radius: 0; padding: 44px calc((100% - 1180px) / 2 + 40px); margin: 30px 0 40px; }
+.zt-results-wrap { background: #161616; color: #fff; border-radius: 0; padding: 52px 48px; margin: 30px 0 40px; }
+.zt-results-wrap .inner { max-width: 1180px; margin: 0 auto; }
+@media (max-width: 600px) { .zt-results-wrap { padding: 36px 24px; } .zt-roi-wrap { padding: 32px 24px; } }
 .zt-results-wrap h3 { color: #fff; margin: 0 0 8px; font-size: 26px; }
 .zt-results-wrap p.lead { color: #a9b8b2; margin: 0 0 32px; font-size: 15px; }
 .zt-bar-chart { display: grid; gap: 22px; }
 .zt-bar-row { }
 .zt-bar-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
-.zt-bar-head .label { color: #fff; font-weight: 600; font-size: 15px; }
+.zt-bar-head .label { color: #fff; font-weight: 600; font-size: 15px; padding-right: 12px; }
 .zt-bar-head .delta { color: #8FD299; font-weight: 700; font-size: 16px; }
 .zt-bar-track { background: rgba(255,255,255,.08); border-radius: 50px; height: 14px; position: relative; overflow: hidden; }
 .zt-bar-fill { height: 100%; background: linear-gradient(90deg, #8FD299 0%, #a5e0ac 100%); border-radius: 50px; position: relative; }
 .zt-bar-meta { display: flex; justify-content: space-between; margin-top: 6px; color: #a9b8b2; font-size: 12px; }
 
 /* ═══ 7. ROI DONUT INFOGRAPHIC ═══ */
-.zt-roi-wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 36px; align-items: center; background: #F7F7F7; border-radius: 0; padding: 40px 36px; margin: 30px 0 40px; }
+.zt-roi-wrap { display: grid; grid-template-columns: 1fr 1.4fr; gap: 36px; align-items: center; background: #F7F7F7; border-radius: 0; padding: 48px 44px; margin: 30px 0 40px; }
 .zt-roi-donut { position: relative; text-align: center; }
 .zt-roi-donut .center-label { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
-.zt-roi-donut .center-label .big { font-size: 42px; font-weight: 700; color: #161616; letter-spacing: -1.5px; display: block; }
+.zt-roi-donut .center-label .big { font-size: 30px; font-weight: 700; color: #161616; letter-spacing: -1px; display: block; line-height: 1; }
 .zt-roi-donut .center-label .small { font-size: 13px; color: #5F6567; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
 .zt-roi-table { }
 .zt-roi-table h3 { margin: 0 0 18px; }
@@ -267,7 +269,7 @@
   <div class="zt-timeline-wrap">
     <svg class="zt-timeline-svg" viewBox="0 0 800 80" xmlns="http://www.w3.org/2000/svg">
       <line x1="60" y1="40" x2="740" y2="40" stroke="#e5e7eb" stroke-width="3" stroke-linecap="round"/>
-      <line x1="60" y1="40" x2="740" y2="40" stroke="#8FD299" stroke-width="3" stroke-linecap="round" stroke-dasharray="680" stroke-dashoffset="0"/>
+      <line x1="60" y1="40" x2="740" y2="40" stroke="#8FD299" stroke-width="3" stroke-linecap="round" stroke-dasharray="680" stroke-dashoffset="92"/>
       <g>
         <circle cx="60" cy="40" r="18" fill="#374B47" stroke="#8FD299" stroke-width="3"/>
         <text x="60" y="46" text-anchor="middle" fill="#8FD299" font-size="14" font-weight="700" font-family="Geologica, sans-serif">1</text>
@@ -318,7 +320,7 @@
   <h2>The Results</h2>
   <p>Within one quarter, operations went from the brand&rsquo;s growth bottleneck to its competitive moat &mdash; fewer errors, faster vendor resolution, real-time inventory visibility, and a cost structure that freed the founder to focus on product and partnerships instead of purchase orders.</p>
 
-  <div class="zt-results-wrap">
+  <div class="zt-results-wrap"><div class="inner">
     <h3>Performance Before &rarr; After</h3>
     <p class="lead">Measured improvements across 90 days post-onboarding of the engagement.</p>
 
@@ -359,15 +361,15 @@
         <div class="zt-bar-meta"><span>Before: $500,000</span><span>After: $105,000</span></div>
       </div>
     </div>
-  </div>
+  </div></div>
 
   <!-- ═══════════ 7. ROI — DONUT + TABLE INFOGRAPHIC ═══════════ -->
   <h2>ROI: Zedtreeo vs In-House Hire</h2>
   <div class="zt-roi-wrap">
     <div class="zt-roi-donut">
-      <svg viewBox="0 0 200 200" width="220" height="220" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="100" r="80" fill="none" stroke="#e5e7eb" stroke-width="28"/>
-        <circle cx="100" cy="100" r="80" fill="none" stroke="#8FD299" stroke-width="28" stroke-dasharray="502" stroke-dashoffset="105" transform="rotate(-90 100 100)" stroke-linecap="round"/>
+      <svg viewBox="0 0 200 200" width="200" height="200" style="max-width:200px;height:auto;" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="70" fill="none" stroke="#e5e7eb" stroke-width="18"/>
+        <circle cx="100" cy="100" r="70" fill="none" stroke="#8FD299" stroke-width="18" stroke-dasharray="440" stroke-dashoffset="92" transform="rotate(-90 100 100)" stroke-linecap="round"/>
       </svg>
       <div class="center-label">
         <span class="big">79%</span>

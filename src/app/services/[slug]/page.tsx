@@ -7,6 +7,7 @@ import { getServicePage, getAllServicePageSlugs } from "@/lib/service-data";
 import JsonLd, { serviceSchema, breadcrumbSchema } from "@/components/JsonLd";
 import { Breadcrumb, FAQ, TrustBar, Button, SectionHeading, CTASection, ScrollReveal, AnimatedCounter, SkillPills } from "@/components/ui";
 import CandidatePreview from "./CandidatePreview";
+import { getRelatedCaseStudies, getRelatedBlogs } from "@/lib/content-links";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -319,6 +320,12 @@ function HirePageLayout({ data }: { data: NonNullable<ReturnType<typeof getHireP
         </div>
       </section>
 
+      {/* Related Case Studies */}
+      <RelatedCaseStudies slug={data.slug} title={data.title} />
+
+      {/* Related Articles */}
+      <RelatedArticles slug={data.slug} title={data.title} />
+
       {/* Related Roles */}
       <section className="bg-zt-light-bg py-zt-section px-6">
         <div className="max-w-zt-content mx-auto">
@@ -428,6 +435,101 @@ function ServicePageLayout({ page }: { page: NonNullable<ReturnType<typeof getSe
         buttonText="Get Started Free"
       />
     </main>
+  );
+}
+
+/* ───── Related Case Studies section ───── */
+function RelatedCaseStudies({ slug, title }: { slug: string; title: string }) {
+  const studies = getRelatedCaseStudies(slug);
+  if (studies.length === 0) return null;
+
+  return (
+    <section className="py-zt-section px-6 bg-zt-near-white">
+      <div className="max-w-zt-content mx-auto">
+        <ScrollReveal>
+          <SectionHeading
+            title="Real Results From Real Teams"
+            subtitle={`See how companies achieved measurable outcomes by hiring remote ${title.toLowerCase()} through Zedtreeo.`}
+            badge="Case Studies"
+          />
+        </ScrollReveal>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {studies.map((study, i) => (
+            <ScrollReveal key={study.href} delay={i * 100}>
+              <Link
+                href={study.href}
+                className="group flex flex-col p-6 rounded-zt bg-white shadow-zt-card hover:shadow-zt-card-hover transition-all no-underline h-full"
+              >
+                <span className="inline-block px-3 py-1 rounded-full bg-zt-accent/10 text-zt-primary text-xs font-bold uppercase tracking-wider mb-3 self-start">
+                  Case Study
+                </span>
+                <h3 className="text-base font-semibold text-zt-headings group-hover:text-zt-accent transition-colors !mt-0 mb-2 leading-snug">
+                  {study.title}
+                </h3>
+                {study.snippet && (
+                  <p className="text-sm text-zt-accent font-medium mt-auto mb-0">
+                    {study.snippet} &rarr;
+                  </p>
+                )}
+              </Link>
+            </ScrollReveal>
+          ))}
+        </div>
+        <div className="text-center mt-8">
+          <Link
+            href="/case-studies"
+            className="text-sm text-zt-primary font-semibold hover:text-zt-accent transition-colors"
+          >
+            View all case studies &rarr;
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ───── Related Articles section ───── */
+function RelatedArticles({ slug, title }: { slug: string; title: string }) {
+  const articles = getRelatedBlogs(slug);
+  if (articles.length === 0) return null;
+
+  return (
+    <section className="py-zt-section px-6">
+      <div className="max-w-zt-content mx-auto">
+        <ScrollReveal>
+          <SectionHeading
+            title="Related Articles"
+            subtitle={`Guides, strategies, and insights related to hiring remote ${title.toLowerCase()}.`}
+            badge="Resources"
+          />
+        </ScrollReveal>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {articles.slice(0, 4).map((article, i) => (
+            <ScrollReveal key={article.href} delay={i * 100}>
+              <Link
+                href={article.href}
+                className="group block p-5 rounded-zt bg-white border border-zt-border hover:border-zt-accent hover:shadow-zt-card transition-all no-underline h-full"
+              >
+                <span className="text-xs text-zt-accent font-semibold uppercase tracking-wider">
+                  Article
+                </span>
+                <h3 className="text-sm font-semibold text-zt-headings group-hover:text-zt-accent transition-colors !mt-2 mb-0 leading-snug">
+                  {article.title}
+                </h3>
+              </Link>
+            </ScrollReveal>
+          ))}
+        </div>
+        <div className="text-center mt-8">
+          <Link
+            href="/blog"
+            className="text-sm text-zt-primary font-semibold hover:text-zt-accent transition-colors"
+          >
+            Browse all articles &rarr;
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 }
 

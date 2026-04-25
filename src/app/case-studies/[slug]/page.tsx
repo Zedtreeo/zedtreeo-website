@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getCaseStudyPage, getAllCaseStudyPageSlugs } from "@/lib/case-study-data";
 import JsonLd, { breadcrumbSchema } from "@/components/JsonLd";
-import { Breadcrumb, CTASection, TrustBar } from "@/components/ui";
+import { Breadcrumb, CTASection, TrustBar, SectionHeading } from "@/components/ui";
+import { getRelatedHirePages } from "@/lib/content-links";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -121,6 +122,9 @@ export default async function CaseStudyPage({ params }: PageProps) {
         </div>
       </section>
 
+      {/* Related Hire Pages */}
+      <RelatedServices caseStudySlug={page.slug} />
+
       {/* CTA */}
       <CTASection
         title="Ready to See These Results?"
@@ -128,5 +132,38 @@ export default async function CaseStudyPage({ params }: PageProps) {
         buttonText="Start Your Free Trial"
       />
     </main>
+  );
+}
+
+/* ───── Related Services (bidirectional link from case study → hire pages) ───── */
+function RelatedServices({ caseStudySlug }: { caseStudySlug: string }) {
+  const services = getRelatedHirePages(caseStudySlug);
+  if (services.length === 0) return null;
+
+  return (
+    <section className="py-zt-section px-6 bg-zt-near-white">
+      <div className="max-w-zt-content mx-auto">
+        <SectionHeading
+          title="Hire Similar Talent"
+          subtitle="Explore the roles and services featured in this case study."
+        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {services.map((service) => (
+            <Link
+              key={service.href}
+              href={service.href}
+              className="group block p-6 rounded-zt bg-white shadow-zt-card hover:shadow-zt-card-hover transition-all no-underline text-center"
+            >
+              <h3 className="text-base font-semibold text-zt-headings group-hover:text-zt-accent transition-colors !mt-0 mb-1 capitalize">
+                {service.title}
+              </h3>
+              <span className="text-sm text-zt-accent font-medium">
+                View pricing &amp; skills &rarr;
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

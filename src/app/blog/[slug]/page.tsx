@@ -5,7 +5,8 @@ import Image from "next/image";
 import { getAuthor, categoryLabels } from "@/lib/blog-data";
 import { getBlogPost, getAllBlogSlugs, getRelatedPosts } from "@/lib/blog-content";
 import JsonLd, { articleSchema } from "@/components/JsonLd";
-import { Breadcrumb, CTASection } from "@/components/ui";
+import { Breadcrumb, CTASection, SectionHeading } from "@/components/ui";
+import { getRelatedHirePagesFromBlog } from "@/lib/content-links";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -254,11 +255,47 @@ export default async function BlogPostPage({ params }: PageProps) {
         </section>
       )}
 
+      {/* Related Hire Pages */}
+      <RelatedHireServices blogSlug={post.slug} />
+
       {/* CTA */}
       <CTASection
         title="Ready to Build Your Remote Team?"
         description="Get matched with pre-vetted talent in 48 hours. Start with a free trial — no commitment."
       />
     </main>
+  );
+}
+
+/* ───── Related hire services (bidirectional link from blog → hire pages) ───── */
+function RelatedHireServices({ blogSlug }: { blogSlug: string }) {
+  const services = getRelatedHirePagesFromBlog(blogSlug);
+  if (services.length === 0) return null;
+
+  return (
+    <section className="py-zt-section px-6 bg-zt-near-white">
+      <div className="max-w-zt-content mx-auto">
+        <SectionHeading
+          title="Hire Remote Talent"
+          subtitle="Ready to put these insights into action? Explore our staffing services."
+        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {services.map((service) => (
+            <Link
+              key={service.href}
+              href={service.href}
+              className="group block p-6 rounded-zt bg-white shadow-zt-card hover:shadow-zt-card-hover transition-all no-underline text-center"
+            >
+              <h3 className="text-base font-semibold text-zt-headings group-hover:text-zt-accent transition-colors !mt-0 mb-1 capitalize">
+                {service.title}
+              </h3>
+              <span className="text-sm text-zt-accent font-medium">
+                From $5/hr &rarr;
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
