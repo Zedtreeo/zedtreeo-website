@@ -6,12 +6,12 @@ import { Breadcrumb, SectionHeading, CTASection, TrustBar } from "@/components/u
 export const metadata: Metadata = {
   title: "About Zedtreeo — Remote Staffing Built Different",
   description:
-    "Zedtreeo connects global businesses with pre-vetted, AI-trained remote employees from India. Learn about our mission, vetting process, and why 200+ companies trust us.",
+    "Zedtreeo connects global businesses with pre-vetted, AI-trained remote employees from India. Learn about our mission, vetting process, and why 500+ companies trust us.",
   alternates: { canonical: "https://zedtreeo.com/about" },
   openGraph: {
     title: "About Zedtreeo — Remote Staffing Built Different",
     description:
-      "Pre-vetted, AI-trained remote talent. Learn why 200+ companies trust Zedtreeo for dedicated remote employees.",
+      "Pre-vetted, AI-trained remote talent. Learn why 500+ companies trust Zedtreeo for dedicated remote employees.",
     url: "https://zedtreeo.com/about",
   },
 };
@@ -103,13 +103,13 @@ export default function AboutPage() {
               </p>
             </div>
             <div>
-              <div className="relative rounded-zt overflow-hidden mb-6">
+              <div className="relative rounded-zt overflow-hidden mb-6" style={{ height: "320px" }}>
                 <Image
                   src="/images/about/professional-team.webp"
                   alt="Zedtreeo remote staffing team collaborating in a modern office"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover rounded-zt"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover rounded-zt"
                   priority
                 />
               </div>
@@ -253,7 +253,7 @@ export default function AboutPage() {
 }
 
 const missionStats = [
-  { value: "200+", label: "Companies Served" },
+  { value: "500+", label: "Companies Served" },
   { value: "500+", label: "Professionals Placed" },
   { value: "50+", label: "Role Categories" },
   { value: "4.8/5", label: "Trustpilot Rating" },
