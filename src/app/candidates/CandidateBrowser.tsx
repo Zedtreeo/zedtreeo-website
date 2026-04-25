@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import {
   candidates,
@@ -10,6 +11,7 @@ import {
 } from "@/lib/candidates-data";
 
 const allCategories = Object.entries(candidateCategoryLabels) as [CandidateCategory, string][];
+const validCategories = new Set(Object.keys(candidateCategoryLabels));
 
 const availabilityLabels: Record<string, string> = {
   immediate: "Available Now",
@@ -24,8 +26,24 @@ const availabilityColors: Record<string, string> = {
 };
 
 export default function CandidateBrowser() {
-  const [selectedCategory, setSelectedCategory] = useState<CandidateCategory | "all">("all");
+  const searchParams = useSearchParams();
+  const initialCategory = searchParams.get("category");
+
+  const [selectedCategory, setSelectedCategory] = useState<CandidateCategory | "all">(() => {
+    if (initialCategory && validCategories.has(initialCategory)) {
+      return initialCategory as CandidateCategory;
+    }
+    return "all";
+  });
   const [searchQuery, setSearchQuery] = useState("");
+
+  /* Sync with URL changes (e.g. browser back/forward) */
+  useEffect(() => {
+    const cat = searchParams.get("category");
+    if (cat && validCategories.has(cat)) {
+      setSelectedCategory(cat as CandidateCategory);
+    }
+  }, [searchParams]);
 
   const filtered = useMemo(() => {
     let result = candidates;

@@ -1725,6 +1725,1046 @@ export const hirePages: Record<string, HirePageData> = {
       { title: "Mobile App Developers", href: "/services/hire-mobile-app-developer" },
     ],
   },
+
+  /* ─── Tier 2: Java Developer ─── */
+
+  "hire-java-developer": {
+    slug: "hire-java-developer",
+    title: "Java Developers",
+    h1: "Hire Remote",
+    h1Accent: "Java Developers",
+    metaTitle: "Hire Remote Java Developers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote Java developers from India starting at $5/hr. Spring Boot, Microservices, Hibernate, AWS experts. Pre-vetted, AI-trained. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted Java developers with production experience in Spring Boot, microservices, Hibernate, and enterprise applications. Dedicated to your team, building scalable systems from day one.",
+    heroBullets: [
+      "Spring Boot, Spring Cloud, Hibernate, JPA specialists",
+      "Microservices, Kafka, Kubernetes, enterprise Java",
+      "70–90% cost savings vs US/EU Java developers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-software-development.svg",
+    focusKeyword: "hire java developer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "160+", label: "Java Devs Placed" },
+      { value: "94%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "☕", title: "Enterprise Java Expertise", description: "Every Java developer builds production-grade enterprise applications — Spring Boot microservices, CQRS/event sourcing, distributed systems, and high-throughput data processing pipelines." },
+      { icon: "🏗️", title: "Microservices Architecture", description: "Production experience with Spring Cloud, service discovery (Eureka), API gateways, circuit breakers, distributed tracing, and event-driven architectures with Kafka and RabbitMQ." },
+      { icon: "🧠", title: "AI-Augmented Development", description: "Trained on IntelliJ AI, GitHub Copilot, and Cursor. Your Java developer writes cleaner code faster with AI-assisted refactoring, test generation, and performance optimization." },
+      { icon: "⏰", title: "Your Timezone", description: "Your Java developer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on code reviews, architecture decisions, and sprint planning." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior Java developers from $5/hr. Replace $80–$170/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "🔒", title: "Security & Compliance", description: "Spring Security, OAuth2, JWT, role-based access control, data encryption, and audit logging. SOC 2, HIPAA, and PCI-DSS compliance experience for regulated industries." },
+    ],
+    skills: [
+      "Java 17+", "Spring Boot", "Spring Cloud", "Spring Security",
+      "Hibernate", "JPA", "MyBatis", "JDBC",
+      "Microservices", "Kafka", "RabbitMQ", "gRPC",
+      "PostgreSQL", "MySQL", "MongoDB", "Redis",
+      "Docker", "Kubernetes", "AWS", "Azure",
+      "JUnit 5", "Mockito", "TestContainers", "Gatling",
+      "Maven", "Gradle", "Jenkins", "CI/CD",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Spring Boot APIs, CRUD operations, Hibernate queries, bug fixes, unit testing, basic microservice endpoints" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Microservices architecture, Kafka integration, database optimization, Spring Security, complex business logic, code reviews" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "Distributed systems design, team leadership, performance tuning, legacy modernization, event-driven architecture, cloud-native Java" },
+    ],
+    faqs: [
+      { question: "What Java frameworks do your developers use?", answer: "Spring Boot (most common), Spring Cloud for microservices, Hibernate/JPA for ORM, and Quarkus/Micronaut for cloud-native apps. Our senior developers architect systems using the right framework for your scale and requirements." },
+      { question: "Can your developers build microservices?", answer: "Yes. Our mid-level and senior developers design and build production microservices — Spring Cloud, service mesh, API gateways, event-driven communication (Kafka/RabbitMQ), distributed tracing (Jaeger), and container orchestration with Kubernetes." },
+      { question: "Do your Java developers work with cloud platforms?", answer: "Yes. AWS (EC2, ECS, Lambda, RDS), Azure (App Service, AKS), and GCP. They deploy containerized Java applications, set up CI/CD pipelines, configure auto-scaling, and manage cloud infrastructure as code." },
+      { question: "Can your developer modernize legacy Java applications?", answer: "Yes. Our senior developers specialize in modernizing legacy Java EE/J2EE applications — migrating to Spring Boot, breaking monoliths into microservices, upgrading Java versions, containerizing, and improving test coverage." },
+      { question: "How do you vet Java developers?", answer: "Every candidate completes a 6-stage screening: portfolio review, live Java coding challenge (OOP, design patterns, concurrency), system design for distributed systems, AI tool proficiency test, English assessment, and cultural fit interview." },
+      { question: "Do your developers handle database design?", answer: "Yes. Relational databases (PostgreSQL, MySQL, Oracle) with Hibernate/JPA, plus NoSQL (MongoDB, Cassandra, Redis). They handle schema design, query optimization, migration scripts, connection pooling, and caching strategies." },
+    ],
+    relatedPages: [
+      { title: ".NET Developers", href: "/services/hire-dotnet-developer" },
+      { title: "Python Developers", href: "/services/hire-python-developer" },
+      { title: "Node.js Developers", href: "/services/hire-nodejs-developer" },
+      { title: "DevOps Engineers", href: "/services/devops-engineers" },
+    ],
+  },
+
+  /* ─── Tier 2: Laravel Developer ─── */
+
+  "hire-laravel-developer": {
+    slug: "hire-laravel-developer",
+    title: "Laravel Developers",
+    h1: "Hire Remote",
+    h1Accent: "Laravel Developers",
+    metaTitle: "Hire Remote Laravel Developers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote Laravel developers from India starting at $5/hr. Laravel, Livewire, Inertia, API development experts. Pre-vetted, AI-trained. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted Laravel developers with production experience in Eloquent ORM, Livewire, Inertia.js, and SaaS application development. Dedicated to your team, shipping clean PHP from day one.",
+    heroBullets: [
+      "Laravel 11, Livewire, Inertia.js, Filament specialists",
+      "SaaS platforms, multi-tenant apps, API development",
+      "70–90% cost savings vs US/EU Laravel developers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-software-development.svg",
+    focusKeyword: "hire laravel developer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "100+", label: "Laravel Devs Placed" },
+      { value: "93%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "⚡", title: "Modern Laravel Stack", description: "Every developer works with Laravel 11, Livewire 3, Inertia.js, Filament admin panels, and Horizon/Pulse for monitoring. Modern, maintainable, convention-driven development." },
+      { icon: "🏗️", title: "SaaS & Multi-Tenant", description: "Build subscription-based SaaS platforms with Laravel Cashier (Stripe/Paddle), multi-tenant architecture, feature flags, usage-based billing, and team management out of the box." },
+      { icon: "🧠", title: "AI-Augmented Development", description: "Trained on GitHub Copilot, Cursor, and Laravel-specific AI tools. Your developer builds features 2–3x faster with AI-assisted Eloquent queries, test generation, and code scaffolding." },
+      { icon: "⏰", title: "Your Timezone", description: "Your Laravel developer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on code reviews, sprint planning, and deployment coordination." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior Laravel developers from $5/hr. Replace $70–$140/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "🧪", title: "Test-Driven Development", description: "Comprehensive testing with PHPUnit and Pest — feature tests, unit tests, browser tests with Dusk, and CI/CD pipelines. Every feature ships with test coverage." },
+    ],
+    skills: [
+      "Laravel 11", "PHP 8+", "Eloquent ORM", "Blade",
+      "Livewire 3", "Inertia.js", "Filament", "Nova",
+      "Laravel Cashier", "Sanctum", "Passport", "Socialite",
+      "Queue/Jobs", "Horizon", "Pulse", "Octane",
+      "MySQL", "PostgreSQL", "Redis", "Elasticsearch",
+      "PHPUnit", "Pest", "Dusk", "Laravel Forge",
+      "Docker", "Vapor", "CI/CD", "Git",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Eloquent CRUD, Blade templates, basic Livewire components, bug fixes, API endpoints, form validation" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Feature ownership, Livewire/Inertia SPAs, queue management, multi-auth systems, payment integrations, Filament admin panels" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "SaaS architecture, multi-tenant design, team leadership, performance optimization, package development, migration from legacy frameworks" },
+    ],
+    faqs: [
+      { question: "What Laravel version do your developers work with?", answer: "Laravel 11 is our default for new projects. Our developers also maintain applications on Laravel 9 and 10, and handle version upgrades. They follow Laravel conventions, use Eloquent ORM, and build with Livewire or Inertia.js for reactive UIs." },
+      { question: "Can your developers build SaaS applications?", answer: "Yes. Our senior developers build complete SaaS platforms — Laravel Cashier for Stripe/Paddle billing, multi-tenant architecture (single DB or separate DBs), role-based permissions with Spatie, feature flags, and usage-based pricing models." },
+      { question: "Do your developers work with Livewire?", answer: "Yes. Our developers build reactive, real-time interfaces with Livewire 3 — dynamic forms, real-time search, infinite scroll, file uploads, and Alpine.js integration. No separate JavaScript framework required." },
+      { question: "How do you vet Laravel developers?", answer: "Every candidate completes a 6-stage screening: portfolio review, live Laravel coding challenge (Eloquent, relationships, middleware), architecture assessment (queues, events, service patterns), AI tool proficiency test, English assessment, and cultural fit interview." },
+      { question: "Can your developer deploy to Laravel Forge or Vapor?", answer: "Yes. Our developers deploy to Laravel Forge (DigitalOcean, AWS, Hetzner), Laravel Vapor (serverless AWS), and custom setups with Docker/Kubernetes. They configure SSL, queues, schedulers, and monitoring." },
+      { question: "Do your developers handle API development?", answer: "Yes. RESTful and GraphQL APIs with Laravel — Sanctum/Passport authentication, API versioning, rate limiting, resource transformations, pagination, OpenAPI documentation, and comprehensive test coverage." },
+    ],
+    relatedPages: [
+      { title: "PHP Developers", href: "/services/hire-php-developer" },
+      { title: "WordPress Developers", href: "/services/hire-wordpress-developer" },
+      { title: "Vue.js Developers", href: "/services/hire-vuejs-developer" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+    ],
+  },
+
+  /* ─── Tier 2: Vue.js Developer ─── */
+
+  "hire-vuejs-developer": {
+    slug: "hire-vuejs-developer",
+    title: "Vue.js Developers",
+    h1: "Hire Remote",
+    h1Accent: "Vue.js Developers",
+    metaTitle: "Hire Remote Vue.js Developers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote Vue.js developers from India starting at $5/hr. Vue 3, Nuxt, Pinia, TypeScript experts. Pre-vetted, AI-trained. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted Vue.js developers with production experience in Vue 3 Composition API, Nuxt.js, Pinia, and TypeScript. Dedicated to your team, building reactive interfaces from day one.",
+    heroBullets: [
+      "Vue 3, Nuxt 3, Pinia, Vuetify, TypeScript specialists",
+      "Composition API, SSR/SSG, progressive web apps",
+      "70–90% cost savings vs US/EU Vue developers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-software-development.svg",
+    focusKeyword: "hire vuejs developer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "70+", label: "Vue Devs Placed" },
+      { value: "93%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "💚", title: "Vue 3 Composition API", description: "Every developer works with Vue 3's Composition API — composables, reactive refs, computed properties, and script setup. Clean, reusable, TypeScript-first component architecture." },
+      { icon: "🚀", title: "Nuxt.js Full-Stack", description: "Build server-rendered, statically generated, and hybrid applications with Nuxt 3. Auto-imports, file-based routing, API routes, and edge rendering for global performance." },
+      { icon: "🧠", title: "AI-Augmented Development", description: "Trained on GitHub Copilot, Cursor, and AI debugging tools. Your Vue developer builds components 2–3x faster with AI-assisted code generation and automated testing." },
+      { icon: "⏰", title: "Your Timezone", description: "Your Vue.js developer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on code reviews, component design, and sprint planning." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior Vue.js developers from $5/hr. Replace $75–$140/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "🎨", title: "Component Libraries", description: "Experience with Vuetify, Quasar, PrimeVue, Element Plus, and custom design systems. Build consistent, accessible UI component libraries that scale across your product." },
+    ],
+    skills: [
+      "Vue 3", "Nuxt 3", "TypeScript", "JavaScript ES6+",
+      "Composition API", "Pinia", "Vuex", "Vue Router",
+      "Vuetify", "Quasar", "PrimeVue", "Tailwind CSS",
+      "Vite", "Vitest", "Cypress", "Playwright",
+      "REST APIs", "GraphQL", "WebSockets", "Axios",
+      "Storybook", "Figma-to-Code", "PWA", "SSR/SSG",
+      "Docker", "Git", "CI/CD", "Performance Optimization",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Vue component development, Vuetify layouts, basic Nuxt pages, bug fixes, unit testing with Vitest" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Composition API architecture, Nuxt 3 full-stack, Pinia stores, API integration, custom composables, code reviews" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "App architecture, design system creation, team leadership, performance optimization, migration from Vue 2, Nuxt module development" },
+    ],
+    faqs: [
+      { question: "Do your developers work with Vue 3 or Vue 2?", answer: "Vue 3 with Composition API is our default. Our developers also maintain Vue 2 Options API applications and handle Vue 2 to Vue 3 migration — component-by-component upgrade strategy, Pinia migration from Vuex, and build tool migration to Vite." },
+      { question: "Can your developers build Nuxt.js applications?", answer: "Yes. Our developers build with Nuxt 3 — server-side rendering, static site generation, hybrid rendering, API routes, auto-imports, and edge deployment. Full-stack Vue applications with SEO optimization and fast initial loads." },
+      { question: "Do your Vue developers work with TypeScript?", answer: "Yes. Most of our mid-level and senior Vue developers use TypeScript by default — typed props, emits, composables, and Pinia stores. Strong typing catches bugs early and improves code maintainability." },
+      { question: "What component libraries do your developers use?", answer: "Vuetify (Material Design), Quasar (cross-platform), PrimeVue (enterprise), Element Plus, and Tailwind CSS with headless UI. They also build custom component libraries with Storybook documentation." },
+      { question: "How do you vet Vue.js developers?", answer: "Every candidate completes a 6-stage screening: portfolio review, live Vue coding challenge (Composition API, state management, component design), system design assessment, AI tool proficiency test, English assessment, and cultural fit interview." },
+      { question: "Can your developer integrate Vue with Laravel?", answer: "Yes. Vue + Laravel is one of our most common stacks. Developers build with Inertia.js for seamless SPA experiences, or use Vue as a standalone frontend consuming Laravel APIs. We also offer dedicated Laravel developers." },
+    ],
+    relatedPages: [
+      { title: "React Developers", href: "/services/hire-react-developer" },
+      { title: "Angular Developers", href: "/services/hire-angular-developer" },
+      { title: "Laravel Developers", href: "/services/hire-laravel-developer" },
+      { title: "Frontend Developers", href: "/services/hire-frontend-developer" },
+    ],
+  },
+
+  /* ─── Tier 2: Angular Developer ─── */
+
+  "hire-angular-developer": {
+    slug: "hire-angular-developer",
+    title: "Angular Developers",
+    h1: "Hire Remote",
+    h1Accent: "Angular Developers",
+    metaTitle: "Hire Remote Angular Developers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote Angular developers from India starting at $5/hr. Angular 17+, RxJS, NgRx, TypeScript experts. Pre-vetted, AI-trained. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted Angular developers with production experience in Angular 17+, RxJS, NgRx, and enterprise single-page applications. Dedicated to your team, building robust frontends from day one.",
+    heroBullets: [
+      "Angular 17+, RxJS, NgRx, Angular Material specialists",
+      "Enterprise SPAs, micro-frontends, module federation",
+      "70–90% cost savings vs US/EU Angular developers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-software-development.svg",
+    focusKeyword: "hire angular developer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "90+", label: "Angular Devs Placed" },
+      { value: "94%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "🅰️", title: "Enterprise Angular", description: "Every Angular developer builds scalable enterprise SPAs — standalone components, signals, lazy-loaded routes, and modular architecture designed for large teams and complex business domains." },
+      { icon: "🔄", title: "Reactive Programming", description: "Deep RxJS expertise — Observables, operators, subjects, and reactive state management with NgRx or NGXS. Real-time data streams, complex async workflows, and event-driven UI patterns." },
+      { icon: "🧠", title: "AI-Augmented Development", description: "Trained on GitHub Copilot, Cursor, and AI debugging tools. Your Angular developer builds features 2–3x faster with AI-assisted component generation, RxJS pipeline creation, and testing." },
+      { icon: "⏰", title: "Your Timezone", description: "Your Angular developer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on code reviews, architecture decisions, and sprint planning." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior Angular developers from $5/hr. Replace $80–$160/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "🧪", title: "Testing & Quality", description: "Comprehensive testing with Jasmine/Karma, Jest, and Cypress. Unit tests for services and components, integration tests for modules, and E2E tests for critical user flows." },
+    ],
+    skills: [
+      "Angular 17+", "TypeScript", "RxJS", "NgRx",
+      "Angular Material", "PrimeNG", "Tailwind CSS", "SCSS",
+      "Standalone Components", "Signals", "Lazy Loading", "Route Guards",
+      "REST APIs", "GraphQL", "WebSockets", "HTTP Interceptors",
+      "Jasmine", "Karma", "Jest", "Cypress",
+      "Nx Monorepo", "Module Federation", "Micro-Frontends", "PWA",
+      "Docker", "Jenkins", "CI/CD", "Azure DevOps",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Component development, template-driven forms, basic services, routing, Angular Material layouts, bug fixes" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Feature modules, reactive forms, NgRx state management, HTTP interceptors, custom directives/pipes, performance optimization" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "Enterprise architecture, micro-frontends, Nx monorepos, team leadership, migration from AngularJS, design system creation" },
+    ],
+    faqs: [
+      { question: "What Angular version do your developers work with?", answer: "Angular 17+ with standalone components and signals is our default. Our developers also maintain applications on Angular 14-16 and handle version upgrades. For legacy AngularJS projects, we provide migration specialists." },
+      { question: "Do your developers use NgRx for state management?", answer: "Yes. Our mid-level and senior developers are proficient with NgRx (Store, Effects, Entity, Router Store), NGXS, and Akita. They choose the right state management approach based on app complexity and team preferences." },
+      { question: "Can your developer build micro-frontends?", answer: "Yes. Our senior developers build micro-frontend architectures using Module Federation (Webpack 5), Nx monorepos, and Angular's lazy loading. Independent team deployment, shared libraries, and consistent design systems." },
+      { question: "Do your Angular developers work with .NET backends?", answer: "Yes. Angular + .NET is one of our most common enterprise stacks. We can provide both Angular frontend and .NET backend developers, or full-stack developers experienced in the combined stack." },
+      { question: "How do you vet Angular developers?", answer: "Every candidate completes a 6-stage screening: portfolio review, live Angular coding challenge (components, RxJS, dependency injection), architecture assessment (module design, state management), AI tool proficiency test, English assessment, and cultural fit interview." },
+      { question: "Can your developer handle Angular performance issues?", answer: "Yes. Our developers optimize Angular performance — OnPush change detection, trackBy functions, virtual scrolling, lazy loading, tree shaking, bundle analysis, and server-side rendering with Angular Universal for faster initial loads." },
+    ],
+    relatedPages: [
+      { title: "React Developers", href: "/services/hire-react-developer" },
+      { title: "Vue.js Developers", href: "/services/hire-vuejs-developer" },
+      { title: ".NET Developers", href: "/services/hire-dotnet-developer" },
+      { title: "Frontend Developers", href: "/services/hire-frontend-developer" },
+    ],
+  },
+
+  /* ─── Tier 2: Web Designer ─── */
+
+  "hire-web-designer": {
+    slug: "hire-web-designer",
+    title: "Web Designers",
+    h1: "Hire Remote",
+    h1Accent: "Web Designers",
+    metaTitle: "Hire Remote Web Designers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote web designers from India starting at $5/hr. Figma, UI/UX, responsive design, Webflow experts. Pre-vetted, AI-trained. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted web designers with portfolios of high-converting, responsive websites. Figma, Adobe XD, Webflow, and design systems — dedicated to your team, designing pixel-perfect experiences.",
+    heroBullets: [
+      "Figma, Adobe XD, Sketch, Webflow, Framer specialists",
+      "UI/UX design, responsive layouts, design systems",
+      "70–90% cost savings vs US/EU web designers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-software-development.svg",
+    focusKeyword: "hire web designer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "110+", label: "Designers Placed" },
+      { value: "92%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "🎨", title: "Conversion-Focused Design", description: "Every web designer creates layouts optimized for conversions — clear CTAs, visual hierarchy, trust signals, and user journey mapping. Design that drives business results, not just aesthetics." },
+      { icon: "📱", title: "Responsive & Mobile-First", description: "Mobile-first responsive design for every screen size — smartphones, tablets, laptops, and desktops. Progressive enhancement, fluid grids, and touch-friendly interactions." },
+      { icon: "🧠", title: "AI-Augmented Design", description: "Trained on Figma AI, Midjourney, and AI design tools. Your designer creates concepts, variations, and prototypes 2–3x faster with AI-assisted ideation, image generation, and layout suggestions." },
+      { icon: "⏰", title: "Your Timezone", description: "Your web designer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on design reviews, feedback iterations, and handoff coordination." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior web designers from $5/hr. Replace $60–$120/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "🔧", title: "Design-to-Code Ready", description: "Developer-ready deliverables — organized Figma files with auto-layout, design tokens, component variants, responsive breakpoints, and detailed interaction specifications for seamless handoff." },
+    ],
+    skills: [
+      "Figma", "Adobe XD", "Sketch", "Photoshop",
+      "Illustrator", "After Effects", "Webflow", "Framer",
+      "UI Design", "UX Design", "Wireframing", "Prototyping",
+      "Design Systems", "Component Libraries", "Auto Layout", "Design Tokens",
+      "Responsive Design", "Mobile-First", "Accessibility", "WCAG 2.1",
+      "User Research", "A/B Testing", "Heatmap Analysis", "Conversion Optimization",
+      "HTML/CSS", "Tailwind CSS", "WordPress", "Shopify Themes",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Landing page design, banner/social media graphics, Figma mockups, basic wireframes, icon design, image editing" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Full website design, responsive layouts, Webflow development, design system components, UX wireframes, interactive prototypes" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "Design system architecture, UX strategy, conversion optimization, team leadership, brand identity systems, design audits" },
+    ],
+    faqs: [
+      { question: "What design tools do your web designers use?", answer: "Figma (primary), Adobe XD, Sketch, Photoshop, and Illustrator for design. Webflow and Framer for no-code website builds. After Effects and Lottie for micro-animations. Our designers deliver organized, developer-ready files." },
+      { question: "Can your designer build websites in Webflow?", answer: "Yes. Our mid-level and senior designers build responsive, CMS-powered websites directly in Webflow — custom interactions, animations, dynamic content, and client-friendly CMS configuration. No developer handoff needed." },
+      { question: "Do your designers handle UX research?", answer: "Yes. Our senior designers conduct user research — persona development, user journey mapping, wireframing, usability testing, heatmap analysis, and A/B test design. Data-driven design decisions, not guesswork." },
+      { question: "Can your designer create a design system?", answer: "Yes. Our senior designers build comprehensive design systems in Figma — atomic components, variant structures, design tokens, typography scales, color systems, spacing rules, and documentation for consistent brand implementation." },
+      { question: "How do you vet web designers?", answer: "Every candidate completes a 6-stage screening: portfolio review (live websites, conversion metrics), design challenge (landing page + responsive adaptation), UX reasoning assessment, AI tool proficiency test, English assessment, and cultural fit interview." },
+      { question: "Can your designer also code HTML/CSS?", answer: "Many of our web designers have front-end coding skills — HTML, CSS, Tailwind, and basic JavaScript. For full development, we recommend pairing with a frontend developer. Our designers always deliver clean, development-ready Figma files." },
+    ],
+    relatedPages: [
+      { title: "Graphic Designers", href: "/services/graphic-designer" },
+      { title: "Frontend Developers", href: "/services/hire-frontend-developer" },
+      { title: "Shopify Developers", href: "/services/hire-shopify-developer" },
+      { title: "WordPress Developers", href: "/services/hire-wordpress-developer" },
+    ],
+  },
+
+  /* ─── Tier 2: Email Marketing Specialist ─── */
+
+  "hire-email-marketing-specialist": {
+    slug: "hire-email-marketing-specialist",
+    title: "Email Marketing Specialists",
+    h1: "Hire Remote",
+    h1Accent: "Email Marketing Specialists",
+    metaTitle: "Hire Remote Email Marketing Specialists $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote email marketing specialists from India starting at $5/hr. Klaviyo, Mailchimp, HubSpot, automation experts. Pre-vetted. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted email marketing specialists with production experience in Klaviyo, Mailchimp, HubSpot, and marketing automation. Dedicated to your team, driving revenue from your email list.",
+    heroBullets: [
+      "Klaviyo, Mailchimp, HubSpot, ActiveCampaign specialists",
+      "Drip sequences, A/B testing, segmentation, automation",
+      "70–90% cost savings vs US/EU email marketers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-marketing.svg",
+    focusKeyword: "hire email marketing specialist",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "65+", label: "Specialists Placed" },
+      { value: "92%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "📧", title: "Revenue-Driving Campaigns", description: "Every specialist builds email programs that generate revenue — welcome sequences, abandoned cart flows, win-back campaigns, promotional blasts, and lifecycle automation that converts subscribers into customers." },
+      { icon: "🎯", title: "Advanced Segmentation", description: "Behavioral segmentation, RFM analysis, predictive sending, dynamic content blocks, and personalized product recommendations. Right message, right person, right time — at scale." },
+      { icon: "🧠", title: "AI-Augmented Marketing", description: "Trained on AI copywriting tools, subject line optimizers, and send-time prediction. Your specialist creates higher-performing campaigns with AI-assisted copy, design, and optimization." },
+      { icon: "⏰", title: "Your Timezone", description: "Your email specialist works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on campaign calendars, A/B tests, and performance reviews." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior email marketing specialists from $5/hr. Replace $50–$100/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "📊", title: "Data-Driven Optimization", description: "A/B testing subject lines, content, CTAs, and send times. Deliverability monitoring, list hygiene, spam score optimization, and detailed reporting on open rates, click rates, and revenue attribution." },
+    ],
+    skills: [
+      "Klaviyo", "Mailchimp", "HubSpot", "ActiveCampaign",
+      "Salesforce Marketing Cloud", "SendGrid", "Brevo", "ConvertKit",
+      "Email Automation", "Drip Campaigns", "A/B Testing", "Segmentation",
+      "HTML Email", "MJML", "Responsive Email", "Dark Mode Email",
+      "Deliverability", "SPF/DKIM/DMARC", "List Hygiene", "Spam Testing",
+      "Copywriting", "CTA Optimization", "Landing Pages", "Lead Magnets",
+      "Google Analytics", "UTM Tracking", "Revenue Attribution", "Reporting",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Campaign execution, template creation, list management, basic automation setup, A/B testing, performance reporting" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Strategy development, advanced automation flows, segmentation architecture, deliverability optimization, cross-channel integration" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "Email program strategy, team leadership, platform migration, revenue attribution modeling, enterprise-scale automation, CRM integration" },
+    ],
+    faqs: [
+      { question: "What email platforms do your specialists work with?", answer: "Klaviyo (eCommerce), Mailchimp, HubSpot, ActiveCampaign, Salesforce Marketing Cloud, SendGrid, Brevo, and ConvertKit. Our specialists choose and configure the right platform based on your business model, list size, and integration needs." },
+      { question: "Can your specialist set up email automation?", answer: "Yes. Welcome sequences, abandoned cart recovery, post-purchase flows, win-back campaigns, lead nurture drips, re-engagement sequences, and birthday/anniversary campaigns. Multi-step flows with conditional logic and dynamic content." },
+      { question: "Do your specialists handle email design?", answer: "Yes. Our specialists create responsive HTML emails — mobile-optimized layouts, dark mode compatibility, brand-consistent templates, and dynamic content blocks. They design in Figma and code in HTML/MJML." },
+      { question: "Can your specialist improve deliverability?", answer: "Yes. SPF/DKIM/DMARC configuration, list hygiene and validation, engagement-based segmentation, warm-up schedules, spam score optimization, and monitoring with tools like GlockApps and Mail-Tester." },
+      { question: "How do you vet email marketing specialists?", answer: "Every candidate completes a 6-stage screening: portfolio review (campaign examples, metrics), email strategy challenge, HTML email coding test, platform proficiency assessment, English assessment, and cultural fit interview." },
+      { question: "Can your specialist handle eCommerce email?", answer: "Yes. Klaviyo is our top eCommerce platform expertise — product recommendation flows, browse abandonment, price drop alerts, back-in-stock notifications, review requests, and revenue-attributed reporting." },
+    ],
+    relatedPages: [
+      { title: "Digital Marketers", href: "/services/digital-marketer" },
+      { title: "Content Writers", href: "/services/content-writer" },
+      { title: "SEO Specialists", href: "/services/seo-specialist" },
+      { title: "Social Media Managers", href: "/services/social-media-manager" },
+    ],
+  },
+
+  /* ─── Tier 2: Accountant ─── */
+
+  "hire-accountant": {
+    slug: "hire-accountant",
+    title: "Accountants",
+    h1: "Hire Remote",
+    h1Accent: "Accountants",
+    metaTitle: "Hire Remote Accountants from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote accountants from India starting at $5/hr. QuickBooks, Xero, financial reporting, tax prep experts. Pre-vetted, CPA-supervised. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted accountants with production experience in US GAAP, IFRS, QuickBooks, Xero, and financial reporting. Dedicated to your team, managing your books with CPA-level accuracy.",
+    heroBullets: [
+      "QuickBooks, Xero, Sage, FreshBooks specialists",
+      "US GAAP, IFRS, financial reporting, tax preparation",
+      "70–90% cost savings vs US/EU accountants",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-finance-accounting.svg",
+    focusKeyword: "hire remote accountant",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "200+", label: "Accountants Placed" },
+      { value: "95%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.9/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "📊", title: "Full-Cycle Accounting", description: "Every accountant handles end-to-end financial management — journal entries, reconciliations, accounts payable/receivable, month-end close, financial statements, and management reporting." },
+      { icon: "💼", title: "US GAAP & IFRS", description: "Trained in US GAAP and IFRS standards. Revenue recognition, lease accounting, consolidation, and compliance reporting for US, UK, Australian, and Canadian businesses." },
+      { icon: "🧠", title: "AI-Augmented Accounting", description: "Trained on AI bookkeeping tools, automated reconciliation, and smart categorization. Your accountant processes transactions faster with AI-assisted data entry, anomaly detection, and report generation." },
+      { icon: "⏰", title: "Your Timezone", description: "Your accountant works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on month-end close, audit preparation, and financial planning." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior accountants from $5/hr. Replace $40–$90/hr US staff with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "🔒", title: "Confidential & Secure", description: "NDA-backed, GDPR compliant. Secure access with role-based permissions, encrypted file sharing, and audit trails. Your financial data stays protected." },
+    ],
+    skills: [
+      "QuickBooks Online", "QuickBooks Desktop", "Xero", "Sage",
+      "FreshBooks", "Wave", "NetSuite", "SAP",
+      "US GAAP", "IFRS", "Tax Preparation", "Payroll",
+      "Accounts Payable", "Accounts Receivable", "Bank Reconciliation", "Month-End Close",
+      "Financial Statements", "Management Reports", "Budgeting", "Forecasting",
+      "Excel (Advanced)", "Google Sheets", "Power BI", "Tableau",
+      "Bill.com", "Gusto", "ADP", "Dext/Receipt Bank",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Data entry, bank reconciliation, invoice processing, expense categorization, basic financial reports, accounts payable/receivable" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Month-end close, financial statements, payroll processing, tax preparation support, multi-entity bookkeeping, client reporting" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "Financial controller functions, audit preparation, budgeting/forecasting, team supervision, ERP implementation, advisory reporting" },
+    ],
+    faqs: [
+      { question: "What accounting software do your accountants use?", answer: "QuickBooks Online/Desktop, Xero, Sage, FreshBooks, Wave, and NetSuite. They also work with bill payment platforms (Bill.com), payroll systems (Gusto, ADP), and expense management tools (Dext, Expensify)." },
+      { question: "Can your accountant handle US tax preparation?", answer: "Yes. Our accountants prepare individual and business tax returns — 1040, 1120, 1120-S, 1065, 990. They work under CPA supervision and handle quarterly estimates, W-2/1099 processing, and state tax filings." },
+      { question: "Do your accountants understand US GAAP?", answer: "Yes. Our accountants are trained in US GAAP — revenue recognition (ASC 606), lease accounting (ASC 842), financial statement preparation, and compliance reporting. They also work with IFRS for international clients." },
+      { question: "Can your accountant handle multi-entity bookkeeping?", answer: "Yes. Our mid-level and senior accountants manage multi-entity financials — intercompany transactions, consolidated reporting, multi-currency accounting, and entity-specific compliance requirements." },
+      { question: "How do you vet accountants?", answer: "Every candidate completes a 6-stage screening: credential verification (CA, CMA, or equivalent), accounting knowledge test (GAAP, reconciliation, financial statements), software proficiency assessment, AI tool test, English assessment, and cultural fit interview." },
+      { question: "Can your accountant work with my CPA firm?", answer: "Yes. Our accountants collaborate directly with your CPA, CFO, or controller — preparing work papers, supporting audits, responding to information requests, and maintaining organized records in your preferred format." },
+    ],
+    relatedPages: [
+      { title: "Bookkeepers", href: "/services/virtual-assistant-for-bookkeeping" },
+      { title: "Finance & Accounting", href: "/services/hire-remote-finance-accounting-staff" },
+      { title: "Tax Preparers", href: "/services/hire-tax-preparer" },
+      { title: "QuickBooks Experts", href: "/services/hire-quickbooks-expert" },
+    ],
+  },
+
+  /* ─── Tier 2: eCommerce Developer ─── */
+
+  "hire-ecommerce-developer": {
+    slug: "hire-ecommerce-developer",
+    title: "eCommerce Developers",
+    h1: "Hire Remote",
+    h1Accent: "eCommerce Developers",
+    metaTitle: "Hire Remote eCommerce Developers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote eCommerce developers from India starting at $5/hr. Shopify, WooCommerce, Magento, headless commerce experts. Pre-vetted. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted eCommerce developers with production experience across Shopify, WooCommerce, Magento, and headless commerce. Dedicated to your team, building stores that convert from day one.",
+    heroBullets: [
+      "Shopify, WooCommerce, Magento, BigCommerce specialists",
+      "Payment gateways, inventory, shipping, headless commerce",
+      "70–90% cost savings vs US/EU eCommerce developers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-ecommerce-retail.svg",
+    focusKeyword: "hire ecommerce developer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "95+", label: "eComm Devs Placed" },
+      { value: "93%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "🛒", title: "Multi-Platform Expertise", description: "Every developer works across Shopify, WooCommerce, Magento 2, BigCommerce, and headless commerce. Choose the right platform for your scale, or migrate between platforms without losing data." },
+      { icon: "💳", title: "Payment & Checkout", description: "Stripe, PayPal, Square, Klarna, Afterpay integration. Custom checkout flows, one-click purchasing, subscription billing, multi-currency support, and PCI-DSS compliant payment handling." },
+      { icon: "🧠", title: "AI-Augmented Development", description: "Trained on AI tools for product recommendation engines, dynamic pricing, inventory forecasting, and personalized shopping experiences. Your store gets smarter with every customer interaction." },
+      { icon: "⏰", title: "Your Timezone", description: "Your eCommerce developer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on store updates, campaign launches, and troubleshooting." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior eCommerce developers from $5/hr. Replace $70–$150/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "📈", title: "Conversion Optimization", description: "Speed optimization, A/B testing, checkout funnel analysis, product page optimization, upsell/cross-sell engines, and analytics integration. Every feature is designed to increase revenue." },
+    ],
+    skills: [
+      "Shopify", "Shopify Plus", "WooCommerce", "Magento 2",
+      "BigCommerce", "PrestaShop", "Hydrogen", "Medusa.js",
+      "Stripe", "PayPal", "Klarna", "Afterpay",
+      "PHP", "JavaScript", "React", "Liquid",
+      "REST APIs", "GraphQL", "Webhooks", "ERP Integration",
+      "Google Analytics 4", "GTM", "Klaviyo", "SEO",
+      "Core Web Vitals", "CDN", "Caching", "Performance Optimization",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Product setup, theme customization, plugin/app configuration, basic payment integration, content updates, bug fixes" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Custom theme development, payment gateway integration, inventory/shipping setup, platform migration, third-party API integrations" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "Headless commerce architecture, multi-store management, ERP/CRM integration, team leadership, performance optimization at scale" },
+    ],
+    faqs: [
+      { question: "Which eCommerce platform should I use?", answer: "Depends on your scale: Shopify/Shopify Plus for fast setup and scaling, WooCommerce for WordPress-based businesses, Magento 2 for complex B2B/enterprise catalogs, and headless (Hydrogen, Medusa) for custom frontend experiences. Our developers advise based on your specific needs." },
+      { question: "Can your developer migrate my store to a new platform?", answer: "Yes. Our developers handle platform migrations — Magento to Shopify, WooCommerce to Shopify Plus, custom to headless. Products, customers, orders, SEO URLs, and 301 redirects are migrated to preserve search rankings and customer history." },
+      { question: "Do your developers handle payment integrations?", answer: "Yes. Stripe, PayPal, Square, Klarna, Afterpay, Apple Pay, Google Pay, and region-specific gateways. Custom checkout flows, subscription billing, multi-currency support, and PCI-DSS compliant implementation." },
+      { question: "Can your developer integrate with my ERP/CRM?", answer: "Yes. Our developers integrate eCommerce platforms with NetSuite, SAP, Odoo, Salesforce, HubSpot, and custom ERP systems. Real-time inventory sync, order management, customer data flow, and automated fulfillment." },
+      { question: "How do you vet eCommerce developers?", answer: "Every candidate completes a 6-stage screening: portfolio review with live stores and revenue metrics, platform-specific coding challenge, payment/checkout integration assessment, AI tool proficiency test, English assessment, and cultural fit interview." },
+      { question: "Can your developer optimize my store speed?", answer: "Yes. Core Web Vitals optimization — lazy loading, image compression (WebP/AVIF), critical CSS, JavaScript optimization, CDN configuration, caching strategies, and app/plugin audit. Faster stores convert better and rank higher." },
+    ],
+    relatedPages: [
+      { title: "Shopify Developers", href: "/services/hire-shopify-developer" },
+      { title: "WordPress Developers", href: "/services/hire-wordpress-developer" },
+      { title: "Frontend Developers", href: "/services/hire-frontend-developer" },
+      { title: "Digital Marketers", href: "/services/digital-marketer" },
+    ],
+  },
+
+  /* ─── Tier 3: Flutter Developer ─── */
+
+  "hire-flutter-developer": {
+    slug: "hire-flutter-developer",
+    title: "Flutter Developers",
+    h1: "Hire Remote",
+    h1Accent: "Flutter Developers",
+    metaTitle: "Hire Remote Flutter Developers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote Flutter developers from India starting at $5/hr. Dart, cross-platform iOS/Android, Firebase experts. Pre-vetted, AI-trained. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted Flutter developers with production apps on both App Store and Google Play. One codebase, two platforms — dedicated to your team, shipping cross-platform apps from day one.",
+    heroBullets: [
+      "Flutter 3, Dart, BLoC, Riverpod, GetX specialists",
+      "Single codebase for iOS, Android, web, and desktop",
+      "70–90% cost savings vs US/EU Flutter developers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-software-development.svg",
+    focusKeyword: "hire flutter developer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "80+", label: "Flutter Devs Placed" },
+      { value: "93%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "🦋", title: "True Cross-Platform", description: "Every Flutter developer builds from a single Dart codebase for iOS, Android, web, and desktop. 90%+ code sharing between platforms — ship faster, maintain less, iterate once for everywhere." },
+      { icon: "🎨", title: "Pixel-Perfect UI", description: "Flutter's widget system enables custom, expressive UIs at 60fps — complex animations, custom paint, platform-adaptive designs, and Material/Cupertino widgets for native look and feel." },
+      { icon: "🧠", title: "AI-Augmented Development", description: "Trained on GitHub Copilot, Cursor, and Dart-specific AI tools. Your Flutter developer builds features 2–3x faster with AI-assisted widget creation, state management, and testing." },
+      { icon: "⏰", title: "Your Timezone", description: "Your Flutter developer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on code reviews, sprint planning, and app store submissions." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior Flutter developers from $5/hr. Replace $80–$160/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "🚀", title: "Fast Development Cycle", description: "Hot reload for instant UI changes, strong typing with Dart, and comprehensive widget testing. From concept to App Store/Play Store in weeks, not months." },
+    ],
+    skills: [
+      "Flutter 3", "Dart", "BLoC", "Riverpod",
+      "GetX", "Provider", "MobX", "Freezed",
+      "Firebase", "Supabase", "REST APIs", "GraphQL",
+      "SQLite", "Hive", "Drift", "Isar",
+      "Platform Channels", "Custom Widgets", "Animations", "Custom Paint",
+      "Flutter Web", "Flutter Desktop", "App Store", "Google Play",
+      "flutter_test", "Integration Testing", "Mockito", "CI/CD",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Widget implementation, basic state management, API integration, bug fixes, unit testing, simple animations" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Feature ownership, BLoC/Riverpod architecture, Firebase integration, custom widgets, platform channels, app store publishing" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "App architecture design, team leadership, performance optimization, complex animations, plugin development, multi-platform deployment strategy" },
+    ],
+    faqs: [
+      { question: "Can Flutter really replace native iOS and Android development?", answer: "For most apps, yes. Flutter achieves 90%+ code sharing with near-native performance. Platform-specific features are handled via platform channels. Only highly specialized native APIs (ARKit, HealthKit) may need native modules alongside Flutter." },
+      { question: "What state management do your Flutter developers use?", answer: "BLoC (most common for enterprise), Riverpod (modern and testable), GetX (rapid prototyping), and Provider. Senior developers choose based on app complexity, team size, and testing requirements." },
+      { question: "Can your developer build Flutter web and desktop apps?", answer: "Yes. Flutter supports web, macOS, Windows, and Linux from the same codebase. Our developers handle responsive layouts, platform-specific adaptations, and deployment to web hosting, Mac App Store, and Microsoft Store." },
+      { question: "How does Flutter compare to React Native?", answer: "Flutter uses its own rendering engine (Skia) for consistent 60fps UI across platforms. React Native bridges to native components. Flutter offers faster development with hot reload and stronger type safety with Dart. Choose based on your team's existing skills." },
+      { question: "How do you vet Flutter developers?", answer: "Every candidate completes a 6-stage screening: portfolio review with live apps, Flutter coding challenge (widget composition, state management, animations), architecture assessment, AI tool proficiency test, English assessment, and cultural fit interview." },
+      { question: "Can your developer integrate Firebase with Flutter?", answer: "Yes. Firebase Authentication, Cloud Firestore, Realtime Database, Cloud Storage, Cloud Messaging (FCM), Crashlytics, Remote Config, and Analytics. Firebase + Flutter is one of our most common project stacks." },
+    ],
+    relatedPages: [
+      { title: "Mobile App Developers", href: "/services/hire-mobile-app-developer" },
+      { title: "React Developers", href: "/services/hire-react-developer" },
+      { title: "iOS Developers", href: "/services/hire-ios-developer" },
+      { title: "Android Developers", href: "/services/hire-android-developer" },
+    ],
+  },
+
+  /* ─── Tier 3: Magento Developer ─── */
+
+  "hire-magento-developer": {
+    slug: "hire-magento-developer",
+    title: "Magento Developers",
+    h1: "Hire Remote",
+    h1Accent: "Magento Developers",
+    metaTitle: "Hire Remote Magento Developers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote Magento developers from India starting at $5/hr. Magento 2, Adobe Commerce, B2B, custom module experts. Pre-vetted. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted Magento developers with production experience in Magento 2, Adobe Commerce, B2B, and enterprise catalog management. Dedicated to your team, scaling complex stores from day one.",
+    heroBullets: [
+      "Magento 2, Adobe Commerce, Hyvä, PWA Studio",
+      "Custom modules, B2B commerce, ERP integration",
+      "70–90% cost savings vs US/EU Magento developers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-ecommerce-retail.svg",
+    focusKeyword: "hire magento developer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "55+", label: "Magento Devs Placed" },
+      { value: "94%", label: "Retention Rate" },
+      { value: "<7 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "🏢", title: "Enterprise Commerce", description: "Every Magento developer handles complex enterprise catalogs — configurable/bundle/grouped products, custom pricing rules, multi-warehouse inventory, B2B quotes, and requisition lists." },
+      { icon: "🔌", title: "Custom Module Development", description: "Build custom Magento 2 modules following Adobe's coding standards — dependency injection, plugins/interceptors, service contracts, and extension attributes for clean, upgrade-safe customizations." },
+      { icon: "🧠", title: "AI-Augmented Development", description: "Trained on GitHub Copilot and AI debugging tools. Your Magento developer builds modules faster with AI-assisted PHP code generation, GraphQL schema creation, and automated testing." },
+      { icon: "⏰", title: "Your Timezone", description: "Your Magento developer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on store updates, deployments, and performance tuning." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior Magento developers from $5/hr. Replace $80–$180/hr US contractors with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "⚡", title: "Performance & Scalability", description: "Full-page cache, Varnish configuration, Elasticsearch/OpenSearch tuning, Redis session management, CDN setup, and database query optimization for high-traffic, high-SKU stores." },
+    ],
+    skills: [
+      "Magento 2", "Adobe Commerce", "PHP 8", "MySQL",
+      "Hyvä Theme", "PWA Studio", "Luma", "Custom Themes",
+      "Custom Modules", "REST API", "GraphQL", "Service Contracts",
+      "Elasticsearch", "OpenSearch", "Redis", "Varnish",
+      "B2B Commerce", "Multi-Store", "Multi-Currency", "ERP Integration",
+      "PHPUnit", "MFTF", "Docker", "Magento Cloud",
+      "Composer", "Git", "CI/CD", "Performance Tuning",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Theme customization, product setup, extension configuration, bug fixes, basic module modifications, admin configuration" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Custom module development, API integrations, B2B features, Hyvä theme development, performance optimization, multi-store setup" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "Enterprise architecture, Adobe Commerce Cloud, complex B2B workflows, ERP/PIM integration, team leadership, platform migration" },
+    ],
+    faqs: [
+      { question: "Do your developers work with Magento 2 or Adobe Commerce?", answer: "Both. Magento 2 Open Source and Adobe Commerce (the enterprise version). Our senior developers handle Adobe Commerce Cloud deployments, B2B modules, customer segmentation, and staging environments." },
+      { question: "Can your developer build custom Magento modules?", answer: "Yes. Our developers build upgrade-safe custom modules following Adobe's coding standards — dependency injection, plugins, observers, service contracts, and extension attributes. Clean, testable, maintainable code." },
+      { question: "Can you migrate my store to Magento 2?", answer: "Yes. Our developers handle migrations from Magento 1, Shopify, WooCommerce, and custom platforms. Data migration (products, customers, orders), theme rebuild, extension replacement, and SEO preservation with 301 redirects." },
+      { question: "Do your developers work with Hyvä?", answer: "Yes. Hyvä is the modern Magento frontend our developers recommend — Alpine.js + Tailwind CSS replacing the heavy Luma/RequireJS stack. 10x faster page loads, better developer experience, and improved conversion rates." },
+      { question: "How do you vet Magento developers?", answer: "Every candidate completes a 6-stage screening: portfolio review with live store demos, Magento coding challenge (module development, API usage), architecture assessment (B2B, multi-store), AI tool proficiency test, English assessment, and cultural fit interview." },
+      { question: "Can your developer handle B2B Magento features?", answer: "Yes. Company accounts, shared catalogs, requisition lists, quick order, negotiated quotes, purchase order workflows, and credit limit management. Our developers build complete B2B commerce experiences." },
+    ],
+    relatedPages: [
+      { title: "eCommerce Developers", href: "/services/hire-ecommerce-developer" },
+      { title: "Shopify Developers", href: "/services/hire-shopify-developer" },
+      { title: "PHP Developers", href: "/services/hire-php-developer" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+    ],
+  },
+
+  /* ─── Tier 3: Salesforce Developer ─── */
+
+  "hire-salesforce-developer": {
+    slug: "hire-salesforce-developer",
+    title: "Salesforce Developers",
+    h1: "Hire Remote",
+    h1Accent: "Salesforce Developers",
+    metaTitle: "Hire Remote Salesforce Developers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote Salesforce developers from India starting at $5/hr. Apex, LWC, CPQ, Sales/Service Cloud experts. Pre-vetted, certified. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted Salesforce developers with certifications in Apex, Lightning Web Components, CPQ, and Sales/Service Cloud. Dedicated to your team, customizing your CRM from day one.",
+    heroBullets: [
+      "Apex, LWC, Visualforce, SOQL specialists",
+      "Sales Cloud, Service Cloud, CPQ, Marketing Cloud",
+      "70–90% cost savings vs US/EU Salesforce developers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-software-development.svg",
+    focusKeyword: "hire salesforce developer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "50+", label: "SF Devs Placed" },
+      { value: "94%", label: "Retention Rate" },
+      { value: "<7 Days", label: "Avg. Match Time" },
+      { value: "4.9/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "☁️", title: "Full Salesforce Stack", description: "Every developer handles Apex triggers, Lightning Web Components, Flows, SOQL/SOSL queries, and integration with external systems. Custom objects, validation rules, and process automation." },
+      { icon: "🏗️", title: "Multi-Cloud Experience", description: "Sales Cloud, Service Cloud, Marketing Cloud, Commerce Cloud, and Experience Cloud. Configure and customize across the Salesforce ecosystem based on your business processes." },
+      { icon: "🧠", title: "AI-Augmented Development", description: "Trained on Salesforce Einstein, GitHub Copilot, and AI debugging tools. Your developer builds Apex code and LWC components faster with AI-assisted development and testing." },
+      { icon: "⏰", title: "Your Timezone", description: "Your Salesforce developer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on sprints, deployments, and user training." },
+      { icon: "💰", title: "70–90% Savings", description: "Certified Salesforce developers from $5/hr. Replace $100–$200/hr US consultants with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "🔒", title: "Certified & Compliant", description: "Salesforce-certified developers who follow security best practices — field-level security, sharing rules, governor limits compliance, and data protection for regulated industries." },
+    ],
+    skills: [
+      "Apex", "Lightning Web Components", "Visualforce", "SOQL/SOSL",
+      "Sales Cloud", "Service Cloud", "CPQ", "Marketing Cloud",
+      "Experience Cloud", "Flows", "Process Builder", "Triggers",
+      "REST/SOAP APIs", "Platform Events", "Change Data Capture", "Batch Apex",
+      "Salesforce DX", "VS Code", "CI/CD", "Copado",
+      "Data Loader", "MuleSoft", "Jitterbit", "Informatica",
+      "AppExchange", "Managed Packages", "Security Review", "Governor Limits",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Admin configuration, Flow automation, basic Apex triggers, report/dashboard creation, data migration, user support" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Custom Apex development, LWC components, API integrations, CPQ configuration, complex automation, Salesforce DX deployment" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "Solution architecture, multi-cloud implementation, team leadership, AppExchange packages, MuleSoft integration, enterprise data strategy" },
+    ],
+    faqs: [
+      { question: "What Salesforce certifications do your developers have?", answer: "Platform Developer I and II, Administrator, App Builder, Sales Cloud Consultant, Service Cloud Consultant, and CPQ Specialist. We verify certifications during our screening process and match certified developers to your specific cloud requirements." },
+      { question: "Can your developer build Lightning Web Components?", answer: "Yes. Our developers build custom LWC components — reactive data binding, event handling, wire service, Lightning Data Service, and custom property editors. They follow Salesforce's component design patterns and accessibility standards." },
+      { question: "Do your developers handle Salesforce integrations?", answer: "Yes. REST/SOAP API callouts, Platform Events, Change Data Capture, MuleSoft, and Jitterbit. Integration with ERP systems (NetSuite, SAP), marketing platforms (HubSpot, Marketo), and custom applications." },
+      { question: "Can your developer configure CPQ?", answer: "Yes. Product bundles, pricing rules, discount schedules, approval workflows, quote templates, and contract management. Our CPQ specialists handle complex pricing models and multi-currency configurations." },
+      { question: "How do you vet Salesforce developers?", answer: "Every candidate completes a 6-stage screening: certification verification, live Apex/LWC coding challenge, architecture assessment (data model, governor limits), integration design test, English assessment, and cultural fit interview." },
+      { question: "Can your developer work within governor limits?", answer: "Yes. Our developers are trained on Salesforce governor limits — bulkified triggers, efficient SOQL queries, async processing (Batch/Queueable/Future), and platform event architecture. They write scalable code that won't hit limits." },
+    ],
+    relatedPages: [
+      { title: ".NET Developers", href: "/services/hire-dotnet-developer" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+      { title: "Data Scientists", href: "/services/hire-data-scientist" },
+      { title: "Digital Marketers", href: "/services/digital-marketer" },
+    ],
+  },
+
+  /* ─── Tier 3: Data Scientist ─── */
+
+  "hire-data-scientist": {
+    slug: "hire-data-scientist",
+    title: "Data Scientists",
+    h1: "Hire Remote",
+    h1Accent: "Data Scientists",
+    metaTitle: "Hire Remote Data Scientists from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote data scientists from India starting at $5/hr. Python, R, SQL, machine learning, analytics experts. Pre-vetted, AI-trained. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted data scientists with production experience in statistical modeling, machine learning, and business analytics. Dedicated to your team, turning data into decisions from day one.",
+    heroBullets: [
+      "Python, R, SQL, Tableau, Power BI specialists",
+      "Predictive modeling, NLP, A/B testing, analytics",
+      "70–90% cost savings vs US/EU data scientists",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-software-development.svg",
+    focusKeyword: "hire data scientist",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "45+", label: "Data Scientists Placed" },
+      { value: "95%", label: "Retention Rate" },
+      { value: "<7 Days", label: "Avg. Match Time" },
+      { value: "4.9/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "📊", title: "Business-Driven Analytics", description: "Every data scientist translates complex data into actionable business insights — customer segmentation, churn prediction, lifetime value modeling, pricing optimization, and demand forecasting." },
+      { icon: "🤖", title: "Machine Learning Models", description: "Build and deploy production ML models — classification, regression, clustering, time-series forecasting, recommendation engines, and anomaly detection using scikit-learn, XGBoost, and LightGBM." },
+      { icon: "🧠", title: "AI-Augmented Analysis", description: "Trained on AI coding assistants, automated EDA tools, and LLM-powered data analysis. Your data scientist explores datasets and builds models faster with AI-assisted workflows." },
+      { icon: "⏰", title: "Your Timezone", description: "Your data scientist works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on analysis reviews, model presentations, and stakeholder meetings." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior data scientists from $5/hr. Replace $90–$200/hr US consultants with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "📈", title: "Visualization & Storytelling", description: "Compelling data visualizations and executive dashboards in Tableau, Power BI, Metabase, and Looker. Data storytelling that drives executive decisions, not just technical reports." },
+    ],
+    skills: [
+      "Python", "R", "SQL", "Jupyter",
+      "Pandas", "NumPy", "SciPy", "Statsmodels",
+      "scikit-learn", "XGBoost", "LightGBM", "TensorFlow",
+      "Tableau", "Power BI", "Looker", "Metabase",
+      "A/B Testing", "Statistical Modeling", "Hypothesis Testing", "Bayesian Analysis",
+      "BigQuery", "Redshift", "Snowflake", "Databricks",
+      "Airflow", "dbt", "Feature Engineering", "MLflow",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Data cleaning, exploratory analysis, basic visualizations, SQL queries, dashboard creation, statistical testing, report generation" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Predictive modeling, feature engineering, A/B test design, customer segmentation, ML model development, stakeholder presentations" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "Data strategy, ML architecture, team leadership, experiment frameworks, production model deployment, executive analytics advisory" },
+    ],
+    faqs: [
+      { question: "What's the difference between a data scientist and data analyst?", answer: "Data analysts focus on reporting, dashboards, and descriptive analytics. Data scientists build predictive models, run experiments, and develop ML algorithms. Our data scientists do both — from executive dashboards to production ML models." },
+      { question: "Can your data scientist work with my existing data stack?", answer: "Yes. Our data scientists work with cloud warehouses (BigQuery, Redshift, Snowflake, Databricks), BI tools (Tableau, Power BI, Looker), and orchestration (Airflow, dbt). They integrate into your existing data infrastructure." },
+      { question: "Do your data scientists build production ML models?", answer: "Yes. Our mid-level and senior data scientists build models that deploy to production — model training pipelines, API endpoints for inference, monitoring for drift, and automated retraining. Not just notebooks." },
+      { question: "Can your data scientist design A/B tests?", answer: "Yes. Experiment design, sample size calculation, statistical significance testing, multi-armed bandits, and causal inference. They set up experimentation frameworks and analyze results for data-driven product decisions." },
+      { question: "How do you vet data scientists?", answer: "Every candidate completes a 6-stage screening: portfolio review (projects, publications), statistics and ML coding challenge, business case presentation (stakeholder communication), AI tool proficiency test, English assessment, and cultural fit interview." },
+      { question: "What industries do your data scientists serve?", answer: "Fintech (fraud detection, credit scoring), e-commerce (recommendation engines, demand forecasting), SaaS (churn prediction, LTV modeling), healthcare (clinical analytics), and marketing (attribution modeling, customer segmentation)." },
+    ],
+    relatedPages: [
+      { title: "AI/ML Engineers", href: "/services/hire-ai-ml-engineer" },
+      { title: "Python Developers", href: "/services/hire-python-developer" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+      { title: "Research & Analytics", href: "/services/hire-remote-research-analytics-staff" },
+    ],
+  },
+
+  /* ─── Tier 3: Project Manager ─── */
+
+  "hire-project-manager": {
+    slug: "hire-project-manager",
+    title: "Project Managers",
+    h1: "Hire Remote",
+    h1Accent: "Project Managers",
+    metaTitle: "Hire Remote Project Managers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote project managers from India starting at $5/hr. Agile, Scrum, Jira, cross-functional team leads. Pre-vetted, PMP-certified. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted project managers with Agile, Scrum, and PMP certifications. Dedicated to your team, keeping projects on track, on budget, and on deadline from day one.",
+    heroBullets: [
+      "Agile, Scrum, Kanban, Waterfall certified",
+      "Jira, Asana, Monday.com, ClickUp, Linear experts",
+      "70–90% cost savings vs US/EU project managers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-virtual-assistants.svg",
+    focusKeyword: "hire remote project manager",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "70+", label: "PMs Placed" },
+      { value: "94%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.9/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "📋", title: "Agile & Scrum Mastery", description: "Every project manager runs structured Agile ceremonies — sprint planning, daily standups, retrospectives, and backlog grooming. They keep distributed teams aligned, focused, and shipping on schedule." },
+      { icon: "🎯", title: "Cross-Functional Leadership", description: "Bridge engineering, design, QA, and stakeholders. Your PM translates business requirements into actionable tickets, manages dependencies, resolves blockers, and communicates progress clearly." },
+      { icon: "🧠", title: "AI-Augmented Management", description: "Trained on AI project tools — automated status reports, risk prediction, resource allocation optimization, and smart sprint planning. Your PM manages more effectively with AI-assisted workflows." },
+      { icon: "⏰", title: "Your Timezone", description: "Your project manager works your business hours — EST, GMT, AEST, or any timezone. They overlap with your team for standups, planning sessions, and stakeholder updates." },
+      { icon: "💰", title: "70–90% Savings", description: "Certified project managers from $5/hr. Replace $60–$130/hr US PMs with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "📊", title: "Data-Driven Delivery", description: "Velocity tracking, burn-down charts, cycle time analysis, and risk heat maps. Your PM uses metrics to predict bottlenecks, optimize sprint capacity, and improve delivery predictability." },
+    ],
+    skills: [
+      "Agile/Scrum", "Kanban", "SAFe", "PMP",
+      "Jira", "Asana", "Monday.com", "ClickUp",
+      "Linear", "Notion", "Confluence", "Trello",
+      "Sprint Planning", "Backlog Grooming", "Retrospectives", "Release Planning",
+      "Stakeholder Management", "Risk Management", "Resource Planning", "Budgeting",
+      "Slack", "Zoom", "Loom", "Technical Writing",
+      "Gantt Charts", "Roadmapping", "OKRs", "KPIs",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Task tracking, meeting coordination, status reporting, Jira/Asana management, basic sprint facilitation, documentation" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Scrum Master duties, sprint planning, cross-team coordination, risk management, stakeholder communication, release management" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "Program management, multiple team coordination, strategic planning, process optimization, vendor management, executive reporting" },
+    ],
+    faqs: [
+      { question: "What certifications do your project managers have?", answer: "PMP, CSM (Certified Scrum Master), PSM, SAFe Agilist, and PRINCE2. We verify certifications during screening and match PMs with relevant methodology expertise to your team's working style." },
+      { question: "Can your PM manage distributed teams?", answer: "Yes. Our PMs specialize in remote/distributed team management — async communication protocols, timezone-aware scheduling, clear documentation practices, and tools that keep everyone aligned regardless of location." },
+      { question: "What project management tools do they use?", answer: "Jira (most common), Asana, Monday.com, ClickUp, Linear, Notion, and Trello. They also work with Confluence for documentation, Slack for communication, and Loom for async video updates." },
+      { question: "Can your PM handle technical projects?", answer: "Yes. Our PMs have backgrounds in software development, data engineering, or IT infrastructure. They understand technical concepts, can triage bugs, estimate story points, and communicate effectively with engineering teams." },
+      { question: "How do you vet project managers?", answer: "Every candidate completes a 6-stage screening: certification verification, project management case study (planning, risk, stakeholder scenarios), tool proficiency assessment, communication skills test, English assessment, and cultural fit interview." },
+      { question: "Can your PM work alongside my existing team lead?", answer: "Yes. Our PMs complement existing leadership — handling process, coordination, and reporting while your tech lead focuses on architecture and code quality. Clear role boundaries established during onboarding." },
+    ],
+    relatedPages: [
+      { title: "Virtual Assistants", href: "/services/virtual-assistants" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+      { title: "DevOps Engineers", href: "/services/devops-engineers" },
+      { title: "QA & Testing", href: "/services/quality-assurance-and-testing" },
+    ],
+  },
+
+  /* ─── Tier 3: Tax Preparer ─── */
+
+  "hire-tax-preparer": {
+    slug: "hire-tax-preparer",
+    title: "Tax Preparers",
+    h1: "Hire Remote",
+    h1Accent: "Tax Preparers",
+    metaTitle: "Hire Remote Tax Preparers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote tax preparers from India starting at $5/hr. Individual, business, multi-state tax prep experts. CPA-supervised. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted tax preparation specialists experienced in US individual and business tax returns. CPA-supervised, detail-oriented, and dedicated to your firm during tax season and year-round.",
+    heroBullets: [
+      "1040, 1120, 1120-S, 1065, 990 preparation",
+      "Multi-state filing, quarterly estimates, W-2/1099",
+      "70–90% cost savings vs US tax prep staff",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-finance-accounting.svg",
+    focusKeyword: "hire remote tax preparer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "80+", label: "Tax Staff Placed" },
+      { value: "95%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.9/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "📋", title: "Full Tax Preparation", description: "Every tax preparer handles individual (1040), corporate (1120/1120-S), partnership (1065), and nonprofit (990) returns. Multi-state filing, quarterly estimates, and amended returns." },
+      { icon: "🏢", title: "CPA Firm Ready", description: "Work seamlessly under your CPA's review — organized work papers, documented assumptions, reviewer notes, and compliance with your firm's quality standards and review processes." },
+      { icon: "🧠", title: "AI-Augmented Tax Prep", description: "Trained on AI-powered tax software, OCR document extraction, and automated data validation. Your preparer processes returns faster with AI-assisted data entry and error detection." },
+      { icon: "⏰", title: "Your Timezone", description: "Your tax preparer works your business hours — EST, GMT, AEST, or any timezone. Critical during tax season when every hour of prep capacity counts." },
+      { icon: "💰", title: "70–90% Savings", description: "Experienced tax preparers from $5/hr. Scale your prep capacity during tax season without the overhead of seasonal US hires. No recruitment fees." },
+      { icon: "🔒", title: "Secure & Compliant", description: "NDA-backed, IRS Publication 4557 compliant data handling. Secure VPN access, encrypted file transfer, and controlled access to taxpayer information." },
+    ],
+    skills: [
+      "Individual Tax (1040)", "Corporate Tax (1120)", "S-Corp (1120-S)", "Partnership (1065)",
+      "Nonprofit (990)", "Multi-State Filing", "Quarterly Estimates", "Amended Returns",
+      "W-2 Processing", "1099 Processing", "K-1 Preparation", "Schedule C/E/K",
+      "Drake Tax", "UltraTax", "Lacerte", "ProSeries",
+      "CCH Axcess", "Thomson Reuters", "QuickBooks", "Xero",
+      "Tax Research", "IRS Correspondence", "Extensions", "Estimated Payments",
+      "FBAR/FinCEN", "FATCA", "Sales Tax", "Payroll Tax",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Individual 1040 preparation, data entry from source documents, W-2/1099 processing, basic Schedule C, extension filing" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Business returns (1120/1065), multi-state filing, K-1 preparation, quarterly estimates, IRS correspondence, complex individual returns" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "Complex corporate/partnership returns, tax planning support, review supervision, FBAR/FATCA compliance, team leadership during tax season" },
+    ],
+    faqs: [
+      { question: "What tax software do your preparers use?", answer: "Drake Tax, UltraTax, Lacerte, ProSeries, CCH Axcess, and Thomson Reuters GoSystem. We match preparers with expertise in your firm's specific tax software to minimize onboarding time." },
+      { question: "Can your preparer handle business tax returns?", answer: "Yes. Our mid-level and senior preparers handle corporate (1120), S-Corp (1120-S), partnership (1065), and nonprofit (990) returns. Multi-state filing, K-1 preparation, and complex entity structures." },
+      { question: "How do you handle taxpayer data security?", answer: "NDA-backed agreements, VPN-only access, encrypted file transfer, no local storage of taxpayer data, and compliance with IRS Publication 4557 for safeguarding taxpayer information. Regular security training." },
+      { question: "Can I hire seasonal tax preparers?", answer: "Yes. Many CPA firms hire our tax preparers for January–April peak season. We also offer year-round placements for firms with ongoing tax advisory, quarterly estimates, and extended deadline filing." },
+      { question: "How do you vet tax preparers?", answer: "Every candidate completes a 6-stage screening: credential verification, tax knowledge assessment (federal/state tax law), software proficiency test, accuracy/detail test with sample returns, English assessment, and cultural fit interview." },
+      { question: "Can your preparer work under my CPA's supervision?", answer: "Yes. Our preparers are trained to work under CPA review — organized work papers, documented positions, reviewer notes, and clear communication of issues. They follow your firm's review process and quality standards." },
+    ],
+    relatedPages: [
+      { title: "Accountants", href: "/services/hire-accountant" },
+      { title: "Bookkeepers", href: "/services/virtual-assistant-for-bookkeeping" },
+      { title: "QuickBooks Experts", href: "/services/hire-quickbooks-expert" },
+      { title: "Finance & Accounting", href: "/services/hire-remote-finance-accounting-staff" },
+    ],
+  },
+
+  /* ─── Tier 3: QuickBooks Expert ─── */
+
+  "hire-quickbooks-expert": {
+    slug: "hire-quickbooks-expert",
+    title: "QuickBooks Experts",
+    h1: "Hire Remote",
+    h1Accent: "QuickBooks Experts",
+    metaTitle: "Hire Remote QuickBooks Experts from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote QuickBooks experts from India starting at $5/hr. QBO, Desktop, payroll, inventory, reporting specialists. Pre-vetted. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted QuickBooks specialists with deep expertise in QuickBooks Online, Desktop, payroll, inventory management, and financial reporting. Dedicated to your team, managing your books accurately.",
+    heroBullets: [
+      "QuickBooks Online, Desktop Pro/Premier/Enterprise",
+      "Payroll, inventory, job costing, class tracking",
+      "70–90% cost savings vs US QuickBooks staff",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-finance-accounting.svg",
+    focusKeyword: "hire quickbooks expert",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "120+", label: "QB Experts Placed" },
+      { value: "94%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.9/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "📚", title: "Complete QB Mastery", description: "Every specialist handles QuickBooks Online and Desktop — chart of accounts setup, bank feeds, reconciliation, invoicing, bill pay, payroll, inventory, and financial reporting. Advanced features most bookkeepers never use." },
+      { icon: "🔧", title: "Setup & Cleanup", description: "QuickBooks file setup from scratch, migration from Desktop to QBO, chart of accounts restructuring, historical data cleanup, and fixing years of misclassified transactions." },
+      { icon: "🧠", title: "AI-Augmented Bookkeeping", description: "Trained on AI categorization tools, automated bank rule creation, and smart reconciliation. Your expert processes transactions faster with AI-assisted data entry and anomaly detection." },
+      { icon: "⏰", title: "Your Timezone", description: "Your QuickBooks expert works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on month-end close, reporting, and client support." },
+      { icon: "💰", title: "70–90% Savings", description: "Certified QuickBooks experts from $5/hr. Replace $35–$75/hr US bookkeepers with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "📊", title: "Reporting & Analysis", description: "Custom reports, P&L analysis, cash flow statements, budget vs. actual comparisons, and management dashboards. Your expert delivers the financial visibility you need to make decisions." },
+    ],
+    skills: [
+      "QuickBooks Online", "QuickBooks Desktop", "QB Enterprise", "QB Payroll",
+      "Bank Reconciliation", "Accounts Payable", "Accounts Receivable", "Invoicing",
+      "Inventory Management", "Job Costing", "Class Tracking", "Location Tracking",
+      "Payroll Processing", "1099 Preparation", "Sales Tax", "Multi-Currency",
+      "Financial Statements", "Custom Reports", "Budgeting", "Cash Flow",
+      "Bill.com", "Dext/Receipt Bank", "Hubdoc", "TSheets/QB Time",
+      "Excel", "Google Sheets", "Data Migration", "File Cleanup",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Transaction entry, bank reconciliation, invoice creation, bill entry, basic reporting, receipt organization" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Full bookkeeping cycle, payroll processing, inventory management, month-end close, custom reports, multi-entity books" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "QB file setup/migration, cleanup projects, advanced job costing, team supervision, CPA liaison, financial analysis" },
+    ],
+    faqs: [
+      { question: "Do your experts work with QuickBooks Online or Desktop?", answer: "Both. QuickBooks Online (Simple Start, Essentials, Plus, Advanced) and QuickBooks Desktop (Pro, Premier, Enterprise). They also handle migration from Desktop to QBO and vice versa." },
+      { question: "Can your expert clean up a messy QuickBooks file?", answer: "Yes. Our experts fix uncategorized transactions, reconciliation discrepancies, duplicate entries, incorrect account structures, and years of accumulated bookkeeping errors. They restructure your chart of accounts for accuracy." },
+      { question: "Do your experts handle payroll in QuickBooks?", answer: "Yes. QuickBooks Payroll setup and processing, employee onboarding, W-4/I-9 management, quarterly payroll tax filings (941), W-2/1099 preparation, and integration with third-party payroll services like Gusto and ADP." },
+      { question: "Can your expert set up QuickBooks for a new business?", answer: "Yes. Complete QB setup — company file creation, chart of accounts customization for your industry, bank/credit card connections, vendor/customer setup, product/service items, sales tax, and opening balances." },
+      { question: "How do you vet QuickBooks experts?", answer: "Every candidate completes a 6-stage screening: QuickBooks certification verification (Intuit ProAdvisor preferred), practical QB skills test, reconciliation accuracy test, reporting proficiency assessment, English assessment, and cultural fit interview." },
+      { question: "Can your expert work with my CPA or accountant?", answer: "Yes. Our experts prepare clean books for CPA review — organized trial balances, adjusted journal entries, supporting schedules, and accountant-ready QB files. Seamless collaboration with your external accounting team." },
+    ],
+    relatedPages: [
+      { title: "Accountants", href: "/services/hire-accountant" },
+      { title: "Bookkeepers", href: "/services/virtual-assistant-for-bookkeeping" },
+      { title: "Tax Preparers", href: "/services/hire-tax-preparer" },
+      { title: "Finance & Accounting", href: "/services/hire-remote-finance-accounting-staff" },
+    ],
+  },
+
+  /* ─── Tier 3: PPC Specialist ─── */
+
+  "hire-ppc-specialist": {
+    slug: "hire-ppc-specialist",
+    title: "PPC Specialists",
+    h1: "Hire Remote",
+    h1Accent: "PPC Specialists",
+    metaTitle: "Hire Remote PPC Specialists from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote PPC specialists from India starting at $5/hr. Google Ads, Meta Ads, LinkedIn Ads, conversion optimization experts. Pre-vetted. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted PPC specialists with production experience managing Google Ads, Meta Ads, LinkedIn Ads, and programmatic campaigns. Dedicated to your team, driving ROAS from day one.",
+    heroBullets: [
+      "Google Ads, Meta Ads, LinkedIn Ads, Microsoft Ads",
+      "Conversion tracking, bidding strategy, landing page optimization",
+      "70–90% cost savings vs US/EU PPC managers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-marketing.svg",
+    focusKeyword: "hire ppc specialist",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "60+", label: "PPC Specialists Placed" },
+      { value: "93%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.8/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "🎯", title: "ROI-Focused Campaigns", description: "Every PPC specialist optimizes for revenue, not vanity metrics — target ROAS bidding, conversion value optimization, customer acquisition cost targets, and full-funnel attribution modeling." },
+      { icon: "📊", title: "Multi-Platform Expertise", description: "Google Ads (Search, Display, Shopping, YouTube, Performance Max), Meta Ads (Facebook, Instagram), LinkedIn Ads, Microsoft Ads, and TikTok Ads. Unified strategy across channels." },
+      { icon: "🧠", title: "AI-Augmented Optimization", description: "Trained on AI bidding strategies, automated rules, and performance prediction tools. Your specialist leverages machine learning for bid management, audience expansion, and creative optimization." },
+      { icon: "⏰", title: "Your Timezone", description: "Your PPC specialist works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on campaign launches, budget adjustments, and performance reviews." },
+      { icon: "💰", title: "70–90% Savings", description: "Google Ads certified PPC specialists from $5/hr. Replace $50–$100/hr US PPC managers with dedicated, full-time talent at a fraction of the cost. No recruitment fees." },
+      { icon: "🧪", title: "Testing & Optimization", description: "Systematic A/B testing of ad copy, landing pages, audiences, and bidding strategies. Your specialist continuously improves performance with data-driven experimentation and statistical rigor." },
+    ],
+    skills: [
+      "Google Ads", "Meta Ads Manager", "LinkedIn Campaign Manager", "Microsoft Ads",
+      "Google Analytics 4", "Google Tag Manager", "Conversion Tracking", "Attribution",
+      "Search Campaigns", "Display Campaigns", "Shopping/PMax", "YouTube Ads",
+      "Keyword Research", "Negative Keywords", "Ad Extensions", "Quality Score",
+      "Bid Strategy", "ROAS Optimization", "Budget Management", "Audience Targeting",
+      "Remarketing", "Lookalike Audiences", "Custom Audiences", "Landing Page Optimization",
+      "Google Data Studio", "Supermetrics", "Scripts/Rules", "Competitor Analysis",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Campaign setup, keyword research, ad copywriting, bid adjustments, basic reporting, negative keyword management" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Multi-platform management, conversion tracking setup, audience strategy, A/B testing, budget optimization, client reporting" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "PPC strategy, full-funnel campaigns, attribution modeling, team leadership, large budget management ($50K+/mo), cross-channel optimization" },
+    ],
+    faqs: [
+      { question: "What PPC platforms do your specialists manage?", answer: "Google Ads (Search, Display, Shopping, YouTube, Performance Max), Meta Ads (Facebook/Instagram), LinkedIn Ads, Microsoft Ads, and TikTok Ads. Most specialists manage multi-platform campaigns with unified reporting." },
+      { question: "Do your specialists handle conversion tracking?", answer: "Yes. Google Tag Manager setup, GA4 event configuration, Meta Pixel, LinkedIn Insight Tag, server-side tracking, and custom conversion tracking. Accurate attribution is the foundation of PPC optimization." },
+      { question: "What certifications do your PPC specialists have?", answer: "Google Ads certifications (Search, Display, Shopping, Video, Measurement), Meta Blueprint, LinkedIn Marketing certifications. We verify certifications during our screening process." },
+      { question: "Can your specialist manage large ad budgets?", answer: "Yes. Our senior specialists manage monthly budgets from $10K to $500K+ across multiple platforms. They handle bid strategy optimization, budget pacing, forecast modeling, and executive reporting for high-spend accounts." },
+      { question: "How do you vet PPC specialists?", answer: "Every candidate completes a 6-stage screening: certification verification, live campaign audit exercise, strategy case study (budget allocation, audience targeting), analytics proficiency test, English assessment, and cultural fit interview." },
+      { question: "Can your specialist optimize landing pages?", answer: "Yes. Our specialists analyze and recommend landing page improvements — message match, CTA optimization, form design, page speed, and A/B testing. They work with your design team or provide wireframe recommendations for higher conversion rates." },
+    ],
+    relatedPages: [
+      { title: "SEO Specialists", href: "/services/seo-specialist" },
+      { title: "Digital Marketers", href: "/services/digital-marketer" },
+      { title: "Social Media Managers", href: "/services/social-media-manager" },
+      { title: "Email Marketing", href: "/services/hire-email-marketing-specialist" },
+    ],
+  },
 };
 
 export function getHirePageData(slug: string): HirePageData | undefined {

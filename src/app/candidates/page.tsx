@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
@@ -145,7 +146,9 @@ export default function CandidatesPage() {
           </p>
 
           {/* Interactive browser: search + filters + cards */}
-          <CandidateBrowser />
+          <Suspense fallback={<div className="text-gray-400 py-8">Loading candidates...</div>}>
+            <CandidateBrowser />
+          </Suspense>
         </div>
       </section>
 

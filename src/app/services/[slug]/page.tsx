@@ -6,6 +6,7 @@ import { getHirePageData, getAllHireSlugs } from "@/lib/hire-data";
 import { getServicePage, getAllServicePageSlugs } from "@/lib/service-data";
 import JsonLd, { serviceSchema, breadcrumbSchema } from "@/components/JsonLd";
 import { Breadcrumb, FAQ, TrustBar, Button, SectionHeading, CTASection, ScrollReveal, AnimatedCounter, SkillPills } from "@/components/ui";
+import CandidatePreview from "./CandidatePreview";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -153,6 +154,9 @@ function HirePageLayout({ data }: { data: NonNullable<ReturnType<typeof getHireP
               </div>
             </div>
           </div>
+
+          {/* Candidate Preview Strip */}
+          <CandidatePreview slug={data.slug} />
         </div>
       </section>
 
