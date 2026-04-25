@@ -516,6 +516,25 @@ export default function ContactPage() {
                 </div>
               </div>
 
+              {/* Schedule a Call */}
+              <div className="p-6 rounded-zt border-2 border-zt-accent/30" style={{ background: "linear-gradient(135deg, #f0faf2 0%, #e8f5ee 100%)" }}>
+                <h3 className="text-lg font-semibold text-zt-headings mb-3 !mt-0">
+                  Schedule a Discovery Call
+                </h3>
+                <p className="text-sm text-zt-body mb-4">
+                  Prefer to talk? Book a free call with our team to discuss your hiring needs.
+                </p>
+                <a
+                  href="https://scheduler.zoom.us/zedtreeo/intro-call"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center py-3 px-6 rounded-full border-2 text-sm font-bold no-underline transition-colors"
+                  style={{ borderColor: "#374B47", color: "#374B47" }}
+                >
+                  Schedule a Call
+                </a>
+              </div>
+
               {/* Fast Track */}
               <div className="p-6 rounded-zt bg-zt-primary text-white">
                 <h3 className="text-lg font-semibold text-white mb-3 !mt-0">

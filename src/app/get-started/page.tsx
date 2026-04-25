@@ -503,6 +503,26 @@ export default function GetStartedPage() {
               </ul>
             </div>
 
+            {/* Schedule a Call */}
+            <div className="p-6 rounded-zt border-2 border-zt-accent/30 text-center" style={{ background: "linear-gradient(135deg, #f0faf2 0%, #e8f5ee 100%)" }}>
+              <div className="text-2xl mb-2">&#128222;</div>
+              <h3 className="text-base font-semibold text-zt-headings mb-2 !mt-0">
+                Prefer to Talk?
+              </h3>
+              <p className="text-sm text-zt-body mb-4">
+                Book a free discovery call with our team. We&apos;ll walk you through the process and answer any questions.
+              </p>
+              <a
+                href="https://scheduler.zoom.us/zedtreeo/intro-call"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-2.5 rounded-full border-2 text-sm font-bold no-underline transition-colors"
+                style={{ borderColor: "#374B47", color: "#374B47" }}
+              >
+                Schedule a Call
+              </a>
+            </div>
+
             {/* Trust Signals */}
             <div className="p-6 rounded-zt border border-zt-border text-center">
               <div className="flex items-center justify-center gap-1 mb-2">

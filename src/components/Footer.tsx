@@ -120,6 +120,19 @@ export default function Footer() {
               </div>
               <div>
                 <p className="text-xs text-white/40 uppercase tracking-wider mb-1">
+                  Schedule a Call
+                </p>
+                <a
+                  href="https://scheduler.zoom.us/zedtreeo/intro-call"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-white/70 hover:text-zt-accent no-underline transition-colors font-normal"
+                >
+                  Book a Discovery Call
+                </a>
+              </div>
+              <div>
+                <p className="text-xs text-white/40 uppercase tracking-wider mb-1">
                   Hire Talent
                 </p>
                 <Link

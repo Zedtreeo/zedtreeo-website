@@ -204,6 +204,14 @@ export default function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-3">
+          <a
+            href="https://scheduler.zoom.us/zedtreeo/intro-call"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2.5 text-sm font-semibold text-white/90 hover:text-white no-underline transition-colors"
+          >
+            Schedule a Call
+          </a>
           <Link
             href="/get-started"
             className="zt-btn !py-2.5 !px-6 !text-sm no-underline"
@@ -238,12 +246,9 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
+      {mobileOpen && (
       <div
-        className={`lg:hidden fixed inset-x-0 top-[72px] bottom-0 transition-transform duration-300 ease-in-out ${
-          mobileOpen
-            ? "translate-y-0 visible"
-            : "-translate-y-full invisible"
-        }`}
+        className="lg:hidden fixed inset-x-0 top-[72px] bottom-0"
         style={{ backgroundColor: "#374B47", zIndex: 49 }}
       >
         <nav
@@ -323,7 +328,16 @@ export default function Header() {
           </Link>
 
           {/* CTA */}
-          <div className="mt-6 pt-6 border-t border-white/10">
+          <div className="mt-6 pt-6 border-t border-white/10 space-y-3">
+            <a
+              href="https://scheduler.zoom.us/zedtreeo/intro-call"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileOpen(false)}
+              className="block text-center py-3 px-6 rounded-full border-2 border-white/30 text-white text-base font-semibold no-underline hover:border-zt-accent hover:text-zt-accent transition-colors"
+            >
+              Schedule a Call
+            </a>
             <Link
               href="/get-started"
               onClick={() => setMobileOpen(false)}
@@ -334,6 +348,7 @@ export default function Header() {
           </div>
         </nav>
       </div>
+      )}
     </header>
   );
 }
