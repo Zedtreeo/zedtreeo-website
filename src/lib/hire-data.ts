@@ -949,6 +949,71 @@ export const hirePages: Record<string, HirePageData> = {
       { title: "Social Media Managers", href: "/services/social-media-manager" },
     ],
   },
+
+  /* ─── Tier 1 Expansion: Tech-Specific Hire Pages ─── */
+
+  "hire-react-developer": {
+    slug: "hire-react-developer",
+    title: "React Developers",
+    h1: "Hire Remote",
+    h1Accent: "React Developers",
+    metaTitle: "Hire Remote React Developers from $5/hr | Zedtreeo",
+    metaDescription:
+      "Hire dedicated remote React developers from India starting at $5/hr. React.js, Next.js, Redux, TypeScript experts. Pre-vetted, AI-trained. Free 5-day trial.",
+    heroSubtitle:
+      "Pre-vetted React developers with production experience in React.js, Next.js, Redux, and TypeScript. Dedicated to your team, working your timezone, shipping production code from day one.",
+    heroBullets: [
+      "React.js, Next.js, Redux, React Native specialists",
+      "AI-trained: GitHub Copilot, Cursor, Claude for code",
+      "70–90% cost savings vs US/EU React developers",
+      "5-day free trial, no commitment required",
+    ],
+    heroImage: "/images/services/service-software-development.svg",
+    focusKeyword: "hire react developer",
+    startingRate: "$5/hr",
+    placementMetrics: [
+      { value: "85+", label: "React Devs Placed" },
+      { value: "94%", label: "Retention Rate" },
+      { value: "<5 Days", label: "Avg. Match Time" },
+      { value: "4.9/5", label: "Client Rating" },
+    ],
+    benefits: [
+      { icon: "⚡", title: "Production-Ready Code", description: "Every React developer writes clean, tested, component-based code following industry best practices — hooks, context API, server components, and performance optimization." },
+      { icon: "🧠", title: "AI-Augmented Development", description: "Trained on GitHub Copilot, Cursor, and Claude Code. Your developer writes code 2–3x faster with AI-assisted development, debugging, and code review." },
+      { icon: "🚀", title: "Full React Ecosystem", description: "React.js, Next.js, Gatsby, React Native, Redux, Zustand, TanStack Query, Tailwind CSS, Material UI — whatever your stack demands." },
+      { icon: "⏰", title: "Your Timezone", description: "Your React developer works your business hours — EST, GMT, AEST, or any timezone. Real-time collaboration on PRs, standups, and sprint planning." },
+      { icon: "💰", title: "70–90% Savings", description: "Senior React developers from $5/hr. Replace $80–$150/hr US contractors with dedicated, full-time talent at a fraction of the cost." },
+      { icon: "🔒", title: "Enterprise Security", description: "ISO 27001 certified infrastructure. NDA-backed, GDPR compliant. Secure dev environments with controlled access and code audit trails." },
+    ],
+    skills: [
+      "React.js", "Next.js", "TypeScript", "JavaScript ES6+",
+      "Redux", "Zustand", "React Query", "Context API",
+      "React Native", "Tailwind CSS", "Material UI", "Styled Components",
+      "REST APIs", "GraphQL", "Apollo Client", "Axios",
+      "Jest", "React Testing Library", "Cypress", "Storybook",
+      "Webpack", "Vite", "Git", "CI/CD",
+      "GitHub Copilot", "Cursor AI", "Figma-to-Code", "Performance Optimization",
+    ],
+    pricingTiers: [
+      { tier: "Junior (1–3 yrs)", rate: "$5–$7/hr", includes: "Component development, bug fixes, UI implementation from Figma designs, unit testing" },
+      { tier: "Mid-Level (3–6 yrs)", rate: "$7–$10/hr", includes: "Feature ownership, state management architecture, API integration, code reviews, Next.js SSR/SSG" },
+      { tier: "Senior (6+ yrs)", rate: "$10–$15/hr", includes: "Frontend architecture, performance optimization, team leadership, design system creation, migration planning" },
+    ],
+    faqs: [
+      { question: "What React frameworks do your developers work with?", answer: "Our React developers are proficient in React.js, Next.js (App Router and Pages Router), Gatsby, and React Native for mobile. They work with TypeScript, Redux, Zustand, TanStack Query, and modern state management patterns." },
+      { question: "Can your React developer handle Next.js projects?", answer: "Yes. Our mid-level and senior developers have production experience with Next.js including server components, App Router, API routes, ISR, SSG, SSR, middleware, and deployment to Vercel, AWS, or self-hosted infrastructure." },
+      { question: "How do you vet React developers?", answer: "Every candidate completes a 6-stage screening: portfolio review, live React coding challenge (hooks, component design, state management), system design, AI tool proficiency test, English communication assessment, and cultural fit interview." },
+      { question: "Can I hire a React developer for a specific project?", answer: "While we specialize in dedicated full-time placements, we offer flexible arrangements. Most clients start with a 5-day free trial, then transition to monthly engagement. No long-term contracts required." },
+      { question: "Do your developers work with React Native?", answer: "Yes. Several of our React developers have cross-platform experience with React Native for iOS and Android. If you need a dedicated mobile developer, we can match you with a React Native specialist." },
+      { question: "What’s the difference between hiring through Zedtreeo vs Upwork?", answer: "Zedtreeo provides pre-vetted, dedicated developers who work exclusively for you — not freelancers juggling multiple clients. You get a managed relationship with HR support, performance tracking, backup coverage, and zero recruitment fees." },
+    ],
+    relatedPages: [
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+      { title: "DevOps Engineers", href: "/services/devops-engineers" },
+      { title: "Mobile App Developers", href: "/services/hire-mobile-app-developer" },
+      { title: "AI/ML Engineers", href: "/services/hire-ai-ml-engineer" },
+    ],
+  },
 };
 
 export function getHirePageData(slug: string): HirePageData | undefined {

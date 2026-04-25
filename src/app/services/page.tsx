@@ -309,6 +309,14 @@ const serviceCategories = [
     roles: ["CAD", "BIM", "Structural", "MEP Design"],
   },
   {
+    title: "React Developers",
+    href: "/services/hire-react-developer",
+    image: "/images/services/service-software-development.svg",
+    startingRate: "$5/hr",
+    description: "React.js, Next.js, Redux, TypeScript specialists. Component-based, AI-augmented development.",
+    roles: ["React.js", "Next.js", "Redux", "React Native"],
+  },
+  {
     title: "IT Staff & Infrastructure",
     href: "/services/hire-remote-it-staff",
     image: "/images/services/service-software-development.svg",
