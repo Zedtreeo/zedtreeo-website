@@ -10,15 +10,15 @@ const homeJsonLd = {
   url: "https://zedtreeo.com",
   numberOfItems: 9,
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Software Development", url: "https://zedtreeo.com/hire/full-stack-developer" },
-    { "@type": "ListItem", position: 2, name: "Finance & Accounting", url: "https://zedtreeo.com/hire/virtual-assistant-for-bookkeeping" },
-    { "@type": "ListItem", position: 3, name: "Digital Marketing", url: "https://zedtreeo.com/hire/digital-marketer" },
-    { "@type": "ListItem", position: 4, name: "Legal & Compliance", url: "https://zedtreeo.com/hire/virtual-legal-staff" },
-    { "@type": "ListItem", position: 5, name: "Healthcare & RCM", url: "https://zedtreeo.com/hire/revenue-cycle-management-staff" },
-    { "@type": "ListItem", position: 6, name: "Virtual Assistants", url: "https://zedtreeo.com/hire/virtual-assistants" },
-    { "@type": "ListItem", position: 7, name: "E-Commerce & Retail", url: "https://zedtreeo.com/hire/remote-employees-for-your-business" },
-    { "@type": "ListItem", position: 8, name: "Cybersecurity & IT", url: "https://zedtreeo.com/hire/cyber-security-expert" },
-    { "@type": "ListItem", position: 9, name: "Real Estate & Operations", url: "https://zedtreeo.com/hire/remote-employees-for-your-business" },
+    { "@type": "ListItem", position: 1, name: "Software Development", url: "https://zedtreeo.com/services/full-stack-developer" },
+    { "@type": "ListItem", position: 2, name: "Finance & Accounting", url: "https://zedtreeo.com/services/virtual-assistant-for-bookkeeping" },
+    { "@type": "ListItem", position: 3, name: "Digital Marketing", url: "https://zedtreeo.com/services/digital-marketer" },
+    { "@type": "ListItem", position: 4, name: "Legal & Compliance", url: "https://zedtreeo.com/services/virtual-legal-staff" },
+    { "@type": "ListItem", position: 5, name: "Healthcare & RCM", url: "https://zedtreeo.com/services/revenue-cycle-management-staff" },
+    { "@type": "ListItem", position: 6, name: "Virtual Assistants", url: "https://zedtreeo.com/services/virtual-assistants" },
+    { "@type": "ListItem", position: 7, name: "E-Commerce & Retail", url: "https://zedtreeo.com/services/remote-employees-for-your-business" },
+    { "@type": "ListItem", position: 8, name: "Cybersecurity & IT", url: "https://zedtreeo.com/services/cyber-security-expert" },
+    { "@type": "ListItem", position: 9, name: "Real Estate & Operations", url: "https://zedtreeo.com/services/remote-employees-for-your-business" },
   ],
 };
 
@@ -127,7 +127,7 @@ export default function HomePage() {
             {services.map((service) => (
               <a
                 key={service.slug}
-                href={`/hire/${service.slug}`}
+                href={`/services/${service.slug}`}
                 className="group block rounded-zt bg-white shadow-zt-card hover:shadow-zt-card-hover transition-all no-underline overflow-hidden"
               >
                 {service.image && (

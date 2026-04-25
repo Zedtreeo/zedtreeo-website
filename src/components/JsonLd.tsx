@@ -34,10 +34,24 @@ export function organizationSchema() {
       contactType: "sales",
       availableLanguage: ["English"],
     },
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "IN",
-    },
+    address: [
+      {
+        "@type": "PostalAddress",
+        streetAddress: "B-18, Malviya Industrial Area",
+        addressLocality: "Jaipur",
+        addressRegion: "Rajasthan",
+        postalCode: "302017",
+        addressCountry: "IN",
+      },
+      {
+        "@type": "PostalAddress",
+        streetAddress: "1209 N Orange Street",
+        addressLocality: "Wilmington",
+        addressRegion: "DE",
+        postalCode: "19801",
+        addressCountry: "US",
+      },
+    ],
     areaServed: {
       "@type": "GeoShape",
       name: "Global",

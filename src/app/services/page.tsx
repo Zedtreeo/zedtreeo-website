@@ -158,7 +158,7 @@ export default function ServicesPage() {
 const serviceCategories = [
   {
     title: "Software Development",
-    href: "/hire/full-stack-developer",
+    href: "/services/full-stack-developer",
     image: "/images/services/service-software-development.svg",
     startingRate: "$8/hr",
     description: "Full-stack, frontend, backend, mobile, DevOps, and QA engineers.",
@@ -166,7 +166,7 @@ const serviceCategories = [
   },
   {
     title: "Virtual Assistants",
-    href: "/hire/virtual-assistants",
+    href: "/services/virtual-assistants",
     image: "/images/services/service-virtual-assistants.svg",
     startingRate: "$5/hr",
     description: "Executive support, admin, data entry, calendar management, and research.",
@@ -174,7 +174,7 @@ const serviceCategories = [
   },
   {
     title: "Finance & Accounting",
-    href: "/hire/virtual-assistant-for-bookkeeping",
+    href: "/services/virtual-assistant-for-bookkeeping",
     image: "/images/services/service-finance-accounting.svg",
     startingRate: "$5/hr",
     description: "Bookkeepers, accountants, financial analysts, payroll, and tax specialists.",
@@ -182,7 +182,7 @@ const serviceCategories = [
   },
   {
     title: "Digital Marketing",
-    href: "/hire/digital-marketer",
+    href: "/services/digital-marketer",
     image: "/images/services/service-marketing.svg",
     startingRate: "$7/hr",
     description: "SEO, PPC, content marketing, social media, and email marketing specialists.",
@@ -190,7 +190,7 @@ const serviceCategories = [
   },
   {
     title: "Legal & Compliance",
-    href: "/hire/virtual-legal-staff",
+    href: "/services/virtual-legal-staff",
     image: "/images/services/service-legal.svg",
     startingRate: "$6/hr",
     description: "Paralegals, legal researchers, contract managers, and compliance staff.",
@@ -198,7 +198,7 @@ const serviceCategories = [
   },
   {
     title: "Healthcare & RCM",
-    href: "/hire/revenue-cycle-management-staff",
+    href: "/services/revenue-cycle-management-staff",
     image: "/images/services/service-healthcare.svg",
     startingRate: "$5/hr",
     description: "Medical coders, billers, RCM specialists, and healthcare VAs.",
@@ -206,7 +206,7 @@ const serviceCategories = [
   },
   {
     title: "Cybersecurity & IT",
-    href: "/hire/cyber-security-expert",
+    href: "/services/cyber-security-expert",
     image: "/images/services/service-logistics-operations.svg",
     startingRate: "$5/hr",
     description: "Security analysts, pen testers, SOC operators, and IT support staff.",
@@ -214,7 +214,7 @@ const serviceCategories = [
   },
   {
     title: "DevOps & Cloud",
-    href: "/hire/devops-engineers",
+    href: "/services/devops-engineers",
     image: "/images/services/service-software-development.svg",
     startingRate: "$9/hr",
     description: "AWS, Azure, GCP engineers. CI/CD, Kubernetes, infrastructure automation.",
@@ -222,7 +222,7 @@ const serviceCategories = [
   },
   {
     title: "Customer Support",
-    href: "/hire/customer-support-representative",
+    href: "/services/customer-support-representative",
     image: "/images/services/service-virtual-assistants.svg",
     startingRate: "$5/hr",
     description: "Phone, email, chat, and social media support agents.",
@@ -230,7 +230,7 @@ const serviceCategories = [
   },
   {
     title: "Graphic Design",
-    href: "/hire/graphic-designer",
+    href: "/services/graphic-designer",
     image: "/images/services/service-ecommerce-retail.svg",
     startingRate: "$6/hr",
     description: "Brand identity, UI/UX, social media creatives, and marketing collateral.",
@@ -238,7 +238,7 @@ const serviceCategories = [
   },
   {
     title: "Content Writing",
-    href: "/hire/content-writer",
+    href: "/services/content-writer",
     image: "/images/services/service-marketing.svg",
     startingRate: "$5/hr",
     description: "SEO blogs, case studies, whitepapers, web copy, and email campaigns.",
@@ -246,7 +246,7 @@ const serviceCategories = [
   },
   {
     title: "SEO Specialists",
-    href: "/hire/seo-specialist",
+    href: "/services/seo-specialist",
     image: "/images/services/service-marketing.svg",
     startingRate: "$6/hr",
     description: "Technical SEO, link building, content strategy, and analytics.",
@@ -254,7 +254,7 @@ const serviceCategories = [
   },
   {
     title: "Social Media Management",
-    href: "/hire/social-media-manager",
+    href: "/services/social-media-manager",
     image: "/images/services/service-marketing.svg",
     startingRate: "$6/hr",
     description: "Strategy, content creation, community management, and paid social.",
@@ -262,7 +262,7 @@ const serviceCategories = [
   },
   {
     title: "Data Entry",
-    href: "/hire/data-entry-assistant",
+    href: "/services/data-entry-assistant",
     image: "/images/services/service-virtual-assistants.svg",
     startingRate: "$5/hr",
     description: "CRM updates, spreadsheet management, form processing, and data cleaning.",
@@ -270,7 +270,7 @@ const serviceCategories = [
   },
   {
     title: "General Remote Employees",
-    href: "/hire/remote-employees-for-your-business",
+    href: "/services/remote-employees-for-your-business",
     image: "/images/services/service-ecommerce-retail.svg",
     startingRate: "$5/hr",
     description: "Don't see your role? We hire across 50+ categories for any function.",

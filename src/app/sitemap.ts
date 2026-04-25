@@ -63,7 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Hire landing pages (money pages — high priority)
+  // Service landing pages (money pages — high priority)
   const hirePages = [
     "full-stack-developer",
     "virtual-assistants",
@@ -81,7 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "content-writer",
     "seo-specialist",
   ].map((slug) => ({
-    url: `${baseUrl}/hire/${slug}`,
+    url: `${baseUrl}/services/${slug}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.9,

@@ -77,10 +77,10 @@ export const hirePages: Record<string, HirePageData> = {
       { question: "What timezone will my developer work in?", answer: "Your developer works your business hours. We match timezone preferences \u2014 EST, GMT, AEST, or any timezone you need \u2014 ensuring real-time collaboration and overlap with your team." },
     ],
     relatedPages: [
-      { title: "DevOps Engineers", href: "/hire/devops-engineers" },
-      { title: "Cybersecurity Experts", href: "/hire/cyber-security-expert" },
-      { title: "Digital Marketers", href: "/hire/digital-marketer" },
-      { title: "Virtual Assistants", href: "/hire/virtual-assistants" },
+      { title: "DevOps Engineers", href: "/services/devops-engineers" },
+      { title: "Cybersecurity Experts", href: "/services/cyber-security-expert" },
+      { title: "Digital Marketers", href: "/services/digital-marketer" },
+      { title: "Virtual Assistants", href: "/services/virtual-assistants" },
     ],
   },
 
@@ -138,10 +138,10 @@ export const hirePages: Record<string, HirePageData> = {
       { question: "Will my VA work in my timezone?", answer: "Yes. We match VAs to your timezone \u2014 whether that\u2019s EST, GMT, AEST, or any other. Your assistant is available during your business hours for real-time collaboration." },
     ],
     relatedPages: [
-      { title: "Bookkeeping Assistants", href: "/hire/virtual-assistant-for-bookkeeping" },
-      { title: "Digital Marketers", href: "/hire/digital-marketer" },
-      { title: "Full-Stack Developers", href: "/hire/full-stack-developer" },
-      { title: "Legal Staff", href: "/hire/virtual-legal-staff" },
+      { title: "Bookkeeping Assistants", href: "/services/virtual-assistant-for-bookkeeping" },
+      { title: "Digital Marketers", href: "/services/digital-marketer" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+      { title: "Legal Staff", href: "/services/virtual-legal-staff" },
     ],
   },
 
@@ -199,10 +199,10 @@ export const hirePages: Record<string, HirePageData> = {
       { question: "How quickly can I start?", answer: "We shortlist candidates within 48 hours. After your interview, onboarding takes 3\u20135 days. The free 5-day trial lets you evaluate performance before committing." },
     ],
     relatedPages: [
-      { title: "Full-Stack Developers", href: "/hire/full-stack-developer" },
-      { title: "Virtual Assistants", href: "/hire/virtual-assistants" },
-      { title: "Bookkeeping Staff", href: "/hire/virtual-assistant-for-bookkeeping" },
-      { title: "Legal Staff", href: "/hire/virtual-legal-staff" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+      { title: "Virtual Assistants", href: "/services/virtual-assistants" },
+      { title: "Bookkeeping Staff", href: "/services/virtual-assistant-for-bookkeeping" },
+      { title: "Legal Staff", href: "/services/virtual-legal-staff" },
     ],
   },
 
@@ -261,10 +261,10 @@ export const hirePages: Record<string, HirePageData> = {
       { question: "How fast can you onboard a bookkeeper?", answer: "We shortlist candidates within 48 hours. After your interview, onboarding \u2014 including software access setup \u2014 typically completes within 5\u20137 days." },
     ],
     relatedPages: [
-      { title: "Virtual Assistants", href: "/hire/virtual-assistants" },
-      { title: "Legal Staff", href: "/hire/virtual-legal-staff" },
-      { title: "Healthcare & RCM", href: "/hire/revenue-cycle-management-staff" },
-      { title: "Full-Stack Developers", href: "/hire/full-stack-developer" },
+      { title: "Virtual Assistants", href: "/services/virtual-assistants" },
+      { title: "Legal Staff", href: "/services/virtual-legal-staff" },
+      { title: "Healthcare & RCM", href: "/services/revenue-cycle-management-staff" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
     ],
   },
 
@@ -323,10 +323,10 @@ export const hirePages: Record<string, HirePageData> = {
       { question: "What\u2019s the typical turnaround for hiring?", answer: "We shortlist qualified candidates within 48 hours. After interviews, onboarding (including software access and NDA signing) completes within 5\u20137 days." },
     ],
     relatedPages: [
-      { title: "Bookkeeping Staff", href: "/hire/virtual-assistant-for-bookkeeping" },
-      { title: "Virtual Assistants", href: "/hire/virtual-assistants" },
-      { title: "Healthcare & RCM", href: "/hire/revenue-cycle-management-staff" },
-      { title: "Full-Stack Developers", href: "/hire/full-stack-developer" },
+      { title: "Bookkeeping Staff", href: "/services/virtual-assistant-for-bookkeeping" },
+      { title: "Virtual Assistants", href: "/services/virtual-assistants" },
+      { title: "Healthcare & RCM", href: "/services/revenue-cycle-management-staff" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
     ],
   },
 
@@ -385,10 +385,10 @@ export const hirePages: Record<string, HirePageData> = {
       { question: "Can your team handle end-to-end RCM?", answer: "Absolutely. We provide staff for every stage: eligibility verification, prior auth, charge capture, coding, claims submission, payment posting, denial management, AR follow-up, and patient collections." },
     ],
     relatedPages: [
-      { title: "Virtual Assistants", href: "/hire/virtual-assistants" },
-      { title: "Bookkeeping Staff", href: "/hire/virtual-assistant-for-bookkeeping" },
-      { title: "Legal Staff", href: "/hire/virtual-legal-staff" },
-      { title: "Data Entry Assistants", href: "/hire/data-entry-assistant" },
+      { title: "Virtual Assistants", href: "/services/virtual-assistants" },
+      { title: "Bookkeeping Staff", href: "/services/virtual-assistant-for-bookkeeping" },
+      { title: "Legal Staff", href: "/services/virtual-legal-staff" },
+      { title: "Data Entry Assistants", href: "/services/data-entry-assistant" },
     ],
   },
 
@@ -447,10 +447,10 @@ export const hirePages: Record<string, HirePageData> = {
       { question: "How do you handle sensitive access?", answer: "All security staff sign comprehensive NDAs and undergo background checks. We use encrypted connections, privileged access management, and audit logging for all activities on your infrastructure." },
     ],
     relatedPages: [
-      { title: "DevOps Engineers", href: "/hire/devops-engineers" },
-      { title: "Full-Stack Developers", href: "/hire/full-stack-developer" },
-      { title: "Healthcare & RCM", href: "/hire/revenue-cycle-management-staff" },
-      { title: "Legal Staff", href: "/hire/virtual-legal-staff" },
+      { title: "DevOps Engineers", href: "/services/devops-engineers" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+      { title: "Healthcare & RCM", href: "/services/revenue-cycle-management-staff" },
+      { title: "Legal Staff", href: "/services/virtual-legal-staff" },
     ],
   },
 
@@ -509,10 +509,10 @@ export const hirePages: Record<string, HirePageData> = {
       { question: "What\u2019s the onboarding timeline?", answer: "We shortlist candidates within 48 hours. After your technical interview, onboarding including infrastructure access setup typically completes within 7 days. The free 5-day trial begins after onboarding." },
     ],
     relatedPages: [
-      { title: "Full-Stack Developers", href: "/hire/full-stack-developer" },
-      { title: "Cybersecurity Experts", href: "/hire/cyber-security-expert" },
-      { title: "Digital Marketers", href: "/hire/digital-marketer" },
-      { title: "Virtual Assistants", href: "/hire/virtual-assistants" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+      { title: "Cybersecurity Experts", href: "/services/cyber-security-expert" },
+      { title: "Digital Marketers", href: "/services/digital-marketer" },
+      { title: "Virtual Assistants", href: "/services/virtual-assistants" },
     ],
   },
 
@@ -571,10 +571,10 @@ export const hirePages: Record<string, HirePageData> = {
       { question: "Are there long-term contracts?", answer: "No. We offer flexible month-to-month arrangements. Scale up or down as your business needs change. There are no lock-in periods or early termination fees." },
     ],
     relatedPages: [
-      { title: "Full-Stack Developers", href: "/hire/full-stack-developer" },
-      { title: "Virtual Assistants", href: "/hire/virtual-assistants" },
-      { title: "Digital Marketers", href: "/hire/digital-marketer" },
-      { title: "Bookkeeping Staff", href: "/hire/virtual-assistant-for-bookkeeping" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+      { title: "Virtual Assistants", href: "/services/virtual-assistants" },
+      { title: "Digital Marketers", href: "/services/digital-marketer" },
+      { title: "Bookkeeping Staff", href: "/services/virtual-assistant-for-bookkeeping" },
     ],
   },
 
@@ -633,10 +633,10 @@ export const hirePages: Record<string, HirePageData> = {
       { question: "Can they do data cleaning and validation?", answer: "Yes. Beyond entry, our staff handle deduplication, format standardization, missing field identification, and cross-referencing. Clean data is a standard part of the service." },
     ],
     relatedPages: [
-      { title: "Virtual Assistants", href: "/hire/virtual-assistants" },
-      { title: "Bookkeeping Staff", href: "/hire/virtual-assistant-for-bookkeeping" },
-      { title: "Customer Support", href: "/hire/customer-support-representative" },
-      { title: "Content Writers", href: "/hire/content-writer" },
+      { title: "Virtual Assistants", href: "/services/virtual-assistants" },
+      { title: "Bookkeeping Staff", href: "/services/virtual-assistant-for-bookkeeping" },
+      { title: "Customer Support", href: "/services/customer-support-representative" },
+      { title: "Content Writers", href: "/services/content-writer" },
     ],
   },
 
@@ -695,10 +695,10 @@ export const hirePages: Record<string, HirePageData> = {
       { question: "How do you evaluate design quality?", answer: "Every designer\u2019s portfolio is reviewed by our creative team. They complete practical design challenges relevant to your industry before being shortlisted. The 5-day trial lets you evaluate their work firsthand." },
     ],
     relatedPages: [
-      { title: "Digital Marketers", href: "/hire/digital-marketer" },
-      { title: "Content Writers", href: "/hire/content-writer" },
-      { title: "Social Media Managers", href: "/hire/social-media-manager" },
-      { title: "Full-Stack Developers", href: "/hire/full-stack-developer" },
+      { title: "Digital Marketers", href: "/services/digital-marketer" },
+      { title: "Content Writers", href: "/services/content-writer" },
+      { title: "Social Media Managers", href: "/services/social-media-manager" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
     ],
   },
 
@@ -757,10 +757,10 @@ export const hirePages: Record<string, HirePageData> = {
       { question: "How fast is onboarding?", answer: "We shortlist agents within 48 hours. After your interview, onboarding (including product training and system access) typically takes 5\u20137 days. The free trial begins once they\u2019re fully trained." },
     ],
     relatedPages: [
-      { title: "Virtual Assistants", href: "/hire/virtual-assistants" },
-      { title: "Data Entry Assistants", href: "/hire/data-entry-assistant" },
-      { title: "Social Media Managers", href: "/hire/social-media-manager" },
-      { title: "Digital Marketers", href: "/hire/digital-marketer" },
+      { title: "Virtual Assistants", href: "/services/virtual-assistants" },
+      { title: "Data Entry Assistants", href: "/services/data-entry-assistant" },
+      { title: "Social Media Managers", href: "/services/social-media-manager" },
+      { title: "Digital Marketers", href: "/services/digital-marketer" },
     ],
   },
 
@@ -819,10 +819,10 @@ export const hirePages: Record<string, HirePageData> = {
       { question: "Can one person handle all my social media?", answer: "For most businesses, a mid-level manager can handle 3\u20134 platforms with daily posting. For brands with heavy content needs or 5+ active platforms, we recommend a small team with complementary skills." },
     ],
     relatedPages: [
-      { title: "Digital Marketers", href: "/hire/digital-marketer" },
-      { title: "Graphic Designers", href: "/hire/graphic-designer" },
-      { title: "Content Writers", href: "/hire/content-writer" },
-      { title: "Virtual Assistants", href: "/hire/virtual-assistants" },
+      { title: "Digital Marketers", href: "/services/digital-marketer" },
+      { title: "Graphic Designers", href: "/services/graphic-designer" },
+      { title: "Content Writers", href: "/services/content-writer" },
+      { title: "Virtual Assistants", href: "/services/virtual-assistants" },
     ],
   },
 
@@ -881,10 +881,10 @@ export const hirePages: Record<string, HirePageData> = {
       { question: "Do you have editors for quality control?", answer: "Yes. We offer senior writers who can serve as editors, or you can hire a dedicated editor to QA all content before publishing. Every piece goes through Grammarly and plagiarism checks as standard." },
     ],
     relatedPages: [
-      { title: "SEO Specialists", href: "/hire/seo-specialist" },
-      { title: "Digital Marketers", href: "/hire/digital-marketer" },
-      { title: "Social Media Managers", href: "/hire/social-media-manager" },
-      { title: "Graphic Designers", href: "/hire/graphic-designer" },
+      { title: "SEO Specialists", href: "/services/seo-specialist" },
+      { title: "Digital Marketers", href: "/services/digital-marketer" },
+      { title: "Social Media Managers", href: "/services/social-media-manager" },
+      { title: "Graphic Designers", href: "/services/graphic-designer" },
     ],
   },
 
@@ -943,10 +943,10 @@ export const hirePages: Record<string, HirePageData> = {
       { question: "Can they work with my content team?", answer: "Absolutely. Most clients pair an SEO specialist with content writers for the best results. The specialist handles strategy, keyword mapping, and optimization briefs while writers produce the content." },
     ],
     relatedPages: [
-      { title: "Content Writers", href: "/hire/content-writer" },
-      { title: "Digital Marketers", href: "/hire/digital-marketer" },
-      { title: "Full-Stack Developers", href: "/hire/full-stack-developer" },
-      { title: "Social Media Managers", href: "/hire/social-media-manager" },
+      { title: "Content Writers", href: "/services/content-writer" },
+      { title: "Digital Marketers", href: "/services/digital-marketer" },
+      { title: "Full-Stack Developers", href: "/services/full-stack-developer" },
+      { title: "Social Media Managers", href: "/services/social-media-manager" },
     ],
   },
 };

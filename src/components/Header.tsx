@@ -6,14 +6,14 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const serviceLinks = [
-  { label: "Software Development", href: "/hire/full-stack-developer" },
-  { label: "Finance & Accounting", href: "/hire/virtual-assistant-for-bookkeeping" },
-  { label: "Digital Marketing", href: "/hire/digital-marketer" },
-  { label: "Legal & Compliance", href: "/hire/virtual-legal-staff" },
-  { label: "Healthcare & RCM", href: "/hire/revenue-cycle-management-staff" },
-  { label: "Virtual Assistants", href: "/hire/virtual-assistants" },
-  { label: "Cybersecurity & IT", href: "/hire/cyber-security-expert" },
-  { label: "DevOps & Cloud", href: "/hire/devops-engineers" },
+  { label: "Software Development", href: "/services/full-stack-developer" },
+  { label: "Finance & Accounting", href: "/services/virtual-assistant-for-bookkeeping" },
+  { label: "Digital Marketing", href: "/services/digital-marketer" },
+  { label: "Legal & Compliance", href: "/services/virtual-legal-staff" },
+  { label: "Healthcare & RCM", href: "/services/revenue-cycle-management-staff" },
+  { label: "Virtual Assistants", href: "/services/virtual-assistants" },
+  { label: "Cybersecurity & IT", href: "/services/cyber-security-expert" },
+  { label: "DevOps & Cloud", href: "/services/devops-engineers" },
 ];
 
 const companyLinks = [
@@ -34,7 +34,7 @@ export default function Header() {
   const [mobileCompanyOpen, setMobileCompanyOpen] = useState(false);
 
   const isServicesActive =
-    pathname.startsWith("/services") || pathname.startsWith("/hire");
+    pathname.startsWith("/services");
   const isCompanyActive =
     pathname.startsWith("/about") ||
     pathname.startsWith("/how-it-works") ||
