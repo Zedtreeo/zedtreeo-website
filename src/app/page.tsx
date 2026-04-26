@@ -101,7 +101,7 @@ export default function HomePage() {
       {/* Trust Bar */}
       <section className="bg-zt-near-white py-8 px-6">
         <div className="max-w-zt-content mx-auto flex flex-wrap items-center justify-center gap-8 text-zt-body text-sm">
-          <span className="font-semibold">Trusted by 200+ companies globally</span>
+          <span className="font-semibold">Trusted by 500+ companies globally</span>
           <span>•</span>
           <span>ISO 27001 Certified</span>
           <span>•</span>
@@ -302,7 +302,7 @@ export default function HomePage() {
             <p>
               That&apos;s why we offer a <strong className="text-white">free 5-day trial</strong> on every
               placement. We have skin in the game. If the hire doesn&apos;t work out, we replace them at
-              no cost. Over <strong className="text-white">500+ placements</strong> across 200+ companies
+              no cost. Over <strong className="text-white">500+ placements</strong> across 500+ companies
               globally, our retention rate sits above 93%.
             </p>
             <p className="text-zt-accent font-medium">
@@ -316,7 +316,7 @@ export default function HomePage() {
               <div className="text-xs text-white/60 uppercase tracking-wider mt-1">Professionals Placed</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-zt-accent">200+</div>
+              <div className="text-2xl font-bold text-zt-accent">500+</div>
               <div className="text-xs text-white/60 uppercase tracking-wider mt-1">Companies Served</div>
             </div>
             <div className="text-center">

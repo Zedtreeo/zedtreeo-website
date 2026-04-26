@@ -62,7 +62,7 @@ export const authors: Record<string, Author> = {
     bio: "The Zedtreeo editorial team brings deep operational experience across remote staffing, outsourcing, and distributed workforce management. Our content is informed by real placement data from 500+ engagements and vetted by industry practitioners.",
     credentials: [
       "500+ remote professionals placed",
-      "200+ companies served globally",
+      "500+ companies served globally",
       "Operations across 50+ role categories",
     ],
   },

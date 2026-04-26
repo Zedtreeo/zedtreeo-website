@@ -41,7 +41,7 @@ export default function TrustBar({ variant = "light", className = "" }: TrustBar
 
         {/* Companies served */}
         <span className={`text-sm font-semibold ${text}`}>
-          Trusted by <span className={accentText}>200+</span> companies globally
+          Trusted by <span className={accentText}>500+</span> companies globally
         </span>
 
         {/* Divider */}

@@ -80,7 +80,7 @@ const processSteps = [
 const pricingStats = [
   { value: "70–90%", label: "Cost Savings" },
   { value: "<7 Days", label: "Time to Hire" },
-  { value: "200+", label: "Companies Served" },
+  { value: "500+", label: "Companies Served" },
   { value: "4.8/5", label: "Trustpilot Rating" },
 ];
 
