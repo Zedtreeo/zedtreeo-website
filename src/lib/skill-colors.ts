@@ -61,3 +61,92 @@ export function getSkillPillStyle(skill: string): React.CSSProperties {
     color: color.text,
   };
 }
+
+/* ─── Category-based card tints (for dark hero backgrounds) ─── */
+
+export type CardTint = {
+  bg: string;       // rgba card background
+  border: string;   // rgba border
+  avatar: string;   // rgba avatar circle
+  accent: string;   // accent color (initials, rate)
+  role: string;     // muted role text
+};
+
+import type { CandidateCategory } from "./candidates-data";
+
+const categoryCardTints: Record<CandidateCategory, CardTint> = {
+  "software-development": {
+    bg: "rgba(123,173,212,0.15)",
+    border: "rgba(123,173,212,0.3)",
+    avatar: "rgba(123,173,212,0.3)",
+    accent: "#7badd4",
+    role: "#9dbfda",
+  },
+  "virtual-assistant": {
+    bg: "rgba(143,210,153,0.15)",
+    border: "rgba(143,210,153,0.3)",
+    avatar: "rgba(143,210,153,0.3)",
+    accent: "#8FD299",
+    role: "#a8d5b0",
+  },
+  "finance-accounting": {
+    bg: "rgba(107,181,170,0.15)",
+    border: "rgba(107,181,170,0.3)",
+    avatar: "rgba(107,181,170,0.3)",
+    accent: "#6bb5aa",
+    role: "#8ec9c0",
+  },
+  "digital-marketing": {
+    bg: "rgba(169,142,201,0.15)",
+    border: "rgba(169,142,201,0.3)",
+    avatar: "rgba(169,142,201,0.3)",
+    accent: "#a98ec9",
+    role: "#baa8d0",
+  },
+  "legal-compliance": {
+    bg: "rgba(212,169,90,0.15)",
+    border: "rgba(212,169,90,0.3)",
+    avatar: "rgba(212,169,90,0.3)",
+    accent: "#d4a95a",
+    role: "#d4bd8a",
+  },
+  "healthcare-rcm": {
+    bg: "rgba(212,138,149,0.15)",
+    border: "rgba(212,138,149,0.3)",
+    avatar: "rgba(212,138,149,0.3)",
+    accent: "#d48a95",
+    role: "#d4a8af",
+  },
+  "customer-support": {
+    bg: "rgba(143,210,153,0.15)",
+    border: "rgba(143,210,153,0.3)",
+    avatar: "rgba(143,210,153,0.3)",
+    accent: "#8FD299",
+    role: "#a8d5b0",
+  },
+  cybersecurity: {
+    bg: "rgba(123,173,212,0.15)",
+    border: "rgba(123,173,212,0.3)",
+    avatar: "rgba(123,173,212,0.3)",
+    accent: "#7badd4",
+    role: "#9dbfda",
+  },
+  design: {
+    bg: "rgba(169,142,201,0.15)",
+    border: "rgba(169,142,201,0.3)",
+    avatar: "rgba(169,142,201,0.3)",
+    accent: "#a98ec9",
+    role: "#baa8d0",
+  },
+  "content-seo": {
+    bg: "rgba(212,169,90,0.15)",
+    border: "rgba(212,169,90,0.3)",
+    avatar: "rgba(212,169,90,0.3)",
+    accent: "#d4a95a",
+    role: "#d4bd8a",
+  },
+};
+
+export function getCategoryCardTint(category: CandidateCategory): CardTint {
+  return categoryCardTints[category];
+}

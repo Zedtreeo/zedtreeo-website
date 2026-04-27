@@ -1,11 +1,12 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useEffect, useRef } from "react";
 import Link from "next/link";
 import {
   candidates,
   type CandidateCategory,
 } from "@/lib/candidates-data";
+import { getCategoryCardTint } from "@/lib/skill-colors";
 
 /* Map hire page slugs → candidate category for relevance matching */
 const slugToCategoryMap: Record<string, CandidateCategory> = {
@@ -69,6 +70,13 @@ const slugToCategoryMap: Record<string, CandidateCategory> = {
   "remote-employees-for-your-business": "virtual-assistant",
   /* Probate / legal variants */
   "hire-remote-probate-specialists": "legal-compliance",
+  /* Service-data HTML pages (category-level landing pages) */
+  "hire-remote-administrative-and-assistant": "virtual-assistant",
+  "hire-remote-customer-support": "customer-support",
+  "hire-remote-designers": "design",
+  "hire-remote-digital-marketing-staff": "digital-marketing",
+  "hire-remote-finance-accounting-staff": "finance-accounting",
+  "hire-remote-legal-staff": "legal-compliance",
 };
 
 const availabilityColors: Record<string, string> = {
@@ -83,8 +91,17 @@ const availabilityLabels: Record<string, string> = {
   "2-weeks": "2 Weeks",
 };
 
+/** Parse "$9/hr" → 9 → monthly = 9 × 160 */
+function getMonthlyRate(rate: string): string {
+  const match = rate.match(/\$(\d+)/);
+  if (!match) return "";
+  const hourly = parseInt(match[1], 10);
+  return `$${(hourly * 160).toLocaleString()}/mo`;
+}
+
 export default function CandidatePreview({ slug }: { slug: string }) {
   const category = slugToCategoryMap[slug];
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const previewCandidates = useMemo(() => {
     if (!category) return [];
@@ -98,37 +115,71 @@ export default function CandidatePreview({ slug }: { slug: string }) {
       .slice(0, 4);
   }, [category]);
 
+  /* Staggered slide-in animation on scroll */
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const cards = container.querySelectorAll<HTMLElement>("[data-candidate-card]");
+    cards.forEach((card) => {
+      card.style.opacity = "0";
+      card.style.transform = "translateY(16px)";
+    });
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          cards.forEach((card, i) => {
+            card.style.transition = `opacity 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) ${i * 120}ms, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) ${i * 120}ms`;
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+          });
+          observer.unobserve(container);
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, [previewCandidates]);
+
   if (previewCandidates.length === 0) return null;
+
+  const tint = getCategoryCardTint(category!);
 
   return (
     <div className="mt-10 pt-8 border-t border-white/15">
-      <div className="flex items-center justify-between mb-4">
-        <div>
-          <p className="text-xs text-zt-accent font-semibold uppercase tracking-wider mb-1">
-            Available Candidates
-          </p>
-          <p className="text-sm text-gray-400 mb-0">
-            Pre-vetted professionals ready to start
-          </p>
-        </div>
-        <Link
-          href={`/candidates?category=${category}`}
-          className="text-xs text-zt-accent font-semibold hover:text-white transition-colors no-underline hidden sm:block"
-        >
-          View all candidates &rarr;
-        </Link>
+      <div className="text-center mb-5">
+        <p className="text-xs text-zt-accent font-semibold uppercase tracking-wider mb-1">
+          Available Candidates
+        </p>
+        <p className="text-sm text-gray-400 mb-0">
+          Pre-vetted professionals ready to start
+        </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+      <div ref={containerRef} className="flex flex-wrap justify-center gap-3">
         {previewCandidates.map((candidate) => (
           <Link
             key={candidate.id}
+            data-candidate-card
             href={`/candidates?category=${category}`}
-            className="group flex items-center gap-3 p-3 rounded-lg bg-white/8 hover:bg-white/14 border border-white/10 hover:border-zt-accent/40 transition-all no-underline"
+            className="group flex items-center gap-3 p-3.5 rounded-lg transition-all no-underline w-full sm:w-[calc(50%-6px)] lg:w-[calc(25%-9px)] hover:-translate-y-0.5"
+            style={{
+              backgroundColor: tint.bg,
+              borderWidth: "1px",
+              borderStyle: "solid",
+              borderColor: tint.border,
+              backdropFilter: "blur(8px)",
+            }}
           >
             {/* Avatar */}
-            <div className="w-10 h-10 rounded-full bg-zt-accent/20 flex items-center justify-center shrink-0">
-              <span className="text-zt-accent font-bold text-xs">
+            <div
+              className="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
+              style={{ backgroundColor: tint.avatar }}
+            >
+              <span className="font-bold text-xs" style={{ color: tint.accent }}>
                 {candidate.name
                   .split(" ")
                   .map((n) => n[0])
@@ -140,12 +191,15 @@ export default function CandidatePreview({ slug }: { slug: string }) {
               <p className="text-sm font-semibold text-white truncate mb-0">
                 {candidate.name}
               </p>
-              <p className="text-xs text-gray-400 truncate mb-0">
+              <p className="text-xs truncate mb-0" style={{ color: tint.role }}>
                 {candidate.role}
               </p>
-              <div className="flex items-center gap-2 mt-1">
-                <span className="text-xs text-zt-accent font-semibold">
+              <div className="flex items-center gap-2 mt-1 flex-wrap">
+                <span className="text-xs font-semibold" style={{ color: tint.accent }}>
                   {candidate.rate}
+                  <span className="font-normal" style={{ color: tint.role }}>
+                    {" "}&middot; {getMonthlyRate(candidate.rate)}
+                  </span>
                 </span>
                 <span
                   className={`text-[10px] px-1.5 py-0.5 rounded-full ${
@@ -160,7 +214,7 @@ export default function CandidatePreview({ slug }: { slug: string }) {
         ))}
       </div>
 
-      <div className="mt-4 sm:hidden">
+      <div className="text-center mt-4">
         <Link
           href={`/candidates?category=${category}`}
           className="text-xs text-zt-accent font-semibold hover:text-white transition-colors no-underline"
