@@ -3,6 +3,7 @@ import { Geologica } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import CookieConsent from "@/components/CookieConsent";
 import ScrollProgress from "@/components/ScrollProgress";
 import JsonLd, { organizationSchema, websiteSchema } from "@/components/JsonLd";
 import "./globals.css";
@@ -111,6 +112,7 @@ export default function RootLayout({
         <div id="main-content" className="pt-[72px] flex-1">{children}</div>
         <Footer />
         <ChatWidget />
+        <CookieConsent />
       </body>
     </html>
   );
