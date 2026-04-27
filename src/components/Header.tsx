@@ -88,7 +88,7 @@ export default function Header() {
           : "bg-zt-primary/95 backdrop-blur-sm"
       }`}
     >
-      <div className="max-w-zt-content mx-auto px-6 flex items-center justify-between h-[72px]">
+      <div className="max-w-zt-content mx-auto px-6 flex items-center h-[72px]">
         {/* Logo */}
         <Link href="/" className="no-underline shrink-0 flex items-center">
           <Image
@@ -102,7 +102,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-1">
+        <nav aria-label="Main navigation" className="hidden lg:flex flex-1 items-center justify-center gap-1">
           {/* Services Dropdown */}
           <div
             className="relative"
@@ -112,7 +112,7 @@ export default function Header() {
             <button
               aria-expanded={servicesOpen}
               aria-haspopup="true"
-              className={`px-4 py-2 text-sm font-medium transition-colors flex items-center gap-1 bg-transparent border-none cursor-pointer ${
+              className={`px-4 py-2 text-sm font-semibold transition-colors flex items-center gap-1 bg-transparent border-none cursor-pointer ${
                 isServicesActive
                   ? "text-white border-b-2 border-zt-accent"
                   : "text-white/90 hover:text-white"
@@ -157,7 +157,7 @@ export default function Header() {
             <button
               aria-expanded={companyOpen}
               aria-haspopup="true"
-              className={`px-4 py-2 text-sm font-medium transition-colors flex items-center gap-1 bg-transparent border-none cursor-pointer ${
+              className={`px-4 py-2 text-sm font-semibold transition-colors flex items-center gap-1 bg-transparent border-none cursor-pointer ${
                 isCompanyActive
                   ? "text-white border-b-2 border-zt-accent"
                   : "text-white/90 hover:text-white"
@@ -188,7 +188,7 @@ export default function Header() {
           {/* Blog — standalone */}
           <Link
             href="/blog"
-            className={`px-4 py-2 text-sm font-medium no-underline transition-colors ${
+            className={`px-4 py-2 text-sm font-semibold no-underline transition-colors ${
               isBlogActive
                 ? "text-white border-b-2 border-zt-accent"
                 : "text-white/90 hover:text-white"
