@@ -61,6 +61,7 @@
   --animate-fade-in: fadeIn 0.5s ease-out;
   --animate-slide-up: slideUp 0.5s ease-out;
   --animate-fade-in-up: fadeInUp 0.4s ease-out both;
+  --animate-menu-slide: menuSlide 0.25s ease-out both;
 }
 
 @keyframes fadeIn {
@@ -76,6 +77,11 @@
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes menuSlide {
+  from { transform: translateY(-8px); }
+  to { transform: translateY(0); }
 }
 
 /* ============================================
