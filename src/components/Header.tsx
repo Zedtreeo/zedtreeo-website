@@ -244,7 +244,7 @@ export default function Header() {
       {/* Mobile Menu */}
       {mobileOpen && (
       <div
-        className="lg:hidden fixed inset-x-0 top-[72px] bottom-0 animate-menu-slide"
+        className="lg:hidden fixed inset-x-0 top-[72px] bottom-0"
         style={{ backgroundColor: "#374B47", zIndex: 49 }}
       >
         <nav
