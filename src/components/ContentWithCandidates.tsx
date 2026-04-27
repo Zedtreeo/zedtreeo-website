@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo } from "react";
+import { useRef, useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import CandidatePreview from "@/components/CandidatePreview";
 import type { CandidateCategory } from "@/lib/candidates-data";
 
@@ -12,13 +13,12 @@ type Props = {
 };
 
 /**
- * Renders self-contained HTML pages (industry / case study) with
- * CandidatePreview injected right after the hero section.
+ * Renders self-contained HTML pages (industry / case study / service-data)
+ * with CandidatePreview injected right after the hero section via a DOM portal.
  *
- * Splits HTML at the first </section> boundary (hero end) and renders:
- *   1. Hero section HTML
- *   2. CandidatePreview component (dark variant, inside hero context)
- *   3. Remaining HTML content
+ * Keeps the full HTML intact (preserving .zt-role-wrap / .zt-cs wrapper
+ * scoping) and uses useEffect to find the hero <section> and insert
+ * a portal container after it.
  */
 export default function ContentWithCandidates({
   htmlContent,
@@ -26,41 +26,46 @@ export default function ContentWithCandidates({
   pageType,
   category,
 }: Props) {
-  const { heroHtml, restHtml } = useMemo(() => {
-    // Find the end of the first <section> (the hero)
-    const heroEndMarker = "</section>";
-    const idx = htmlContent.indexOf(heroEndMarker);
+  const articleRef = useRef<HTMLDivElement>(null);
+  const [portalTarget, setPortalTarget] = useState<HTMLElement | null>(null);
 
-    if (idx === -1) {
-      // No section found — render everything as-is
-      return { heroHtml: htmlContent, restHtml: "" };
+  useEffect(() => {
+    if (!articleRef.current || !category) return;
+
+    // Find the hero section (first <section> in the content)
+    const firstSection = articleRef.current.querySelector("section");
+    if (!firstSection) return;
+
+    // Check if we already inserted the portal container
+    const existing = articleRef.current.querySelector("[data-candidate-portal]");
+    if (existing) {
+      setPortalTarget(existing as HTMLElement);
+      return;
     }
 
-    const splitPoint = idx + heroEndMarker.length;
-    return {
-      heroHtml: htmlContent.slice(0, splitPoint),
-      restHtml: htmlContent.slice(splitPoint),
-    };
-  }, [htmlContent]);
+    // Create a container div and insert it right after the hero section
+    const container = document.createElement("div");
+    container.setAttribute("data-candidate-portal", "true");
+    firstSection.insertAdjacentElement("afterend", container);
+    setPortalTarget(container);
+  }, [category]);
 
   return (
     <>
-      {/* Hero section */}
-      <div dangerouslySetInnerHTML={{ __html: heroHtml }} />
+      <div ref={articleRef} dangerouslySetInnerHTML={{ __html: htmlContent }} />
 
-      {/* Candidates — right after hero */}
-      {category && (
-        <CandidatePreview
-          slug={slug}
-          pageType={pageType}
-          variant="light"
-        />
-      )}
-
-      {/* Rest of the page content */}
-      {restHtml && (
-        <div dangerouslySetInnerHTML={{ __html: restHtml }} />
-      )}
+      {/* Portal renders CandidatePreview inside the DOM, right after the hero */}
+      {portalTarget &&
+        category &&
+        createPortal(
+          <CandidatePreview
+            slug={slug}
+            pageType={pageType}
+            variant="light"
+            directCategory={category}
+          />,
+          portalTarget
+        )}
     </>
   );
 }

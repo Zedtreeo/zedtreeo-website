@@ -174,14 +174,17 @@ type Variant = "dark" | "light";
 
 type Props = {
   slug: string;
-  pageType?: "service" | "industry" | "case-study";
+  pageType?: "service" | "industry" | "case-study" | "blog";
   variant?: Variant;
+  /** Pass category directly (e.g. for blog posts that use category-level mapping) */
+  directCategory?: CandidateCategory;
 };
 
 export default function CandidatePreview({
   slug,
   pageType = "service",
   variant = "dark",
+  directCategory,
 }: Props) {
   const categoryMap =
     pageType === "industry"
@@ -190,7 +193,7 @@ export default function CandidatePreview({
         ? caseStudySlugToCategoryMap
         : serviceSlugToCategoryMap;
 
-  const category = categoryMap[slug];
+  const category = directCategory || categoryMap[slug];
   const containerRef = useRef<HTMLDivElement>(null);
   const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
 

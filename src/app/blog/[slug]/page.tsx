@@ -7,6 +7,20 @@ import { getBlogPost, getAllBlogSlugs, getRelatedPosts } from "@/lib/blog-conten
 import JsonLd, { articleSchema } from "@/components/JsonLd";
 import { Breadcrumb, CTASection, SectionHeading } from "@/components/ui";
 import { getRelatedHirePagesFromBlog } from "@/lib/content-links";
+import CandidatePreview from "@/components/CandidatePreview";
+import type { CandidateCategory } from "@/lib/candidates-data";
+import type { BlogCategory } from "@/lib/blog-data";
+
+/** Map blog categories → candidate categories for relevant candidate display */
+const blogCategoryToCandidateMap: Partial<Record<BlogCategory, CandidateCategory>> = {
+  "remote-staffing": "virtual-assistant",
+  outsourcing: "software-development",
+  "hiring-guides": "software-development",
+  "finance-accounting": "finance-accounting",
+  technology: "software-development",
+  "industry-insights": "virtual-assistant",
+  "case-studies": "customer-support",
+};
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -141,7 +155,21 @@ export default async function BlogPostPage({ params }: PageProps) {
             className="zt-blog-content"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
+        </div>
+      </section>
 
+      {/* Available Candidates — after article, before tags/author */}
+      {blogCategoryToCandidateMap[post.category] && (
+        <CandidatePreview
+          slug={post.slug}
+          pageType="blog"
+          variant="light"
+          directCategory={blogCategoryToCandidateMap[post.category]}
+        />
+      )}
+
+      <section className="py-zt-section px-6">
+        <div className="max-w-zt-narrow mx-auto">
           {/* Tags */}
           {post.tags.length > 0 && (
             <div className="mt-12 pt-8 border-t border-zt-border">
