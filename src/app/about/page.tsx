@@ -103,22 +103,22 @@ export default function AboutPage() {
               </p>
             </div>
             <div>
-              <div className="relative rounded-zt overflow-hidden mb-6" style={{ height: "260px" }}>
+              <div className="relative rounded-zt overflow-hidden mb-4" style={{ height: "200px" }}>
                 <Image
                   src="/images/about/professional-team.webp"
                   alt="Zedtreeo remote staffing team collaborating in a modern office"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover rounded-zt"
-                  style={{ objectPosition: "center 20%" }}
+                  style={{ objectPosition: "center 15%" }}
                   priority
                 />
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-4 gap-3">
                 {missionStats.map((stat) => (
-                  <div key={stat.label} className="p-4 rounded-zt bg-zt-near-white text-center">
-                    <div className="text-2xl font-bold text-zt-accent mb-1">{stat.value}</div>
-                    <div className="text-xs text-zt-body uppercase tracking-wider">{stat.label}</div>
+                  <div key={stat.label} className="p-3 rounded-zt bg-zt-near-white text-center">
+                    <div className="text-lg font-bold text-zt-accent mb-0.5">{stat.value}</div>
+                    <div className="text-[10px] text-zt-body uppercase tracking-wider leading-tight">{stat.label}</div>
                   </div>
                 ))}
               </div>
