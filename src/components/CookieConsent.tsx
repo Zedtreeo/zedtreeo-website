@@ -29,7 +29,7 @@ export default function CookieConsent() {
 
   return (
     <div
-      className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:max-w-sm z-[70] animate-fade-in-up"
+      className="fixed bottom-4 left-4 right-4 sm:right-auto sm:left-6 sm:max-w-sm z-[70] animate-fade-in-up"
       role="dialog"
       aria-label="Cookie consent"
     >
