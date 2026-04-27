@@ -102,7 +102,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav aria-label="Main navigation" className="hidden lg:flex flex-1 items-center justify-center gap-1 pl-20">
+        <nav aria-label="Main navigation" className="hidden lg:flex flex-1 items-center justify-center gap-1 pl-24">
           {/* Services Dropdown */}
           <div
             className="relative"
@@ -324,11 +324,11 @@ export default function Header() {
           </Link>
 
           {/* CTA */}
-          <div className="mt-6 pt-6 border-t border-white/10 space-y-6">
+          <div className="mt-6 pt-6 border-t border-white/10 flex flex-col gap-4">
             <Link
               href="/get-started"
               onClick={() => setMobileOpen(false)}
-              className="zt-btn block text-center no-underline"
+              className="zt-btn !block text-center no-underline"
             >
               Get Started Free
             </Link>
@@ -337,7 +337,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileOpen(false)}
-              className="zt-btn block text-center no-underline !bg-transparent !border !border-white/30 !text-white hover:!border-zt-accent hover:!text-zt-accent"
+              className="zt-btn !block text-center no-underline !bg-transparent !border !border-white/30 !text-white hover:!border-zt-accent hover:!text-zt-accent"
             >
               Schedule a Call
             </a>
