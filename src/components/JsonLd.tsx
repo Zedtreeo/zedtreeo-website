@@ -20,7 +20,7 @@ export function organizationSchema() {
     "@type": "Organization",
     name: "Zedtreeo",
     url: "https://zedtreeo.com",
-    logo: "https://zedtreeo.com/zedtreeo-logo-header.png",
+    logo: "https://zedtreeo.com/zedtreeo-logo-green-cropped.png",
     description:
       "Zedtreeo provides pre-vetted dedicated remote employees from India starting at $5/hour. Hire software developers, accountants, marketers, legal staff, and more.",
     foundingDate: "2023",
@@ -193,7 +193,7 @@ export function articleSchema(article: {
       url: "https://zedtreeo.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://zedtreeo.com/zedtreeo-logo-header.png",
+        url: "https://zedtreeo.com/zedtreeo-logo-green-cropped.png",
       },
     },
   };

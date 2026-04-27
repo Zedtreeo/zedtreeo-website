@@ -34,11 +34,11 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="no-underline inline-block">
               <Image
-                src="/zedtreeo-dark.svg"
+                src="/zedtreeo-logo-white-cropped.png"
                 alt="Zedtreeo"
-                width={180}
-                height={76}
-                className="h-11 w-auto"
+                width={577}
+                height={240}
+                className="h-10 w-auto"
               />
             </Link>
             <p className="mt-4 text-sm text-white/70 leading-relaxed">

@@ -90,13 +90,13 @@ export default function Header() {
     >
       <div className="max-w-zt-content mx-auto px-6 flex items-center justify-between h-[72px]">
         {/* Logo */}
-        <Link href="/" className="no-underline shrink-0">
+        <Link href="/" className="no-underline shrink-0 flex items-center">
           <Image
-            src="/zedtreeo-dark.svg"
+            src="/zedtreeo-logo-white-cropped.png"
             alt="Zedtreeo"
-            width={180}
-            height={76}
-            className="h-11 w-auto"
+            width={577}
+            height={240}
+            className="h-10 w-auto"
             priority
           />
         </Link>
