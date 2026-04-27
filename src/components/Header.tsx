@@ -102,7 +102,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav aria-label="Main navigation" className="hidden lg:flex flex-1 items-center justify-center gap-1">
+        <nav aria-label="Main navigation" className="hidden lg:flex flex-1 items-center justify-center gap-1 pl-12">
           {/* Services Dropdown */}
           <div
             className="relative"
