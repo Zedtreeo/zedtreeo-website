@@ -2,7 +2,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getIndustryPage, getAllIndustryPageSlugs } from "@/lib/industry-data";
 import JsonLd, { serviceSchema, breadcrumbSchema } from "@/components/JsonLd";
-import CandidatePreview from "@/components/CandidatePreview";
+import ContentWithCandidates from "@/components/ContentWithCandidates";
+import { industrySlugToCategoryMap } from "@/components/CandidatePreview";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -50,6 +51,8 @@ export default async function IndustryPage({ params }: PageProps) {
     { label: page.title, href: `/industries/${page.slug}` },
   ];
 
+  const category = industrySlugToCategoryMap[page.slug];
+
   return (
     <main>
       <JsonLd
@@ -68,12 +71,15 @@ export default async function IndustryPage({ params }: PageProps) {
         )}
       />
 
-      {/* Industry pages are fully self-contained (own hero, sections, CTA) */}
-      <article
-        className="zt-blog-content"
-        dangerouslySetInnerHTML={{ __html: page.content }}
-      />
-      <CandidatePreview slug={page.slug} pageType="industry" variant="light" />
+      {/* Industry pages split at hero → candidates → rest of content */}
+      <article className="zt-blog-content">
+        <ContentWithCandidates
+          htmlContent={page.content}
+          slug={page.slug}
+          pageType="industry"
+          category={category}
+        />
+      </article>
     </main>
   );
 }

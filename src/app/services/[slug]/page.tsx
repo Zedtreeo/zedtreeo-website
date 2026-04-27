@@ -6,7 +6,8 @@ import { getHirePageData, getAllHireSlugs } from "@/lib/hire-data";
 import { getServicePage, getAllServicePageSlugs } from "@/lib/service-data";
 import JsonLd, { serviceSchema, breadcrumbSchema } from "@/components/JsonLd";
 import { Breadcrumb, FAQ, TrustBar, Button, SectionHeading, CTASection, ScrollReveal, AnimatedCounter, SkillPills } from "@/components/ui";
-import CandidatePreview from "@/components/CandidatePreview";
+import CandidatePreview, { serviceSlugToCategoryMap } from "@/components/CandidatePreview";
+import ContentWithCandidates from "@/components/ContentWithCandidates";
 import { getRelatedCaseStudies, getRelatedBlogs } from "@/lib/content-links";
 
 type PageProps = {
@@ -390,12 +391,15 @@ function ServicePageLayout({ page }: { page: NonNullable<ReturnType<typeof getSe
         )}
       />
 
-      {/* HTML service pages are fully self-contained (own hero, sections, CTA) */}
-      <article
-        className="zt-blog-content"
-        dangerouslySetInnerHTML={{ __html: page.content }}
-      />
-      <CandidatePreview slug={page.slug} pageType="service" variant="light" />
+      {/* HTML service pages split at hero → candidates → rest of content */}
+      <article className="zt-blog-content">
+        <ContentWithCandidates
+          htmlContent={page.content}
+          slug={page.slug}
+          pageType="service"
+          category={serviceSlugToCategoryMap[page.slug]}
+        />
+      </article>
     </main>
   );
 }

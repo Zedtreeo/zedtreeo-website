@@ -121,13 +121,16 @@ export default function Header() {
               Services
               {chevron(servicesOpen)}
             </button>
+            {/* Invisible bridge to prevent gap-triggered close */}
+            <div className="absolute top-full left-0 h-3 w-64" />
             <div
-              className={`absolute top-full left-0 mt-1 w-64 bg-white rounded-zt shadow-zt-card-hover py-2 transition-all duration-200 ${
+              className={`absolute top-full left-0 pt-3 w-64 transition-all duration-200 ${
                 servicesOpen
                   ? "opacity-100 translate-y-0 pointer-events-auto"
                   : "opacity-0 -translate-y-2 pointer-events-none"
               }`}
             >
+            <div className="bg-white rounded-zt shadow-zt-card-hover py-2">
               {serviceLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -145,6 +148,7 @@ export default function Header() {
                   View All Services →
                 </Link>
               </div>
+            </div>
             </div>
           </div>
 
@@ -166,22 +170,26 @@ export default function Header() {
               Company
               {chevron(companyOpen)}
             </button>
+            {/* Invisible bridge to prevent gap-triggered close */}
+            <div className="absolute top-full left-0 h-3 w-56" />
             <div
-              className={`absolute top-full left-0 mt-1 w-56 bg-white rounded-zt shadow-zt-card-hover py-2 transition-all duration-200 ${
+              className={`absolute top-full left-0 pt-3 w-56 transition-all duration-200 ${
                 companyOpen
                   ? "opacity-100 translate-y-0 pointer-events-auto"
                   : "opacity-0 -translate-y-2 pointer-events-none"
               }`}
             >
-              {companyLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="block px-4 py-2.5 text-sm text-zt-body hover:bg-zt-near-white hover:text-zt-primary no-underline font-medium transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              <div className="bg-white rounded-zt shadow-zt-card-hover py-2">
+                {companyLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block px-4 py-2.5 text-sm text-zt-body hover:bg-zt-near-white hover:text-zt-primary no-underline font-medium transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
 

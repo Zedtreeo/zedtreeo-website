@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import {
@@ -9,7 +9,8 @@ import {
   type CandidateCategory,
   type Candidate,
 } from "@/lib/candidates-data";
-import { getSkillPillStyle } from "@/lib/skill-colors";
+import { getSkillPillStyle, getCategoryCardTint } from "@/lib/skill-colors";
+import CandidateInquiryPanel from "@/components/CandidateInquiryPanel";
 
 const allCategories = Object.entries(candidateCategoryLabels) as [CandidateCategory, string][];
 const validCategories = new Set(Object.keys(candidateCategoryLabels));
@@ -37,6 +38,9 @@ export default function CandidateBrowser() {
     return "all";
   });
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
+
+  const handleClose = useCallback(() => setSelectedCandidate(null), []);
 
   /* Sync with URL changes (e.g. browser back/forward) */
   useEffect(() => {
@@ -170,7 +174,11 @@ export default function CandidateBrowser() {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filtered.map((candidate) => (
-                <CandidateCard key={candidate.id} candidate={candidate} />
+                <CandidateCard
+                  key={candidate.id}
+                  candidate={candidate}
+                  onSelect={setSelectedCandidate}
+                />
               ))}
             </div>
           )}
@@ -194,13 +202,27 @@ export default function CandidateBrowser() {
           </div>
         </div>
       </section>
+
+      {/* Slide-out inquiry panel */}
+      <CandidateInquiryPanel
+        candidate={selectedCandidate}
+        tint={selectedCandidate ? getCategoryCardTint(selectedCandidate.category) : null}
+        sourcePage="/candidates"
+        onClose={handleClose}
+      />
     </>
   );
 }
 
 /* ─── Candidate Card ─── */
 
-function CandidateCard({ candidate }: { candidate: Candidate }) {
+function CandidateCard({
+  candidate,
+  onSelect,
+}: {
+  candidate: Candidate;
+  onSelect: (c: Candidate) => void;
+}) {
   return (
     <div className="rounded-zt bg-white shadow-zt-card hover:shadow-zt-card-hover transition-all overflow-hidden">
       <div className="p-6">
@@ -280,12 +302,12 @@ function CandidateCard({ candidate }: { candidate: Candidate }) {
         </div>
 
         {/* CTA */}
-        <Link
-          href={`/get-started?role=${encodeURIComponent(candidate.role)}`}
-          className="block w-full text-center py-2.5 rounded-zt-pill bg-zt-accent text-zt-headings text-sm font-bold no-underline hover:bg-zt-accent-hover transition-colors"
+        <button
+          onClick={() => onSelect(candidate)}
+          className="block w-full text-center py-2.5 rounded-zt-pill bg-zt-accent text-zt-headings text-sm font-bold border-none cursor-pointer hover:bg-zt-accent-hover transition-colors"
         >
           Hire {candidate.name.split(" ")[0]}
-        </Link>
+        </button>
       </div>
     </div>
   );

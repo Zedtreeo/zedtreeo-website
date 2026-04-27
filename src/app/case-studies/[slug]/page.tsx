@@ -5,7 +5,8 @@ import { getCaseStudyPage, getAllCaseStudyPageSlugs } from "@/lib/case-study-dat
 import JsonLd, { breadcrumbSchema } from "@/components/JsonLd";
 import { SectionHeading } from "@/components/ui";
 import { getRelatedHirePages } from "@/lib/content-links";
-import CandidatePreview from "@/components/CandidatePreview";
+import ContentWithCandidates from "@/components/ContentWithCandidates";
+import { caseStudySlugToCategoryMap } from "@/components/CandidatePreview";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -53,6 +54,8 @@ export default async function CaseStudyPage({ params }: PageProps) {
     { label: page.title, href: `/case-studies/${page.slug}` },
   ];
 
+  const category = caseStudySlugToCategoryMap[page.slug];
+
   return (
     <main>
       <JsonLd
@@ -78,16 +81,17 @@ export default async function CaseStudyPage({ params }: PageProps) {
         )}
       />
 
-      {/* Case study pages are fully self-contained (own hero, sections, CTA) */}
-      <article
-        className="zt-blog-content"
-        dangerouslySetInnerHTML={{ __html: page.content }}
-      />
+      {/* Case study pages split at hero → candidates → rest of content */}
+      <article className="zt-blog-content">
+        <ContentWithCandidates
+          htmlContent={page.content}
+          slug={page.slug}
+          pageType="case-study"
+          category={category}
+        />
+      </article>
 
-      {/* Available Candidates */}
-      <CandidatePreview slug={page.slug} pageType="case-study" variant="light" />
-
-      {/* Related Hire Pages (component-only, not in HTML) */}
+      {/* Related Hire Pages */}
       <RelatedServices caseStudySlug={page.slug} />
     </main>
   );
