@@ -420,14 +420,10 @@ function ServicePageLayout({ page }: { page: NonNullable<ReturnType<typeof getSe
 
       <TrustBar />
 
-      <section className="py-zt-section px-6">
-        <div className="max-w-zt-narrow mx-auto">
-          <article
-            className="zt-blog-content"
-            dangerouslySetInnerHTML={{ __html: page.content }}
-          />
-        </div>
-      </section>
+      <article
+        className="zt-blog-content"
+        dangerouslySetInnerHTML={{ __html: page.content }}
+      />
 
       <CTASection
         title="Ready to Build Your Remote Team?"

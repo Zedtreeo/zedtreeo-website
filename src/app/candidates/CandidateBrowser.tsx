@@ -9,6 +9,7 @@ import {
   type CandidateCategory,
   type Candidate,
 } from "@/lib/candidates-data";
+import { getSkillPillStyle } from "@/lib/skill-colors";
 
 const allCategories = Object.entries(candidateCategoryLabels) as [CandidateCategory, string][];
 const validCategories = new Set(Object.keys(candidateCategoryLabels));
@@ -252,13 +253,14 @@ function CandidateCard({ candidate }: { candidate: Candidate }) {
           {candidate.skills.slice(0, 5).map((skill) => (
             <span
               key={skill}
-              className="px-2.5 py-1 rounded bg-zt-near-white text-xs text-zt-headings font-medium"
+              className="px-2.5 py-1 rounded text-xs font-medium border"
+              style={getSkillPillStyle(skill)}
             >
               {skill}
             </span>
           ))}
           {candidate.skills.length > 5 && (
-            <span className="px-2.5 py-1 rounded bg-zt-near-white text-xs text-zt-body">
+            <span className="px-2.5 py-1 rounded bg-zt-near-white text-xs text-zt-body border border-zt-border">
               +{candidate.skills.length - 5} more
             </span>
           )}

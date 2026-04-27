@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { getSkillColor } from "@/lib/skill-colors";
 
 type Props = {
   skills: string[];
@@ -47,15 +48,23 @@ export default function SkillPills({
 
   return (
     <div ref={containerRef} className={`flex flex-wrap justify-center gap-3 ${className}`}>
-      {skills.map((skill) => (
-        <span
-          key={skill}
-          data-pill
-          className="px-4 py-2 rounded-full bg-white text-zt-headings text-sm font-medium shadow-sm border border-zt-border hover:border-zt-accent hover:text-zt-accent transition-colors"
-        >
-          {skill}
-        </span>
-      ))}
+      {skills.map((skill) => {
+        const color = getSkillColor(skill);
+        return (
+          <span
+            key={skill}
+            data-pill
+            className="px-4 py-2 rounded-full text-sm font-medium shadow-sm border transition-colors"
+            style={{
+              backgroundColor: color.bg,
+              borderColor: color.border,
+              color: color.text,
+            }}
+          >
+            {skill}
+          </span>
+        );
+      })}
     </div>
   );
 }
