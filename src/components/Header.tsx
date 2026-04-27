@@ -88,7 +88,7 @@ export default function Header() {
           : "bg-zt-primary/95 backdrop-blur-sm"
       }`}
     >
-      <div className="max-w-zt-content mx-auto px-6 flex items-center h-[72px]">
+      <div className="max-w-zt-content mx-auto px-6 flex items-center justify-between h-[72px]">
         {/* Logo */}
         <Link href="/" className="no-underline shrink-0 flex items-center">
           <Image
@@ -324,7 +324,7 @@ export default function Header() {
           </Link>
 
           {/* CTA */}
-          <div className="mt-6 pt-6 border-t border-white/10 space-y-3">
+          <div className="mt-6 pt-6 border-t border-white/10 space-y-4">
             <Link
               href="/get-started"
               onClick={() => setMobileOpen(false)}
