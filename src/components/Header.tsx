@@ -242,9 +242,12 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu */}
-      {mobileOpen && (
       <div
-        className="lg:hidden fixed inset-x-0 top-[72px] bottom-0"
+        className={`lg:hidden fixed inset-x-0 top-[72px] bottom-0 transition-all duration-300 ease-in-out ${
+          mobileOpen
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-4 pointer-events-none"
+        }`}
         style={{ backgroundColor: "#374B47", zIndex: 49 }}
       >
         <nav
@@ -344,7 +347,6 @@ export default function Header() {
           </div>
         </nav>
       </div>
-      )}
     </header>
   );
 }
