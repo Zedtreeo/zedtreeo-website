@@ -8,19 +8,7 @@ import JsonLd, { articleSchema } from "@/components/JsonLd";
 import { Breadcrumb, CTASection, SectionHeading } from "@/components/ui";
 import { getRelatedHirePagesFromBlog } from "@/lib/content-links";
 import CandidatePreview from "@/components/CandidatePreview";
-import type { CandidateCategory } from "@/lib/candidates-data";
-import type { BlogCategory } from "@/lib/blog-data";
-
-/** Map blog categories → candidate categories for relevant candidate display */
-const blogCategoryToCandidateMap: Partial<Record<BlogCategory, CandidateCategory>> = {
-  "remote-staffing": "virtual-assistant",
-  outsourcing: "software-development",
-  "hiring-guides": "software-development",
-  "finance-accounting": "finance-accounting",
-  technology: "software-development",
-  "industry-insights": "virtual-assistant",
-  "case-studies": "customer-support",
-};
+import { blogCategoryToCandidateMap } from "@/lib/candidate-category-maps";
 
 type PageProps = {
   params: Promise<{ slug: string }>;

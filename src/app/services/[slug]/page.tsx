@@ -6,7 +6,8 @@ import { getHirePageData, getAllHireSlugs } from "@/lib/hire-data";
 import { getServicePage, getAllServicePageSlugs } from "@/lib/service-data";
 import JsonLd, { serviceSchema, breadcrumbSchema } from "@/components/JsonLd";
 import { Breadcrumb, FAQ, TrustBar, Button, SectionHeading, CTASection, ScrollReveal, AnimatedCounter, SkillPills } from "@/components/ui";
-import CandidatePreview, { serviceSlugToCategoryMap } from "@/components/CandidatePreview";
+import CandidatePreview from "@/components/CandidatePreview";
+import { serviceSlugToCategoryMap } from "@/lib/candidate-category-maps";
 import ContentWithCandidates from "@/components/ContentWithCandidates";
 import { getRelatedCaseStudies, getRelatedBlogs } from "@/lib/content-links";
 

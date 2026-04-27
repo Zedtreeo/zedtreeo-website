@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { getIndustryPage, getAllIndustryPageSlugs } from "@/lib/industry-data";
 import JsonLd, { serviceSchema, breadcrumbSchema } from "@/components/JsonLd";
 import ContentWithCandidates from "@/components/ContentWithCandidates";
-import { industrySlugToCategoryMap } from "@/components/CandidatePreview";
+import { industrySlugToCategoryMap } from "@/lib/candidate-category-maps";
 
 type PageProps = {
   params: Promise<{ slug: string }>;

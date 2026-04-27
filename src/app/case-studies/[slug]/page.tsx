@@ -6,7 +6,7 @@ import JsonLd, { breadcrumbSchema } from "@/components/JsonLd";
 import { SectionHeading } from "@/components/ui";
 import { getRelatedHirePages } from "@/lib/content-links";
 import ContentWithCandidates from "@/components/ContentWithCandidates";
-import { caseStudySlugToCategoryMap } from "@/components/CandidatePreview";
+import { caseStudySlugToCategoryMap } from "@/lib/candidate-category-maps";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
