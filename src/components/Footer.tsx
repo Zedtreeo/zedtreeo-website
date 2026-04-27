@@ -32,17 +32,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2.5 no-underline">
+            <Link href="/" className="no-underline inline-block">
               <Image
-                src="/zedtreeo-logo-icon.svg"
-                alt=""
-                width={32}
-                height={32}
-                className="w-8 h-8"
+                src="/zedtreeo-dark.svg"
+                alt="Zedtreeo"
+                width={180}
+                height={76}
+                className="h-11 w-auto"
               />
-              <span className="text-2xl tracking-tight">
-                <span className="font-extrabold text-white">Zed</span><span className="font-normal text-zt-accent">treeo</span>
-              </span>
             </Link>
             <p className="mt-4 text-sm text-white/70 leading-relaxed">
               Hire dedicated remote employees from India starting at $5/hour.

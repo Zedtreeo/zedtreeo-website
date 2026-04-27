@@ -90,19 +90,15 @@ export default function Header() {
     >
       <div className="max-w-zt-content mx-auto px-6 flex items-center justify-between h-[72px]">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 no-underline shrink-0">
+        <Link href="/" className="no-underline shrink-0">
           <Image
-            src="/zedtreeo-logo-icon.svg"
-            alt=""
-            width={32}
-            height={32}
-            className="w-8 h-8"
+            src="/zedtreeo-dark.svg"
+            alt="Zedtreeo"
+            width={180}
+            height={76}
+            className="h-11 w-auto"
             priority
           />
-          <span className="text-2xl tracking-tight">
-            <span className="font-extrabold text-white">Zed</span>
-            <span className="font-normal text-zt-accent">treeo</span>
-          </span>
         </Link>
 
         {/* Desktop Navigation */}
