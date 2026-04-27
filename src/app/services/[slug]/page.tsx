@@ -6,7 +6,7 @@ import { getHirePageData, getAllHireSlugs } from "@/lib/hire-data";
 import { getServicePage, getAllServicePageSlugs } from "@/lib/service-data";
 import JsonLd, { serviceSchema, breadcrumbSchema } from "@/components/JsonLd";
 import { Breadcrumb, FAQ, TrustBar, Button, SectionHeading, CTASection, ScrollReveal, AnimatedCounter, SkillPills } from "@/components/ui";
-import CandidatePreview from "./CandidatePreview";
+import CandidatePreview from "@/components/CandidatePreview";
 import { getRelatedCaseStudies, getRelatedBlogs } from "@/lib/content-links";
 
 type PageProps = {
@@ -395,6 +395,7 @@ function ServicePageLayout({ page }: { page: NonNullable<ReturnType<typeof getSe
         className="zt-blog-content"
         dangerouslySetInnerHTML={{ __html: page.content }}
       />
+      <CandidatePreview slug={page.slug} pageType="service" variant="light" />
     </main>
   );
 }

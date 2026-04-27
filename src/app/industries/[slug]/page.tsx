@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getIndustryPage, getAllIndustryPageSlugs } from "@/lib/industry-data";
 import JsonLd, { serviceSchema, breadcrumbSchema } from "@/components/JsonLd";
+import CandidatePreview from "@/components/CandidatePreview";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -72,6 +73,7 @@ export default async function IndustryPage({ params }: PageProps) {
         className="zt-blog-content"
         dangerouslySetInnerHTML={{ __html: page.content }}
       />
+      <CandidatePreview slug={page.slug} pageType="industry" variant="light" />
     </main>
   );
 }

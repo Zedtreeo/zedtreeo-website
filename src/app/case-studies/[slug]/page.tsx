@@ -5,6 +5,7 @@ import { getCaseStudyPage, getAllCaseStudyPageSlugs } from "@/lib/case-study-dat
 import JsonLd, { breadcrumbSchema } from "@/components/JsonLd";
 import { SectionHeading } from "@/components/ui";
 import { getRelatedHirePages } from "@/lib/content-links";
+import CandidatePreview from "@/components/CandidatePreview";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -82,6 +83,9 @@ export default async function CaseStudyPage({ params }: PageProps) {
         className="zt-blog-content"
         dangerouslySetInnerHTML={{ __html: page.content }}
       />
+
+      {/* Available Candidates */}
+      <CandidatePreview slug={page.slug} pageType="case-study" variant="light" />
 
       {/* Related Hire Pages (component-only, not in HTML) */}
       <RelatedServices caseStudySlug={page.slug} />
