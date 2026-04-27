@@ -325,15 +325,6 @@ export default function Header() {
 
           {/* CTA */}
           <div className="mt-6 pt-6 border-t border-white/10 space-y-3">
-            <a
-              href="https://scheduler.zoom.us/zedtreeo/intro-call"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setMobileOpen(false)}
-              className="block text-center py-2 px-5 rounded-full border border-white/30 text-white text-sm font-medium no-underline hover:border-zt-accent hover:text-zt-accent transition-colors"
-            >
-              Schedule a Call
-            </a>
             <Link
               href="/get-started"
               onClick={() => setMobileOpen(false)}
@@ -341,6 +332,15 @@ export default function Header() {
             >
               Get Started Free
             </Link>
+            <a
+              href="https://scheduler.zoom.us/zedtreeo/intro-call"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileOpen(false)}
+              className="zt-btn block text-center no-underline !bg-transparent !border !border-white/30 !text-white hover:!border-zt-accent hover:!text-zt-accent"
+            >
+              Schedule a Call
+            </a>
           </div>
         </nav>
       </div>
