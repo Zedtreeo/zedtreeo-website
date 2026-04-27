@@ -102,7 +102,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav aria-label="Main navigation" className="hidden lg:flex flex-1 items-center justify-center gap-1 pl-12">
+        <nav aria-label="Main navigation" className="hidden lg:flex flex-1 items-center justify-center gap-1 pl-20">
           {/* Services Dropdown */}
           <div
             className="relative"
@@ -324,7 +324,7 @@ export default function Header() {
           </Link>
 
           {/* CTA */}
-          <div className="mt-6 pt-6 border-t border-white/10 space-y-4">
+          <div className="mt-6 pt-6 border-t border-white/10 space-y-6">
             <Link
               href="/get-started"
               onClick={() => setMobileOpen(false)}
