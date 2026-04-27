@@ -243,12 +243,12 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden fixed inset-x-0 top-[72px] bottom-0 transition-all duration-300 ease-in-out ${
+        className={`lg:hidden fixed inset-x-0 top-[72px] transition-transform duration-300 ease-in-out ${
           mobileOpen
-            ? "opacity-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 -translate-y-4 pointer-events-none"
+            ? "translate-y-0 pointer-events-auto"
+            : "-translate-y-full pointer-events-none"
         }`}
-        style={{ backgroundColor: "#374B47", zIndex: 49 }}
+        style={{ backgroundColor: "#374B47", zIndex: 49, height: "calc(100vh - 72px)" }}
       >
         <nav
           aria-label="Mobile navigation"
